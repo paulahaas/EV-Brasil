@@ -1,0 +1,17 @@
+{
+  "name": "ev-brasil",
+  "version": "1.0.0",
+  "description": "Site de venda de veículos elétricos para o Brasil — HTML/CSS/JavaScript puro.",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "veiculos-eletricos",
+    "ev",
+    "brasil",
+    "byd"
+  ],
+  "license": "MIT"
+}

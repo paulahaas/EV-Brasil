@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EV Brasil — Veículos Elétricos Premium</title>
+  <meta name="description" content="A nova era da mobilidade elétrica no Brasil. Descubra veículos elétricos premium: hatches, sedãs e SUVs. BYD, GWM e mais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="eyebrow">A nova era da mobilidade</span>
+        <h1>O futuro é <span class="gradient-text">elétrico</span>.<br />O futuro é agora.</h1>
+        <p>Veículos elétricos premium para todo o Brasil. Autonomia de sobra, tecnologia de ponta e zero emissões — do compacto urbano ao SUV de luxo.</p>
+        <div class="hero-actions">
+          <a href="veiculos.html" class="btn btn-primary btn-lg">Explorar veículos</a>
+          <a href="#tecnologia" class="btn btn-ghost btn-lg">Saiba mais</a>
+        </div>
+        <div class="hero-visual" id="heroVisual"></div>
+      </div>
+    </section>
+
+    <!-- MÉTRICAS -->
+    <section style="padding-top:0;">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="num">605 km</div><div class="lbl">Autonomia máxima</div></div>
+          <div class="stat"><div class="num">3,8 s</div><div class="lbl">0–100 km/h</div></div>
+          <div class="stat"><div class="num">100%</div><div class="lbl">Elétrico</div></div>
+          <div class="stat"><div class="num">0</div><div class="lbl">Emissões</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section id="destaques">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">Em destaque</span>
+          <h2 class="section-title">Modelos que fazem a diferença</h2>
+          <p class="section-sub mx-auto">Selecionamos os elétricos mais desejados do momento. Escolha o seu e sinta a diferença já na primeira aceleração.</p>
+        </div>
+        <div class="grid" id="featuredGrid"></div>
+        <div class="text-center" style="margin-top:40px;">
+          <a href="veiculos.html" class="btn btn-ghost btn-lg">Ver todos os veículos →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIA -->
+    <section id="tecnologia">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">Tecnologia</span>
+          <h2 class="section-title">Engenharia que você sente</h2>
+          <p class="section-sub mx-auto">Cada detalhe foi pensado para entregar segurança, desempenho e uma experiência de condução única.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <div class="ic">🔋</div>
+            <h3>Bateria Blade</h3>
+            <p>Tecnologia LFP referência mundial em segurança e durabilidade, com milhares de ciclos de recarga.</p>
+          </div>
+          <div class="feature">
+            <div class="ic">⚡</div>
+            <h3>Recarga rápida</h3>
+            <p>De 30% a 80% em cerca de 30 minutos nos carregadores DC. Chegue, recarregue e siga viagem.</p>
+          </div>
+          <div class="feature">
+            <div class="ic">🛡️</div>
+            <h3>Segurança total</h3>
+            <p>Pacote completo de assistências à condução (ADAS) e as mais altas classificações de segurança.</p>
+          </div>
+          <div class="feature">
+            <div class="ic">📱</div>
+            <h3>Conectividade</h3>
+            <p>Centrais multimídia amplas, atualizações remotas (OTA) e integração total com seu smartphone.</p>
+          </div>
+          <div class="feature">
+            <div class="ic">🌱</div>
+            <h3>Zero emissões</h3>
+            <p>Dirija com consciência. Energia limpa, sem poluentes locais e com custo por km muito menor.</p>
+          </div>
+          <div class="feature">
+            <div class="ic">💸</div>
+            <h3>Economia real</h3>
+            <p>Menos manutenção, sem combustível fóssil e isenções em várias cidades. O elétrico se paga.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <span class="eyebrow">Pronto para começar?</span>
+          <h2>Encontre o elétrico perfeito para você</h2>
+          <p>Explore todo o catálogo, compare modelos e fale com nossos especialistas. Sua próxima viagem começa agora.</p>
+          <a href="veiculos.html" class="btn btn-primary btn-lg">Explorar catálogo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <div class="container">
+        <div class="section-head text-center">
+          <span class="eyebrow">Contato</span>
+          <h2 class="section-title">Fale com um especialista</h2>
+          <p class="section-sub mx-auto">Tem interesse em um modelo ou quer tirar dúvidas? Preencha o formulário e entraremos em contato.</p>
+        </div>
+        <form class="form-card" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="voce@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" />
+            </div>
+            <div class="field">
+              <label for="modelo">Modelo de interesse</label>
+              <select id="modelo" name="modelo"></select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Enviar mensagem</button>
+          <div class="form-msg" id="formMsg">✅ Obrigado! Recebemos sua mensagem e entraremos em contato em breve.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

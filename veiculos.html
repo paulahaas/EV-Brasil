@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veículos — EV Brasil</title>
+  <meta name="description" content="Catálogo completo de veículos elétricos à venda no Brasil. Filtre por marca, tipo e faixa de preço." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section style="padding-bottom:0;">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Catálogo</span>
+          <h1 class="section-title">Veículos à venda</h1>
+          <p class="section-sub">Explore nossa linha completa de veículos elétricos. Clique em qualquer modelo para ver todas as informações e especificações.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+          <div class="filter-group" id="brandFilters"></div>
+          <div class="spacer"></div>
+          <div class="filter-group" id="typeFilters"></div>
+          <select class="select" id="sortSelect">
+            <option value="destaque">Ordenar: Destaques</option>
+            <option value="menor">Preço: menor primeiro</option>
+            <option value="maior">Preço: maior primeiro</option>
+            <option value="autonomia">Maior autonomia</option>
+          </select>
+        </div>
+
+        <p class="results-count" id="resultsCount"></p>
+      </div>
+    </section>
+
+    <section style="padding-top:20px;">
+      <div class="container">
+        <div class="grid" id="vehiclesGrid"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+          Nenhum veículo encontrado com esses filtros. Tente ajustar sua busca.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/veiculos.js"></script>
+</body>
+</html>
