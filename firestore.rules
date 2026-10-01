@@ -1,0 +1,40 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Anúncios de particulares (gravados por js/sell.js, lidos por js/anuncios.js).
+    match /anuncios/{anuncioId} {
+      // A vitrine é pública.
+      allow read: if true;
+
+      // Qualquer visitante pode publicar, desde que o anúncio tenha o formato esperado.
+      // (Etapa 2: exigir login e gravar o dono do anúncio.)
+      allow create: if anuncioValido(request.resource.data);
+
+      // Ninguém edita nem apaga pelo site por enquanto.
+      allow update, delete: if false;
+    }
+
+    function anuncioValido(d) {
+      return d.keys().hasOnly([
+               'origem', 'marca', 'modelo', 'ano', 'quilometragem',
+               'tipo_carroceria', 'estado_conservacao', 'preco',
+               'cidade', 'estado', 'descricao', 'whatsapp', 'data'
+             ])
+          && d.origem == 'usuario'
+          && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 40
+          && d.modelo is string && d.modelo.size() > 0 && d.modelo.size() <= 60
+          && d.ano is int && d.ano >= 1990 && d.ano <= 2100
+          && d.quilometragem is int && d.quilometragem >= 0
+          && d.tipo_carroceria is string && d.tipo_carroceria.size() <= 30
+          && d.estado_conservacao in ['Novo', 'Seminovo', 'Usado']
+          && d.preco is number && d.preco > 0
+          && d.cidade is string && d.cidade.size() > 0 && d.cidade.size() <= 60
+          && d.estado is string && d.estado.size() == 2
+          && d.descricao is string && d.descricao.size() <= 2000
+          && d.whatsapp is string && d.whatsapp.matches('^[0-9]{10,13}$')
+          && d.data is string && d.data.size() <= 40;
+    }
+  }
+}

@@ -41,10 +41,14 @@
 
     <section style="padding-top:20px;">
       <div class="container">
-        <div class="grid" id="vehiclesGrid"></div>
-        <div class="empty-state" id="emptyState" style="display:none;">
-          Nenhum veículo encontrado com esses filtros. Tente ajustar sua busca.
-        </div>
+       <div class="grid" id="vehiclesGrid"></div>
+
+<!-- Anúncios publicados pelos usuários -->
+<div id="userVehicles"></div>
+
+<div class="empty-state" id="emptyState" style="display:none;">
+  Nenhum veículo encontrado com esses filtros. Tente ajustar sua busca.
+</div>
       </div>
     </section>
   </main>
@@ -55,5 +59,6 @@
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
   <script src="js/veiculos.js"></script>
+  <script type="module" src="js/anuncios.js"></script>
 </body>
 </html>

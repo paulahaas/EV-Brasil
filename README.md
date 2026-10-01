@@ -17,6 +17,9 @@ ev-brasil/
 ├── index.html          # Página inicial (herói, destaques, tecnologia, contato)
 ├── veiculos.html       # Aba de venda: catálogo com filtros e ordenação
 ├── veiculo.html        # Página de detalhes de um carro (ficha técnica completa)
+├── vender.html         # Formulário para anunciar um veículo
+├── login.html          # Entrar na conta
+├── cadastro.html       # Criar conta
 ├── css/
 │   └── styles.css      # TODO o visual do site (cores no topo do arquivo)
 ├── js/
@@ -25,8 +28,20 @@ ev-brasil/
 │   ├── main.js         # Cabeçalho, rodapé e card de veículo (compartilhados)
 │   ├── home.js         # Lógica da página inicial
 │   ├── veiculos.js     # Lógica do catálogo (filtros/ordenação)
-│   └── veiculo.js      # Lógica da página de detalhes
+│   ├── veiculo.js      # Lógica da página de detalhes
+│   ├── firebase.js     # Conexão com o Firebase (Auth + Firestore)
+│   ├── auth.js         # Login e cadastro
+│   ├── sell.js         # Salva o anúncio no Firestore (coleção "anuncios")
+│   └── anuncios.js     # Mostra os anúncios do Firestore na vitrine
+├── firestore.rules     # Regras de segurança do banco
+├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
 └── assets/             # (imagens próprias, se quiser adicionar)
+```
+
+Para publicar as regras do banco depois de editar `firestore.rules`:
+
+```bash
+firebase deploy --only firestore:rules
 ```
 
 ## ▶️ Como rodar localmente
