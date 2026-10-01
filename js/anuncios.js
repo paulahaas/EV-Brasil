@@ -73,7 +73,10 @@ async function carregarAnunciosUsuario() {
   let carros = [];
   try {
     const snap = await getDocs(collection(db, "anuncios"));
-    carros = snap.docs.map((d) => ({ ...d.data(), id: d.id }));
+    carros = snap.docs
+      .map((d) => ({ ...d.data(), id: d.id }))
+      // Ignora documentos incompletos (ex.: criados vazios pelo console do Firebase).
+      .filter((c) => c.marca && c.modelo);
   } catch (erro) {
     console.error("Não foi possível carregar os anúncios:", erro);
     return;
