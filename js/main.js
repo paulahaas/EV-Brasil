@@ -31,6 +31,8 @@ return `
 
     <nav class="nav-links">
       ${nav}
+      <!-- Entrar / Meus anúncios / Sair: preenchido por js/session.js -->
+      <span class="nav-auth" id="authSlot"></span>
     </nav>
 
     <div class="nav-cta">

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus anúncios | EV Brasil</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="header-slot"></div>
+
+  <!-- Fica escondido até js/meus-anuncios.js confirmar o login. -->
+  <main id="protegido" hidden>
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <span class="eyebrow" id="myAdsHello">Sua conta</span>
+          <h1 class="section-title">Meus anúncios</h1>
+          <p class="section-sub" id="myAdsCount">Carregando...</p>
+        </div>
+
+        <div class="grid" id="myAds"></div>
+
+        <div class="empty-state" id="myAdsEmpty" style="display:none;">
+          <p style="margin-bottom:24px;">Você ainda não publicou nenhum anúncio.</p>
+          <a href="vender.html" class="btn btn-primary">Anunciar meu EV</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("conta");
+  </script>
+  <script type="module" src="js/meus-anuncios.js"></script>
+
+</body>
+</html>

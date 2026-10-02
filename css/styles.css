@@ -456,6 +456,49 @@ CARDS DE USUÁRIO — vitrine
   font-weight: 600;
 }
 
+/* Botões do rodapé do card (WhatsApp, ou Editar/Excluir em "Meus anúncios") */
+.card-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn-danger {
+  background: rgba(239, 68, 68, 0.12);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.22);
+}
+
+/* ========================================
+CONTA NO CABEÇALHO — Entrar / Meus anúncios / Sair
+======================================== */
+
+/* O slot some do layout: os links dentro dele se alinham como os outros do menu. */
+.nav-auth {
+  display: contents;
+}
+
+.nav-link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.94rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-link-btn:hover {
+  color: var(--text);
+}
+
 /* ========================================
 MENSAGEM DE SUCESSO (toast)
 ======================================== */
@@ -593,4 +636,27 @@ RESPONSIVO
 
     opacity:.9;
 
+}
+.login-brand{
+    margin-bottom:28px;
+    color:white;
+}
+
+.login-card .form-error{
+    margin:0 0 15px;
+    color:#fca5a5;
+}
+
+.login-card button:disabled{
+    opacity:.6;
+    cursor:wait;
+}
+
+.login-card .login-alt{
+    margin:22px 0 0;
+}
+
+.login-alt a{
+    color:var(--accent-2);
+    font-weight:600;
 }
