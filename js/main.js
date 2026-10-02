@@ -8,11 +8,11 @@
 /* ---------------- Cabeçalho ---------------- */
 function renderHeader(active) {
   const links = [
-  { href: "index.html", label: "Início", key: "home" },
-  { href: "veiculos.html", label: "Veículos", key: "veiculos" },
-  { href: "index.html#tecnologia", label: "Tecnologia", key: "tec" },
-  { href: "index.html#contato", label: "Contato", key: "contato" },
-];
+    { href: "veiculos.html", label: "Veículos", key: "veiculos" },
+    { href: "index.html#categorias", label: "Categorias", key: "categorias" },
+    { href: "index.html#tecnologia", label: "Tecnologia", key: "tec" },
+    { href: "index.html#contato", label: "Contato", key: "contato" },
+  ];
   const nav = links
     .map(
       (l) =>
@@ -20,7 +20,7 @@ function renderHeader(active) {
     )
     .join("");
 
-return `
+  return `
 <header class="header" id="siteHeader">
   <div class="container nav">
 
@@ -36,27 +36,22 @@ return `
     </nav>
 
     <div class="nav-cta">
-
-      <a href="veiculos.html" class="btn btn-ghost">
-        Ver veículos
-      </a>
-
-      <a href="vender.html" class="btn btn-primary">
+      <a href="vender.html" class="btn btn-primary btn-sm ${active === "vender" ? "active" : ""}">
         Vender meu EV
       </a>
 
       <button
         class="nav-toggle"
+        type="button"
         aria-label="Abrir menu"
         onclick="document.getElementById('siteHeader').classList.toggle('open')">
-        ☰
+        Menu
       </button>
-
     </div>
 
   </div>
 </header>`;
-  }
+}
 
 /* ---------------- Rodapé ---------------- */
 function renderFooter() {
@@ -76,7 +71,7 @@ function renderFooter() {
           <h4>Navegar</h4>
           <a href="index.html">Início</a>
           <a href="veiculos.html">Veículos</a>
-          <a href="index.html#tecnologia">Tecnologia</a>
+          <a href="vender.html">Vender meu EV</a>
           <a href="index.html#contato">Contato</a>
         </div>
         <div class="footer-col">
@@ -100,54 +95,45 @@ function renderFooter() {
   </footer>`;
 }
 
+/* ---------------- Números rápidos de um veículo ---------------- */
+// Extrai só o número dos textos da ficha (ex.: "570 km (CLTC)" -> "570").
+function quickSpecs(v) {
+  const aceleracao = v.specs.aceleracao.match(/[\d,]+ s/);
+  return {
+    autonomia: v.specs.autonomia.split(" ")[0] + " km",
+    aceleracao: aceleracao ? aceleracao[0] : "-",
+    potencia: v.specs.potencia.split(" ")[0] + " cv",
+  };
+}
+
+/** Faixa de números sob o carro (painéis da home e página de detalhes). */
+function specBar(v) {
+  const q = quickSpecs(v);
+  return `
+    <div class="specbar">
+      <div class="spec"><span class="v">${q.autonomia}</span><span class="k">Autonomia</span></div>
+      <div class="spec"><span class="v">${q.aceleracao}</span><span class="k">0–100 km/h</span></div>
+      <div class="spec"><span class="v">${q.potencia}</span><span class="k">Potência</span></div>
+      <div class="spec"><span class="v">${formatBRL(v.priceBRL)}</span><span class="k">A partir de</span></div>
+    </div>`;
+}
+
 /* ---------------- Card de veículo ---------------- */
 function createCard(v) {
-  const a = document.createElement("a");
-  a.className = "card";
-  a.href = "veiculo.html?id=" + encodeURIComponent(v.id);
-
-  a.innerHTML = `
-    <div class="card-media">
-      ${v.featured ? '<span class="badge">Destaque</span>' : ""}
-      ${carImage(v)}
-    </div>
-
-    <div class="card-body">
-      <span class="card-brand">${v.brand}</span>
-      <h3 class="card-title">${v.model}</h3>
-      <p class="card-tagline">${v.tagline}</p>
-
-      <div class="card-specs">
-        <div class="cs">
-          <span class="v">${v.specs.autonomia.split(" ")[0]} km</span>
-          <span class="k">Autonomia</span>
-        </div>
-
-        <div class="cs">
-          <span class="v">${v.specs.potencia.split(" ")[0]} cv</span>
-          <span class="k">Potência</span>
-        </div>
-
-        <div class="cs">
-          <span class="v">${v.specs.lugares}</span>
-          <span class="k">Lugares</span>
-        </div>
+  const q = quickSpecs(v);
+  return `
+    <a class="card" href="veiculo.html?id=${encodeURIComponent(v.id)}">
+      <div class="card-media" style="--glow:${v.color}">
+        ${carImage(v)}
       </div>
-
-      <div class="card-foot">
-        <div class="card-price">
-          ${formatBRL(v.priceBRL)}
-          <small>A PARTIR DE</small>
-        </div>
-
-        <span class="card-link">
-          Ver detalhes →
-        </span>
+      <div class="card-body">
+        ${v.featured ? '<span class="card-flag">Destaque</span>' : ""}
+        <h3 class="card-title">${v.brand} ${v.model}</h3>
+        <p class="card-meta">${v.bodyType} · ${v.segment}</p>
+        <p class="card-meta">${q.autonomia} · ${q.potencia} · ${v.specs.lugares} lugares</p>
+        <p class="card-price">${formatBRL(v.priceBRL)}</p>
       </div>
-    </div>
-  `;
-
-  return a.outerHTML;
+    </a>`;
 }
 
 /* ---------------- Segurança ---------------- */
@@ -167,4 +153,12 @@ function mountChrome(activeKey) {
   const footerSlot = document.getElementById("footer-slot");
   if (headerSlot) headerSlot.innerHTML = renderHeader(activeKey);
   if (footerSlot) footerSlot.innerHTML = renderFooter();
+
+  // Na home o cabeçalho começa transparente sobre o painel e ganha fundo ao rolar.
+  const header = document.getElementById("siteHeader");
+  if (header) {
+    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 24);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
 }

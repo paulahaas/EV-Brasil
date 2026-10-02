@@ -2,7 +2,8 @@
 
 Site profissional para venda de veículos elétricos em todo o Brasil.
 Design em **modo noturno**, com tons de **cinza escuro** e **azul escuro**,
-minimalista e inspirado nos sites da **Tesla** e da **Apple**.
+com layout inspirado nos sites da **Tesla** (painéis de tela cheia) e da **Nike**
+(títulos pesados, cards sem moldura).
 
 Feito com **HTML + CSS + JavaScript puro** (sem frameworks e sem etapa de
 build), para você ter acesso total e conseguir editar tudo facilmente no

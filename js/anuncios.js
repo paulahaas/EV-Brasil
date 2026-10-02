@@ -32,9 +32,9 @@ async function carregarAnunciosUsuario() {
   carros.sort((a, b) => String(b.data || "").localeCompare(String(a.data || "")));
 
   container.innerHTML = `
-    <div class="section-head" style="margin-top:60px;">
+    <div class="section-head user-ads-head">
       <span class="eyebrow">Anúncios de particulares</span>
-      <h2 class="section-title" style="font-size:1.8rem;">Veículos de proprietários</h2>
+      <h2 class="section-title">Veículos de proprietários</h2>
       <p class="section-sub">${carros.length} ${carros.length === 1 ? "veículo anunciado" : "veículos anunciados"} pela comunidade.</p>
     </div>
     <div class="grid">${carros.map((c) => criarCardUsuario(c)).join("")}</div>`;

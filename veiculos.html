@@ -14,41 +14,39 @@
   <div id="header-slot"></div>
 
   <main>
-    <section style="padding-bottom:0;">
+    <section class="page-head">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Catálogo</span>
-          <h1 class="section-title">Veículos à venda</h1>
-          <p class="section-sub">Explore nossa linha completa de veículos elétricos. Clique em qualquer modelo para ver todas as informações e especificações.</p>
-        </div>
-
-        <!-- Filtros -->
-        <div class="filters">
-          <div class="filter-group" id="brandFilters"></div>
-          <div class="spacer"></div>
-          <div class="filter-group" id="typeFilters"></div>
-          <select class="select" id="sortSelect">
-            <option value="destaque">Ordenar: Destaques</option>
-            <option value="menor">Preço: menor primeiro</option>
-            <option value="maior">Preço: maior primeiro</option>
-            <option value="autonomia">Maior autonomia</option>
-          </select>
-        </div>
-
+        <span class="eyebrow">Catálogo</span>
+        <h1 class="section-title">Veículos elétricos</h1>
         <p class="results-count" id="resultsCount"></p>
       </div>
     </section>
 
-    <section style="padding-top:20px;">
+    <!-- Filtros: ficam presos no topo ao rolar -->
+    <div class="filterbar">
+      <div class="container filters">
+        <div class="filter-group" id="brandFilters"></div>
+        <div class="filter-group" id="typeFilters"></div>
+        <div class="spacer"></div>
+        <select class="select" id="sortSelect" aria-label="Ordenar">
+          <option value="destaque">Ordenar: Destaques</option>
+          <option value="menor">Preço: menor primeiro</option>
+          <option value="maior">Preço: maior primeiro</option>
+          <option value="autonomia">Maior autonomia</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="section-flush">
       <div class="container">
-       <div class="grid" id="vehiclesGrid"></div>
+        <div class="grid" id="vehiclesGrid"></div>
 
-<!-- Anúncios publicados pelos usuários -->
-<div id="userVehicles"></div>
+        <div class="empty-state" id="emptyState" style="display:none;">
+          Nenhum veículo encontrado com esses filtros. Tente ajustar sua busca.
+        </div>
 
-<div class="empty-state" id="emptyState" style="display:none;">
-  Nenhum veículo encontrado com esses filtros. Tente ajustar sua busca.
-</div>
+        <!-- Anúncios publicados pelos usuários (js/anuncios.js) -->
+        <div id="userVehicles"></div>
       </div>
     </section>
   </main>
