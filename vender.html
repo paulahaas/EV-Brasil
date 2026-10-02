@@ -206,6 +206,23 @@
 
             <div class="form-group form-group-full">
 
+              <label for="fotos">Fotos do veículo</label>
+
+              <input
+                type="file"
+                id="fotos"
+                accept="image/*"
+                multiple>
+
+              <span class="form-hint" id="fotosHint"></span>
+
+              <!-- Miniaturas das fotos escolhidas (js/sell.js) -->
+              <div class="fotos-preview" id="fotosPreview"></div>
+
+            </div>
+
+            <div class="form-group form-group-full">
+
               <label for="descricao">
                 Descrição do veículo
               </label>

@@ -68,7 +68,11 @@ lista.addEventListener("click", async (e) => {
   btn.disabled = true;
   btn.textContent = "Excluindo...";
   try {
-    await deleteDoc(doc(db, "anuncios", btn.dataset.excluir));
+    // As fotos ficam em documentos separados e precisam sair antes do anúncio.
+    const id = btn.dataset.excluir;
+    const fotos = await getDocs(collection(db, "anuncios", id, "fotos"));
+    await Promise.all(fotos.docs.map((f) => deleteDoc(f.ref)));
+    await deleteDoc(doc(db, "anuncios", id));
     btn.closest(".card").remove();
     atualizarContagem();
     mostrarToast("Anúncio excluído.");

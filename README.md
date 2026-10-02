@@ -20,6 +20,7 @@ ev-brasil/
 ├── veiculo.html        # Página de detalhes de um carro (ficha técnica completa)
 ├── vender.html         # Formulário para anunciar ou editar um veículo (exige login)
 ├── meus-anuncios.html  # Anúncios do usuário logado: editar e excluir
+├── anuncio.html        # Página de um anúncio: galeria de fotos, dados e WhatsApp
 ├── login.html          # Entrar na conta
 ├── cadastro.html       # Criar conta
 ├── css/
@@ -37,7 +38,9 @@ ev-brasil/
 │   ├── sell.js         # Cria/edita o anúncio no Firestore (coleção "anuncios")
 │   ├── anuncio-card.js # Card de anúncio e aviso (toast), compartilhados
 │   ├── anuncios.js     # Mostra os anúncios do Firestore na vitrine
-│   └── meus-anuncios.js# Lista, edita e exclui os anúncios do usuário
+│   ├── meus-anuncios.js# Lista, edita e exclui os anúncios do usuário
+│   ├── anuncio.js      # Página de um anúncio
+│   └── fotos.js        # Reduz as fotos no navegador antes de salvar no Firestore
 ├── firestore.rules     # Regras de segurança do banco
 ├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
 └── assets/             # (imagens próprias, se quiser adicionar)
@@ -81,7 +84,8 @@ python3 -m http.server 5173
 
 ## 🚗 Marcas incluídas (exemplos)
 
-BYD (Dolphin, Dolphin Mini, Seal, Yuan Plus, Han, Song Plus DM-i, Tan) e GWM (Ora 03).
+22 modelos de 15 marcas: BYD, GWM, Volvo, Renault, Fiat, Peugeot, Nissan, BMW, Porsche,
+Mini, Zeekr, GAC, Chevrolet, Mercedes-Benz e JAC.
 Os dados são ilustrativos — ajuste preços e especificações conforme sua operação.
 
 ---

@@ -227,15 +227,17 @@ section { padding: clamp(64px, 9vw, 110px) 0; }
   background: radial-gradient(ellipse 80% 55% at 50% 60%, color-mix(in srgb, var(--glow, var(--accent)) 20%, transparent), transparent 72%);
 }
 .card-media .car-svg { width: 100%; transition: transform 0.4s ease; }
-a.card:hover .card-media { background: var(--bg-elev-2); }
-a.card:hover .car-svg { transform: scale(1.05); }
+.card-media.has-photo { padding: 0; }
+.card-media.has-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.card-link { display: flex; flex-direction: column; }
+a.card:hover .card-media, .card-link:hover .card-media { background: var(--bg-elev-2); }
+a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo img { transform: scale(1.05); }
 .card-body { padding: 14px 4px 0; display: flex; flex-direction: column; flex: 1; }
 .card-flag { color: var(--accent-2); font-size: 0.85rem; font-weight: 600; }
 .card-title { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
 .card-meta { color: var(--text-dim); font-size: 0.92rem; line-height: 1.45; }
-.card-desc { color: var(--text-mute); }
 .card-price { font-weight: 600; font-size: 1.02rem; margin-top: 10px; }
-.card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; padding: 0 4px; }
 .card-actions:empty { display: none; }
 .user-ads-head { margin-top: clamp(64px, 9vw, 110px); }
 
@@ -336,6 +338,53 @@ a.card:hover .car-svg { transform: scale(1.05); }
 .form-actions { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
 .form-actions .btn { flex: 1; min-width: 200px; }
 
+/* Fotos no formulário de venda */
+.form-group input[type="file"] { padding: 10px; cursor: pointer; }
+.form-group input[type="file"]::file-selector-button {
+  margin-right: 12px; padding: 8px 14px; border: none; border-radius: 6px;
+  background: var(--accent); color: #fff; font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer;
+}
+.fotos-preview { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 12px; }
+.fotos-preview:empty { display: none; }
+.foto-thumb { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-sm); overflow: hidden; background: var(--bg-elev-2); }
+.foto-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.foto-thumb button {
+  position: absolute; top: 6px; right: 6px; width: 24px; height: 24px; border: none; border-radius: 50%;
+  background: rgba(10, 14, 23, 0.8); color: var(--text); font-size: 1rem; line-height: 1; cursor: pointer;
+}
+.foto-thumb button:hover { background: var(--danger-soft); color: var(--danger); }
+.foto-capa {
+  position: absolute; left: 6px; bottom: 6px; padding: 2px 8px; border-radius: 100px;
+  background: var(--text); color: var(--bg); font-size: 0.7rem; font-weight: 600;
+}
+
+/* ---------------- Página de um anúncio (anuncio.html) ---------------- */
+/* Galeria à esquerda, dados e contato à direita, presos ao rolar. */
+.ad-layout { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.gallery-main { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: var(--bg-elev); }
+.gallery-main img { width: 100%; height: 100%; object-fit: cover; }
+.gallery-empty { position: relative; isolation: isolate; display: grid; place-items: center; padding: 8%; }
+.gallery-empty::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(ellipse 80% 55% at 50% 60%, color-mix(in srgb, var(--glow) 20%, transparent), transparent 72%);
+}
+.gallery-empty .car-svg { width: 100%; }
+.gallery-thumbs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 8px; }
+.gallery-thumb {
+  aspect-ratio: 4 / 3; padding: 0; border: 2px solid transparent; border-radius: var(--radius-sm);
+  overflow: hidden; background: var(--bg-elev); cursor: pointer; opacity: 0.6; transition: opacity 0.2s, border-color 0.2s;
+}
+.gallery-thumb:hover, .gallery-thumb.active { opacity: 1; }
+.gallery-thumb.active { border-color: var(--text); }
+.gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.ad-info { position: sticky; top: calc(var(--header-h) + 24px); }
+.ad-title { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-top: 4px; }
+.ad-price { font-size: 1.5rem; font-weight: 600; margin: 10px 0 22px; }
+.ad-info .spec-table { margin-top: 22px; }
+.ad-subtitle { font-size: 1.05rem; margin: 26px 0 8px; }
+.ad-desc { color: var(--text-dim); white-space: pre-line; overflow-wrap: anywhere; }
+.ad-info .form-hint { display: block; margin-top: 18px; }
+
 /* ---------------- Aviso (toast) ---------------- */
 .toast-success {
   position: fixed; top: calc(var(--header-h) + 16px); left: 50%; z-index: 9999;
@@ -401,6 +450,8 @@ a.card:hover .car-svg { transform: scale(1.05); }
   .tile { min-height: 320px; }
   .features { grid-template-columns: 1fr 1fr; }
   .detail-cols { grid-template-columns: 1fr; }
+  .ad-layout { grid-template-columns: 1fr; }
+  .ad-info { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
   .stat:nth-child(3) { border-left: none; }

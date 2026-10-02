@@ -4,11 +4,14 @@
  *
  * Usa escapeHtml() de main.js, formatBRL() de data.js e carSilhouette() de car-svg.js.
  */
+import { fotoValida } from "./fotos.js";
 
-const COR_ANUNCIO = "#22d3ee";
+export const COR_ANUNCIO = "#22d3ee";
 
-// O formulário de venda usa nomes de carroceria diferentes dos do catálogo.
-const SILHUETAS = { Sedan: "Sedã", SUV: "SUV", Hatch: "Hatch" };
+/** O formulário de venda escreve "Sedan"; o catálogo, "Sedã". */
+export function tipoCatalogo(tipo) {
+  return tipo === "Sedan" ? "Sedã" : tipo;
+}
 
 export function whatsappLink(carro) {
   let wa = String(carro.whatsapp || "").replace(/\D/g, "");
@@ -18,13 +21,22 @@ export function whatsappLink(carro) {
   return `https://wa.me/${wa}?text=${encodeURIComponent(texto)}`;
 }
 
+/** Foto de capa do anúncio ou, sem foto, a silhueta do tipo de carroceria. */
+export function midiaDoAnuncio(carro) {
+  if (fotoValida(carro.capa)) {
+    return `<div class="card-media has-photo"><img src="${carro.capa}" alt="" loading="lazy"></div>`;
+  }
+  return `
+    <div class="card-media" style="--glow:${COR_ANUNCIO}">
+      ${carSilhouette(tipoCatalogo(carro.tipo_carroceria), COR_ANUNCIO)}
+    </div>`;
+}
+
 /**
  * @param carro   dados do anúncio (com `id` do documento)
  * @param acoes   HTML dos botões do card; por padrão, o botão de WhatsApp
  */
 export function criarCardUsuario(carro, acoes) {
-  const descricao = String(carro.descricao || "");
-  const resumo = descricao.substring(0, 80) + (descricao.length > 80 ? "…" : "");
   const km = (Number(carro.quilometragem) || 0).toLocaleString("pt-BR");
 
   if (acoes === undefined) {
@@ -36,18 +48,17 @@ export function criarCardUsuario(carro, acoes) {
 
   return `
     <div class="card user-card" data-anuncio="${escapeHtml(carro.id)}">
-      <div class="card-media" style="--glow:${COR_ANUNCIO}">
-        ${carSilhouette(SILHUETAS[carro.tipo_carroceria], COR_ANUNCIO)}
-      </div>
-      <div class="card-body">
-        <span class="card-flag">Anúncio de particular</span>
-        <h3 class="card-title">${escapeHtml(carro.marca)} ${escapeHtml(carro.modelo)}</h3>
-        <p class="card-meta">${escapeHtml(carro.ano)} · ${km} km · ${escapeHtml(carro.estado_conservacao)}</p>
-        <p class="card-meta">${escapeHtml(carro.cidade)} - ${escapeHtml(carro.estado)}</p>
-        ${resumo ? `<p class="card-meta card-desc">${escapeHtml(resumo)}</p>` : ""}
-        <p class="card-price">${formatBRL(Number(carro.preco) || 0)}</p>
-        <div class="card-actions">${acoes}</div>
-      </div>
+      <a class="card-link" href="anuncio.html?id=${encodeURIComponent(carro.id)}">
+        ${midiaDoAnuncio(carro)}
+        <div class="card-body">
+          <span class="card-flag">Anúncio de particular</span>
+          <h3 class="card-title">${escapeHtml(carro.marca)} ${escapeHtml(carro.modelo)}</h3>
+          <p class="card-meta">${escapeHtml(carro.ano)} · ${km} km · ${escapeHtml(carro.estado_conservacao)}</p>
+          <p class="card-meta">${escapeHtml(carro.cidade)} - ${escapeHtml(carro.estado)}</p>
+          <p class="card-price">${formatBRL(Number(carro.preco) || 0)}</p>
+        </div>
+      </a>
+      <div class="card-actions">${acoes}</div>
     </div>`;
 }
 

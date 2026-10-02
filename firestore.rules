@@ -23,14 +23,40 @@ service cloud.firestore {
       // Só o dono apaga.
       allow delete: if request.auth != null
                     && resource.data.uid == request.auth.uid;
+
+      // Fotos do anúncio: uma por documento, com id de "0" a "5".
+      match /fotos/{fotoId} {
+        allow read: if true;
+        allow create, update: if donoDoAnuncio(anuncioId)
+                              && fotoId.matches('^[0-5]$')
+                              && fotoValida(request.resource.data);
+        allow delete: if donoDoAnuncio(anuncioId);
+      }
+    }
+
+    function donoDoAnuncio(anuncioId) {
+      return request.auth != null
+          && get(/databases/$(database)/documents/anuncios/$(anuncioId)).data.uid == request.auth.uid;
+    }
+
+    function fotoValida(d) {
+      return d.keys().hasOnly(['dados', 'ordem'])
+          && d.dados is string && d.dados.size() <= 900000
+          && d.dados.matches('^data:image/jpeg;base64,[A-Za-z0-9+/=]+$')
+          && d.ordem is int && d.ordem >= 0 && d.ordem <= 5;
     }
 
     function anuncioValido(d) {
       return d.keys().hasOnly([
                'origem', 'uid', 'marca', 'modelo', 'ano', 'quilometragem',
                'tipo_carroceria', 'estado_conservacao', 'preco',
-               'cidade', 'estado', 'descricao', 'whatsapp', 'data'
+               'cidade', 'estado', 'descricao', 'whatsapp', 'data',
+               'capa', 'fotos'
              ])
+          // Capa (miniatura) e quantidade de fotos são opcionais: anúncios antigos não têm.
+          && (!('capa' in d) || (d.capa is string && d.capa.size() <= 120000
+                && d.capa.matches('^(data:image/jpeg;base64,[A-Za-z0-9+/=]+)?$')))
+          && (!('fotos' in d) || (d.fotos is int && d.fotos >= 0 && d.fotos <= 6))
           && d.origem == 'usuario'
           && d.uid is string
           && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 40
