@@ -14,18 +14,19 @@
 
   <div id="header-slot"></div>
 
-  <main>
+  <!-- Fica escondido até js/sell.js confirmar o login. -->
+  <main id="protegido" hidden>
     <section>
       <div class="container">
 
         <div class="section-head">
           <span class="eyebrow">Desapegue do combustível</span>
 
-          <h1 class="section-title">
+          <h1 class="section-title" id="sellTitle">
             Anunciar seu veículo
           </h1>
 
-          <p class="section-sub">
+          <p class="section-sub" id="sellSub">
             Preencha os dados abaixo e seu EV será publicado na vitrine para compradores entrarem em contato.
           </p>
         </div>
@@ -61,7 +62,7 @@
                 id="ano"
                 name="ano"
                 min="1990"
-                max="2026"
+                max="2027"
                 placeholder="Ex.: 2024"
                 required>
             </div>
@@ -258,9 +259,7 @@
 
           </div>
 
-          <p class="form-error" id="sellError" role="alert">
-            Não foi possível publicar o anúncio. Verifique sua conexão e tente novamente.
-          </p>
+          <p class="form-error" id="sellError" role="alert"></p>
 
         </form>
 

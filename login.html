@@ -1,70 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Login | EV Brasil</title>
-
-<link rel="stylesheet" href="css/styles.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | EV Brasil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
 <div class="login-container">
 
-<div class="login-card">
+  <div class="login-card">
 
-<h1>Entrar</h1>
+    <a href="index.html" class="brand login-brand">
+      <span class="logo-mark">⚡</span>
+      <span>EV<span class="accent">Brasil</span></span>
+    </a>
 
-<p>Entre na sua conta.</p>
+    <h1>Entrar</h1>
 
-<form id="loginForm">
+    <p>Entre na sua conta.</p>
 
-<input
-type="email"
-id="email"
-placeholder="Seu e-mail"
-required
->
+    <form id="loginForm">
 
-<input
-type="password"
-id="senha"
-placeholder="Sua senha"
-required
->
+      <input
+        type="email"
+        id="email"
+        placeholder="Seu e-mail"
+        autocomplete="email"
+        required
+      >
 
-<button type="submit">
+      <input
+        type="password"
+        id="senha"
+        placeholder="Sua senha"
+        autocomplete="current-password"
+        required
+      >
 
-Entrar
+      <p class="form-error" id="authError" role="alert"></p>
 
-</button>
+      <button type="submit">
+        Entrar
+      </button>
 
-</form>
+    </form>
 
-<p>
+    <p class="login-alt">
+      Não possui conta?
+      <a href="cadastro.html" data-manter-next>Criar conta</a>
+    </p>
 
-Não possui conta?
-
-<a href="cadastro.html">
-
-Criar conta
-
-</a>
-
-</p>
-
-</div>
+  </div>
 
 </div>
 
 <script type="module" src="js/auth.js"></script>
 
 </body>
-
 </html>

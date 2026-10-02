@@ -8,21 +8,31 @@ service cloud.firestore {
       // A vitrine é pública.
       allow read: if true;
 
-      // Qualquer visitante pode publicar, desde que o anúncio tenha o formato esperado.
-      // (Etapa 2: exigir login e gravar o dono do anúncio.)
-      allow create: if anuncioValido(request.resource.data);
+      // Só quem está logado publica, e o anúncio fica no nome de quem publicou.
+      allow create: if request.auth != null
+                    && request.resource.data.uid == request.auth.uid
+                    && anuncioValido(request.resource.data);
 
-      // Ninguém edita nem apaga pelo site por enquanto.
-      allow update, delete: if false;
+      // Só o dono edita, e não pode trocar o dono nem a data de publicação.
+      allow update: if request.auth != null
+                    && resource.data.uid == request.auth.uid
+                    && request.resource.data.uid == resource.data.uid
+                    && request.resource.data.data == resource.data.data
+                    && anuncioValido(request.resource.data);
+
+      // Só o dono apaga.
+      allow delete: if request.auth != null
+                    && resource.data.uid == request.auth.uid;
     }
 
     function anuncioValido(d) {
       return d.keys().hasOnly([
-               'origem', 'marca', 'modelo', 'ano', 'quilometragem',
+               'origem', 'uid', 'marca', 'modelo', 'ano', 'quilometragem',
                'tipo_carroceria', 'estado_conservacao', 'preco',
                'cidade', 'estado', 'descricao', 'whatsapp', 'data'
              ])
           && d.origem == 'usuario'
+          && d.uid is string
           && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 40
           && d.modelo is string && d.modelo.size() > 0 && d.modelo.size() <= 60
           && d.ano is int && d.ano >= 1990 && d.ano <= 2100

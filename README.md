@@ -17,7 +17,8 @@ ev-brasil/
 ├── index.html          # Página inicial (herói, destaques, tecnologia, contato)
 ├── veiculos.html       # Aba de venda: catálogo com filtros e ordenação
 ├── veiculo.html        # Página de detalhes de um carro (ficha técnica completa)
-├── vender.html         # Formulário para anunciar um veículo
+├── vender.html         # Formulário para anunciar ou editar um veículo (exige login)
+├── meus-anuncios.html  # Anúncios do usuário logado: editar e excluir
 ├── login.html          # Entrar na conta
 ├── cadastro.html       # Criar conta
 ├── css/
@@ -31,8 +32,11 @@ ev-brasil/
 │   ├── veiculo.js      # Lógica da página de detalhes
 │   ├── firebase.js     # Conexão com o Firebase (Auth + Firestore)
 │   ├── auth.js         # Login e cadastro
-│   ├── sell.js         # Salva o anúncio no Firestore (coleção "anuncios")
-│   └── anuncios.js     # Mostra os anúncios do Firestore na vitrine
+│   ├── session.js      # Entrar/Sair no cabeçalho e exigirLogin()
+│   ├── sell.js         # Cria/edita o anúncio no Firestore (coleção "anuncios")
+│   ├── anuncio-card.js # Card de anúncio e aviso (toast), compartilhados
+│   ├── anuncios.js     # Mostra os anúncios do Firestore na vitrine
+│   └── meus-anuncios.js# Lista, edita e exclui os anúncios do usuário
 ├── firestore.rules     # Regras de segurança do banco
 ├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
 └── assets/             # (imagens próprias, se quiser adicionar)
