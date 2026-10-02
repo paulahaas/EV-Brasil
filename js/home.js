@@ -71,22 +71,5 @@
     if (preset) modeloSelect.value = preset;
   }
 
-  // Envio do formulário (simulado — sem backend).
-  const form = document.getElementById("contactForm");
-  const msg = document.getElementById("formMsg");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const nome = document.getElementById("nome");
-      const email = document.getElementById("email");
-      if (!nome.value.trim() || !email.value.trim()) {
-        nome.focus();
-        return;
-      }
-      msg.classList.add("show");
-      form.reset();
-      msg.scrollIntoView({ behavior: "smooth", block: "center" });
-      setTimeout(() => msg.classList.remove("show"), 6000);
-    });
-  }
+  // O envio do formulário de contato fica em js/contato.js.
 })();

@@ -40,6 +40,7 @@ ev-brasil/
 │   ├── anuncios.js     # Mostra os anúncios do Firestore na vitrine
 │   ├── meus-anuncios.js# Lista, edita e exclui os anúncios do usuário
 │   ├── anuncio.js      # Página de um anúncio
+│   ├── contato.js      # Formulário de contato: grava em "contatos" no Firestore
 │   └── fotos.js        # Reduz as fotos no navegador antes de salvar no Firestore
 ├── firestore.rules     # Regras de segurança do banco
 ├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
