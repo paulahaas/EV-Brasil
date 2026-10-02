@@ -1,5 +1,27 @@
 {
   "firestore": {
     "rules": "firestore.rules"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "firestore.rules",
+      "serve.json",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+      "chat.html",
+      "js/chat.js",
+      "**/.*",
+      "**/.*/**",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|css|js)",
+        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+      }
+    ]
   }
 }
