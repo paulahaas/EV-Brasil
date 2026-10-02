@@ -7,6 +7,7 @@
 
   const root = document.getElementById("detailRoot");
   const id = new URLSearchParams(location.search).get("id");
+
   const v = getVehicleById(id);
 
   if (!v) {
@@ -113,3 +114,4 @@
   const cta = document.getElementById("ctaComprar");
   if (cta) cta.setAttribute("href", `index.html?modelo=${v.id}#contato`);
 })();
+

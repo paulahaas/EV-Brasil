@@ -8,11 +8,11 @@
 /* ---------------- Cabeçalho ---------------- */
 function renderHeader(active) {
   const links = [
-    { href: "index.html", label: "Início", key: "home" },
-    { href: "veiculos.html", label: "Veículos", key: "veiculos" },
-    { href: "index.html#tecnologia", label: "Tecnologia", key: "tec" },
-    { href: "index.html#contato", label: "Contato", key: "contato" },
-  ];
+  { href: "index.html", label: "Início", key: "home" },
+  { href: "veiculos.html", label: "Veículos", key: "veiculos" },
+  { href: "index.html#tecnologia", label: "Tecnologia", key: "tec" },
+  { href: "index.html#contato", label: "Contato", key: "contato" },
+];
   const nav = links
     .map(
       (l) =>
@@ -20,21 +20,41 @@ function renderHeader(active) {
     )
     .join("");
 
-  return `
-  <header class="header" id="siteHeader">
-    <div class="container nav">
-      <a href="index.html" class="brand">
-        <span class="logo-mark">⚡</span>
-        <span>EV<span class="accent">Brasil</span></span>
+return `
+<header class="header" id="siteHeader">
+  <div class="container nav">
+
+    <a href="index.html" class="brand">
+      <span class="logo-mark">⚡</span>
+      <span>EV<span class="accent">Brasil</span></span>
+    </a>
+
+    <nav class="nav-links">
+      ${nav}
+    </nav>
+
+    <div class="nav-cta">
+
+      <a href="veiculos.html" class="btn btn-ghost">
+        Ver veículos
       </a>
-      <nav class="nav-links">${nav}</nav>
-      <div class="nav-cta">
-        <a href="veiculos.html" class="btn btn-primary">Ver veículos</a>
-        <button class="nav-toggle" aria-label="Abrir menu" onclick="document.getElementById('siteHeader').classList.toggle('open')">☰</button>
-      </div>
+
+      <a href="vender.html" class="btn btn-primary">
+        Vender meu EV
+      </a>
+
+      <button
+        class="nav-toggle"
+        aria-label="Abrir menu"
+        onclick="document.getElementById('siteHeader').classList.toggle('open')">
+        ☰
+      </button>
+
     </div>
-  </header>`;
-}
+
+  </div>
+</header>`;
+  }
 
 /* ---------------- Rodapé ---------------- */
 function renderFooter() {
@@ -80,27 +100,63 @@ function renderFooter() {
 
 /* ---------------- Card de veículo ---------------- */
 function createCard(v) {
-  return `
-  <a class="card" href="veiculo.html?id=${v.id}">
+  const a = document.createElement("a");
+  a.className = "card";
+  a.href = "veiculo.html?id=" + encodeURIComponent(v.id);
+
+  a.innerHTML = `
     <div class="card-media">
       ${v.featured ? '<span class="badge">Destaque</span>' : ""}
       ${carImage(v)}
     </div>
+
     <div class="card-body">
       <span class="card-brand">${v.brand}</span>
       <h3 class="card-title">${v.model}</h3>
       <p class="card-tagline">${v.tagline}</p>
+
       <div class="card-specs">
-        <div class="cs"><span class="v">${v.specs.autonomia.split(" ")[0]} km</span><span class="k">Autonomia</span></div>
-        <div class="cs"><span class="v">${v.specs.potencia.split(" ")[0]} cv</span><span class="k">Potência</span></div>
-        <div class="cs"><span class="v">${v.specs.lugares}</span><span class="k">Lugares</span></div>
+        <div class="cs">
+          <span class="v">${v.specs.autonomia.split(" ")[0]} km</span>
+          <span class="k">Autonomia</span>
+        </div>
+
+        <div class="cs">
+          <span class="v">${v.specs.potencia.split(" ")[0]} cv</span>
+          <span class="k">Potência</span>
+        </div>
+
+        <div class="cs">
+          <span class="v">${v.specs.lugares}</span>
+          <span class="k">Lugares</span>
+        </div>
       </div>
+
       <div class="card-foot">
-        <div class="card-price">${formatBRL(v.priceBRL)}<small>A PARTIR DE</small></div>
-        <span class="card-link">Ver detalhes <span class="arrow">→</span></span>
+        <div class="card-price">
+          ${formatBRL(v.priceBRL)}
+          <small>A PARTIR DE</small>
+        </div>
+
+        <span class="card-link">
+          Ver detalhes →
+        </span>
       </div>
     </div>
-  </a>`;
+  `;
+
+  return a.outerHTML;
+}
+
+/* ---------------- Segurança ---------------- */
+// Texto digitado por usuários (anúncios) passa por aqui antes de ir para o HTML.
+function escapeHtml(value) {
+  return String(value == null ? "" : value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 /* ---------------- Inicialização comum ---------------- */

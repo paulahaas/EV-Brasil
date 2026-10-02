@@ -13,5 +13,8 @@
     "brasil",
     "byd"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^12.16.0"
+  }
 }
