@@ -146,7 +146,8 @@
             <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar mensagem</button>
-          <div class="form-msg" id="formMsg">✅ Obrigado! Recebemos sua mensagem e entraremos em contato em breve.</div>
+          <div class="form-msg" id="formMsg" role="status">✅ Obrigado! Recebemos sua mensagem e entraremos em contato em breve.</div>
+          <p class="form-error" id="contactError" role="alert"></p>
         </form>
       </div>
     </section>
@@ -158,6 +159,7 @@
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
+  <script type="module" src="js/contato.js"></script>
   <script type="module" src="js/session.js"></script>
 </body>
 </html>

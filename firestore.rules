@@ -34,6 +34,24 @@ service cloud.firestore {
       }
     }
 
+    // Mensagens do formulário de contato (js/contato.js).
+    // Qualquer visitante envia; ninguém lê pelo site — só pelo console do Firebase.
+    match /contatos/{contatoId} {
+      allow create: if contatoValido(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    function contatoValido(d) {
+      return d.keys().hasOnly(['nome', 'email', 'telefone', 'modelo', 'mensagem', 'data'])
+          && d.nome is string && d.nome.size() > 0 && d.nome.size() <= 100
+          && d.email is string && d.email.size() <= 150
+          && d.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$')
+          && d.telefone is string && d.telefone.size() <= 30
+          && d.modelo is string && d.modelo.size() <= 80
+          && d.mensagem is string && d.mensagem.size() <= 2000
+          && d.data is string && d.data.size() <= 40;
+    }
+
     function donoDoAnuncio(anuncioId) {
       return request.auth != null
           && get(/databases/$(database)/documents/anuncios/$(anuncioId)).data.uid == request.auth.uid;
