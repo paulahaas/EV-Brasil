@@ -9,8 +9,8 @@
 function renderHeader(active) {
   const links = [
     { href: "veiculos.html", label: "Veículos", key: "veiculos" },
-    { href: "index.html#categorias", label: "Categorias", key: "categorias" },
-    { href: "index.html#tecnologia", label: "Tecnologia", key: "tec" },
+    { href: "comparar.html", label: "Comparar", key: "comparar" },
+    { href: "index.html#simulador", label: "Simulador", key: "simulador" },
     { href: "index.html#contato", label: "Contato", key: "contato" },
   ];
   const nav = links
@@ -71,6 +71,8 @@ function renderFooter() {
           <h4>Navegar</h4>
           <a href="index.html">Início</a>
           <a href="veiculos.html">Veículos</a>
+          <a href="comparar.html">Comparar modelos</a>
+          <a href="index.html#simulador">Simulador de economia</a>
           <a href="vender.html">Vender meu EV</a>
           <a href="index.html#contato">Contato</a>
         </div>

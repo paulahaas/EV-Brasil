@@ -15,12 +15,17 @@ let carros = [];
 
 // js/veiculos.js guarda os filtros em window.catalogFilters e avisa a cada mudança.
 function render() {
-  const f = window.catalogFilters || { brand: "Todas", type: "Todos", sort: "destaque" };
+  const f = window.catalogFilters || { q: "", brand: "Todas", type: "Todos", maxPrice: 0, minRange: 0, sort: "destaque" };
+  const q = f.q.toLowerCase();
 
   const lista = carros.filter((c) => {
+    // Anúncios não informam autonomia, então saem quando esse filtro está ligado.
+    if (f.minRange) return false;
     const okMarca = f.brand === "Todas" || String(c.marca).trim().toLowerCase() === f.brand.toLowerCase();
     const okTipo = f.type === "Todos" || tipoCatalogo(c.tipo_carroceria) === f.type;
-    return okMarca && okTipo;
+    const okPreco = !f.maxPrice || c.preco <= f.maxPrice;
+    const okTexto = !q || `${c.marca} ${c.modelo} ${c.cidade}`.toLowerCase().includes(q);
+    return okMarca && okTipo && okPreco && okTexto;
   });
 
   if (f.sort === "menor") lista.sort((a, b) => a.preco - b.preco);

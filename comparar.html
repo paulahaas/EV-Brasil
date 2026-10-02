@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparar modelos — EV Brasil</title>
+  <meta name="description" content="Compare até três veículos elétricos lado a lado: preço, autonomia, potência, recarga e mais.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Comparador</span>
+        <h1 class="section-title">Compare lado a lado</h1>
+        <p class="section-sub">Escolha até três modelos e veja qual vence em cada ponto.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container" id="compareRoot">
+        <!-- Tabela injetada por js/comparar.js -->
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/comparar.js"></script>
+  <script type="module" src="js/session.js"></script>
+
+</body>
+</html>
