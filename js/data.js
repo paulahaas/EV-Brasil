@@ -732,6 +732,34 @@ function formatBRL(value) {
   });
 }
 
+/** Primeiro número de um texto da ficha: "1.100 km" -> 1100, "44,9 kWh (Blade)" -> 44.9. */
+function firstNumber(text) {
+  const m = String(text).replace(/\./g, "").match(/\d+(,\d+)?/);
+  return m ? parseFloat(m[0].replace(",", ".")) : 0;
+}
+
+/** Autonomia em km. */
+function rangeKm(v) {
+  return firstNumber(v.specs.autonomia);
+}
+
+/** Segundos de 0 a 100 km/h. */
+function accelSeconds(v) {
+  const m = v.specs.aceleracao.match(/([\d,]+) s/);
+  return m ? parseFloat(m[1].replace(",", ".")) : 0;
+}
+
+/**
+ * Consumo estimado em kWh a cada 100 km (bateria ÷ autonomia declarada).
+ * Devolve null para híbridos, em que a autonomia "combinada" inclui gasolina.
+ */
+function consumptionKwh100(v) {
+  const km = rangeKm(v);
+  const kwh = firstNumber(v.specs.bateria);
+  if (!km || !kwh || /combinada/i.test(v.specs.autonomia)) return null;
+  return (kwh / km) * 100;
+}
+
 /** Busca um veículo pelo id. */
 function getVehicleById(id) {
   return VEHICLES.find((v) => v.id === id) || null;

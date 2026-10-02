@@ -21,6 +21,7 @@ ev-brasil/
 ├── vender.html         # Formulário para anunciar ou editar um veículo (exige login)
 ├── meus-anuncios.html  # Anúncios do usuário logado: editar e excluir
 ├── anuncio.html        # Página de um anúncio: galeria de fotos, dados e WhatsApp
+├── comparar.html       # Comparador: até três modelos lado a lado
 ├── login.html          # Entrar na conta
 ├── cadastro.html       # Criar conta
 ├── css/
@@ -32,6 +33,8 @@ ev-brasil/
 │   ├── home.js         # Lógica da página inicial
 │   ├── veiculos.js     # Lógica do catálogo (filtros/ordenação)
 │   ├── veiculo.js      # Lógica da página de detalhes
+│   ├── comparar.js     # Comparador de modelos
+│   ├── simulador.js    # Simulador de economia elétrico × gasolina (home)
 │   ├── firebase.js     # Conexão com o Firebase (Auth + Firestore)
 │   ├── auth.js         # Login e cadastro
 │   ├── session.js      # Entrar/Sair no cabeçalho e exigirLogin()

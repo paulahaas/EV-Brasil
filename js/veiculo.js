@@ -70,8 +70,9 @@
         ${specBar(v)}
         <div class="panel-actions">
           <a href="index.html?modelo=${v.id}#contato" class="btn btn-primary btn-wide">Tenho interesse</a>
-          <a href="veiculos.html" class="btn btn-ghost btn-wide">Ver outros modelos</a>
+          <a href="comparar.html?ids=${v.id}" class="btn btn-ghost btn-wide">Comparar</a>
         </div>
+        ${consumptionKwh100(v) ? `<a href="index.html?simular=${v.id}#simulador" class="text-link">Simule quanto você economiza com o ${v.model}</a>` : ""}
       </div>
     </section>
 

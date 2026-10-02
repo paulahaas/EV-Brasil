@@ -20,22 +20,39 @@
       <div class="container">
         <span class="eyebrow">Catálogo</span>
         <h1 class="section-title">Veículos elétricos</h1>
-        <p class="results-count" id="resultsCount"></p>
+        <p class="results-count">
+          <span id="resultsCount"></span> ·
+          <a href="comparar.html" class="text-link">Comparar modelos</a>
+        </p>
       </div>
     </section>
 
     <!-- Filtros: ficam presos no topo ao rolar -->
     <div class="filterbar">
       <div class="container filters">
+        <input class="search" type="search" id="searchInput" placeholder="Buscar marca ou modelo" aria-label="Buscar marca ou modelo">
         <div class="filter-group" id="typeFilters"></div>
         <div class="spacer"></div>
         <select class="select" id="brandSelect" aria-label="Marca"></select>
+        <select class="select" id="priceSelect" aria-label="Preço máximo">
+          <option value="0">Preço: qualquer</option>
+          <option value="150000">Até R$ 150 mil</option>
+          <option value="250000">Até R$ 250 mil</option>
+          <option value="400000">Até R$ 400 mil</option>
+        </select>
+        <select class="select" id="rangeSelect" aria-label="Autonomia mínima">
+          <option value="0">Autonomia: qualquer</option>
+          <option value="300">300 km ou mais</option>
+          <option value="400">400 km ou mais</option>
+          <option value="500">500 km ou mais</option>
+        </select>
         <select class="select" id="sortSelect" aria-label="Ordenar">
           <option value="destaque">Ordenar: Destaques</option>
           <option value="menor">Preço: menor primeiro</option>
           <option value="maior">Preço: maior primeiro</option>
           <option value="autonomia">Maior autonomia</option>
         </select>
+        <button type="button" class="chip" id="clearFilters" hidden>Limpar filtros</button>
       </div>
     </div>
 

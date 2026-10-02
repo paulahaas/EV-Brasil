@@ -171,6 +171,7 @@ a.panel-visual:hover .car-svg { transform: scale(1.02); }
 @keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 .panel-foot { display: grid; gap: clamp(18px, 3.5vh, 32px); justify-items: center; width: 100%; }
 .panel-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.panel-foot .text-link { font-size: 0.92rem; }
 
 /* Faixa de números sob o carro */
 .specbar { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px clamp(22px, 5vw, 64px); }
@@ -262,6 +263,15 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   border: 1px solid var(--stroke); color: var(--text); font-family: inherit; font-size: 0.85rem; cursor: pointer;
 }
 .results-count { color: var(--text-dim); font-size: 0.95rem; margin-top: 10px; }
+.text-link { color: var(--accent-2); font-weight: 500; }
+.text-link:hover { text-decoration: underline; }
+.search {
+  padding: 8px 16px; border-radius: 100px; min-width: 220px;
+  background: var(--bg-elev); border: 1px solid var(--stroke); color: var(--text);
+  font-family: inherit; font-size: 0.85rem; outline: none;
+}
+.search:focus { border-color: var(--accent); }
+.search::placeholder { color: var(--text-mute); }
 
 /* ---------------- Página de detalhes ---------------- */
 .breadcrumb { color: var(--text-mute); font-size: 0.82rem; margin-bottom: 18px; }
@@ -288,6 +298,52 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .cta-band { margin-top: 32px; padding: 28px; border-radius: var(--radius); background: var(--bg-elev); }
 .cta-band h3 { font-size: 1.25rem; }
 .cta-band p { color: var(--text-dim); margin: 8px 0 18px; }
+
+/* ---------------- Comparador (comparar.html) ---------------- */
+.compare-wrap { overflow-x: auto; }
+.compare { width: 100%; min-width: 640px; border-collapse: collapse; table-layout: fixed; }
+.compare thead th { padding: 0 12px 24px; vertical-align: top; font-weight: 400; text-align: left; }
+.compare thead td { width: 170px; }
+.compare .select { width: 100%; border-radius: var(--radius-sm); padding: 10px 12px; }
+.compare-car {
+  position: relative; isolation: isolate; display: block; margin-top: 12px; padding: 20px 16px 16px;
+  border-radius: var(--radius); background: var(--bg-elev); overflow: hidden;
+}
+.compare-car::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(ellipse 80% 50% at 50% 40%, color-mix(in srgb, var(--glow) 20%, transparent), transparent 72%);
+}
+.compare-car .car-svg { width: 100%; }
+.compare-name { display: block; font-weight: 600; margin-top: 10px; }
+.compare-meta { display: block; color: var(--text-dim); font-size: 0.88rem; }
+.compare-empty {
+  display: grid; place-items: center; min-height: 190px; margin-top: 12px; padding: 16px; text-align: center;
+  border: 1px dashed var(--stroke); border-radius: var(--radius); color: var(--text-mute); font-size: 0.9rem;
+}
+.compare tbody tr { border-top: 1px solid var(--stroke); }
+.compare tbody th { padding: 15px 12px 15px 0; text-align: left; font-weight: 400; color: var(--text-dim); }
+.compare tbody td { padding: 15px 12px; font-weight: 600; }
+.compare td.best { color: var(--accent-2); }
+.compare-wrap + .form-hint { display: block; margin-top: 18px; }
+
+/* ---------------- Simulador de economia (home) ---------------- */
+.sim { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(24px, 4vw, 56px); align-items: start; }
+.sim-form label strong { color: var(--text); }
+.sim-form input[type="range"] { padding: 0; background: none; border: none; accent-color: var(--accent); cursor: pointer; }
+.sim-result { background: var(--bg-elev); border-radius: var(--radius); padding: clamp(24px, 4vw, 44px); }
+.sim-big { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
+.sim-label { color: var(--text-dim); font-size: 1.05rem; margin-top: 8px; }
+.sim-bars { margin: 28px 0; display: grid; gap: 10px; }
+.sim-bar-row { display: grid; grid-template-columns: 70px 1fr 90px; gap: 12px; align-items: center; font-size: 0.9rem; color: var(--text-dim); }
+.sim-bar-row strong { color: var(--text); text-align: right; }
+.sim-track { height: 12px; border-radius: 100px; background: var(--bg-elev-2); overflow: hidden; }
+.sim-bar { height: 100%; border-radius: 100px; background: var(--accent); transition: width 0.3s ease; }
+.sim-bar-gas { background: var(--text-mute); }
+.sim-stats { justify-content: flex-start; gap: 14px 32px; margin-bottom: 20px; }
+.sim-stats .spec { align-items: flex-start; }
+.sim-stats .spec .v { font-size: 1.15rem; }
+.sim-result .form-hint { display: block; }
+.sim-result .btn { margin-top: 20px; }
 
 /* ---------------- Faixa de ponta a ponta (home) ---------------- */
 .band {
@@ -451,6 +507,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   .features { grid-template-columns: 1fr 1fr; }
   .detail-cols { grid-template-columns: 1fr; }
   .ad-layout { grid-template-columns: 1fr; }
+  .sim { grid-template-columns: 1fr; }
   .ad-info { position: static; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
@@ -468,6 +525,8 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   .card-media { padding: 12px; }
   .features, .form-row, .form-grid, .footer-grid { grid-template-columns: 1fr; }
   .filters .spacer { display: none; }
+  .search { flex: 1 1 100%; }
+  .compare thead td { width: 110px; }
   .form-actions { flex-direction: column; }
   .form-actions .btn { width: 100%; }
   .login-card { padding: 28px; }
