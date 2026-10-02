@@ -23,20 +23,22 @@
   const grid = document.getElementById("vehiclesGrid");
   const emptyState = document.getElementById("emptyState");
   const resultsCount = document.getElementById("resultsCount");
-  const brandFilters = document.getElementById("brandFilters");
+  const brandSelect = document.getElementById("brandSelect");
   const typeFilters = document.getElementById("typeFilters");
   const sortSelect = document.getElementById("sortSelect");
 
-  // Monta os chips de filtro.
-  function renderChips() {
-    const brands = ["Todas", ...BRANDS];
-    brandFilters.innerHTML = brands
-      .map(
-        (b) =>
-          `<button class="chip ${b === state.brand ? "active" : ""}" data-brand="${b}">${b}</button>`
-      )
-      .join("");
+  // Marcas num menu (são muitas para caber em chips).
+  brandSelect.innerHTML =
+    '<option value="Todas">Marca: Todas</option>' +
+    BRANDS.map((b) => `<option value="${b}">${b}</option>`).join("");
+  brandSelect.value = state.brand;
+  brandSelect.addEventListener("change", () => {
+    state.brand = brandSelect.value;
+    render();
+  });
 
+  // Monta os chips de tipo de carroceria.
+  function renderChips() {
     const types = ["Todos", ...BODY_TYPES];
     typeFilters.innerHTML = types
       .map(
@@ -45,13 +47,6 @@
       )
       .join("");
 
-    brandFilters.querySelectorAll(".chip").forEach((c) =>
-      c.addEventListener("click", () => {
-        state.brand = c.dataset.brand;
-        renderChips();
-        render();
-      })
-    );
     typeFilters.querySelectorAll(".chip").forEach((c) =>
       c.addEventListener("click", () => {
         state.type = c.dataset.type;
@@ -91,6 +86,10 @@
     grid.innerHTML = list.map(createCard).join("");
     emptyState.style.display = list.length ? "none" : "block";
     resultsCount.textContent = `${list.length} ${list.length === 1 ? "veículo encontrado" : "veículos encontrados"}`;
+
+    // Avisa js/anuncios.js para aplicar os mesmos filtros aos anúncios de particulares.
+    window.catalogFilters = state;
+    document.dispatchEvent(new CustomEvent("catalogo:filtros"));
   }
 
   sortSelect.addEventListener("change", () => {
