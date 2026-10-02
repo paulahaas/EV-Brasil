@@ -47,6 +47,16 @@ ev-brasil/
 └── assets/             # (imagens próprias, se quiser adicionar)
 ```
 
+## 🚀 Publicar
+
+O site fica em **https://ev-brasil.web.app** (Firebase Hosting). Para publicar uma nova versão:
+
+```bash
+npm run deploy
+```
+
+O que vai ao ar e o que fica de fora está em `firebase.json`.
+
 Para publicar as regras do banco depois de editar `firestore.rules`:
 
 ```bash
