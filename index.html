@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EV Brasil — Veículos Elétricos Premium</title>
-  <meta name="description" content="A nova era da mobilidade elétrica no Brasil. Descubra veículos elétricos premium: hatches, sedãs e SUVs. BYD, GWM e mais." />
+  <title>EV Brasil — Qual carro elétrico comprar? Compare todos os modelos</title>
+  <meta name="description" content="Seu próximo carro é elétrico. Qual deles? Compare autonomia, consumo e preço dos carros elétricos à venda no Brasil, com dados oficiais do Inmetro." />
   <link rel="canonical" href="https://ev-brasil.web.app/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="EV Brasil" />
-  <meta property="og:title" content="EV Brasil — Veículos Elétricos" />
-  <meta property="og:description" content="Veículos elétricos para todo o Brasil: catálogo de modelos e anúncios de proprietários." />
+  <meta property="og:title" content="Seu próximo carro é elétrico. Qual deles?" />
+  <meta property="og:description" content="Compare autonomia, consumo e preço dos carros elétricos à venda no Brasil, com dados oficiais do Inmetro." />
   <meta property="og:url" content="https://ev-brasil.web.app/" />
   <meta property="og:locale" content="pt_BR" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,26 +24,78 @@
   <div id="header-slot"></div>
 
   <main>
-    <!-- PAINEL DE ABERTURA (o carro é escolhido em js/home.js) -->
+    <!-- ABERTURA (a foto de fundo é escolhida em js/home.js) -->
     <section class="panel panel-hero" id="heroPanel">
       <div class="panel-head">
-        <span class="eyebrow">A nova era da mobilidade</span>
-        <h1 class="display">O futuro é elétrico.</h1>
-        <p class="panel-sub">Veículos elétricos para todo o Brasil — do compacto urbano ao SUV de luxo.</p>
+        <span class="eyebrow">Guia dos carros elétricos no Brasil</span>
+        <h1 class="display">Seu próximo carro é elétrico.<br>Qual deles?</h1>
+        <p class="panel-sub">Compare autonomia, preço e custo real dos elétricos à venda no Brasil, com dados oficiais do Inmetro.</p>
       </div>
       <a class="panel-visual" id="heroVisual"></a>
       <div class="panel-foot">
         <div class="panel-actions">
-          <a href="veiculos.html" class="btn btn-primary btn-wide">Explorar veículos</a>
-          <a href="vender.html" class="btn btn-ghost btn-wide">Vender meu EV</a>
+          <a href="encontre.html" class="btn btn-primary btn-wide">Descobrir qual é o meu</a>
+          <a href="veiculos.html" class="btn btn-ghost btn-wide" id="heroAll">Ver todos os carros</a>
         </div>
       </div>
     </section>
 
-    <!-- UM PAINEL DE TELA CHEIA POR MODELO EM DESTAQUE (preenchido por js/home.js) -->
-    <div id="featuredPanels"></div>
+    <!-- NÚMEROS DO CATÁLOGO (calculados em js/home.js) -->
+    <section class="section-tight">
+      <div class="container">
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
 
-    <!-- CATEGORIAS -->
+    <!-- POR ONDE COMEÇAR -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Por onde começar</span>
+          <h2 class="section-title">Quatro jeitos de escolher</h2>
+        </div>
+        <div class="tools">
+          <a class="tool" href="encontre.html">
+            <span class="ic">01</span>
+            <h3>Qual é o meu?</h3>
+            <p>Responda cinco perguntas sobre orçamento e rotina e veja os modelos que combinam com você.</p>
+            <span class="text-link">Começar →</span>
+          </a>
+          <a class="tool" href="rankings.html">
+            <span class="ic">02</span>
+            <h3>Rankings</h3>
+            <p>Os mais baratos, os que rodam mais e os que gastam menos energia, com o critério explicado.</p>
+            <span class="text-link">Ver rankings →</span>
+          </a>
+          <a class="tool" href="comparar.html">
+            <span class="ic">03</span>
+            <h3>Comparar</h3>
+            <p>Até três modelos lado a lado: preço, autonomia, consumo e custo por quilômetro.</p>
+            <span class="text-link">Comparar →</span>
+          </a>
+          <a class="tool" href="calculadora.html">
+            <span class="ic">04</span>
+            <h3>Calculadora</h3>
+            <p>Quanto você economiza trocando a gasolina pela tomada, com os seus números.</p>
+            <span class="text-link">Calcular →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RANKINGS (prévia, preenchida em js/home.js) -->
+    <section id="rankings">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Rankings</span>
+          <h2 class="section-title">Os destaques de cada critério</h2>
+        </div>
+        <div class="rank-cols" id="rankPreview"></div>
+        <p class="section-more"><a href="rankings.html" class="text-link">Ver todos os rankings →</a></p>
+      </div>
+    </section>
+
+    <!-- CARROCERIAS -->
     <section id="categorias">
       <div class="container">
         <div class="section-head">
@@ -53,191 +105,25 @@
       </div>
     </section>
 
-    <!-- MÉTRICAS -->
-    <section class="section-tight">
-      <div class="container">
-        <div class="stats">
-          <div class="stat"><div class="num">605 km</div><div class="lbl">Autonomia máxima</div></div>
-          <div class="stat"><div class="num">3,8 s</div><div class="lbl">0–100 km/h</div></div>
-          <div class="stat"><div class="num">100%</div><div class="lbl">Elétrico</div></div>
-          <div class="stat"><div class="num">0</div><div class="lbl">Emissões</div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SIMULADOR DE ECONOMIA (js/simulador.js) -->
-    <section id="simulador">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Simulador</span>
-          <h2 class="section-title">Quanto você economiza</h2>
-          <p class="section-sub">Compare o gasto com gasolina do seu carro atual com o de recarregar um elétrico em casa.</p>
-        </div>
-
-        <div class="sim">
-          <form class="sim-form" id="simForm">
-            <div class="field">
-              <label for="simModelo">Modelo elétrico</label>
-              <select id="simModelo"></select>
-            </div>
-            <div class="field">
-              <label for="simKm">Quanto você roda: <strong id="simKmValor"></strong></label>
-              <input type="range" id="simKm" min="300" max="5000" step="100">
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="simGasolina">Gasolina (R$ por litro)</label>
-                <input type="number" id="simGasolina" min="0" step="0.01" inputmode="decimal">
-              </div>
-              <div class="field">
-                <label for="simKmL">Seu carro faz (km por litro)</label>
-                <input type="number" id="simKmL" min="1" step="0.5" inputmode="decimal">
-              </div>
-            </div>
-            <div class="field">
-              <label for="simKwh">Energia em casa (R$ por kWh)</label>
-              <input type="number" id="simKwh" min="0" step="0.01" inputmode="decimal">
-            </div>
-          </form>
-
-          <div class="sim-result" aria-live="polite">
-            <div class="sim-big" id="simAno"></div>
-            <div class="sim-label" id="simRotulo"></div>
-
-            <div class="sim-bars">
-              <div class="sim-bar-row">
-                <span>Gasolina</span>
-                <div class="sim-track"><div class="sim-bar sim-bar-gas" id="simBarGasolina"></div></div>
-                <strong id="simCustoGasolina"></strong>
-              </div>
-              <div class="sim-bar-row">
-                <span>Elétrico</span>
-                <div class="sim-track"><div class="sim-bar" id="simBarEletrico"></div></div>
-                <strong id="simCustoEletrico"></strong>
-              </div>
-              <p class="form-hint">Gasto por mês com combustível ou energia.</p>
-            </div>
-
-            <div class="specbar sim-stats">
-              <div class="spec"><span class="v" id="simMes"></span><span class="k">por mês</span></div>
-              <div class="spec"><span class="v" id="sim5anos"></span><span class="k">em 5 anos</span></div>
-              <div class="spec"><span class="v" id="simKmGasolina"></span><span class="k">gasolina</span></div>
-              <div class="spec"><span class="v" id="simKmEletrico"></span><span class="k">elétrico</span></div>
-            </div>
-
-            <p class="form-hint" id="simConsumo"></p>
-            <p class="form-hint">Estimativa: não inclui manutenção, IPVA, seguro nem recarga em eletropostos pagos.</p>
-            <a class="btn btn-primary" id="simLink" href="veiculos.html">Ver este modelo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECNOLOGIA -->
-    <section id="tecnologia">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Tecnologia</span>
-          <h2 class="section-title">Engenharia que você sente</h2>
-          <p class="section-sub">Cada detalhe foi pensado para entregar segurança, desempenho e uma experiência de condução única.</p>
-        </div>
-        <div class="features">
-          <div class="feature">
-            <div class="ic">01</div>
-            <h3>Bateria Blade</h3>
-            <p>Tecnologia LFP referência mundial em segurança e durabilidade, com milhares de ciclos de recarga.</p>
-          </div>
-          <div class="feature">
-            <div class="ic">02</div>
-            <h3>Recarga rápida</h3>
-            <p>De 30% a 80% em cerca de 30 minutos nos carregadores DC. Chegue, recarregue e siga viagem.</p>
-          </div>
-          <div class="feature">
-            <div class="ic">03</div>
-            <h3>Segurança total</h3>
-            <p>Pacote completo de assistências à condução (ADAS) e as mais altas classificações de segurança.</p>
-          </div>
-          <div class="feature">
-            <div class="ic">04</div>
-            <h3>Conectividade</h3>
-            <p>Centrais multimídia amplas, atualizações remotas (OTA) e integração total com seu smartphone.</p>
-          </div>
-          <div class="feature">
-            <div class="ic">05</div>
-            <h3>Zero emissões</h3>
-            <p>Dirija com consciência. Energia limpa, sem poluentes locais e com custo por km muito menor.</p>
-          </div>
-          <div class="feature">
-            <div class="ic">06</div>
-            <h3>Economia real</h3>
-            <p>Menos manutenção, sem combustível fóssil e isenções em várias cidades. O elétrico se paga.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAIXA: VENDER -->
+    <!-- CONFIANÇA -->
     <section class="band">
       <div class="container">
-        <span class="eyebrow">Para proprietários</span>
-        <h2 class="display">Tem um elétrico na garagem?</h2>
-        <p>Anuncie na EV Brasil e fale direto com compradores pelo WhatsApp.</p>
+        <span class="eyebrow">Como fazemos</span>
+        <h2 class="display">Dados, não propaganda.</h2>
+        <p>Autonomia e consumo medidos pelo Inmetro, iguais para todas as marcas. Preço com fonte e data. E nenhum carro à venda aqui.</p>
         <div class="panel-actions">
-          <a href="vender.html" class="btn btn-primary btn-wide">Anunciar meu EV</a>
-          <a href="veiculos.html" class="btn btn-ghost btn-wide">Ver anúncios</a>
+          <a href="metodologia.html" class="btn btn-ghost btn-wide">De onde vêm os dados</a>
         </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato">
-      <div class="container">
-        <div class="section-head text-center">
-          <span class="eyebrow">Contato</span>
-          <h2 class="section-title">Fale com um especialista</h2>
-          <p class="section-sub mx-auto">Tem interesse em um modelo ou quer tirar dúvidas? Preencha o formulário e entraremos em contato.</p>
-        </div>
-        <form class="form-card" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="nome">Nome completo</label>
-              <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-            </div>
-            <div class="field">
-              <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" placeholder="voce@email.com" required />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="field">
-              <label for="telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="telefone" name="telefone" placeholder="(11) 90000-0000" />
-            </div>
-            <div class="field">
-              <label for="modelo">Modelo de interesse</label>
-              <select id="modelo" name="modelo"></select>
-            </div>
-          </div>
-          <div class="field">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Enviar mensagem</button>
-          <div class="form-msg" id="formMsg" role="status">✅ Obrigado! Recebemos sua mensagem e entraremos em contato em breve.</div>
-          <p class="form-error" id="contactError" role="alert"></p>
-        </form>
       </div>
     </section>
   </main>
 
   <div id="footer-slot"></div>
 
+  <script src="js/catalogo.js"></script>
   <script src="js/data.js"></script>
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
-  <script src="js/simulador.js"></script>
-  <script type="module" src="js/contato.js"></script>
-  <script type="module" src="js/session.js"></script>
 </body>
 </html>

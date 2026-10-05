@@ -8,10 +8,10 @@
 /* ---------------- Cabeçalho ---------------- */
 function renderHeader(active) {
   const links = [
-    { href: "veiculos.html", label: "Veículos", key: "veiculos" },
+    { href: "veiculos.html", label: "Carros", key: "veiculos" },
+    { href: "rankings.html", label: "Rankings", key: "rankings" },
     { href: "comparar.html", label: "Comparar", key: "comparar" },
-    { href: "index.html#simulador", label: "Simulador", key: "simulador" },
-    { href: "index.html#contato", label: "Contato", key: "contato" },
+    { href: "calculadora.html", label: "Calculadora", key: "calculadora" },
   ];
   const nav = links
     .map(
@@ -31,13 +31,11 @@ function renderHeader(active) {
 
     <nav class="nav-links">
       ${nav}
-      <!-- Entrar / Meus anúncios / Sair: preenchido por js/session.js -->
-      <span class="nav-auth" id="authSlot"></span>
     </nav>
 
     <div class="nav-cta">
-      <a href="vender.html" class="btn btn-primary btn-sm ${active === "vender" ? "active" : ""}">
-        Vender meu EV
+      <a href="encontre.html" class="btn btn-primary btn-sm">
+        Qual é o meu?
       </a>
 
       <button
@@ -65,81 +63,65 @@ function renderFooter() {
             <span class="logo-mark">⚡</span>
             <span>EV<span class="accent">Brasil</span></span>
           </a>
-          <p>A nova era da mobilidade elétrica no Brasil. Veículos elétricos premium, do compacto urbano ao SUV de luxo.</p>
+          <p>Guia independente dos carros elétricos à venda no Brasil. Não vendemos carros: comparamos, com dados oficiais.</p>
         </div>
         <div class="footer-col">
-          <h4>Navegar</h4>
-          <a href="index.html">Início</a>
-          <a href="veiculos.html">Veículos</a>
+          <h4>Pesquisar</h4>
+          <a href="encontre.html">Qual elétrico é para mim?</a>
+          <a href="veiculos.html">Todos os carros</a>
+          <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
-          <a href="index.html#simulador">Simulador de economia</a>
-          <a href="vender.html">Vender meu EV</a>
-          <a href="index.html#contato">Contato</a>
+          <a href="calculadora.html">Calculadora de economia</a>
         </div>
         <div class="footer-col">
-          <h4>Modelos</h4>
-          <a href="veiculos.html?tipo=Hatch">Hatches</a>
-          <a href="veiculos.html?tipo=Sedã">Sedãs</a>
-          <a href="veiculos.html?tipo=SUV">SUVs</a>
+          <h4>Carrocerias</h4>
+          ${BODY_TYPES.map((t) => `<a href="veiculos.html?tipo=${encodeURIComponent(t)}">${t}</a>`).join("")}
         </div>
         <div class="footer-col">
-          <h4>Contato</h4>
-          <a href="mailto:contato@evbrasil.com.br">contato@evbrasil.com.br</a>
-          <a href="tel:+5508007000000">0800 700 0000</a>
-          <a href="#">São Paulo · SP</a>
+          <h4>Sobre</h4>
+          <a href="metodologia.html">De onde vêm os dados</a>
+          <a href="creditos.html">Créditos das fotos</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© ${year} EV Brasil. Todos os direitos reservados.</span>
-        <span>Feito no Brasil ⚡ Energia limpa para todos. · <a href="creditos.html">Créditos das fotos</a></span>
+        <span>© ${year} EV Brasil. Autonomia e consumo: Inmetro (${DATA_INFO.inmetro.atualizacao}). Preços coletados em ${DATA_INFO.precos.coleta}.</span>
+        <span>Feito no Brasil ⚡</span>
       </div>
     </div>
   </footer>`;
 }
 
 /* ---------------- Números rápidos de um veículo ---------------- */
-// Extrai só o número dos textos da ficha (ex.: "570 km (CLTC)" -> "570").
-function quickSpecs(v) {
-  const aceleracao = v.specs.aceleracao.match(/[\d,]+ s/);
-  return {
-    autonomia: v.specs.autonomia.split(" ")[0] + " km",
-    aceleracao: aceleracao ? aceleracao[0] : "-",
-    potencia: v.specs.potencia.split(" ")[0] + " cv",
-  };
-}
-
-/** Faixa de números sob o carro (painéis da home e página de detalhes). */
+/** Faixa de números sob o carro (painéis e página do modelo). */
 function specBar(v) {
-  const q = quickSpecs(v);
   return `
     <div class="specbar">
-      <div class="spec"><span class="v">${q.autonomia}</span><span class="k">Autonomia</span></div>
-      <div class="spec"><span class="v">${q.aceleracao}</span><span class="k">0–100 km/h</span></div>
-      <div class="spec"><span class="v">${q.potencia}</span><span class="k">Potência</span></div>
-      <div class="spec"><span class="v">${formatBRL(v.priceBRL)}</span><span class="k">A partir de</span></div>
+      <div class="spec"><span class="v">${rangeText(v)}</span><span class="k">Autonomia (Inmetro)</span></div>
+      <div class="spec"><span class="v">${formatNum(v.kwh100)}</span><span class="k">kWh a cada 100 km</span></div>
+      <div class="spec"><span class="v">${v.price ? formatBRL(v.price) : "—"}</span><span class="k">${v.price ? "A partir de" : "Preço não divulgado"}</span></div>
     </div>`;
 }
 
 /* ---------------- Card de veículo ---------------- */
 function createCard(v) {
-  const q = quickSpecs(v);
+  const nota = priceNoteShort(v);
   return `
     <a class="card" href="veiculo.html?id=${encodeURIComponent(v.id)}">
       <div class="card-media ${hasPhoto(v) ? "has-photo" : ""}" style="--glow:${v.color}">
         ${carImage(v)}
       </div>
       <div class="card-body">
-        ${v.featured ? '<span class="card-flag">Destaque</span>' : ""}
         <h3 class="card-title">${v.brand} ${v.model}</h3>
-        <p class="card-meta">${v.bodyType} · ${v.segment}</p>
-        <p class="card-meta">${q.autonomia} · ${q.potencia} · ${v.specs.lugares} lugares</p>
-        <p class="card-price">${formatBRL(v.priceBRL)}</p>
+        <p class="card-meta">${v.bodyType} · ${v.versions.length} ${v.versions.length === 1 ? "versão" : "versões"}</p>
+        <p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-price">${priceText(v)}</p>
+        ${nota ? `<p class="card-note">${nota}</p>` : ""}
       </div>
     </a>`;
 }
 
 /* ---------------- Segurança ---------------- */
-// Texto digitado por usuários (anúncios) passa por aqui antes de ir para o HTML.
+// Textos que não escrevemos nós (ex.: créditos de fotos) passam por aqui antes de ir para o HTML.
 function escapeHtml(value) {
   return String(value == null ? "" : value)
     .replace(/&/g, "&amp;")

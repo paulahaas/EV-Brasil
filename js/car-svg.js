@@ -31,7 +31,9 @@ function carSilhouette(bodyType, color) {
       <path d="M205 104 Q255 74 345 76 L450 82 Q525 88 575 118 L300 118 Z" fill="#0b1220" opacity="0.55"/>
     `,
   };
-  const shape = shapes[bodyType] || shapes.Hatch;
+  // Carrocerias sem desenho próprio usam a mais parecida.
+  const parecida = { Perua: "Sedã", Esportivo: "Sedã", Picape: "SUV" };
+  const shape = shapes[bodyType] || shapes[parecida[bodyType]] || shapes.Hatch;
   return `
     <svg viewBox="0 0 800 230" xmlns="http://www.w3.org/2000/svg" class="car-svg" role="img" aria-label="Ilustração do veículo">
       <defs>

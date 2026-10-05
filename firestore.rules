@@ -1,94 +1,12 @@
 rules_version = '2';
 
+// O site virou um guia de pesquisa e não usa mais o banco: anúncios, contas e
+// formulário de contato foram removidos. Tudo fica fechado, inclusive leitura,
+// para que os dados antigos (que têm WhatsApp e e-mail de pessoas) não fiquem públicos.
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // Anúncios de particulares (gravados por js/sell.js, lidos por js/anuncios.js).
-    match /anuncios/{anuncioId} {
-      // A vitrine é pública.
-      allow read: if true;
-
-      // Só quem está logado publica, e o anúncio fica no nome de quem publicou.
-      allow create: if request.auth != null
-                    && request.resource.data.uid == request.auth.uid
-                    && anuncioValido(request.resource.data);
-
-      // Só o dono edita, e não pode trocar o dono nem a data de publicação.
-      allow update: if request.auth != null
-                    && resource.data.uid == request.auth.uid
-                    && request.resource.data.uid == resource.data.uid
-                    && request.resource.data.data == resource.data.data
-                    && anuncioValido(request.resource.data);
-
-      // Só o dono apaga.
-      allow delete: if request.auth != null
-                    && resource.data.uid == request.auth.uid;
-
-      // Fotos do anúncio: uma por documento, com id de "0" a "5".
-      match /fotos/{fotoId} {
-        allow read: if true;
-        allow create, update: if donoDoAnuncio(anuncioId)
-                              && fotoId.matches('^[0-5]$')
-                              && fotoValida(request.resource.data);
-        allow delete: if donoDoAnuncio(anuncioId);
-      }
-    }
-
-    // Mensagens do formulário de contato (js/contato.js).
-    // Qualquer visitante envia; ninguém lê pelo site — só pelo console do Firebase.
-    match /contatos/{contatoId} {
-      allow create: if contatoValido(request.resource.data);
-      allow read, update, delete: if false;
-    }
-
-    function contatoValido(d) {
-      return d.keys().hasOnly(['nome', 'email', 'telefone', 'modelo', 'mensagem', 'data'])
-          && d.nome is string && d.nome.size() > 0 && d.nome.size() <= 100
-          && d.email is string && d.email.size() <= 150
-          && d.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$')
-          && d.telefone is string && d.telefone.size() <= 30
-          && d.modelo is string && d.modelo.size() <= 80
-          && d.mensagem is string && d.mensagem.size() <= 2000
-          && d.data is string && d.data.size() <= 40;
-    }
-
-    function donoDoAnuncio(anuncioId) {
-      return request.auth != null
-          && get(/databases/$(database)/documents/anuncios/$(anuncioId)).data.uid == request.auth.uid;
-    }
-
-    function fotoValida(d) {
-      return d.keys().hasOnly(['dados', 'ordem'])
-          && d.dados is string && d.dados.size() <= 900000
-          && d.dados.matches('^data:image/jpeg;base64,[A-Za-z0-9+/=]+$')
-          && d.ordem is int && d.ordem >= 0 && d.ordem <= 5;
-    }
-
-    function anuncioValido(d) {
-      return d.keys().hasOnly([
-               'origem', 'uid', 'marca', 'modelo', 'ano', 'quilometragem',
-               'tipo_carroceria', 'estado_conservacao', 'preco',
-               'cidade', 'estado', 'descricao', 'whatsapp', 'data',
-               'capa', 'fotos'
-             ])
-          // Capa (miniatura) e quantidade de fotos são opcionais: anúncios antigos não têm.
-          && (!('capa' in d) || (d.capa is string && d.capa.size() <= 120000
-                && d.capa.matches('^(data:image/jpeg;base64,[A-Za-z0-9+/=]+)?$')))
-          && (!('fotos' in d) || (d.fotos is int && d.fotos >= 0 && d.fotos <= 6))
-          && d.origem == 'usuario'
-          && d.uid is string
-          && d.marca is string && d.marca.size() > 0 && d.marca.size() <= 40
-          && d.modelo is string && d.modelo.size() > 0 && d.modelo.size() <= 60
-          && d.ano is int && d.ano >= 1990 && d.ano <= 2100
-          && d.quilometragem is int && d.quilometragem >= 0
-          && d.tipo_carroceria is string && d.tipo_carroceria.size() <= 30
-          && d.estado_conservacao in ['Novo', 'Seminovo', 'Usado']
-          && d.preco is number && d.preco > 0
-          && d.cidade is string && d.cidade.size() > 0 && d.cidade.size() <= 60
-          && d.estado is string && d.estado.size() == 2
-          && d.descricao is string && d.descricao.size() <= 2000
-          && d.whatsapp is string && d.whatsapp.matches('^[0-9]{10,13}$')
-          && d.data is string && d.data.size() <= 40;
+    match /{document=**} {
+      allow read, write: if false;
     }
   }
 }

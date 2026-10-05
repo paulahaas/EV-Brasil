@@ -11,17 +11,13 @@
     type: "Todos",
     maxPrice: 0,   // 0 = qualquer preço
     minRange: 0,   // 0 = qualquer autonomia
-    sort: "destaque",
+    sort: "menor",
   };
 
   // Lê filtros vindos da URL (ex.: veiculos.html?tipo=SUV&q=byd).
   const params = new URLSearchParams(location.search);
-  if (params.get("tipo") && BODY_TYPES.includes(params.get("tipo"))) {
-    state.type = params.get("tipo");
-  }
-  if (params.get("marca") && BRANDS.includes(params.get("marca"))) {
-    state.brand = params.get("marca");
-  }
+  if (params.get("tipo") && BODY_TYPES.includes(params.get("tipo"))) state.type = params.get("tipo");
+  if (params.get("marca") && BRANDS.includes(params.get("marca"))) state.brand = params.get("marca");
   if (params.get("q")) state.q = params.get("q").trim();
 
   const grid = document.getElementById("vehiclesGrid");
@@ -40,16 +36,11 @@
     '<option value="Todas">Marca: Todas</option>' +
     BRANDS.map((b) => `<option value="${b}">${b}</option>`).join("");
 
-  // Monta os chips de tipo de carroceria.
+  // Chips de tipo de carroceria.
   function renderChips() {
-    const types = ["Todos", ...BODY_TYPES];
-    typeFilters.innerHTML = types
-      .map(
-        (t) =>
-          `<button class="chip ${t === state.type ? "active" : ""}" data-type="${t}">${t}</button>`
-      )
+    typeFilters.innerHTML = ["Todos", ...BODY_TYPES]
+      .map((t) => `<button class="chip ${t === state.type ? "active" : ""}" data-type="${t}">${t}</button>`)
       .join("");
-
     typeFilters.querySelectorAll(".chip").forEach((c) =>
       c.addEventListener("click", () => {
         state.type = c.dataset.type;
@@ -69,63 +60,46 @@
     renderChips();
   }
 
+  // Modelos sem preço divulgado vão para o fim quando a ordem é por preço.
+  const porPreco = (sinal) => (a, b) => {
+    if (!a.price) return 1;
+    if (!b.price) return -1;
+    return sinal * (a.price - b.price);
+  };
+
   function render() {
     const q = state.q.toLowerCase();
-    let list = VEHICLES.filter((v) => {
+    const list = VEHICLES.filter((v) => {
       const okBrand = state.brand === "Todas" || v.brand === state.brand;
       const okType = state.type === "Todos" || v.bodyType === state.type;
-      const okPrice = !state.maxPrice || v.priceBRL <= state.maxPrice;
-      const okRange = !state.minRange || rangeKm(v) >= state.minRange;
-      const okText = !q || `${v.brand} ${v.model} ${v.segment} ${v.bodyType}`.toLowerCase().includes(q);
+      const okPrice = !state.maxPrice || (v.price && v.price <= state.maxPrice);
+      const okRange = !state.minRange || v.rangeMax >= state.minRange;
+      const okText = !q || `${v.brand} ${v.model} ${v.bodyType}`.toLowerCase().includes(q);
       return okBrand && okType && okPrice && okRange && okText;
     });
 
-    switch (state.sort) {
-      case "menor":
-        list.sort((a, b) => a.priceBRL - b.priceBRL);
-        break;
-      case "maior":
-        list.sort((a, b) => b.priceBRL - a.priceBRL);
-        break;
-      case "autonomia":
-        list.sort((a, b) => rangeKm(b) - rangeKm(a));
-        break;
-      default:
-        list.sort((a, b) => (b.featured === true) - (a.featured === true));
-    }
+    const ordens = {
+      menor: porPreco(1),
+      maior: porPreco(-1),
+      autonomia: (a, b) => b.rangeMax - a.rangeMax,
+      consumo: (a, b) => a.kwh100 - b.kwh100,
+      nome: (a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"),
+    };
+    list.sort(ordens[state.sort] || ordens.menor);
 
     grid.innerHTML = list.map(createCard).join("");
     emptyState.style.display = list.length ? "none" : "block";
-    resultsCount.textContent = `${list.length} ${list.length === 1 ? "veículo encontrado" : "veículos encontrados"}`;
+    resultsCount.textContent = `${list.length} ${list.length === 1 ? "modelo" : "modelos"}`;
 
     const filtrando = q || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange;
     clearBtn.hidden = !filtrando;
-
-    // Avisa js/anuncios.js para aplicar os mesmos filtros aos anúncios de particulares.
-    window.catalogFilters = state;
-    document.dispatchEvent(new CustomEvent("catalogo:filtros"));
   }
 
-  searchInput.addEventListener("input", () => {
-    state.q = searchInput.value.trim();
-    render();
-  });
-  brandSelect.addEventListener("change", () => {
-    state.brand = brandSelect.value;
-    render();
-  });
-  priceSelect.addEventListener("change", () => {
-    state.maxPrice = Number(priceSelect.value);
-    render();
-  });
-  rangeSelect.addEventListener("change", () => {
-    state.minRange = Number(rangeSelect.value);
-    render();
-  });
-  sortSelect.addEventListener("change", () => {
-    state.sort = sortSelect.value;
-    render();
-  });
+  searchInput.addEventListener("input", () => { state.q = searchInput.value.trim(); render(); });
+  brandSelect.addEventListener("change", () => { state.brand = brandSelect.value; render(); });
+  priceSelect.addEventListener("change", () => { state.maxPrice = Number(priceSelect.value); render(); });
+  rangeSelect.addEventListener("change", () => { state.minRange = Number(rangeSelect.value); render(); });
+  sortSelect.addEventListener("change", () => { state.sort = sortSelect.value; render(); });
   clearBtn.addEventListener("click", () => {
     Object.assign(state, { q: "", brand: "Todas", type: "Todos", maxPrice: 0, minRange: 0 });
     syncControls();

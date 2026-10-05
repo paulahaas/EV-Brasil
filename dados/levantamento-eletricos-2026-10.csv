@@ -1,0 +1,73 @@
+﻿Marca;Modelo;Categoria Inmetro;Versões no Inmetro;Autonomia Inmetro (km);Consumo (kWh/100 km);Preço a partir de (R$);Versão do preço;Status;Fonte do preço;Observação
+Audi;A6 AVANT E-TRON;Extra Grande;S line;474;16,7;;;sem preço: não pesquisado;;
+Audi;A6 E-TRON;Extra Grande;Performance black, S line;443–445;16,4;;;sem preço: preço não encontrado;;preço não encontrado
+Audi;Q6 E-TRON QUATTRO;Extra Grande;Performance, Performance black, Dynamic, S line;411–424;16,9;695.990;;conferir (imprensa);https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html;"preço sugerido divulgado no lançamento (abr/2026); site da Audi não mostra preço"
+Audi;Q6 E-TRON RWD;Extra Grande;Performance;411;17,8;;;sem preço: não pesquisado;;
+Audi;Q6 SPORTBACK E-TRON QUATTRO;Extra Grande;Performance black, S line;427–432;16,7;710.990;;conferir (imprensa);https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html;preço sugerido no lançamento (abr/2026)
+Audi;RS E-TRON GT;Extra Grande;Performance;348;22,2;;;sem preço: preço não encontrado;;preço não encontrado
+Audi;SQ6 SPORTBACK E-TRON QUATTRO;Extra Grande;-;428–431;16,7;790.990;;conferir (imprensa);https://www.car.blog.br/2026/04/audi-sq6-etron-2026-preco-brasil.html;preço sugerido no lançamento (abr/2026)
+BMW;I5;Extra Grande;M60;393;16,9;;;sem preço: não aparece entre os elétricos do site oficial;https://www.bmw.com.br/pt/all-models.html;não aparece entre os elétricos do site oficial
+BMW;I7;Extra Grande;xDrive60;467;18,1;1.373.950;xDrive60 M Sport;ok (site oficial);https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html;a partir de
+BMW;IX;Extra Grande;xDrive 50;498;17,8;;;sem preço: não aparece entre os elétricos do site oficial;https://www.bmw.com.br/pt/all-models.html;não aparece entre os elétricos do site oficial
+BMW;IX1;Grande;xDrive30, eDrive20;324–345;15,3;485.950;xDrive30 M Sport;ok (site oficial);https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html;"a partir de; eDrive20 não aparece no site"
+BMW;IX2;Grande;xDrive30 MSP;327;16,4;495.950;xDrive30 M Sport;ok (site oficial);https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html;a partir de
+BMW;IX3;Extra Grande;50 XDRIVE MSP;570;15,0;582.950;50 xDrive;ok (site oficial);https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html;a partir de, à vista
+BYD;DOLPHIN;Médio;GS 180EV, PLUS 310EV, SE 290EV;272–330;11,7;149.990;GS;ok (site oficial);https://www.byd.com/br/ofertas;preço 'De' (tabela)
+BYD;DOLPHIN MINI;Sub Compacto;GS EV, GS 5 EV, GL 5 EV;224–280;10,8;118.990;GL;ok (site oficial);https://www.byd.com/br/ofertas;"preço 'De' (tabela); oferta válida até 31/10/2026; preço 'De' (tabela)"
+BYD;HAN;Extra Grande;AWD GS 680EV;349;19,2;559.800;;ok (site oficial);https://www.byd.com/br/ofertas;"preço 'De' (tabela); ano-modelo 2025"
+BYD;SEAL;Extra Grande;AWD GS 590EV;372;17,2;299.990;AWD;ok (site oficial);https://www.byd.com/br/ofertas;preço 'De' (tabela)
+BYD;SEALION 7;Extra Grande;GS 690EV;360;18,3;339.990;;ok (site oficial);https://www.byd.com/br/ofertas;preço 'De' (tabela)
+BYD;TAN;Extra Grande;AWD GS 700EV;430;20,3;426.800;;ok (site oficial);https://www.byd.com/br/ofertas;"preço 'De' (tabela); ano-modelo 2025"
+BYD;YUAN PLUS;Grande;GS 560EV, GL310 EV, GS310 EV;294–378;15,6;269.990;AWD;ok (site oficial);https://www.byd.com/br/ofertas;preço 'De' (tabela)
+BYD;YUAN PRO;Médio;GS 290EV;250;14,2;182.990;;ok (site oficial);https://www.byd.com/br/ofertas;preço 'De' (tabela)
+Caoa Changan;AVATR 11;Extra Grande;EV;497;16,7;;;sem preço: preço não encontrado;;preço não encontrado
+Chevrolet;BLAZER EV;Extra Grande;RS;481;17,5;503.190;RS;ok (site oficial);https://www.chevrolet.com.br/eletrico/blazer-ev;"a partir de; ano-modelo 2025"
+Chevrolet;CAPTIVA EV;Extra Grande;PR;304;17,2;199.990;;ok (site oficial);https://www.chevrolet.com.br/eletrico/captiva-ev;a partir de
+Chevrolet;EQUINOX EV;Extra Grande;-;443;15,6;;;sem preço: não aparece mais na linha de elétricos do site oficial;https://www.chevrolet.com.br/eletrico;não aparece mais na linha de elétricos do site oficial
+Chevrolet;SPARK EUV;Médio;ACTIV;258;13,9;146.990;ACTIV;ok (site oficial);https://www.chevrolet.com.br/eletrico/spark-euv;"a partir de; ano-modelo 2027"
+Fiat;500E;Sub Compacto;ICON;227;12,8;214.990;ICON;ok (site oficial);https://500e.fiat.com.br/monte.html;"configurador oficial; unidade ano-modelo 2022"
+GAC;AION ES;Extra Grande;PLUS;314;12,5;170.990;;ok (site oficial);https://www.gacgroup.com/pt-br/sedan/aion-es;a partir de
+GAC;AION UT;Grande;ELITE, PREMIUM;253–310;14,2;139.990;PREMIUM;conferir (imprensa);https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990;"site oficial não mostra preço; preço de lançamento divulgado na imprensa; site oficial não mostra preço; preço de lançamento divulgado na imprensa"
+GAC;AION V;Extra Grande;ELITE, PREMIUM;325–389;15,0;219.990;;ok (site oficial);https://www.gacgroup.com/pt-br/suv/aion-v;a partir de
+GAC;AION Y;Grande;PREMIUM, ELITE;318;15,8;175.990;;ok (site oficial);https://www.gacgroup.com/pt-br/suv/aion-y;a partir de
+GAC;HYPTEC HT;Extra Grande;ELITE, ULTRA;431;14,7;314.990;;ok (site oficial);https://www.gacgroup.com/pt-br/suv/hyptec-ht;a partir de
+GWM;ORA 03;Médio;BEV58 C, GT BEV63, SKIN BEV48, BEV58;232–315;14,2;169.000;BEV58;ok (site oficial);https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58;"preço único; bônus de R$ 20.000 na nota ou taxa 0% (promoção)"
+GWM;ORA 5;Grande;5;349;13,6;163.990;5;ok (site oficial);https://www.gwmmotors.com.br/pt/modelos/ora5;preço único
+Geely;EX2;Médio;MAX, PRO;289;10,8;124.600;PRO;ok (site oficial);https://www.geelybrasil.com.br/ofertas;à vista
+Geely;EX5;Extra Grande;MAX, PRO;349–413;11,7;207.800;PRO;ok (site oficial);https://www.geelybrasil.com.br/ofertas;"a partir de; promoção à vista R$ 197.800 com bônus; à vista"
+Hyundai;IONIQ 5;Extra Grande;Platinum, Ultimate, Signature;374;18,3;339.990;;conferir (imprensa);https://www.cnnbrasil.com.br/auto/hyundai-ioniq-5-abre-pre-venda-no-brasil-e-pode-rodar-374-km-saiba-preco/;fontes divergem (R$ 339.990 e R$ 394.990) — conferir
+JAC;E-J7;Extra Grande;e-J7;263;13,9;259.900;;conferir (imprensa);https://www.cnnbrasil.com.br/auto/quanto-custa-um-carro-eletrico-da-jac-motors-no-brasil/;"site oficial inacessível; valor de imprensa — conferir"
+JAC;E-JS1;Sub Compacto;e-JS1, e-JS1 EXT;181;13,9;129.990;;conferir (imprensa);https://www.cnnbrasil.com.br/auto/quanto-custa-um-carro-eletrico-da-jac-motors-no-brasil/;"site oficial inacessível; valor de imprensa — conferir"
+JAC;E-JS4;Médio;e-JS4;307;13,1;;;sem preço: preço não encontrado;;preço não encontrado
+JAC;IEV330P;Picape;IEV330;226;20,8;;;sem preço: não pesquisado;;
+KIA;EV5 2WD;Extra Grande;AIR 2WD, LAND 2WD;402;16,7;389.990;;conferir (imprensa);busca na imprensa;site oficial não verificado — conferir
+Leapmotor;B10;Extra Grande;LIFE;288;15,3;182.990;Elétrico;ok (site oficial);https://www.leapmotor.com.br/b10/monte.html;configurador oficial
+Leapmotor;C10;Extra Grande;Design;338;16,9;214.990;Elétrico;ok (site oficial);https://www.leapmotor.com.br/;"'à vista a partir de' para pessoa física na página inicial; configurador não carregou — conferir"
+Lexus;RZ;Extra Grande;500e;357;15,8;499.900;500e;conferir (imprensa);busca na imprensa;preço de pré-venda — conferir
+MG;CYBERSTER;Esportivo;77 KWH AWD;342;15,6;;;sem preço: não pesquisado;;
+MG;MG4;Médio;64 KWH COM, 64 KWH LUX, 64 KWH AWD;279–364;13,9;184.600;COMFORT 64 KWH;ok (site oficial);https://mgmotoroficial.com.br/oferta/mg4;"preço 'De'; oferta de 01 a 31/10/2026; preço 'De'; oferta de 01 a 31/10/2026"
+MG;MG4 URBAN;Grande;URB EV54KWH COM, URB EV54KWH LUX, URB EV43KWH COM, URB EV43KWH LUX;299–358;11,1;129.990;COMFORT 43 KWH;conferir (imprensa);https://www.automotivebusiness.com.br/noticias/mg4-urban-chega-ao-brasil-por-129-990;"preço de lançamento (jul/2026); site oficial não mostra; preço de lançamento (jul/2026); preço de lançamento (jul/2026)"
+MG;S5;Grande;EV 62KWH LUX, EV 62KWH COM;351;14,2;218.800;COMFORT;ok (site oficial);https://mgmotoroficial.com.br/oferta/mgs5;"preço 'De'; preço 'De'"
+MINI;ACEMAN;Médio;E, SE;253–270;12,8;275.990;E;ok (site oficial);https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html;"a partir de; ano-modelo 2025/2026"
+MINI;COOPER;Compacto;E, SE;239–312;12,8;264.990;E;ok (site oficial);https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html;"preço sugerido, à vista; ano-modelo 2025/2026"
+MINI;COUNTRYMAN;Grande;SE EXCLUSIVE, SE TOP;320;16,9;;;sem preço: não verificado;https://www.mini.com.br/;não verificado
+MINI;JCW-E;Compacto;3P, ACEMAN;306–312;13,3;;;sem preço: não verificado;https://www.mini.com.br/;não verificado
+Mercedes-Benz;EQB250+;Extra Grande;-;376;14,7;399.900;;conferir (imprensa);https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html;preço de lançamento (jul/2025) — conferir
+Mercedes-Benz;GLB250;Extra Grande;EV AMGL;427;15,8;;;sem preço: preço não encontrado;;preço não encontrado
+Omoda;E5;Grande;--;345;14,2;209.990;;conferir (imprensa);https://www.webmotors.com.br/omoda/e5/2026;preço sugerido citado pela imprensa — conferir
+Peugeot;E-208;Compacto;GT;220;16,4;;;sem preço: versão elétrica não aparece no configurador oficial;https://www.peugeot.com.br/gama/peugeot-208/monte.html;versão elétrica não aparece no configurador oficial
+Peugeot;E2008;Médio;GT;261;15,3;;;sem preço: versão elétrica não aparece no configurador oficial;https://www.peugeot.com.br/gama/peugeot-2008/monte.html;versão elétrica não aparece no configurador oficial
+Porsche;CAYENNE;Extra Grande;E, E OF, E C, E CO, ET, ET C, ET OF, ET CO;481–493;17,5;900.000;Electric;conferir (imprensa);https://www.carrosegaragem.com.br/porsche-cayenne-electric-brasil/;"Porsche não divulga preço no site; valor de imprensa (set/2026); Coupé R$ 950 mil, S R$ 1,08 mi, Turbo R$ 1,41 mi"
+Porsche;MACAN;Extra Grande;E4, ETURBO, E4S, EGTS;435–443;16,7;580.000;Electric;conferir (imprensa);https://www.vrum.com.br/mercado/2026/02/7348831-porsche-no-brasil-precos-atualizados-dos-modelos-e-o-mais-desejado.html;"Porsche não divulga preço no site; 'Macan a partir de' na imprensa (fev/2026) — conferir se é a versão elétrica"
+Porsche;TAYCAN;Esportivo;TURBO S, 4S, 4S BE, TURBOCT, 4S CT, 4CT, TURBOGT;415–442;17,8;850.000;;conferir (imprensa);https://www.vrum.com.br/mercado/2026/02/7348831-porsche-no-brasil-precos-atualizados-dos-modelos-e-o-mais-desejado.html;"Porsche não divulga preço no site; valor de imprensa (fev/2026), pode ter sido reajustado"
+Renault;E-KWID;Sub Compacto;INTENS;185;12,2;;;sem preço: versão elétrica não aparece mais no site oficial;https://www.renault.com.br/veiculos-de-passeio/kwid.html;versão elétrica não aparece mais no site oficial
+Renault;MÉGANE;Médio;E-TECH;337;14,2;279.990;E-TECH;ok (site oficial);https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech;a partir de
+Suzuki;E-VITARA;Médio;4STY 2WD, 4STY 4WD;293–317;15,0;;;sem preço: preço não encontrado;;preço não encontrado
+Volvo;EC40;Grande;6 CORE, 6 PLUS, 6 ULTRA, 8 CORE, 8 PLUS, 8 ULTRA, PERF BLACK, PERF ULTRA;385–404;14,2;350.950;;ok (site oficial);https://www.volvocars.com/br/cars/ec40-electric/;"a partir de; versão superior a partir de R$ 405.950"
+Volvo;ES90;Extra Grande;TWIN PE ULT;524;15,3;659.950;;ok (site oficial);https://www.volvocars.com/br/cars/es90-electric/;a partir de
+Volvo;EX30;Médio;E40 CORE, E40 PLUS, E60 ULTRA, E60 PLUS, E60 CORE, TWIN ULTRA, CROSSC PLUS, C COUNTRY;250–338;14,4;249.950;;ok (site oficial);https://www.volvocars.com/br/cars/ex30-electric/;"a partir de; outras versões a partir de R$ 319.950 e R$ 324.950"
+Volvo;EX40;Utilitário Esportivo Grande;6 CORE, 6 PLUS, 6 ULTRA, 8 CORE, 8 PLUS, 8 ULTRA, PERF BLACK, PERF ULTRA;364–393;15,3;345.950;;ok (site oficial);https://www.volvocars.com/br/cars/ex40-electric/;"a partir de; versão superior a partir de R$ 400.950"
+Volvo;EX90;Utilitário Esportivo Grande 4x4;ULTRA TWIN, PLUS TWIN, ULT TWIN PER;459;18,9;849.950;;ok (site oficial);https://www.volvocars.com/br/cars/ex90-electric/;a partir de
+Zeekr;001;Extra Grande;Flagship, Premium;426;17,5;495.000;Premium;conferir (imprensa);https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860;imprensa cita faixa R$ 495–542 mil — conferir
+Zeekr;7X;Extra Grande;Flagship AWD, Premium RWD;423–491;15,3;378.000;Premium RWD;conferir (imprensa);https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860;"site oficial não mostra preço; imprensa; Flagship AWD R$ 468.000"
+Zeekr;X;Utilitário Esportivo Grande;Premium, Flagship;304–332;15,3;300.000;Premium;conferir (imprensa);https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860;imprensa cita faixa R$ 300–340 mil — conferir

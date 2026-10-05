@@ -1,0 +1,475 @@
+{
+ "_leia": "Cadastro dos modelos do site. A chave é 'MARCA|MODELO' como aparece na tabela PBE do Inmetro (dados/inmetro-pbev-2026-eletricos.json). Duas chaves com o mesmo id viram um modelo só. 'fora_de_linha' lista modelos que ficam de fora. Depois de editar, rode: npm run dados",
+ "fora_de_linha": [
+  "CHEVROLET|EQUINOX EV",
+  "RENAULT|E-KWID",
+  "PEUGEOT|E-208",
+  "PEUGEOT|E2008",
+  "BMW|I5",
+  "BMW|IX"
+ ],
+ "modelos": {
+  "AUDI|A6 AVANT E-TRON": {
+   "id": "audi-a6-avant-e-tron",
+   "marca": "Audi",
+   "modelo": "A6 Avant e-tron",
+   "carroceria": "Perua",
+   "cor": "#3b82f6"
+  },
+  "AUDI|A6 E-TRON": {
+   "id": "audi-a6-e-tron",
+   "marca": "Audi",
+   "modelo": "A6 e-tron",
+   "carroceria": "Sedã",
+   "cor": "#22d3ee"
+  },
+  "AUDI|Q6 E-TRON QUATTRO": {
+   "id": "audi-q6-e-tron",
+   "marca": "Audi",
+   "modelo": "Q6 e-tron",
+   "carroceria": "SUV",
+   "cor": "#6366f1"
+  },
+  "AUDI|Q6 E-TRON RWD": {
+   "id": "audi-q6-e-tron",
+   "marca": "Audi",
+   "modelo": "Q6 e-tron",
+   "carroceria": "SUV",
+   "cor": "#6366f1"
+  },
+  "AUDI|Q6 SPORTBACK E-TRON QUATTRO": {
+   "id": "audi-q6-sportback-e-tron",
+   "marca": "Audi",
+   "modelo": "Q6 Sportback e-tron",
+   "carroceria": "SUV",
+   "cor": "#0ea5e9"
+  },
+  "AUDI|SQ6 SPORTBACK E-TRON QUATTRO": {
+   "id": "audi-sq6-sportback-e-tron",
+   "marca": "Audi",
+   "modelo": "SQ6 Sportback e-tron",
+   "carroceria": "SUV",
+   "cor": "#8b5cf6"
+  },
+  "AUDI|RS E-TRON GT": {
+   "id": "audi-rs-e-tron-gt",
+   "marca": "Audi",
+   "modelo": "RS e-tron GT",
+   "carroceria": "Esportivo",
+   "cor": "#14b8a6"
+  },
+  "BMW|I7": {
+   "id": "bmw-i7",
+   "marca": "BMW",
+   "modelo": "i7",
+   "carroceria": "Sedã",
+   "cor": "#60a5fa"
+  },
+  "BMW|IX1": {
+   "id": "bmw-ix1",
+   "marca": "BMW",
+   "modelo": "iX1",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "BMW|IX2": {
+   "id": "bmw-ix2",
+   "marca": "BMW",
+   "modelo": "iX2",
+   "carroceria": "SUV",
+   "cor": "#818cf8"
+  },
+  "BMW|IX3": {
+   "id": "bmw-ix3",
+   "marca": "BMW",
+   "modelo": "iX3",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "BYD|DOLPHIN": {
+   "id": "byd-dolphin",
+   "marca": "BYD",
+   "modelo": "Dolphin",
+   "carroceria": "Hatch",
+   "cor": "#3b82f6"
+  },
+  "BYD|DOLPHIN MINI": {
+   "id": "byd-dolphin-mini",
+   "marca": "BYD",
+   "modelo": "Dolphin Mini",
+   "carroceria": "Hatch",
+   "cor": "#22d3ee"
+  },
+  "BYD|HAN": {
+   "id": "byd-han",
+   "marca": "BYD",
+   "modelo": "Han",
+   "carroceria": "Sedã",
+   "cor": "#6366f1"
+  },
+  "BYD|SEAL": {
+   "id": "byd-seal",
+   "marca": "BYD",
+   "modelo": "Seal",
+   "carroceria": "Sedã",
+   "cor": "#0ea5e9"
+  },
+  "BYD|SEALION 7": {
+   "id": "byd-sealion-7",
+   "marca": "BYD",
+   "modelo": "Sealion 7",
+   "carroceria": "SUV",
+   "cor": "#8b5cf6"
+  },
+  "BYD|TAN": {
+   "id": "byd-tan",
+   "marca": "BYD",
+   "modelo": "Tan",
+   "carroceria": "SUV",
+   "cor": "#14b8a6"
+  },
+  "BYD|YUAN PLUS": {
+   "id": "byd-yuan-plus",
+   "marca": "BYD",
+   "modelo": "Yuan Plus",
+   "carroceria": "SUV",
+   "cor": "#60a5fa"
+  },
+  "BYD|YUAN PRO": {
+   "id": "byd-yuan-pro",
+   "marca": "BYD",
+   "modelo": "Yuan Pro",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "CAOA CHANGAN|AVATR 11": {
+   "id": "avatr-11",
+   "marca": "Caoa Changan",
+   "modelo": "Avatr 11",
+   "carroceria": "SUV",
+   "cor": "#818cf8"
+  },
+  "CHEVROLET|BLAZER EV": {
+   "id": "chevrolet-blazer-ev",
+   "marca": "Chevrolet",
+   "modelo": "Blazer EV",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "CHEVROLET|CAPTIVA EV": {
+   "id": "chevrolet-captiva-ev",
+   "marca": "Chevrolet",
+   "modelo": "Captiva EV",
+   "carroceria": "SUV",
+   "cor": "#3b82f6"
+  },
+  "CHEVROLET|SPARK EUV": {
+   "id": "chevrolet-spark-euv",
+   "marca": "Chevrolet",
+   "modelo": "Spark EUV",
+   "carroceria": "SUV",
+   "cor": "#22d3ee"
+  },
+  "FIAT|500E": {
+   "id": "fiat-500e",
+   "marca": "Fiat",
+   "modelo": "500e",
+   "carroceria": "Hatch",
+   "cor": "#6366f1"
+  },
+  "GAC|AION ES": {
+   "id": "gac-aion-es",
+   "marca": "GAC",
+   "modelo": "Aion ES",
+   "carroceria": "Sedã",
+   "cor": "#0ea5e9"
+  },
+  "GAC|AION UT": {
+   "id": "gac-aion-ut",
+   "marca": "GAC",
+   "modelo": "Aion UT",
+   "carroceria": "Hatch",
+   "cor": "#8b5cf6"
+  },
+  "GAC|AION V": {
+   "id": "gac-aion-v",
+   "marca": "GAC",
+   "modelo": "Aion V",
+   "carroceria": "SUV",
+   "cor": "#14b8a6"
+  },
+  "GAC|AION Y": {
+   "id": "gac-aion-y",
+   "marca": "GAC",
+   "modelo": "Aion Y",
+   "carroceria": "SUV",
+   "cor": "#60a5fa"
+  },
+  "GAC|HYPTEC HT": {
+   "id": "gac-hyptec-ht",
+   "marca": "GAC",
+   "modelo": "Hyptec HT",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "GWM|ORA 03": {
+   "id": "gwm-ora-03",
+   "marca": "GWM",
+   "modelo": "Ora 03",
+   "carroceria": "Hatch",
+   "cor": "#818cf8"
+  },
+  "GWM|ORA 5": {
+   "id": "gwm-ora-5",
+   "marca": "GWM",
+   "modelo": "Ora 5",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "GEELY|EX2": {
+   "id": "geely-ex2",
+   "marca": "Geely",
+   "modelo": "EX2",
+   "carroceria": "SUV",
+   "cor": "#3b82f6"
+  },
+  "GEELY|EX5": {
+   "id": "geely-ex5",
+   "marca": "Geely",
+   "modelo": "EX5",
+   "carroceria": "SUV",
+   "cor": "#22d3ee"
+  },
+  "HYUNDAI|IONIQ 5": {
+   "id": "hyundai-ioniq-5",
+   "marca": "Hyundai",
+   "modelo": "Ioniq 5",
+   "carroceria": "SUV",
+   "cor": "#6366f1"
+  },
+  "JAC|E-J7": {
+   "id": "jac-e-j7",
+   "marca": "JAC",
+   "modelo": "e-J7",
+   "carroceria": "Sedã",
+   "cor": "#0ea5e9"
+  },
+  "JAC|E-JS1": {
+   "id": "jac-e-js1",
+   "marca": "JAC",
+   "modelo": "e-JS1",
+   "carroceria": "Hatch",
+   "cor": "#8b5cf6"
+  },
+  "JAC|E-JS4": {
+   "id": "jac-e-js4",
+   "marca": "JAC",
+   "modelo": "e-JS4",
+   "carroceria": "SUV",
+   "cor": "#14b8a6"
+  },
+  "JAC|IEV330P": {
+   "id": "jac-iev330p",
+   "marca": "JAC",
+   "modelo": "iEV330P",
+   "carroceria": "Picape",
+   "cor": "#60a5fa"
+  },
+  "KIA|EV5 2WD": {
+   "id": "kia-ev5",
+   "marca": "Kia",
+   "modelo": "EV5",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "LEAPMOTOR|B10": {
+   "id": "leapmotor-b10",
+   "marca": "Leapmotor",
+   "modelo": "B10",
+   "carroceria": "SUV",
+   "cor": "#818cf8"
+  },
+  "LEAPMOTOR|C10": {
+   "id": "leapmotor-c10",
+   "marca": "Leapmotor",
+   "modelo": "C10",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "LEXUS|RZ": {
+   "id": "lexus-rz",
+   "marca": "Lexus",
+   "modelo": "RZ",
+   "carroceria": "SUV",
+   "cor": "#3b82f6"
+  },
+  "MG|CYBERSTER": {
+   "id": "mg-cyberster",
+   "marca": "MG",
+   "modelo": "Cyberster",
+   "carroceria": "Esportivo",
+   "cor": "#22d3ee"
+  },
+  "MG|MG4": {
+   "id": "mg-mg4",
+   "marca": "MG",
+   "modelo": "MG4",
+   "carroceria": "Hatch",
+   "cor": "#6366f1"
+  },
+  "MG|MG4 URBAN": {
+   "id": "mg-mg4-urban",
+   "marca": "MG",
+   "modelo": "MG4 Urban",
+   "carroceria": "Hatch",
+   "cor": "#0ea5e9"
+  },
+  "MG|S5": {
+   "id": "mg-s5",
+   "marca": "MG",
+   "modelo": "S5",
+   "carroceria": "SUV",
+   "cor": "#8b5cf6"
+  },
+  "MINI|ACEMAN": {
+   "id": "mini-aceman",
+   "marca": "Mini",
+   "modelo": "Aceman",
+   "carroceria": "SUV",
+   "cor": "#14b8a6"
+  },
+  "MINI|COOPER": {
+   "id": "mini-cooper",
+   "marca": "Mini",
+   "modelo": "Cooper",
+   "carroceria": "Hatch",
+   "cor": "#60a5fa"
+  },
+  "MINI|COUNTRYMAN": {
+   "id": "mini-countryman",
+   "marca": "Mini",
+   "modelo": "Countryman",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "MINI|JCW-E": {
+   "id": "mini-jcw",
+   "marca": "Mini",
+   "modelo": "John Cooper Works",
+   "carroceria": "Hatch",
+   "cor": "#818cf8"
+  },
+  "MERCEDES-BENZ|EQB250+": {
+   "id": "mercedes-eqb",
+   "marca": "Mercedes-Benz",
+   "modelo": "EQB 250+",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "MERCEDES-BENZ|GLB250": {
+   "id": "mercedes-glb-ev",
+   "marca": "Mercedes-Benz",
+   "modelo": "GLB 250 EV",
+   "carroceria": "SUV",
+   "cor": "#3b82f6"
+  },
+  "OMODA|E5": {
+   "id": "omoda-e5",
+   "marca": "Omoda",
+   "modelo": "E5",
+   "carroceria": "SUV",
+   "cor": "#22d3ee"
+  },
+  "PORSCHE|CAYENNE": {
+   "id": "porsche-cayenne-electric",
+   "marca": "Porsche",
+   "modelo": "Cayenne Electric",
+   "carroceria": "SUV",
+   "cor": "#6366f1"
+  },
+  "PORSCHE|MACAN": {
+   "id": "porsche-macan-electric",
+   "marca": "Porsche",
+   "modelo": "Macan Electric",
+   "carroceria": "SUV",
+   "cor": "#0ea5e9"
+  },
+  "PORSCHE|TAYCAN": {
+   "id": "porsche-taycan",
+   "marca": "Porsche",
+   "modelo": "Taycan",
+   "carroceria": "Esportivo",
+   "cor": "#8b5cf6"
+  },
+  "RENAULT|MÉGANE": {
+   "id": "renault-megane-e-tech",
+   "marca": "Renault",
+   "modelo": "Mégane E-Tech",
+   "carroceria": "SUV",
+   "cor": "#14b8a6"
+  },
+  "SUZUKI|E-VITARA": {
+   "id": "suzuki-e-vitara",
+   "marca": "Suzuki",
+   "modelo": "e Vitara",
+   "carroceria": "SUV",
+   "cor": "#60a5fa"
+  },
+  "VOLVO|EC40": {
+   "id": "volvo-ec40",
+   "marca": "Volvo",
+   "modelo": "EC40",
+   "carroceria": "SUV",
+   "cor": "#38bdf8"
+  },
+  "VOLVO|ES90": {
+   "id": "volvo-es90",
+   "marca": "Volvo",
+   "modelo": "ES90",
+   "carroceria": "Sedã",
+   "cor": "#818cf8"
+  },
+  "VOLVO|EX30": {
+   "id": "volvo-ex30",
+   "marca": "Volvo",
+   "modelo": "EX30",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf"
+  },
+  "VOLVO|EX40": {
+   "id": "volvo-ex40",
+   "marca": "Volvo",
+   "modelo": "EX40",
+   "carroceria": "SUV",
+   "cor": "#3b82f6"
+  },
+  "VOLVO|EX90": {
+   "id": "volvo-ex90",
+   "marca": "Volvo",
+   "modelo": "EX90",
+   "carroceria": "SUV",
+   "cor": "#22d3ee"
+  },
+  "ZEEKR|001": {
+   "id": "zeekr-001",
+   "marca": "Zeekr",
+   "modelo": "001",
+   "carroceria": "Perua",
+   "cor": "#6366f1"
+  },
+  "ZEEKR|7X": {
+   "id": "zeekr-7x",
+   "marca": "Zeekr",
+   "modelo": "7X",
+   "carroceria": "SUV",
+   "cor": "#0ea5e9"
+  },
+  "ZEEKR|X": {
+   "id": "zeekr-x",
+   "marca": "Zeekr",
+   "modelo": "X",
+   "carroceria": "SUV",
+   "cor": "#8b5cf6"
+  }
+ }
+}

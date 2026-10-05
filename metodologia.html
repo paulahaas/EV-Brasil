@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De onde vêm os dados — EV Brasil</title>
+  <meta name="description" content="Como o EV Brasil coleta autonomia, consumo e preço dos carros elétricos: tabela PBE Veicular do Inmetro e sites oficiais das marcas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Metodologia</span>
+        <h1 class="section-title">De onde vêm os dados</h1>
+        <p class="section-sub">O EV Brasil não vende carros e não recebe das marcas. Tudo o que aparece aqui vem de fontes públicas, com data.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container prose">
+        <h2>Autonomia e consumo: Inmetro</h2>
+        <p>
+          Usamos a <a class="text-link" id="inmetroLink" href="#" target="_blank" rel="noopener">tabela PBE Veicular do Inmetro</a>
+          (<span id="inmetroTitulo"></span>, atualização de <span id="inmetroData"></span>). É a medição oficial no Brasil e
+          usa o mesmo teste para todas as marcas, o que permite comparar de forma justa.
+        </p>
+        <p>
+          A autonomia do Inmetro costuma ser menor que a divulgada pelas marcas, que muitas vezes usam ciclos de teste
+          mais otimistas (WLTP, NEDC ou CLTC). Quando um modelo tem várias versões, mostramos a faixa de autonomia e,
+          nos rankings, a versão que roda mais.
+        </p>
+        <p>
+          O consumo vem da tabela em MJ/km e é convertido para kWh a cada 100 km (1 kWh = 3,6 MJ), a unidade da conta de luz.
+        </p>
+
+        <h2>Preço</h2>
+        <p>
+          É o preço de tabela "a partir de" (a versão mais barata), coletado nos sites oficiais das marcas em
+          <span id="precoData"></span>. Não usamos preços promocionais nem os descontos para taxistas, motoristas de
+          aplicativo ou pessoas com deficiência.
+        </p>
+        <p>
+          Quando a marca não mostra o preço no site, usamos o valor publicado na imprensa especializada, sempre com o
+          aviso "valor publicado na imprensa" e o link da fonte. Quando não encontramos um valor confiável, o modelo
+          aparece como "preço não divulgado".
+        </p>
+
+        <h2>Quais carros entram</h2>
+        <p>
+          Os carros 100% elétricos da tabela do Inmetro que continuam à venda nos sites oficiais. Ficam de fora vans e
+          caminhões, híbridos e modelos que saíram de linha.
+        </p>
+
+        <h2>Rankings e sugestões</h2>
+        <p>
+          Os rankings usam um critério de cada vez, explicado em cada um. O questionário
+          "Qual é o meu?" filtra por orçamento, carroceria e uma autonomia mínima calculada a partir de quanto você roda,
+          e depois ordena por uma nota que mistura preço, autonomia e consumo, com pesos que mudam conforme a sua prioridade.
+          Nenhuma marca paga para aparecer.
+        </p>
+
+        <h2>Achou um erro?</h2>
+        <p>
+          Preços mudam com frequência. Se você viu um valor diferente no site da marca, confira a data da nossa coleta:
+          o site da marca vale mais que o nosso.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("metodologia");
+    document.getElementById("inmetroLink").href = DATA_INFO.inmetro.url;
+    document.getElementById("inmetroTitulo").textContent = DATA_INFO.inmetro.titulo;
+    document.getElementById("inmetroData").textContent = DATA_INFO.inmetro.atualizacao;
+    document.getElementById("precoData").textContent = DATA_INFO.precos.coleta;
+  </script>
+</body>
+</html>
