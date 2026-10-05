@@ -8,11 +8,19 @@
   const heroCar = VEHICLES.find((v) => v.id === "byd-seal") || VEHICLES[0];
   const heroPanel = document.getElementById("heroPanel");
   const heroVisual = document.getElementById("heroVisual");
-  if (heroPanel) heroPanel.style.setProperty("--glow", heroCar.color);
+  if (heroPanel) {
+    heroPanel.style.setProperty("--glow", heroCar.color);
+    // Com foto, ela vira o fundo do painel inteiro (como na Tesla).
+    if (hasPhoto(heroCar)) {
+      heroPanel.classList.add("has-photo");
+      heroPanel.insertAdjacentHTML("afterbegin", panelBackground(heroCar));
+    }
+  }
   if (heroVisual) {
     heroVisual.href = "veiculo.html?id=" + encodeURIComponent(heroCar.id);
     heroVisual.setAttribute("aria-label", `Ver detalhes do ${heroCar.brand} ${heroCar.model}`);
-    heroVisual.innerHTML = carImage(heroCar);
+    // Com foto, o carro já está no fundo; sem foto, a silhueta fica no meio.
+    if (!hasPhoto(heroCar)) heroVisual.innerHTML = carImage(heroCar);
   }
 
   // Um painel de tela cheia para cada modelo em destaque (featured: true em data.js),
@@ -21,12 +29,13 @@
     const link = "veiculo.html?id=" + encodeURIComponent(v.id);
     return `
       <section class="panel" style="--glow:${v.color}">
+        ${hasPhoto(v) ? photoCredit(v) : ""}
         <div class="panel-head">
           <span class="eyebrow">${v.brand} · ${v.segment}</span>
           <h2 class="panel-title">${v.model}</h2>
           <p class="panel-sub">${v.tagline}</p>
         </div>
-        <a class="panel-visual" href="${link}" aria-label="Ver detalhes do ${v.brand} ${v.model}">${carImage(v)}</a>
+        <a class="panel-visual" href="${link}" aria-label="Ver detalhes do ${v.brand} ${v.model}">${panelVisual(v)}</a>
         <div class="panel-foot">
           ${specBar(v)}
           <div class="panel-actions">
@@ -47,8 +56,9 @@
       const doTipo = VEHICLES.filter((v) => v.bodyType === tipo);
       const capa = doTipo[0];
       return `
-        <a class="tile" href="veiculos.html?tipo=${encodeURIComponent(tipo)}" style="--glow:${capa.color}">
-          <div class="tile-visual">${carImage(capa)}</div>
+        <a class="tile ${hasPhoto(capa) ? "has-photo" : ""}" href="veiculos.html?tipo=${encodeURIComponent(tipo)}" style="--glow:${capa.color}">
+          ${hasPhoto(capa) ? `<img class="tile-bg" src="${capa.photo.card}" alt="" loading="lazy">` : ""}
+          <div class="tile-visual">${hasPhoto(capa) ? "" : carImage(capa)}</div>
           <div class="tile-body">
             <span class="tile-count">${doTipo.length} ${doTipo.length === 1 ? "modelo" : "modelos"}</span>
             <h3 class="tile-title">${tipo}</h3>

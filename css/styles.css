@@ -161,6 +161,27 @@ body.home .header:not(.is-scrolled):not(.open) {
     linear-gradient(180deg, var(--bg) 0%, var(--bg-elev) 58%, var(--bg) 100%);
 }
 .panel-head { max-width: 900px; }
+
+/* Abertura da home com foto: a foto cobre o painel inteiro e um degradê escuro
+   em cima e embaixo garante a leitura do texto. */
+.panel-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.panel.has-photo::before {
+  background: linear-gradient(180deg, rgba(10, 14, 23, 0.82) 0%, rgba(10, 14, 23, 0.15) 32%, rgba(10, 14, 23, 0) 52%, rgba(10, 14, 23, 0.25) 66%, rgba(10, 14, 23, 0.92) 100%);
+}
+.panel.has-photo .panel-sub { color: rgba(238, 242, 248, 0.85); }
+.panel.has-photo .panel-head, .panel.has-photo .panel-foot { text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5); }
+.photo-credit {
+  position: absolute; right: 16px; bottom: 8px; z-index: 1; margin: 0;
+  font-size: 0.68rem; color: rgba(238, 242, 248, 0.55); text-align: right;
+}
+.photo-credit a { text-decoration: underline; }
+
+/* Nos painéis de modelo a foto fica emoldurada no meio, com o crédito embaixo. */
+.panel-visual .car-photo {
+  display: block; width: 100%; height: min(50vh, 560px); object-fit: cover;
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+a.panel-visual:hover .car-photo { filter: brightness(1.05); }
 .panel-title { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 600; letter-spacing: -0.03em; margin-top: 10px; }
 .panel-hero .display { margin-top: 14px; }
 .panel-sub { color: var(--text-dim); font-size: clamp(1rem, 1.6vw, 1.2rem); margin-top: 10px; }
@@ -201,10 +222,16 @@ section { padding: clamp(64px, 9vw, 110px) 0; }
 }
 .tile:hover::before { opacity: 1; }
 .tile-visual { margin: auto 0; }
+.tile-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.tile.has-photo::before { opacity: 1; background: linear-gradient(180deg, rgba(10, 14, 23, 0) 30%, rgba(10, 14, 23, 0.92) 100%); }
+.tile.has-photo:hover .tile-bg { transform: scale(1.04); }
+.tile.has-photo { min-height: 0; aspect-ratio: 4 / 3; }
 .tile-visual .car-svg { width: 100%; transition: transform 0.5s ease; }
 .tile:hover .car-svg { transform: scale(1.05); }
 .tile-body { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .tile-count { color: var(--text-dim); font-size: 0.85rem; }
+.tile.has-photo .tile-count { color: rgba(238, 242, 248, 0.9); }
+.tile.has-photo .tile-body { text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
 .tile-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; margin-bottom: 12px; }
 
 /* ---------------- Faixa de métricas ---------------- */
@@ -236,7 +263,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .card-body { padding: 14px 4px 0; display: flex; flex-direction: column; flex: 1; }
 .card-flag { color: var(--accent-2); font-size: 0.85rem; font-weight: 600; }
 .card-title { font-size: 1.02rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
-.card-meta { color: var(--text-dim); font-size: 0.92rem; line-height: 1.45; }
+.card-meta { color: var(--text-dim); font-size: 0.92rem; line-height: 1.45; overflow-wrap: anywhere; }
 .card-price { font-weight: 600; font-size: 1.02rem; margin-top: 10px; }
 .card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; padding: 0 4px; }
 .card-actions:empty { display: none; }
@@ -314,6 +341,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   background: radial-gradient(ellipse 80% 50% at 50% 40%, color-mix(in srgb, var(--glow) 20%, transparent), transparent 72%);
 }
 .compare-car .car-svg { width: 100%; }
+.compare-car .car-photo { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--radius-sm); }
 .compare-name { display: block; font-weight: 600; margin-top: 10px; }
 .compare-meta { display: block; color: var(--text-dim); font-size: 0.88rem; }
 .compare-empty {

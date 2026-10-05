@@ -717,6 +717,192 @@ const VEHICLES = [
   },
 ];
 
+/**
+ * Fotos reais dos modelos, baixadas do Wikimedia Commons (licenças livres).
+ * `src` é a versão grande (1920px), `card` a menor (960px) para cards.
+ * As licenças exigem citar autor e licença: o crédito aparece junto da foto
+ * (photoCredit() em car-svg.js) e na página creditos.html.
+ */
+const CAR_PHOTOS = {
+  "byd-dolphin": {
+    src: "assets/carros/byd-dolphin.jpg",
+    card: "assets/carros/byd-dolphin-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_IAA_2023_1X7A0634.jpg",
+  },
+  "byd-dolphin-mini": {
+    src: "assets/carros/byd-dolphin-mini.jpg",
+    card: "assets/carros/byd-dolphin-mini-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_Surf_IAA_2025_DSC_2256.jpg",
+  },
+  "byd-seal": {
+    src: "assets/carros/byd-seal.jpg",
+    card: "assets/carros/byd-seal-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_Seal_IAA_2023_1X7A0026.jpg",
+  },
+  "byd-yuan-plus": {
+    src: "assets/carros/byd-yuan-plus.jpg",
+    card: "assets/carros/byd-yuan-plus-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg",
+  },
+  "byd-han": {
+    src: "assets/carros/byd-han.jpg",
+    card: "assets/carros/byd-han-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_Han_EV_DSC_8759.jpg",
+  },
+  "byd-song-plus": {
+    src: "assets/carros/byd-song-plus.jpg",
+    card: "assets/carros/byd-song-plus-960.jpg",
+    author: "Mateusmatsuda",
+    license: "CC BY 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BYD_SONG_PLUS_DM-I_FRONT.jpg",
+  },
+  "gwm-ora-03": {
+    src: "assets/carros/gwm-ora-03.jpg",
+    card: "assets/carros/gwm-ora-03-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:ORA_Funky_Cat_1X7A0814.jpg",
+  },
+  "byd-tan": {
+    src: "assets/carros/byd-tan.jpg",
+    card: "assets/carros/byd-tan-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:2024_BYD_Tang_GIMS_2024_1X7A2342.jpg",
+  },
+  "volvo-ex30": {
+    src: "assets/carros/volvo-ex30.jpg",
+    card: "assets/carros/volvo-ex30-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Volvo_EX30_1X7A2476.jpg",
+  },
+  "renault-kwid-e-tech": {
+    src: "assets/carros/renault-kwid-e-tech.jpg",
+    card: "assets/carros/renault-kwid-e-tech-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Dacia_Spring_1X7A0350.jpg",
+  },
+  "fiat-500e": {
+    src: "assets/carros/fiat-500e.jpg",
+    card: "assets/carros/fiat-500e-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Fiat_500e_(2020)_Auto_Zuerich_2021_IMG_0604.jpg",
+  },
+  "peugeot-e-2008": {
+    src: "assets/carros/peugeot-e-2008.jpg",
+    card: "assets/carros/peugeot-e-2008-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Peugeot_e-2008_Automesse_Ludwigsburg_2022_1X7A5981.jpg",
+  },
+  "nissan-leaf": {
+    src: "assets/carros/nissan-leaf.jpg",
+    card: "assets/carros/nissan-leaf-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Nissan_Leaf_(ZE1)_DSC_7096.jpg",
+  },
+  "bmw-ix1": {
+    src: "assets/carros/bmw-ix1.jpg",
+    card: "assets/carros/bmw-ix1-960.jpg",
+    author: "Alexander Migl",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BMW_iX1_DSC_7507.jpg",
+  },
+  "bmw-i4": {
+    src: "assets/carros/bmw-i4.jpg",
+    card: "assets/carros/bmw-i4-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:BMW_i4_M50_1X7A7379.jpg",
+  },
+  "porsche-taycan": {
+    src: "assets/carros/porsche-taycan.jpg",
+    card: "assets/carros/porsche-taycan-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:2024_Porsche_Taycan_GTS_IAA_2025_DSC_1988.jpg",
+  },
+  "mini-cooper-se": {
+    src: "assets/carros/mini-cooper-se.jpg",
+    card: "assets/carros/mini-cooper-se-960.jpg",
+    author: "Alexander-93",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Mini_Hatch_(J01)_IMG_8959.jpg",
+  },
+  "zeekr-x": {
+    src: "assets/carros/zeekr-x.jpg",
+    card: "assets/carros/zeekr-x-960.jpg",
+    author: "Matti Blume",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Zeekr_X,_Almaty_(LRM_20240331_124050).jpg",
+  },
+  "gac-aion-y": {
+    src: "assets/carros/gac-aion-y.jpg",
+    card: "assets/carros/gac-aion-y-960.jpg",
+    author: "Jengtingchen",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Aion_Y_004.jpg",
+  },
+  "chevrolet-equinox-ev": {
+    src: "assets/carros/chevrolet-equinox-ev.jpg",
+    card: "assets/carros/chevrolet-equinox-ev-960.jpg",
+    author: "JustAnotherCarDesigner",
+    license: "CC0",
+    licenseUrl: "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:Chevrolet_Equinox_EV_001.jpg",
+  },
+  "mercedes-eqa": {
+    src: "assets/carros/mercedes-eqa.jpg",
+    card: "assets/carros/mercedes-eqa-960.jpg",
+    author: "Dinkun Chen",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:MERCEDES-BENZ_EQA_China.jpg",
+  },
+  "jac-e-js1": {
+    src: "assets/carros/jac-e-js1.jpg",
+    card: "assets/carros/jac-e-js1-960.jpg",
+    author: "Matti Blume",
+    license: "CC BY-SA 4.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+    page: "https://commons.wikimedia.org/wiki/File:JAC_e-JS1,_Auto_2024,_Zurich_(PANA0126).jpg",
+  },
+};
+VEHICLES.forEach((v) => { if (CAR_PHOTOS[v.id]) v.photo = CAR_PHOTOS[v.id]; });
+
 /** Marcas disponíveis (para filtros). */
 const BRANDS = [...new Set(VEHICLES.map((v) => v.brand))].sort();
 

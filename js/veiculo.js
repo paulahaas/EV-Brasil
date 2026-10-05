@@ -55,6 +55,7 @@
 
   root.innerHTML = `
     <section class="panel model-hero" style="--glow:${v.color}">
+      ${hasPhoto(v) ? photoCredit(v) : ""}
       <div class="panel-head">
         <nav class="breadcrumb">
           <a href="index.html">Início</a> ·
@@ -65,7 +66,7 @@
         <h1 class="panel-title">${v.model}</h1>
         <p class="panel-sub">${v.tagline}</p>
       </div>
-      <div class="panel-visual">${carImage(v)}</div>
+      <div class="panel-visual">${panelVisual(v)}</div>
       <div class="panel-foot">
         ${specBar(v)}
         <div class="panel-actions">

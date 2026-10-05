@@ -22,6 +22,7 @@ ev-brasil/
 ├── meus-anuncios.html  # Anúncios do usuário logado: editar e excluir
 ├── anuncio.html        # Página de um anúncio: galeria de fotos, dados e WhatsApp
 ├── comparar.html       # Comparador: até três modelos lado a lado
+├── creditos.html       # Autores e licenças das fotos dos carros
 ├── login.html          # Entrar na conta
 ├── cadastro.html       # Criar conta
 ├── css/
@@ -47,7 +48,8 @@ ev-brasil/
 │   └── fotos.js        # Reduz as fotos no navegador antes de salvar no Firestore
 ├── firestore.rules     # Regras de segurança do banco
 ├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
-└── assets/             # (imagens próprias, se quiser adicionar)
+└── assets/
+    └── carros/         # Fotos dos modelos (Wikimedia Commons): <id>.jpg 1920px e <id>-960.jpg
 ```
 
 ## 🚀 Publicar
@@ -93,8 +95,9 @@ python3 -m http.server 5173
 - **Mudar cores/visual:** abra `css/styles.css`. As cores ficam em `:root`
   no topo do arquivo (`--bg`, `--accent`, etc.).
 - **Trocar textos do menu/rodapé:** edite `js/main.js`.
-- **Usar fotos reais dos carros:** em `js/car-svg.js`, altere a função
-  `carImage()` para retornar `<img src="assets/seu-carro.jpg">`.
+- **Trocar a foto de um carro:** coloque `<id>.jpg` (1920px) e `<id>-960.jpg` em
+  `assets/carros/` e ajuste autor e licença em `CAR_PHOTOS`, no fim de `js/data.js`.
+  Fotos de terceiros só com licença que permita o uso.
 
 ## 🚗 Marcas incluídas (exemplos)
 

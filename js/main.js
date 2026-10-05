@@ -91,7 +91,7 @@ function renderFooter() {
       </div>
       <div class="footer-bottom">
         <span>© ${year} EV Brasil. Todos os direitos reservados.</span>
-        <span>Feito no Brasil ⚡ Energia limpa para todos.</span>
+        <span>Feito no Brasil ⚡ Energia limpa para todos. · <a href="creditos.html">Créditos das fotos</a></span>
       </div>
     </div>
   </footer>`;
@@ -125,7 +125,7 @@ function createCard(v) {
   const q = quickSpecs(v);
   return `
     <a class="card" href="veiculo.html?id=${encodeURIComponent(v.id)}">
-      <div class="card-media" style="--glow:${v.color}">
+      <div class="card-media ${hasPhoto(v) ? "has-photo" : ""}" style="--glow:${v.color}">
         ${carImage(v)}
       </div>
       <div class="card-body">
