@@ -14,30 +14,30 @@
   if (ids.length === 0) ids = ["byd-dolphin", "volvo-ex30"].filter((id) => getVehicleById(id));
   while (ids.length < MAX) ids.push(null);
 
-  const num = (decimais) => (n) => n.toLocaleString("pt-BR", { maximumFractionDigits: decimais });
+  const TARIFA = 0.95; // R$ por kWh, carregando em casa (o mesmo padrão da calculadora)
 
   // Linhas da tabela. `valor` é o número usado para achar o melhor da linha
   // e `melhor` diz se ganha o maior ou o menor (sem `melhor`, ninguém é destacado).
   const LINHAS = [
-    { rotulo: "Preço", texto: (v) => formatBRL(v.priceBRL), valor: (v) => v.priceBRL, melhor: "menor" },
-    { rotulo: "Autonomia", texto: (v) => v.specs.autonomia, valor: rangeKm, melhor: "maior" },
-    { rotulo: "Bateria", texto: (v) => v.specs.bateria },
+    { rotulo: "Preço a partir de", texto: (v) => priceText(v) + (priceNoteShort(v) ? `<small>${priceNoteShort(v)}</small>` : ""), valor: (v) => v.price, melhor: "menor" },
+    { rotulo: "Autonomia (Inmetro)", texto: (v) => rangeText(v), valor: (v) => v.rangeMax, melhor: "maior" },
+    { rotulo: "Consumo", texto: (v) => `${formatNum(v.kwh100)} kWh/100 km`, valor: (v) => v.kwh100, melhor: "menor" },
     {
-      rotulo: "Consumo estimado",
-      texto: (v) => (consumptionKwh100(v) ? num(1)(consumptionKwh100(v)) + " kWh/100 km" : "—"),
-      // Arredonda como na tela, para empates aparecerem como empates.
-      valor: (v) => (consumptionKwh100(v) ? Math.round(consumptionKwh100(v) * 10) / 10 : null),
+      rotulo: "Energia a cada 100 km",
+      texto: (v) => (v.kwh100 * TARIFA).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
+      valor: (v) => Math.round(v.kwh100 * TARIFA * 100),
       melhor: "menor",
     },
-    { rotulo: "Potência", texto: (v) => v.specs.potencia, valor: (v) => firstNumber(v.specs.potencia), melhor: "maior" },
-    { rotulo: "Torque", texto: (v) => v.specs.torque, valor: (v) => firstNumber(v.specs.torque), melhor: "maior" },
-    { rotulo: "0–100 km/h", texto: (v) => num(1)(accelSeconds(v)) + " s", valor: accelSeconds, melhor: "menor" },
-    { rotulo: "Velocidade máxima", texto: (v) => v.specs.velocidadeMax, valor: (v) => firstNumber(v.specs.velocidadeMax), melhor: "maior" },
-    { rotulo: "Tração", texto: (v) => v.specs.tracao },
-    { rotulo: "Recarga (AC)", texto: (v) => v.specs.recargaAC },
-    { rotulo: "Recarga rápida (DC)", texto: (v) => v.specs.recargaDC, valor: (v) => firstNumber(v.specs.recargaDC), melhor: "maior" },
-    { rotulo: "Lugares", texto: (v) => v.specs.lugares },
-    { rotulo: "Porta-malas", texto: (v) => v.specs.portaMalas, valor: (v) => firstNumber(v.specs.portaMalas), melhor: "maior" },
+    {
+      // Versão de entrada: o preço "a partir de" é o da versão mais barata.
+      rotulo: "Autonomia por R$ 100 mil",
+      texto: (v) => (v.price ? `${Math.round((v.rangeMin / v.price) * 100000)} km` : "—"),
+      valor: (v) => (v.price ? Math.round((v.rangeMin / v.price) * 100000) : null),
+      melhor: "maior",
+    },
+    { rotulo: "Carroceria", texto: (v) => v.bodyType },
+    { rotulo: "Categoria (Inmetro)", texto: (v) => v.category },
+    { rotulo: "Versões", texto: (v) => String(v.versions.length) },
   ];
 
   function opcoes(selecionado, coluna) {
@@ -60,7 +60,7 @@
           <a class="compare-car" href="veiculo.html?id=${encodeURIComponent(v.id)}" style="--glow:${v.color}">
             ${carImage(v)}
             <span class="compare-name">${v.brand} ${v.model}</span>
-            <span class="compare-meta">${v.bodyType} · ${v.segment}</span>
+            <span class="compare-meta">${v.bodyType} · ${v.category}</span>
           </a>` : '<div class="compare-empty">Escolha um modelo para comparar</div>'}
       </th>`;
   }
@@ -94,7 +94,7 @@
           <tbody>${LINHAS.map(linha).join("")}</tbody>
         </table>
       </div>
-      <p class="form-hint">Em azul, o melhor valor de cada linha. Consumo estimado = bateria ÷ autonomia declarada.</p>`;
+      <p class="fine-print">Em azul, o melhor valor de cada linha. Autonomia e consumo: Inmetro (versão mais eficiente). Energia: carregando em casa a R$ 0,95 por kWh.</p>`;
 
     // Mantém a escolha na URL, para o link poder ser compartilhado.
     const escolhidos = ids.filter(Boolean);

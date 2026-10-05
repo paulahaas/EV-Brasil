@@ -4,61 +4,77 @@
 (function () {
   mountChrome("home");
 
-  // Painel de abertura: usa o Seal (o esportivo) como carro de capa.
-  const heroCar = VEHICLES.find((v) => v.id === "byd-seal") || VEHICLES[0];
+  // Abertura: foto de fundo do BYD Seal (a foto de salão, que funciona bem em tela cheia).
+  const heroCar = getVehicleById("byd-seal") || VEHICLES.find(hasPhoto);
   const heroPanel = document.getElementById("heroPanel");
   const heroVisual = document.getElementById("heroVisual");
-  if (heroPanel) {
+  if (heroPanel && heroCar) {
     heroPanel.style.setProperty("--glow", heroCar.color);
-    // Com foto, ela vira o fundo do painel inteiro (como na Tesla).
     if (hasPhoto(heroCar)) {
       heroPanel.classList.add("has-photo");
       heroPanel.insertAdjacentHTML("afterbegin", panelBackground(heroCar));
+    } else if (heroVisual) {
+      heroVisual.innerHTML = carImage(heroCar);
     }
   }
-  if (heroVisual) {
+  if (heroVisual && heroCar) {
     heroVisual.href = "veiculo.html?id=" + encodeURIComponent(heroCar.id);
-    heroVisual.setAttribute("aria-label", `Ver detalhes do ${heroCar.brand} ${heroCar.model}`);
-    // Com foto, o carro já está no fundo; sem foto, a silhueta fica no meio.
-    if (!hasPhoto(heroCar)) heroVisual.innerHTML = carImage(heroCar);
+    heroVisual.setAttribute("aria-label", `Ver ${heroCar.brand} ${heroCar.model}`);
   }
+  const heroAll = document.getElementById("heroAll");
+  if (heroAll) heroAll.textContent = `Ver os ${VEHICLES.length} carros`;
 
-  // Um painel de tela cheia para cada modelo em destaque (featured: true em data.js),
-  // menos o carro de capa, que já aparece no painel de abertura.
-  function panel(v) {
-    const link = "veiculo.html?id=" + encodeURIComponent(v.id);
-    return `
-      <section class="panel" style="--glow:${v.color}">
-        ${hasPhoto(v) ? photoCredit(v) : ""}
-        <div class="panel-head">
-          <span class="eyebrow">${v.brand} · ${v.segment}</span>
-          <h2 class="panel-title">${v.model}</h2>
-          <p class="panel-sub">${v.tagline}</p>
-        </div>
-        <a class="panel-visual" href="${link}" aria-label="Ver detalhes do ${v.brand} ${v.model}">${panelVisual(v)}</a>
-        <div class="panel-foot">
-          ${specBar(v)}
-          <div class="panel-actions">
-            <a href="${link}" class="btn btn-primary btn-wide">Ver detalhes</a>
-            <a href="index.html?modelo=${encodeURIComponent(v.id)}#contato" class="btn btn-ghost btn-wide">Tenho interesse</a>
-          </div>
-        </div>
-      </section>`;
-  }
+  // Números do catálogo.
+  const comPreco = VEHICLES.filter((v) => v.price);
+  const maisBarato = comPreco.reduce((a, b) => (b.price < a.price ? b : a));
+  const maisLonge = VEHICLES.reduce((a, b) => (b.rangeMax > a.rangeMax ? b : a));
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="num">${VEHICLES.length}</div><div class="lbl">Modelos 100% elétricos</div></div>
+    <div class="stat"><div class="num">${BRANDS.length}</div><div class="lbl">Marcas</div></div>
+    <div class="stat"><div class="num">${formatBRL(maisBarato.price)}</div><div class="lbl">O mais barato (${maisBarato.brand} ${maisBarato.model})</div></div>
+    <div class="stat"><div class="num">${maisLonge.rangeMax} km</div><div class="lbl">Maior autonomia (${maisLonge.brand} ${maisLonge.model})</div></div>`;
 
-  const panels = document.getElementById("featuredPanels");
-  if (panels) panels.innerHTML = VEHICLES.filter((v) => v.featured && v !== heroCar).map(panel).join("");
+  // Prévia dos rankings: top 5 de três critérios (os mesmos de rankings.html).
+  const colunas = [
+    {
+      titulo: "Mais baratos",
+      itens: [...comPreco].sort((a, b) => a.price - b.price).slice(0, 5),
+      valor: (v) => formatBRL(v.price),
+    },
+    {
+      titulo: "Maior autonomia",
+      itens: [...VEHICLES].sort((a, b) => b.rangeMax - a.rangeMax).slice(0, 5),
+      valor: (v) => `${v.rangeMax} km`,
+    },
+    {
+      titulo: "Gastam menos energia",
+      itens: [...VEHICLES].sort((a, b) => a.kwh100 - b.kwh100).slice(0, 5),
+      valor: (v) => `${formatNum(v.kwh100)} kWh/100 km`,
+    },
+  ];
+  document.getElementById("rankPreview").innerHTML = colunas.map((c) => `
+    <div class="rank-col">
+      <h3>${c.titulo}</h3>
+      <ol class="rank-list">
+        ${c.itens.map((v) => `
+          <li><a href="veiculo.html?id=${encodeURIComponent(v.id)}">
+            <span class="rank-name">${v.brand} ${v.model}</span>
+            <span class="rank-value">${c.valor(v)}</span>
+          </a></li>`).join("")}
+      </ol>
+    </div>`).join("");
 
-  // Blocos de categoria: um por tipo de carroceria, com o primeiro carro do tipo.
+  // Blocos de carroceria: Hatch, Sedã e SUV, com a foto de um modelo do tipo.
   const tiles = document.getElementById("categoryTiles");
   if (tiles) {
-    tiles.innerHTML = BODY_TYPES.map((tipo) => {
+    tiles.innerHTML = ["Hatch", "Sedã", "SUV"].map((tipo) => {
       const doTipo = VEHICLES.filter((v) => v.bodyType === tipo);
-      const capa = doTipo[0];
+      const capa = doTipo.find(hasPhoto) || doTipo[0];
+      const foto = hasPhoto(capa);
       return `
-        <a class="tile ${hasPhoto(capa) ? "has-photo" : ""}" href="veiculos.html?tipo=${encodeURIComponent(tipo)}" style="--glow:${capa.color}">
-          ${hasPhoto(capa) ? `<img class="tile-bg" src="${capa.photo.card}" alt="" loading="lazy">` : ""}
-          <div class="tile-visual">${hasPhoto(capa) ? "" : carImage(capa)}</div>
+        <a class="tile ${foto ? "has-photo" : ""}" href="veiculos.html?tipo=${encodeURIComponent(tipo)}" style="--glow:${capa.color}">
+          ${foto ? `<img class="tile-bg" src="${capa.photo.card}" alt="" loading="lazy">` : ""}
+          <div class="tile-visual">${foto ? "" : carImage(capa)}</div>
           <div class="tile-body">
             <span class="tile-count">${doTipo.length} ${doTipo.length === 1 ? "modelo" : "modelos"}</span>
             <h3 class="tile-title">${tipo}</h3>
@@ -67,19 +83,4 @@
         </a>`;
     }).join("");
   }
-
-  // Preenche o select de modelos no formulário de contato.
-  const modeloSelect = document.getElementById("modelo");
-  if (modeloSelect) {
-    modeloSelect.innerHTML =
-      '<option value="">Selecione um modelo</option>' +
-      VEHICLES.map((v) => `<option value="${v.id}">${v.brand} ${v.model}</option>`).join("");
-
-    // Se veio de um link com ?modelo=id, pré-seleciona.
-    const params = new URLSearchParams(location.search);
-    const preset = params.get("modelo");
-    if (preset) modeloSelect.value = preset;
-  }
-
-  // O envio do formulário de contato fica em js/contato.js.
 })();

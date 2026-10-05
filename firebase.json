@@ -11,16 +11,23 @@
       "package.json",
       "package-lock.json",
       "README.md",
-      "chat.html",
-      "js/chat.js",
       "**/.*",
       "**/.*/**",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "dados/**",
+      "scripts/**",
+      "previa-pesquisa/**",
+      "previa-fotos/**"
     ],
     "headers": [
       {
         "source": "**/*.@(html|css|js)",
-        "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
       }
     ]
   }

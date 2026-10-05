@@ -1,110 +1,77 @@
-# EV Brasil ⚡ — Site de Venda de Veículos Elétricos
+# EV Brasil ⚡ — Guia dos carros elétricos no Brasil
 
-Site profissional para venda de veículos elétricos em todo o Brasil.
-Design em **modo noturno**, com tons de **cinza escuro** e **azul escuro**,
-com layout inspirado nos sites da **Tesla** (painéis de tela cheia) e da **Nike**
-(títulos pesados, cards sem moldura).
+**Seu próximo carro é elétrico. Qual deles?**
 
-Feito com **HTML + CSS + JavaScript puro** (sem frameworks e sem etapa de
-build), para você ter acesso total e conseguir editar tudo facilmente no
-VSCode.
+Site de pesquisa que compara os carros 100% elétricos à venda no Brasil com dados
+públicos: autonomia e consumo medidos pelo **Inmetro** e preço com fonte e data.
+O site não vende carros.
+
+No ar em **https://ev-brasil.web.app** (Firebase Hosting).
+
+Feito com **HTML + CSS + JavaScript puro**, sem framework.
 
 ---
 
-## 🗂️ Estrutura do projeto
+## 🗂️ Estrutura
 
 ```
 ev-brasil/
-├── index.html          # Página inicial (herói, destaques, tecnologia, contato)
-├── veiculos.html       # Aba de venda: catálogo com filtros e ordenação
-├── veiculo.html        # Página de detalhes de um carro (ficha técnica completa)
-├── vender.html         # Formulário para anunciar ou editar um veículo (exige login)
-├── meus-anuncios.html  # Anúncios do usuário logado: editar e excluir
-├── anuncio.html        # Página de um anúncio: galeria de fotos, dados e WhatsApp
-├── comparar.html       # Comparador: até três modelos lado a lado
-├── creditos.html       # Autores e licenças das fotos dos carros
-├── login.html          # Entrar na conta
-├── cadastro.html       # Criar conta
-├── css/
-│   └── styles.css      # TODO o visual do site (cores no topo do arquivo)
+├── index.html          # Home: abertura, números, ferramentas, rankings, carrocerias
+├── veiculos.html       # Catálogo com busca e filtros
+├── veiculo.html        # Página de um modelo: versões do Inmetro e origem do preço
+├── encontre.html       # Questionário "Qual é o meu?"
+├── rankings.html       # Rankings (critério explicado em cada um)
+├── comparar.html       # Até três modelos lado a lado
+├── calculadora.html    # Economia elétrico × gasolina
+├── metodologia.html    # De onde vêm os dados
+├── creditos.html       # Autores e licenças das fotos
+├── css/styles.css      # Todo o visual (cores no topo do arquivo)
 ├── js/
-│   ├── data.js         # "Banco de dados" dos carros — edite aqui p/ add/remover
-│   ├── car-svg.js      # Ilustrações vetoriais dos carros
-│   ├── main.js         # Cabeçalho, rodapé e card de veículo (compartilhados)
-│   ├── home.js         # Lógica da página inicial
-│   ├── veiculos.js     # Lógica do catálogo (filtros/ordenação)
-│   ├── veiculo.js      # Lógica da página de detalhes
-│   ├── comparar.js     # Comparador de modelos
-│   ├── simulador.js    # Simulador de economia elétrico × gasolina (home)
-│   ├── firebase.js     # Conexão com o Firebase (Auth + Firestore)
-│   ├── auth.js         # Login e cadastro
-│   ├── session.js      # Entrar/Sair no cabeçalho e exigirLogin()
-│   ├── sell.js         # Cria/edita o anúncio no Firestore (coleção "anuncios")
-│   ├── anuncio-card.js # Card de anúncio e aviso (toast), compartilhados
-│   ├── anuncios.js     # Mostra os anúncios do Firestore na vitrine
-│   ├── meus-anuncios.js# Lista, edita e exclui os anúncios do usuário
-│   ├── anuncio.js      # Página de um anúncio
-│   ├── contato.js      # Formulário de contato: grava em "contatos" no Firestore
-│   └── fotos.js        # Reduz as fotos no navegador antes de salvar no Firestore
-├── firestore.rules     # Regras de segurança do banco
-├── serve.json          # Config do `npx serve` (mantém o ?id= nas URLs)
-└── assets/
-    └── carros/         # Fotos dos modelos (Wikimedia Commons): <id>.jpg 1920px e <id>-960.jpg
+│   ├── catalogo.js     # GERADO por scripts/gerar-dados.mjs — não editar à mão
+│   ├── data.js         # Funções auxiliares sobre o catálogo
+│   ├── car-svg.js      # Fotos e silhuetas dos carros
+│   ├── main.js         # Cabeçalho, rodapé e card (compartilhados)
+│   └── home.js, veiculos.js, veiculo.js, encontre.js, rankings.js,
+│       comparar.js, simulador.js
+├── dados/              # Fonte dos dados (não vai para o ar)
+│   ├── inmetro-pbev-2026-eletricos.json   # elétricos da tabela PBE Veicular 2026
+│   ├── precos-2026-10.jsonl               # preços coletados, com fonte
+│   ├── modelos.json                       # nome de exibição, carroceria, cor
+│   ├── fotos.json                         # fotos e créditos
+│   └── levantamento-eletricos-2026-10.*   # planilha de revisão
+├── scripts/gerar-dados.mjs  # Gera js/catalogo.js e sitemap.xml a partir de dados/
+└── assets/carros/      # Fotos (Wikimedia Commons): <id>.jpg 1920px e <id>-960.jpg
 ```
 
-## 🚀 Publicar
+## ✏️ Atualizar o catálogo
 
-O site fica em **https://ev-brasil.web.app** (Firebase Hosting). Para publicar uma nova versão:
+1. Edite os arquivos em `dados/` (preço novo, modelo novo, foto nova).
+2. Gere o catálogo:
+
+```bash
+npm run dados
+```
+
+Modelo novo precisa estar na tabela do Inmetro e ganhar uma linha em
+`dados/modelos.json`. Modelo que saiu de linha vai para `fora_de_linha`.
+
+## ▶️ Rodar localmente
+
+```bash
+npm start
+```
+
+O `serve.json` desliga as URLs "limpas" do `npx serve`, que apagariam o `?id=`.
+
+## 🚀 Publicar
 
 ```bash
 npm run deploy
 ```
 
-O que vai ao ar e o que fica de fora está em `firebase.json`.
-
-Para publicar as regras do banco depois de editar `firestore.rules`:
-
-```bash
-firebase deploy --only firestore:rules
-```
-
-## ▶️ Como rodar localmente
-
-Como é um site estático, você precisa apenas de um servidor local simples
-(porque o navegador bloqueia alguns recursos ao abrir o arquivo direto).
-
-**Opção 1 — VSCode (mais fácil):**
-1. Instale a extensão **Live Server**.
-2. Clique com o botão direito em `index.html` → **Open with Live Server**.
-
-**Opção 2 — Node.js:**
-```bash
-npx serve .
-```
-
-**Opção 3 — Python:**
-```bash
-python3 -m http.server 5173
-# abra http://localhost:5173
-```
-
-## ✏️ Como personalizar
-
-- **Adicionar/editar carros:** abra `js/data.js` e altere a lista `VEHICLES`.
-  Cada carro tem preço, ficha técnica (`specs`), destaques e descrição.
-- **Mudar cores/visual:** abra `css/styles.css`. As cores ficam em `:root`
-  no topo do arquivo (`--bg`, `--accent`, etc.).
-- **Trocar textos do menu/rodapé:** edite `js/main.js`.
-- **Trocar a foto de um carro:** coloque `<id>.jpg` (1920px) e `<id>-960.jpg` em
-  `assets/carros/` e ajuste autor e licença em `CAR_PHOTOS`, no fim de `js/data.js`.
-  Fotos de terceiros só com licença que permita o uso.
-
-## 🚗 Marcas incluídas (exemplos)
-
-22 modelos de 15 marcas: BYD, GWM, Volvo, Renault, Fiat, Peugeot, Nissan, BMW, Porsche,
-Mini, Zeekr, GAC, Chevrolet, Mercedes-Benz e JAC.
-Os dados são ilustrativos — ajuste preços e especificações conforme sua operação.
+O que vai ao ar e o que fica de fora está em `firebase.json` (`dados/` e `scripts/`
+ficam de fora).
 
 ---
 
-Feito no Brasil 🇧🇷 — energia limpa para todos.
+Feito no Brasil 🇧🇷

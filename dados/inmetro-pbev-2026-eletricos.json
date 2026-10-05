@@ -1,0 +1,1862 @@
+[
+ {
+  "categoria": "Sub Compacto",
+  "marca": "BYD",
+  "modelo": "DOLPHIN MINI",
+  "versao": "GS EV",
+  "autonomia_km": 280,
+  "mj_km": 0.41,
+  "kmle_cidade": "58,59",
+  "kmle_estrada": "41,9"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "BYD",
+  "modelo": "DOLPHIN MINI",
+  "versao": "GS 5 EV",
+  "autonomia_km": 280,
+  "mj_km": 0.41,
+  "kmle_cidade": "58,6",
+  "kmle_estrada": "41,9"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "BYD",
+  "modelo": "DOLPHIN MINI",
+  "versao": "GL 5 EV",
+  "autonomia_km": 224,
+  "mj_km": 0.39,
+  "kmle_cidade": "60,6",
+  "kmle_estrada": "44,4"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "FIAT",
+  "modelo": "500E",
+  "versao": "ICON",
+  "autonomia_km": 227,
+  "mj_km": 0.46,
+  "kmle_cidade": "47,3",
+  "kmle_estrada": "40,4"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "JAC",
+  "modelo": "e-JS1",
+  "versao": "e-JS1",
+  "autonomia_km": 181,
+  "mj_km": 0.5,
+  "kmle_cidade": "46,6",
+  "kmle_estrada": "35,0"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "JAC",
+  "modelo": "e-JS1",
+  "versao": "e-JS1 EXT",
+  "autonomia_km": 181,
+  "mj_km": 0.5,
+  "kmle_cidade": "46,6",
+  "kmle_estrada": "35,0"
+ },
+ {
+  "categoria": "Sub Compacto",
+  "marca": "RENAULT",
+  "modelo": "E-KWID",
+  "versao": "INTENS",
+  "autonomia_km": 185,
+  "mj_km": 0.44,
+  "kmle_cidade": "52,7",
+  "kmle_estrada": "39,6"
+ },
+ {
+  "categoria": "Compacto",
+  "marca": "MINI",
+  "modelo": "Cooper",
+  "versao": "E",
+  "autonomia_km": 239,
+  "mj_km": 0.46,
+  "kmle_cidade": "48,0",
+  "kmle_estrada": "39,7"
+ },
+ {
+  "categoria": "Compacto",
+  "marca": "MINI",
+  "modelo": "Cooper",
+  "versao": "SE",
+  "autonomia_km": 312,
+  "mj_km": 0.48,
+  "kmle_cidade": "46,1",
+  "kmle_estrada": "38,4"
+ },
+ {
+  "categoria": "Compacto",
+  "marca": "MINI",
+  "modelo": "JCW-E",
+  "versao": "3P",
+  "autonomia_km": 306,
+  "mj_km": 0.48,
+  "kmle_cidade": "43,8",
+  "kmle_estrada": "40,2"
+ },
+ {
+  "categoria": "Compacto",
+  "marca": "PEUGEOT",
+  "modelo": "E-208",
+  "versao": "GT",
+  "autonomia_km": 220,
+  "mj_km": 0.59,
+  "kmle_cidade": "37,8",
+  "kmle_estrada": "30,8"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "BYD",
+  "modelo": "DOLPHIN",
+  "versao": "GS 180EV",
+  "autonomia_km": 291,
+  "mj_km": 0.42,
+  "kmle_cidade": "51,9",
+  "kmle_estrada": "43,5"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "BYD",
+  "modelo": "DOLPHIN",
+  "versao": "PLUS 310EV",
+  "autonomia_km": 330,
+  "mj_km": 0.51,
+  "kmle_cidade": "42,1",
+  "kmle_estrada": "36,8"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "BYD",
+  "modelo": "DOLPHIN",
+  "versao": "SE 290EV",
+  "autonomia_km": 272,
+  "mj_km": 0.49,
+  "kmle_cidade": "45,8",
+  "kmle_estrada": "36,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "BYD",
+  "modelo": "YUAN PRO",
+  "versao": "GS 290EV",
+  "autonomia_km": 250,
+  "mj_km": 0.51,
+  "kmle_cidade": "44,0",
+  "kmle_estrada": "35,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "CHEVROLET",
+  "modelo": "SPARK EUV",
+  "versao": "ACTIV",
+  "autonomia_km": 258,
+  "mj_km": 0.5,
+  "kmle_cidade": "47,4",
+  "kmle_estrada": "34,9"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GEELY",
+  "modelo": "EX2",
+  "versao": "MAX",
+  "autonomia_km": 289,
+  "mj_km": 0.39,
+  "kmle_cidade": "60,1",
+  "kmle_estrada": "45,2"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GEELY",
+  "modelo": "EX2",
+  "versao": "PRO",
+  "autonomia_km": 289,
+  "mj_km": 0.39,
+  "kmle_cidade": "60,1",
+  "kmle_estrada": "45,2"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GWM",
+  "modelo": "ORA 03",
+  "versao": "BEV58 C",
+  "autonomia_km": 315,
+  "mj_km": 0.51,
+  "kmle_cidade": "42,8",
+  "kmle_estrada": "36,1"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GWM",
+  "modelo": "ORA 03",
+  "versao": "GT BEV63",
+  "autonomia_km": 295,
+  "mj_km": 0.54,
+  "kmle_cidade": "41,1",
+  "kmle_estrada": "33,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GWM",
+  "modelo": "ORA 03",
+  "versao": "SKIN BEV48",
+  "autonomia_km": 232,
+  "mj_km": 0.52,
+  "kmle_cidade": "41,7",
+  "kmle_estrada": "35,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "GWM",
+  "modelo": "ORA 03",
+  "versao": "BEV58",
+  "autonomia_km": 315,
+  "mj_km": 0.51,
+  "kmle_cidade": "42,8",
+  "kmle_estrada": "36,1"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "JAC",
+  "modelo": "e-JS4",
+  "versao": "e-JS4",
+  "autonomia_km": 307,
+  "mj_km": 0.47,
+  "kmle_cidade": "47,5",
+  "kmle_estrada": "39,1"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "64 KWH COM",
+  "autonomia_km": 364,
+  "mj_km": 0.5,
+  "kmle_cidade": "43,3",
+  "kmle_estrada": "37,4"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "64 KWH LUX",
+  "autonomia_km": 364,
+  "mj_km": 0.5,
+  "kmle_cidade": "43,3",
+  "kmle_estrada": "37,4"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "64 KWH AWD",
+  "autonomia_km": 279,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,3",
+  "kmle_estrada": "32,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MINI",
+  "modelo": "Aceman",
+  "versao": "E",
+  "autonomia_km": 253,
+  "mj_km": 0.46,
+  "kmle_cidade": "47,6",
+  "kmle_estrada": "40,2"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MINI",
+  "modelo": "Aceman",
+  "versao": "SE",
+  "autonomia_km": 270,
+  "mj_km": 0.52,
+  "kmle_cidade": "40,8",
+  "kmle_estrada": "36,7"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "MINI",
+  "modelo": "JCW-E",
+  "versao": "ACEMAN",
+  "autonomia_km": 312,
+  "mj_km": 0.5,
+  "kmle_cidade": "41,2",
+  "kmle_estrada": "39,8"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "PEUGEOT",
+  "modelo": "E2008",
+  "versao": "GT",
+  "autonomia_km": 261,
+  "mj_km": 0.55,
+  "kmle_cidade": "38,2",
+  "kmle_estrada": "35,3"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "RENAULT",
+  "modelo": "MÉGANE",
+  "versao": "E-TECH",
+  "autonomia_km": 337,
+  "mj_km": 0.51,
+  "kmle_cidade": "41,4",
+  "kmle_estrada": "38,8"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "SUZUKI",
+  "modelo": "e-Vitara",
+  "versao": "4STY 2WD",
+  "autonomia_km": 317,
+  "mj_km": 0.54,
+  "kmle_cidade": "41,5",
+  "kmle_estrada": "34,3"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "SUZUKI",
+  "modelo": "e-Vitara",
+  "versao": "4STY 4WD",
+  "autonomia_km": 293,
+  "mj_km": 0.58,
+  "kmle_cidade": "37,8",
+  "kmle_estrada": "31,6"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "E40 CORE",
+  "autonomia_km": 250,
+  "mj_km": 0.55,
+  "kmle_cidade": "40,1",
+  "kmle_estrada": "33,9"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "E40 PLUS",
+  "autonomia_km": 250,
+  "mj_km": 0.55,
+  "kmle_cidade": "40,1",
+  "kmle_estrada": "33,9"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "E60 ULTRA",
+  "autonomia_km": 338,
+  "mj_km": 0.52,
+  "kmle_cidade": "43,2",
+  "kmle_estrada": "35,3"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "E60 PLUS",
+  "autonomia_km": 338,
+  "mj_km": 0.52,
+  "kmle_cidade": "43,2",
+  "kmle_estrada": "35,3"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "E60 CORE",
+  "autonomia_km": 338,
+  "mj_km": 0.52,
+  "kmle_cidade": "43,2",
+  "kmle_estrada": "35,3"
+ },
+ {
+  "categoria": "Médio",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "TWIN ULTRA",
+  "autonomia_km": 316,
+  "mj_km": 0.62,
+  "kmle_cidade": "33,4",
+  "kmle_estrada": "32,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "BMW",
+  "modelo": "iX1",
+  "versao": "xDrive30",
+  "autonomia_km": 324,
+  "mj_km": 0.6,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "32,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "BMW",
+  "modelo": "iX1",
+  "versao": "eDrive20",
+  "autonomia_km": 345,
+  "mj_km": 0.55,
+  "kmle_cidade": "37,4",
+  "kmle_estrada": "36,1"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "BMW",
+  "modelo": "iX2",
+  "versao": "xDrive30 MSP",
+  "autonomia_km": 327,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "32,8"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "BYD",
+  "modelo": "YUAN PLUS",
+  "versao": "GS 560EV",
+  "autonomia_km": 378,
+  "mj_km": 0.58,
+  "kmle_cidade": "38,3",
+  "kmle_estrada": "32,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "GAC",
+  "modelo": "AION Y",
+  "versao": "PREMIUM",
+  "autonomia_km": 318,
+  "mj_km": 0.57,
+  "kmle_cidade": "36,5",
+  "kmle_estrada": "35,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "GAC",
+  "modelo": "AION Y",
+  "versao": "ELITE",
+  "autonomia_km": 318,
+  "mj_km": 0.57,
+  "kmle_cidade": "36,5",
+  "kmle_estrada": "35,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "GAC",
+  "modelo": "AION UT",
+  "versao": "ELITE",
+  "autonomia_km": 310,
+  "mj_km": 0.57,
+  "kmle_cidade": "38,3",
+  "kmle_estrada": "32,3"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "GAC",
+  "modelo": "AION UT",
+  "versao": "PREMIUM",
+  "autonomia_km": 253,
+  "mj_km": 0.51,
+  "kmle_cidade": "43,7",
+  "kmle_estrada": "35,3"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "GWM",
+  "modelo": "ORA",
+  "versao": "5",
+  "autonomia_km": 349,
+  "mj_km": 0.49,
+  "kmle_cidade": "44,8",
+  "kmle_estrada": "37,1"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "S5",
+  "versao": "EV 62KWH LUX",
+  "autonomia_km": 351,
+  "mj_km": 0.51,
+  "kmle_cidade": "43,0",
+  "kmle_estrada": "36,7"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "S5",
+  "versao": "EV 62KWH COM",
+  "autonomia_km": 351,
+  "mj_km": 0.51,
+  "kmle_cidade": "43,0",
+  "kmle_estrada": "36,7"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "URB EV54KWH COM",
+  "autonomia_km": 358,
+  "mj_km": 0.42,
+  "kmle_cidade": "53,0",
+  "kmle_estrada": "42,8"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "URB EV54KWH LUX",
+  "autonomia_km": 358,
+  "mj_km": 0.42,
+  "kmle_cidade": "53,0",
+  "kmle_estrada": "42,8"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "URB EV43KWH COM",
+  "autonomia_km": 299,
+  "mj_km": 0.4,
+  "kmle_cidade": "56,8",
+  "kmle_estrada": "44,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MG",
+  "modelo": "MG4",
+  "versao": "URB EV43KWH LUX",
+  "autonomia_km": 299,
+  "mj_km": 0.4,
+  "kmle_cidade": "56,8",
+  "kmle_estrada": "44,0"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MINI",
+  "modelo": "Countryman",
+  "versao": "SE EXCLUSIVE",
+  "autonomia_km": 320,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "31,8"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "MINI",
+  "modelo": "Countryman",
+  "versao": "SE TOP",
+  "autonomia_km": 320,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "31,8"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "OMODA",
+  "modelo": "E5",
+  "versao": "--",
+  "autonomia_km": 345,
+  "mj_km": 0.51,
+  "kmle_cidade": "44,7",
+  "kmle_estrada": "35,2"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "6 CORE",
+  "autonomia_km": 385,
+  "mj_km": 0.51,
+  "kmle_cidade": "41,7",
+  "kmle_estrada": "37,2"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "6 PLUS",
+  "autonomia_km": 385,
+  "mj_km": 0.51,
+  "kmle_cidade": "41,7",
+  "kmle_estrada": "37,2"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "6 ULTRA",
+  "autonomia_km": 385,
+  "mj_km": 0.51,
+  "kmle_cidade": "41,7",
+  "kmle_estrada": "37,2"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "8 CORE",
+  "autonomia_km": 404,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,6"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "8 PLUS",
+  "autonomia_km": 404,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,6"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "8 ULTRA",
+  "autonomia_km": 404,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,6"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "PERF BLACK",
+  "autonomia_km": 404,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,6"
+ },
+ {
+  "categoria": "Grande",
+  "marca": "VOLVO",
+  "modelo": "EC40",
+  "versao": "PERF ULTRA",
+  "autonomia_km": 404,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "A6 Avant e-tron",
+  "versao": "S line",
+  "autonomia_km": 474,
+  "mj_km": 0.6,
+  "kmle_cidade": "37,0",
+  "kmle_estrada": "31,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "A6 e-tron",
+  "versao": "Performance black",
+  "autonomia_km": 445,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,4",
+  "kmle_estrada": "31,8"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 e-tron Quattro",
+  "versao": "Performance",
+  "autonomia_km": 411,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,0",
+  "kmle_estrada": "29,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 e-tron Quattro",
+  "versao": "Performance black",
+  "autonomia_km": 411,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,0",
+  "kmle_estrada": "29,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 e-tron RWD",
+  "versao": "Performance",
+  "autonomia_km": 411,
+  "mj_km": 0.64,
+  "kmle_cidade": "33,8",
+  "kmle_estrada": "29,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 Sportback e-tron Quattro",
+  "versao": "Performance black",
+  "autonomia_km": 427,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,4",
+  "kmle_estrada": "31,2"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "SQ6 Sportback e-tron Quattro",
+  "versao": "-",
+  "autonomia_km": 428,
+  "mj_km": 0.6,
+  "kmle_cidade": "35,1",
+  "kmle_estrada": "31,9"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 e-tron Quattro",
+  "versao": "Dynamic",
+  "autonomia_km": 424,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,3",
+  "kmle_estrada": "30,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 e-tron Quattro",
+  "versao": "S line",
+  "autonomia_km": 424,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,3",
+  "kmle_estrada": "30,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "Q6 Sportback e-tron Quattro",
+  "versao": "S line",
+  "autonomia_km": 432,
+  "mj_km": 0.6,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "31,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "SQ6 Sportback e-tron Quattro",
+  "versao": "-",
+  "autonomia_km": 431,
+  "mj_km": 0.61,
+  "kmle_cidade": "34,8",
+  "kmle_estrada": "31,8"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "A6 e-tron",
+  "versao": "S line",
+  "autonomia_km": 443,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,5",
+  "kmle_estrada": "32,2"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "AUDI",
+  "modelo": "RS e-tron GT",
+  "versao": "Performance",
+  "autonomia_km": 348,
+  "mj_km": 0.8,
+  "kmle_cidade": "25,2",
+  "kmle_estrada": "25,9"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BMW",
+  "modelo": "i7",
+  "versao": "xDrive60",
+  "autonomia_km": 467,
+  "mj_km": 0.65,
+  "kmle_cidade": "31,8",
+  "kmle_estrada": "30,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BMW",
+  "modelo": "I5",
+  "versao": "M60",
+  "autonomia_km": 393,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,1",
+  "kmle_estrada": "31,7"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BMW",
+  "modelo": "IX",
+  "versao": "xDrive 50",
+  "autonomia_km": 498,
+  "mj_km": 0.64,
+  "kmle_cidade": "33,2",
+  "kmle_estrada": "30,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BMW",
+  "modelo": "iX3",
+  "versao": "50 XDRIVE MSP",
+  "autonomia_km": 570,
+  "mj_km": 0.54,
+  "kmle_cidade": "38,7",
+  "kmle_estrada": "35,7"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BYD",
+  "modelo": "HAN",
+  "versao": "AWD GS 680EV",
+  "autonomia_km": 349,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,8",
+  "kmle_estrada": "28,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BYD",
+  "modelo": "SEAL",
+  "versao": "AWD GS 590EV",
+  "autonomia_km": 372,
+  "mj_km": 0.62,
+  "kmle_cidade": "34,9",
+  "kmle_estrada": "30,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BYD",
+  "modelo": "TAN",
+  "versao": "AWD GS 700EV",
+  "autonomia_km": 430,
+  "mj_km": 0.73,
+  "kmle_cidade": "30,2",
+  "kmle_estrada": "25,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "BYD",
+  "modelo": "SEALION 7",
+  "versao": "GS 690EV",
+  "autonomia_km": 360,
+  "mj_km": 0.66,
+  "kmle_cidade": "33,2",
+  "kmle_estrada": "28,2"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "CAOA CHANGAN",
+  "modelo": "AVATR 11",
+  "versao": "EV",
+  "autonomia_km": 497,
+  "mj_km": 0.6,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "32,2"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "CAOA CHANGAN",
+  "modelo": "AVATR 11",
+  "versao": "EV",
+  "autonomia_km": 497,
+  "mj_km": 0.6,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "32,2"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "CHEVROLET",
+  "modelo": "BLAZER EV",
+  "versao": "RS",
+  "autonomia_km": 481,
+  "mj_km": 0.63,
+  "kmle_cidade": "34,2",
+  "kmle_estrada": "30,4"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "CHEVROLET",
+  "modelo": "EQUINOX EV",
+  "versao": "-",
+  "autonomia_km": 443,
+  "mj_km": 0.56,
+  "kmle_cidade": "37,1",
+  "kmle_estrada": "35,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "CHEVROLET",
+  "modelo": "CAPTIVA EV",
+  "versao": "PR",
+  "autonomia_km": 304,
+  "mj_km": 0.62,
+  "kmle_cidade": "36,2",
+  "kmle_estrada": "28,9"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GAC",
+  "modelo": "AION ES",
+  "versao": "PLUS",
+  "autonomia_km": 314,
+  "mj_km": 0.45,
+  "kmle_cidade": "47,1",
+  "kmle_estrada": "42,9"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GAC",
+  "modelo": "HYPTEC HT",
+  "versao": "ELITE",
+  "autonomia_km": 431,
+  "mj_km": 0.53,
+  "kmle_cidade": "43,1",
+  "kmle_estrada": "33,4"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GAC",
+  "modelo": "HYPTEC HT",
+  "versao": "ULTRA",
+  "autonomia_km": 431,
+  "mj_km": 0.53,
+  "kmle_cidade": "43,1",
+  "kmle_estrada": "33,4"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GAC",
+  "modelo": "AION V",
+  "versao": "ELITE",
+  "autonomia_km": 389,
+  "mj_km": 0.54,
+  "kmle_cidade": "40,3",
+  "kmle_estrada": "34,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GAC",
+  "modelo": "AION V",
+  "versao": "PREMIUM",
+  "autonomia_km": 325,
+  "mj_km": 0.55,
+  "kmle_cidade": "38,8",
+  "kmle_estrada": "34,7"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GEELY",
+  "modelo": "EX5",
+  "versao": "MAX",
+  "autonomia_km": 349,
+  "mj_km": 0.51,
+  "kmle_cidade": "43,0",
+  "kmle_estrada": "37,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "GEELY",
+  "modelo": "EX5",
+  "versao": "PRO",
+  "autonomia_km": 413,
+  "mj_km": 0.42,
+  "kmle_cidade": "51,0",
+  "kmle_estrada": "44,7"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "HYUNDAI",
+  "modelo": "IONIQ 5",
+  "versao": "Platinum",
+  "autonomia_km": 374,
+  "mj_km": 0.66,
+  "kmle_cidade": "33,6",
+  "kmle_estrada": "28,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "HYUNDAI",
+  "modelo": "IONIQ 5",
+  "versao": "Ultimate",
+  "autonomia_km": 374,
+  "mj_km": 0.66,
+  "kmle_cidade": "33,6",
+  "kmle_estrada": "28,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "HYUNDAI",
+  "modelo": "IONIQ 5",
+  "versao": "Signature",
+  "autonomia_km": 374,
+  "mj_km": 0.66,
+  "kmle_cidade": "33,6",
+  "kmle_estrada": "28,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "JAC",
+  "modelo": "e-J7",
+  "versao": "e-J7",
+  "autonomia_km": 263,
+  "mj_km": 0.5,
+  "kmle_cidade": "44,0",
+  "kmle_estrada": "37,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "KIA",
+  "modelo": "EV5 2WD",
+  "versao": "AIR 2WD",
+  "autonomia_km": 402,
+  "mj_km": 0.6,
+  "kmle_cidade": "37,6",
+  "kmle_estrada": "30,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "KIA",
+  "modelo": "EV5 2WD",
+  "versao": "LAND 2WD",
+  "autonomia_km": 402,
+  "mj_km": 0.6,
+  "kmle_cidade": "37,6",
+  "kmle_estrada": "30,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "LEAPMOTOR",
+  "modelo": "C10",
+  "versao": "Design",
+  "autonomia_km": 338,
+  "mj_km": 0.61,
+  "kmle_cidade": "35,1",
+  "kmle_estrada": "30,8"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "LEAPMOTOR",
+  "modelo": "B10",
+  "versao": "LIFE",
+  "autonomia_km": 288,
+  "mj_km": 0.55,
+  "kmle_cidade": "41,2",
+  "kmle_estrada": "32,8"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "LEXUS",
+  "modelo": "RZ",
+  "versao": "500e",
+  "autonomia_km": 357,
+  "mj_km": 0.57,
+  "kmle_cidade": "39,1",
+  "kmle_estrada": "32,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "MERCEDES-BENZ",
+  "modelo": "EQB250+",
+  "versao": "",
+  "autonomia_km": 376,
+  "mj_km": 0.53,
+  "kmle_cidade": "40,3",
+  "kmle_estrada": "36,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "MERCEDES-BENZ",
+  "modelo": "GLB250",
+  "versao": "EV AMGL",
+  "autonomia_km": 427,
+  "mj_km": 0.57,
+  "kmle_cidade": "37,8",
+  "kmle_estrada": "33,4"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "MACAN",
+  "versao": "E4",
+  "autonomia_km": 443,
+  "mj_km": 0.6,
+  "kmle_cidade": "36,5",
+  "kmle_estrada": "31,0"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "MACAN",
+  "versao": "ETURBO",
+  "autonomia_km": 435,
+  "mj_km": 0.61,
+  "kmle_cidade": "36,1",
+  "kmle_estrada": "30,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "MACAN",
+  "versao": "E4S",
+  "autonomia_km": 438,
+  "mj_km": 0.61,
+  "kmle_cidade": "36,2",
+  "kmle_estrada": "30,4"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "MACAN",
+  "versao": "EGTS",
+  "autonomia_km": 441,
+  "mj_km": 0.61,
+  "kmle_cidade": "36,1",
+  "kmle_estrada": "30,6"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E OF",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E C",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E CO",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "VOLVO",
+  "modelo": "ES90",
+  "versao": "TWIN PE ULT",
+  "autonomia_km": 524,
+  "mj_km": 0.55,
+  "kmle_cidade": "38,9",
+  "kmle_estrada": "34,3"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "ZEEKR",
+  "modelo": "001",
+  "versao": "Flagship",
+  "autonomia_km": 426,
+  "mj_km": 0.63,
+  "kmle_cidade": "34,1",
+  "kmle_estrada": "30,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "ZEEKR",
+  "modelo": "001",
+  "versao": "Premium",
+  "autonomia_km": 426,
+  "mj_km": 0.63,
+  "kmle_cidade": "34,1",
+  "kmle_estrada": "30,1"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "ZEEKR",
+  "modelo": "7X",
+  "versao": "Flagship AWD",
+  "autonomia_km": 423,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,5",
+  "kmle_estrada": "29,0"
+ },
+ {
+  "categoria": "Extra Grande",
+  "marca": "ZEEKR",
+  "modelo": "7X",
+  "versao": "Premium RWD",
+  "autonomia_km": 491,
+  "mj_km": 0.55,
+  "kmle_cidade": "39,5",
+  "kmle_estrada": "34,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Compacto 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "CROSSC PLUS",
+  "autonomia_km": 333,
+  "mj_km": 0.58,
+  "kmle_cidade": "37,8",
+  "kmle_estrada": "31,8"
+ },
+ {
+  "categoria": "Utilitário Esportivo Compacto 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX30",
+  "versao": "C COUNTRY",
+  "autonomia_km": 327,
+  "mj_km": 0.57,
+  "kmle_cidade": "37,3",
+  "kmle_estrada": "33,4"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "BYD",
+  "modelo": "YUAN PLUS",
+  "versao": "GL310 EV",
+  "autonomia_km": 294,
+  "mj_km": 0.56,
+  "kmle_cidade": "39,8",
+  "kmle_estrada": "33,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "BYD",
+  "modelo": "YUAN PLUS",
+  "versao": "GS310 EV",
+  "autonomia_km": 294,
+  "mj_km": 0.56,
+  "kmle_cidade": "39,8",
+  "kmle_estrada": "33,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "6 CORE",
+  "autonomia_km": 364,
+  "mj_km": 0.55,
+  "kmle_cidade": "39,4",
+  "kmle_estrada": "34,3"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "6 PLUS",
+  "autonomia_km": 364,
+  "mj_km": 0.55,
+  "kmle_cidade": "39,4",
+  "kmle_estrada": "34,3"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "6 ULTRA",
+  "autonomia_km": 364,
+  "mj_km": 0.55,
+  "kmle_cidade": "39,4",
+  "kmle_estrada": "34,3"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande",
+  "marca": "ZEEKR",
+  "modelo": "X",
+  "versao": "Premium",
+  "autonomia_km": 332,
+  "mj_km": 0.55,
+  "kmle_cidade": "39,5",
+  "kmle_estrada": "34,7"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E OF",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E C",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "E CO",
+  "autonomia_km": 493,
+  "mj_km": 0.63,
+  "kmle_cidade": "35,0",
+  "kmle_estrada": "29,5"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "ET",
+  "autonomia_km": 481,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,3",
+  "kmle_estrada": "29,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "ET C",
+  "autonomia_km": 481,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,3",
+  "kmle_estrada": "29,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "ET OF",
+  "autonomia_km": 481,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,3",
+  "kmle_estrada": "29,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "PORSCHE",
+  "modelo": "CAYENNE",
+  "versao": "ET CO",
+  "autonomia_km": 481,
+  "mj_km": 0.64,
+  "kmle_cidade": "34,3",
+  "kmle_estrada": "29,1"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX90",
+  "versao": "ULTRA TWIN",
+  "autonomia_km": 459,
+  "mj_km": 0.68,
+  "kmle_cidade": "32,6",
+  "kmle_estrada": "27,4"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX90",
+  "versao": "PLUS TWIN",
+  "autonomia_km": 459,
+  "mj_km": 0.68,
+  "kmle_cidade": "32,6",
+  "kmle_estrada": "27,4"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX90",
+  "versao": "ULT TWIN PER",
+  "autonomia_km": 459,
+  "mj_km": 0.68,
+  "kmle_cidade": "32,6",
+  "kmle_estrada": "27,4"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "8 CORE",
+  "autonomia_km": 393,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "33,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "8 PLUS",
+  "autonomia_km": 393,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "33,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "8 ULTRA",
+  "autonomia_km": 393,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "33,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "PERF BLACK",
+  "autonomia_km": 393,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "33,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "VOLVO",
+  "modelo": "EX40",
+  "versao": "PERF ULTRA",
+  "autonomia_km": 393,
+  "mj_km": 0.59,
+  "kmle_cidade": "35,7",
+  "kmle_estrada": "33,0"
+ },
+ {
+  "categoria": "Utilitário Esportivo Grande 4x4",
+  "marca": "ZEEKR",
+  "modelo": "X",
+  "versao": "Flagship",
+  "autonomia_km": 304,
+  "mj_km": 0.59,
+  "kmle_cidade": "36,6",
+  "kmle_estrada": "32,2"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "BYD",
+  "modelo": "ET3",
+  "versao": "---",
+  "autonomia_km": 170,
+  "mj_km": 0.71,
+  "kmle_cidade": "30,7",
+  "kmle_estrada": "26,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "CITROEN",
+  "modelo": "E-JUMPY",
+  "versao": "CARGO",
+  "autonomia_km": 258,
+  "mj_km": 0.75,
+  "kmle_cidade": "28,1",
+  "kmle_estrada": "26,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "V6E",
+  "versao": "--",
+  "autonomia_km": 156,
+  "mj_km": 0.72,
+  "kmle_cidade": "32,1",
+  "kmle_estrada": "24,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "AIR 11M3",
+  "autonomia_km": 239,
+  "mj_km": 0.92,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "20,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "AIR PRO11M3",
+  "autonomia_km": 239,
+  "mj_km": 0.92,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "20,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "LUX 11M3",
+  "autonomia_km": 239,
+  "mj_km": 0.92,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "20,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "LUX PRO11M3",
+  "autonomia_km": 239,
+  "mj_km": 0.92,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "20,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "AIR 8M3",
+  "autonomia_km": 262,
+  "mj_km": 0.84,
+  "kmle_cidade": "25,3",
+  "kmle_estrada": "23,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "AIR PRO 8M3",
+  "autonomia_km": 262,
+  "mj_km": 0.84,
+  "kmle_cidade": "25,3",
+  "kmle_estrada": "23,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "LUX 8M3",
+  "autonomia_km": 262,
+  "mj_km": 0.84,
+  "kmle_cidade": "25,3",
+  "kmle_estrada": "23,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FARIZON",
+  "modelo": "SV",
+  "versao": "LUX PRO 8M3",
+  "autonomia_km": 262,
+  "mj_km": 0.84,
+  "kmle_cidade": "25,3",
+  "kmle_estrada": "23,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "F35MMAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "F35MAAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "F35LMAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "F35LAAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "F35EAAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "C35LBAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FORD",
+  "modelo": "E-Transit",
+  "versao": "C35EBAB",
+  "autonomia_km": 203,
+  "mj_km": 1.02,
+  "kmle_cidade": "23,9",
+  "kmle_estrada": "16,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "EVIEW",
+  "versao": "GRAND53",
+  "autonomia_km": 162,
+  "mj_km": 0.82,
+  "kmle_cidade": "27,3",
+  "kmle_estrada": "22,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "EWONDER",
+  "versao": "CHASSI",
+  "autonomia_km": 189,
+  "mj_km": 0.58,
+  "kmle_cidade": "43,3",
+  "kmle_estrada": "28,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "EVIEW CONNECT",
+  "versao": "50S",
+  "autonomia_km": 202,
+  "mj_km": 0.69,
+  "kmle_cidade": "32,2",
+  "kmle_estrada": "26,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "EVIEW",
+  "versao": "GRAND77",
+  "autonomia_km": 187,
+  "mj_km": 1.0,
+  "kmle_cidade": "20,2",
+  "kmle_estrada": "20,5"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "ETOANO",
+  "versao": "PRO H",
+  "autonomia_km": 179,
+  "mj_km": 1.05,
+  "kmle_cidade": "20,6",
+  "kmle_estrada": "18,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "FOTON",
+  "modelo": "ETOANO",
+  "versao": "PRO M",
+  "autonomia_km": 198,
+  "mj_km": 1.0,
+  "kmle_cidade": "23,5",
+  "kmle_estrada": "17,6"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "JAC",
+  "modelo": "EJV5.5",
+  "versao": "CARGO",
+  "autonomia_km": 260,
+  "mj_km": 0.63,
+  "kmle_cidade": "38,0",
+  "kmle_estrada": "27,4"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "MERCEDES-BENZ",
+  "modelo": "320 E SPRINTER",
+  "versao": "Furgão",
+  "autonomia_km": 206,
+  "mj_km": 1.09,
+  "kmle_cidade": "21,1",
+  "kmle_estrada": "16,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "MERCEDES-BENZ",
+  "modelo": "320 E SPRINTER",
+  "versao": "Chassi",
+  "autonomia_km": 206,
+  "mj_km": 1.09,
+  "kmle_cidade": "21,1",
+  "kmle_estrada": "16,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "PEUGEOT",
+  "modelo": "E-EXPERT",
+  "versao": "CARGO",
+  "autonomia_km": 258,
+  "mj_km": 0.75,
+  "kmle_cidade": "28,1",
+  "kmle_estrada": "26,1"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "RENAULT",
+  "modelo": "KANGOO",
+  "versao": "ETECHL2",
+  "autonomia_km": 210,
+  "mj_km": 0.6,
+  "kmle_cidade": "37,5",
+  "kmle_estrada": "30,3"
+ },
+ {
+  "categoria": "Comercial",
+  "marca": "RENAULT",
+  "modelo": "E-KWID",
+  "versao": "CARGO",
+  "autonomia_km": 185,
+  "mj_km": 0.44,
+  "kmle_cidade": "52,7",
+  "kmle_estrada": "39,6"
+ },
+ {
+  "categoria": "Picape",
+  "marca": "JAC",
+  "modelo": "IEV330P",
+  "versao": "IEV330",
+  "autonomia_km": 226,
+  "mj_km": 0.75,
+  "kmle_cidade": "29,2",
+  "kmle_estrada": "25,1"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "MG",
+  "modelo": "CYBERSTER",
+  "versao": "77 KWH AWD",
+  "autonomia_km": 342,
+  "mj_km": 0.56,
+  "kmle_cidade": "38,9",
+  "kmle_estrada": "33,9"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "TURBO S",
+  "autonomia_km": 425,
+  "mj_km": 0.67,
+  "kmle_cidade": "30,7",
+  "kmle_estrada": "30,2"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "4S",
+  "autonomia_km": 415,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,0",
+  "kmle_estrada": "28,5"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "4S BE",
+  "autonomia_km": 415,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,0",
+  "kmle_estrada": "28,5"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "TURBOCT",
+  "autonomia_km": 415,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,0",
+  "kmle_estrada": "28,5"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "4S CT",
+  "autonomia_km": 415,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,0",
+  "kmle_estrada": "28,5"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "4CT",
+  "autonomia_km": 415,
+  "mj_km": 0.69,
+  "kmle_cidade": "30,0",
+  "kmle_estrada": "28,5"
+ },
+ {
+  "categoria": "Esportivo",
+  "marca": "PORSCHE",
+  "modelo": "TAYCAN",
+  "versao": "TURBOGT",
+  "autonomia_km": 442,
+  "mj_km": 0.64,
+  "kmle_cidade": "33,7",
+  "kmle_estrada": "29,7"
+ }
+]

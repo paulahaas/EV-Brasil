@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /login.html
-Disallow: /cadastro.html
-Disallow: /vender.html
-Disallow: /meus-anuncios.html
 
 Sitemap: https://ev-brasil.web.app/sitemap.xml

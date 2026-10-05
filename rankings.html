@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anúncio — EV Brasil</title>
-  <meta name="description" content="Veículo elétrico anunciado por um proprietário na EV Brasil.">
+  <title>Rankings de carros elétricos no Brasil — EV Brasil</title>
+  <meta name="description" content="Os carros elétricos mais baratos, os de maior autonomia e os que gastam menos energia no Brasil, com dados do Inmetro e critério explicado.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,27 +13,29 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-
   <div id="header-slot"></div>
 
   <main>
     <section class="page-head">
-      <div class="container" id="adRoot">
-        <!-- Conteúdo injetado por js/anuncio.js -->
+      <div class="container">
+        <span class="eyebrow">Rankings</span>
+        <h1 class="section-title">Os melhores em cada critério</h1>
+        <p class="section-sub">Cada ranking usa um único critério, explicado logo abaixo do título. Autonomia e consumo vêm do Inmetro; preço, dos sites das marcas.</p>
+        <div class="filter-group rank-nav" id="rankNav"></div>
       </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container" id="rankingsRoot"></div>
     </section>
   </main>
 
   <div id="footer-slot"></div>
 
+  <script src="js/catalogo.js"></script>
   <script src="js/data.js"></script>
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    mountChrome("veiculos");
-  </script>
-  <script type="module" src="js/anuncio.js"></script>
-  <script type="module" src="js/session.js"></script>
-
+  <script src="js/rankings.js"></script>
 </body>
 </html>

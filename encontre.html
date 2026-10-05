@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qual carro elétrico é para mim? — EV Brasil</title>
+  <meta name="description" content="Responda cinco perguntas sobre orçamento e rotina e veja quais carros elétricos à venda no Brasil combinam com você.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Qual é o meu?</span>
+        <h1 class="section-title">Cinco perguntas, os elétricos certos</h1>
+        <p class="section-sub">Responda sobre o seu dia a dia. A lista se atualiza na hora, com o motivo de cada sugestão.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container quiz-layout">
+        <form class="quiz" id="quizForm">
+          <fieldset>
+            <legend>1. Quanto você quer gastar?</legend>
+            <div class="options">
+              <label><input type="radio" name="orcamento" value="150000"><span>Até R$ 150 mil</span></label>
+              <label><input type="radio" name="orcamento" value="250000" checked><span>Até R$ 250 mil</span></label>
+              <label><input type="radio" name="orcamento" value="400000"><span>Até R$ 400 mil</span></label>
+              <label><input type="radio" name="orcamento" value="0"><span>Sem limite</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Quanto você roda por dia?</legend>
+            <div class="options">
+              <label><input type="radio" name="km" value="40" checked><span>Até 50 km</span></label>
+              <label><input type="radio" name="km" value="100"><span>De 50 a 150 km</span></label>
+              <label><input type="radio" name="km" value="200"><span>Mais de 150 km</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Que tipo de carro?</legend>
+            <div class="options">
+              <label><input type="radio" name="tipo" value="" checked><span>Tanto faz</span></label>
+              <label><input type="radio" name="tipo" value="Hatch"><span>Hatch</span></label>
+              <label><input type="radio" name="tipo" value="Sedã"><span>Sedã</span></label>
+              <label><input type="radio" name="tipo" value="SUV"><span>SUV</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Onde você vai carregar?</legend>
+            <div class="options">
+              <label><input type="radio" name="recarga" value="casa" checked><span>Em casa ou no trabalho</span></label>
+              <label><input type="radio" name="recarga" value="rua"><span>Em eletropostos</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>5. O que pesa mais na sua escolha?</legend>
+            <div class="options">
+              <label><input type="radio" name="prioridade" value="preco" checked><span>Pagar menos</span></label>
+              <label><input type="radio" name="prioridade" value="autonomia"><span>Rodar mais sem recarregar</span></label>
+              <label><input type="radio" name="prioridade" value="consumo"><span>Gastar menos energia</span></label>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="quiz-results" aria-live="polite">
+          <h2 id="quizTitle">Sugestões</h2>
+          <p class="fine-print" id="quizResumo"></p>
+          <ol class="matches" id="quizResults"></ol>
+          <a class="btn btn-ghost" id="quizCompare" href="comparar.html">Comparar os três primeiros</a>
+          <p class="fine-print">Sugestões calculadas só com dados públicos: autonomia e consumo do Inmetro e preço "a partir de". <a class="text-link" href="metodologia.html">Como funciona</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/encontre.js"></script>
+</body>
+</html>
