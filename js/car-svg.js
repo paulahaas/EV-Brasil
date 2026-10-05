@@ -5,9 +5,8 @@
  * de carros em SVG, coloridas com a cor de cada veículo. Isso deixa
  * tudo rápido, leve e fácil de personalizar.
  *
- * Se quiser usar fotos reais no futuro, basta trocar a função
- * `carImage()` para retornar uma tag <img src="..."> apontando para
- * seus próprios arquivos na pasta /assets.
+ * Quando o modelo tem foto real (campo `photo` em data.js), carImage()
+ * devolve a foto no lugar da silhueta.
  */
 
 // Cada SVG precisa de ids próprios: com ids repetidos na página, todos os
@@ -71,7 +70,36 @@ function shade(hex, amount) {
   return "#" + ((r << 16) | (g << 8) | b).toString(16).padStart(6, "0");
 }
 
-/** Retorna o HTML da "imagem" do carro (atualmente uma silhueta SVG). */
-function carImage(vehicle) {
+/** O modelo tem foto real? (campo `photo`, preenchido em data.js) */
+function hasPhoto(vehicle) {
+  return !!(vehicle && vehicle.photo && vehicle.photo.src);
+}
+
+/**
+ * Retorna o HTML da imagem do carro: a foto, se houver, ou a silhueta SVG.
+ * Por padrão usa a versão menor da foto (cards); `grande` usa a de 1920px.
+ */
+function carImage(vehicle, grande) {
+  if (hasPhoto(vehicle)) {
+    const src = grande ? vehicle.photo.src : vehicle.photo.card || vehicle.photo.src;
+    return `<img class="car-photo" src="${src}" alt="${vehicle.brand} ${vehicle.model}" loading="lazy">`;
+  }
   return carSilhouette(vehicle.bodyType, vehicle.color);
+}
+
+/** Crédito da foto (as licenças livres exigem citar autor e licença). */
+function photoCredit(vehicle) {
+  const p = vehicle.photo;
+  return `<p class="photo-credit">Foto: <a href="${p.page}" target="_blank" rel="noopener">${escapeHtml(p.author)}</a> · ${escapeHtml(p.license)}</p>`;
+}
+
+/** Foto de fundo de tela cheia — usada só no painel de abertura da home. */
+function panelBackground(vehicle) {
+  if (!hasPhoto(vehicle)) return "";
+  return `<img class="panel-bg" src="${vehicle.photo.src}" alt="">${photoCredit(vehicle)}`;
+}
+
+/** Miolo dos painéis de modelo: foto grande emoldurada ou silhueta. */
+function panelVisual(vehicle) {
+  return carImage(vehicle, hasPhoto(vehicle));
 }

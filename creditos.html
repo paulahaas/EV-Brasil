@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Créditos das fotos — EV Brasil</title>
+  <meta name="description" content="Autores e licenças das fotos de veículos usadas na EV Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Créditos</span>
+        <h1 class="section-title">Fotos dos veículos</h1>
+        <p class="section-sub">
+          As fotos dos modelos vêm do Wikimedia Commons e são usadas sob licenças livres,
+          que permitem o uso desde que autor e licença sejam citados. Clique no nome do
+          arquivo para ver a foto original.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container">
+        <div class="grid" id="creditsGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("creditos");
+
+    // Uma ficha por modelo com foto: miniatura, autor, licença e link para o original.
+    document.getElementById("creditsGrid").innerHTML = VEHICLES.filter(hasPhoto)
+      .map((v) => {
+        const p = v.photo;
+        const arquivo = decodeURIComponent(p.page.split("File:")[1] || "").replace(/_/g, " ");
+        return `
+          <div class="card">
+            <div class="card-media has-photo">${carImage(v)}</div>
+            <div class="card-body">
+              <h3 class="card-title">${v.brand} ${v.model}</h3>
+              <p class="card-meta">Autor: ${escapeHtml(p.author)}</p>
+              <p class="card-meta">Licença: <a class="text-link" href="${p.licenseUrl}" target="_blank" rel="noopener">${escapeHtml(p.license)}</a></p>
+              <p class="card-meta"><a class="text-link" href="${p.page}" target="_blank" rel="noopener">${escapeHtml(arquivo)}</a></p>
+            </div>
+          </div>`;
+      })
+      .join("");
+  </script>
+  <script type="module" src="js/session.js"></script>
+
+</body>
+</html>
