@@ -73,7 +73,7 @@
       const foto = hasPhoto(capa);
       return `
         <a class="tile ${foto ? "has-photo" : ""}" href="veiculos.html?tipo=${encodeURIComponent(tipo)}" style="--glow:${capa.color}">
-          ${foto ? `<img class="tile-bg" src="${capa.photo.card}" alt="" loading="lazy">` : ""}
+          ${foto ? `<img class="tile-bg" ${fotoAttrs(capa, "card")} alt="" loading="lazy" decoding="async">` : ""}
           <div class="tile-visual">${foto ? "" : carImage(capa)}</div>
           <div class="tile-body">
             <span class="tile-count">${doTipo.length} ${doTipo.length === 1 ? "modelo" : "modelos"}</span>
