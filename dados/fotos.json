@@ -1,5 +1,5 @@
 {
- "_leia": "Fotos dos modelos (Wikimedia Commons). A chave é o id do modelo em dados/modelos.json. Os arquivos ficam em assets/carros/<id>.jpg (1920px) e <id>-960.jpg.",
+ "_leia": "Fotos dos modelos (Wikimedia Commons). A chave é o id do modelo em dados/modelos.json. Os originais ficam em assets/carros/<id>.jpg (1920px); o site usa as versões WebP geradas por `npm run imagens` (<id>-480/960/1600.webp).",
  "fotos": {
   "byd-dolphin": {
    "src": "assets/carros/byd-dolphin.jpg",

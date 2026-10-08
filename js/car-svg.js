@@ -78,13 +78,27 @@ function hasPhoto(vehicle) {
 }
 
 /**
+ * Atributos src/srcset da foto em WebP (480, 960 e 1600px, gerados por
+ * `npm run imagens`). O navegador baixa só o tamanho que a tela precisa;
+ * `sizes` diz quanto da largura da tela a imagem ocupa.
+ */
+const TAMANHOS = {
+  card: "(max-width: 640px) 50vw, (max-width: 1100px) 33vw, 340px",
+  grande: "(max-width: 1100px) 100vw, 1100px",
+  tela: "100vw",
+};
+function fotoAttrs(vehicle, tamanho) {
+  const base = vehicle.photo.src.replace(/\.jpg$/, "");
+  return `src="${base}-960.webp" srcset="${base}-480.webp 480w, ${base}-960.webp 960w, ${base}-1600.webp 1600w" sizes="${TAMANHOS[tamanho]}"`;
+}
+
+/**
  * Retorna o HTML da imagem do carro: a foto, se houver, ou a silhueta SVG.
- * Por padrão usa a versão menor da foto (cards); `grande` usa a de 1920px.
+ * `grande` = foto de destaque (página do modelo), que carrega logo.
  */
 function carImage(vehicle, grande) {
   if (hasPhoto(vehicle)) {
-    const src = grande ? vehicle.photo.src : vehicle.photo.card || vehicle.photo.src;
-    return `<img class="car-photo" src="${src}" alt="${vehicle.brand} ${vehicle.model}" loading="lazy">`;
+    return `<img class="car-photo" ${fotoAttrs(vehicle, grande ? "grande" : "card")} alt="${vehicle.brand} ${vehicle.model}"${grande ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}>`;
   }
   return carSilhouette(vehicle.bodyType, vehicle.color);
 }
@@ -98,7 +112,7 @@ function photoCredit(vehicle) {
 /** Foto de fundo de tela cheia — usada só no painel de abertura da home. */
 function panelBackground(vehicle) {
   if (!hasPhoto(vehicle)) return "";
-  return `<img class="panel-bg" src="${vehicle.photo.src}" alt="">${photoCredit(vehicle)}`;
+  return `<img class="panel-bg" ${fotoAttrs(vehicle, "tela")} alt="" fetchpriority="high">${photoCredit(vehicle)}`;
 }
 
 /** Miolo dos painéis de modelo: foto grande emoldurada ou silhueta. */
