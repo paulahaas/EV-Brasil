@@ -16,7 +16,7 @@ const SITE = "https://ev-brasil.web.app";
 const PASTA = "carros";
 
 const ctx = {};
-vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|DATA_INFO)/g, "this.$1"), ctx);
+vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|DATA_INFO|IPVA)/g, "this.$1"), ctx);
 const { VEHICLES } = ctx;
 
 const modelo = fs.readFileSync("veiculo.html", "utf8");

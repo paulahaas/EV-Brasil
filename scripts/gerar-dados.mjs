@@ -5,6 +5,7 @@
  *   dados/modelos.json                       — cadastro: nome de exibição, carroceria, cor
  *   dados/fotos.json                         — fotos (Wikimedia Commons) e créditos
  *   dados/fichas.json                        — ficha técnica (bateria, potência, recarga...) com fonte
+ *   dados/ipva-2026.json                     — IPVA por estado (gasolina e elétrico), para a calculadora
  *
  * Uso: npm run dados
  */
@@ -15,6 +16,7 @@ const inmetro = lerJson("dados/inmetro-pbev-2026-eletricos.json");
 const cadastro = lerJson("dados/modelos.json");
 const fotos = lerJson("dados/fotos.json").fotos;
 const fichas = lerJson("dados/fichas.json").fichas;
+const ipva = lerJson("dados/ipva-2026.json");
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
 
@@ -113,6 +115,7 @@ const DATA_INFO = {
   },
   precos: { coleta: "05/10/2026" },
   fichas: { coleta: "08/10/2026" },
+  ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
 };
 
 const js = `/**
@@ -122,6 +125,8 @@ const js = `/**
 const DATA_INFO = ${JSON.stringify(DATA_INFO, null, 2)};
 
 const VEHICLES = ${JSON.stringify(VEHICLES, null, 2)};
+
+const IPVA = ${JSON.stringify(ipva.estados, null, 2)};
 `;
 fs.writeFileSync("js/catalogo.js", js);
 

@@ -1,0 +1,176 @@
+{
+ "_leia": "IPVA 2026 por estado, em % do valor do veículo. 'gasolina' = alíquota normal de automóvel (quando o estado usa faixas, a mais alta). 'eletrico' = regra para carro 100% elétrico. 'anos_isento' = anos iniciais sem IPVA; 'teto_valor' = acima disso, o elétrico paga a alíquota normal. Coleta: outubro de 2026. As regras mudam: confirme na Sefaz do estado.",
+ "fontes": {
+  "eletrico": "https://www.vrum.com.br/noticias/2026/07/7466052-ipva-2026-para-eletricos-a-lista-de-estados-com-isencao-ou-desconto.html",
+  "gasolina": [
+   "https://www.cnnbrasil.com.br/auto/ipva-2026-saiba-quais-estados-cobram-os-impostos-mais-caros-e-baratos/",
+   "https://valorfinal.com.br/tabela-fipe/ipva"
+  ]
+ },
+ "estados": {
+  "AC": {
+   "nome": "Acre",
+   "gasolina": 2,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "AL": {
+   "nome": "Alagoas",
+   "gasolina": 3.25,
+   "eletrico": 1,
+   "nota": "Isenção no primeiro ano; depois, 1%",
+   "anos_isento": 1
+  },
+  "AP": {
+   "nome": "Amapá",
+   "gasolina": 3,
+   "eletrico": 3,
+   "nota": "A lista de 2026 não cita o estado; usamos a alíquota normal. Confirme na Sefaz"
+  },
+  "AM": {
+   "nome": "Amazonas",
+   "gasolina": 1.5,
+   "eletrico": 0.75,
+   "nota": "Desconto de 50% nos cinco primeiros anos"
+  },
+  "BA": {
+   "nome": "Bahia",
+   "gasolina": 2.5,
+   "eletrico": 2.5,
+   "nota": "A lista de 2026 não cita o estado; usamos a alíquota normal. Confirme na Sefaz"
+  },
+  "CE": {
+   "nome": "Ceará",
+   "gasolina": 3.5,
+   "eletrico": 3.5,
+   "nota": "A lista de 2026 não cita o estado; usamos a alíquota normal. Confirme na Sefaz"
+  },
+  "DF": {
+   "nome": "Distrito Federal",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos comprados em concessionária do DF"
+  },
+  "ES": {
+   "nome": "Espírito Santo",
+   "gasolina": 2,
+   "eletrico": 2,
+   "nota": "Sem benefício para elétricos"
+  },
+  "GO": {
+   "nome": "Goiás",
+   "gasolina": 3.75,
+   "eletrico": 3.75,
+   "nota": "Sem benefício para elétricos"
+  },
+  "MA": {
+   "nome": "Maranhão",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos puros"
+  },
+  "MT": {
+   "nome": "Mato Grosso",
+   "gasolina": 4,
+   "eletrico": 4,
+   "nota": "A lista de 2026 não cita o estado; usamos a alíquota normal. Confirme na Sefaz"
+  },
+  "MS": {
+   "nome": "Mato Grosso do Sul",
+   "gasolina": 3.5,
+   "eletrico": 1.05,
+   "nota": "Alíquota de 3,5% com redução de 70% na base de cálculo"
+  },
+  "MG": {
+   "nome": "Minas Gerais",
+   "gasolina": 4,
+   "eletrico": 4,
+   "nota": "Sem benefício para elétricos (a isenção de MG é só para híbridos flex feitos no estado)"
+  },
+  "PA": {
+   "nome": "Pará",
+   "gasolina": 2.5,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos de até R$ 150 mil",
+   "teto_valor": 150000
+  },
+  "PB": {
+   "nome": "Paraíba",
+   "gasolina": 2.5,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "PR": {
+   "nome": "Paraná",
+   "gasolina": 1.9,
+   "eletrico": 0,
+   "nota": "Alíquota zero para elétricos"
+  },
+  "PE": {
+   "nome": "Pernambuco",
+   "gasolina": 2.4,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "PI": {
+   "nome": "Piauí",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "RJ": {
+   "nome": "Rio de Janeiro",
+   "gasolina": 4,
+   "eletrico": 0.5,
+   "nota": "Alíquota de 0,5% para elétricos"
+  },
+  "RN": {
+   "nome": "Rio Grande do Norte",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos, válida até 2029"
+  },
+  "RS": {
+   "nome": "Rio Grande do Sul",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "RO": {
+   "nome": "Rondônia",
+   "gasolina": 3,
+   "eletrico": 3,
+   "nota": "A lista de 2026 não cita o estado; usamos a alíquota normal. Confirme na Sefaz"
+  },
+  "RR": {
+   "nome": "Roraima",
+   "gasolina": 3,
+   "eletrico": 3,
+   "nota": "A lei de isenção foi invalidada; paga a alíquota normal"
+  },
+  "SC": {
+   "nome": "Santa Catarina",
+   "gasolina": 2,
+   "eletrico": 2,
+   "nota": "Sem benefício para elétricos"
+  },
+  "SP": {
+   "nome": "São Paulo",
+   "gasolina": 4,
+   "eletrico": 4,
+   "nota": "Paga a alíquota normal; carros de até R$ 150 mil podem pedir restituição parcial (até R$ 10,8 mil)"
+  },
+  "SE": {
+   "nome": "Sergipe",
+   "gasolina": 3,
+   "eletrico": 0,
+   "nota": "Isenção para elétricos"
+  },
+  "TO": {
+   "nome": "Tocantins",
+   "gasolina": 3.5,
+   "eletrico": 3.5,
+   "nota": "A isenção de Tocantins vale só até o fim de 2026; a partir de 2027, usamos a alíquota normal"
+  }
+ }
+}

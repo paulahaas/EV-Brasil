@@ -389,6 +389,12 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .sim-stats .spec .v { font-size: 1.15rem; }
 .sim-result .form-hint { display: block; }
 .sim-result .btn { margin-top: 20px; }
+.tco-table { margin-bottom: 14px; }
+.tco-table th { font-size: 0.82rem; font-weight: 500; color: var(--text-mute); text-align: right; padding: 0 4px 8px; }
+.tco-table th:first-child, .tco-table td:first-child { text-align: left; }
+.tco-table td { padding: 11px 4px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tco-table td:first-child { font-weight: 400; color: var(--text-dim); }
+.tco-table tr.tco-total td { color: var(--text); font-weight: 800; }
 
 /* ---------------- Faixa de ponta a ponta (home) ---------------- */
 .band {
@@ -658,3 +664,4 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.tco-uf-nota { margin-top: 8px; }

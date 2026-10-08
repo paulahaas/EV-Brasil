@@ -17,7 +17,7 @@ fs.mkdirSync(PASTA, { recursive: true });
 
 // Carrega VEHICLES do arquivo gerado (é um script de navegador, não um módulo).
 const ctx = {};
-vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|DATA_INFO)/g, "this.$1"), ctx);
+vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|DATA_INFO|IPVA)/g, "this.$1"), ctx);
 const VEHICLES = ctx.VEHICLES;
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
