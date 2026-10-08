@@ -47,6 +47,34 @@
       </div>
     </section>
 
+    <!-- PREÇO × AUTONOMIA (js/grafico.js) -->
+    <section id="mercado">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">O mercado de uma vez</span>
+          <h2 class="section-title">Preço × autonomia</h2>
+          <p class="section-sub">Cada ponto é um modelo. Quanto mais para cima e para a esquerda, mais autonomia pelo preço.</p>
+        </div>
+        <div class="viz" id="scatter">
+          <div class="viz-legend" aria-label="Mostrar ou esconder grupos"></div>
+          <div class="viz-stage">
+            <div class="viz-plot"></div>
+            <div class="viz-tip" hidden></div>
+          </div>
+          <p class="fine-print">Autonomia do Inmetro na versão de entrada, a que tem o preço "a partir de". Modelos sem preço divulgado não aparecem.</p>
+          <details class="viz-table">
+            <summary>Ver os dados em tabela</summary>
+            <div class="viz-table-wrap">
+              <table class="spec-table versions-table">
+                <thead><tr><th>Modelo</th><th>Carroceria</th><th>Preço a partir de</th><th>Autonomia</th></tr></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- POR ONDE COMEÇAR -->
     <section>
       <div class="container">
@@ -125,5 +153,6 @@
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
   <script src="js/home.js"></script>
+  <script src="js/grafico.js"></script>
 </body>
 </html>

@@ -17,7 +17,9 @@
       "dados/**",
       "scripts/**",
       "previa-pesquisa/**",
-      "previa-fotos/**"
+      "previa-fotos/**",
+      "previa-visual/**",
+      "previa-fotos2/**"
     ],
     "headers": [
       {

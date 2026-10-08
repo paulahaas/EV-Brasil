@@ -63,6 +63,7 @@
       <div class="panel-visual">${panelVisual(v)}</div>
       <div class="panel-foot">
         ${specBar(v)}
+        <p class="card-meter">${consumoMeter(v)}</p>
         ${priceNoteShort(v) ? `<p class="card-note">${priceNoteShort(v)}</p>` : ""}
         <div class="panel-actions">
           <a href="comparar.html?ids=${encodeURIComponent(v.id)}" class="btn btn-primary btn-wide">Comparar com outros</a>

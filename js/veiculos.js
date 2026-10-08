@@ -30,6 +30,14 @@
   const typeFilters = document.getElementById("typeFilters");
   const sortSelect = document.getElementById("sortSelect");
   const clearBtn = document.getElementById("clearFilters");
+  const toggleBtn = document.getElementById("filtersToggle");
+  const filtersMore = document.getElementById("filtersMore");
+
+  // Celular: abre e fecha o painel de filtros.
+  toggleBtn.addEventListener("click", () => {
+    const aberto = filtersMore.classList.toggle("open");
+    toggleBtn.setAttribute("aria-expanded", String(aberto));
+  });
 
   // Marcas num menu (são muitas para caber em chips).
   brandSelect.innerHTML =
@@ -93,6 +101,8 @@
 
     const filtrando = q || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange;
     clearBtn.hidden = !filtrando;
+    const ativos = [state.brand !== "Todas", state.type !== "Todos", state.maxPrice, state.minRange].filter(Boolean).length;
+    toggleBtn.textContent = ativos ? `Filtros (${ativos})` : "Filtros";
   }
 
   searchInput.addEventListener("input", () => { state.q = searchInput.value.trim(); render(); });
