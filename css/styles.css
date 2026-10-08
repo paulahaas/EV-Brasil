@@ -326,6 +326,10 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .spec-table td { padding: 15px 4px; }
 .spec-table td:first-child { color: var(--text-dim); width: 45%; }
 .spec-table td:last-child { text-align: right; font-weight: 600; }
+.detail-main { display: grid; gap: clamp(40px, 5vw, 56px); }
+.spec-table caption { text-align: left; color: var(--text-mute); font-size: 0.85rem; padding-bottom: 6px; caption-side: top; }
+.spec-table tbody th { padding: 15px 4px; text-align: left; font-weight: 400; color: var(--text-dim); width: 45%; }
+.spec-missing { color: var(--text-mute); font-weight: 400; font-size: 0.9rem; }
 
 .highlights-list { list-style: none; display: grid; gap: 14px; }
 .highlights-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--text-dim); }

@@ -10,6 +10,9 @@ const DATA_INFO = {
   },
   "precos": {
     "coleta": "05/10/2026"
+  },
+  "fichas": {
+    "coleta": "08/10/2026"
   }
 };
 
@@ -43,6 +46,19 @@ const VEHICLES = [
       "license": "CC BY-SA 3.0 de",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Avant_e-tron_%E2%80%93_f_12102025.jpg"
+    },
+    "specs": {
+      "version": "S line",
+      "cv": 367,
+      "kwh": null,
+      "s0100": 5.4,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.audi.com.br/pt/models/a6/a-6-avant-e-tron/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -79,6 +95,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Sportback_e-tron_performance_S_Line_GH_Daytona_Gray_Pearl_Effect_(10).jpg"
+    },
+    "specs": {
+      "version": "Sportback",
+      "cv": null,
+      "kwh": 100,
+      "s0100": 4.5,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.audi.com.br/pt/models/a6/a-6-e-tron/index1",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -125,6 +154,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_IAA_2023_1X7A0303.jpg"
+    },
+    "specs": {
+      "version": "Performance",
+      "cv": 428,
+      "kwh": 100,
+      "s0100": 5.1,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": 526,
+      "note": "Mais 64 L no porta-malas dianteiro. Bateria de 100 kWh (94,9 kWh úteis)",
+      "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
+      "sourceExtra": "https://www.audi.com.br/pt/models/q6-e-tron/q6-e-tron/",
+      "kind": "imprensa"
     }
   },
   {
@@ -161,6 +203,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9278.jpg"
+    },
+    "specs": {
+      "version": "Performance",
+      "cv": 428,
+      "kwh": 100,
+      "s0100": 5.1,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": 511,
+      "note": "Mais 64 L no porta-malas dianteiro",
+      "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -192,6 +247,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_RS_e-tron_GT_1X7A1874.jpg"
+    },
+    "specs": {
+      "version": "performance",
+      "cv": null,
+      "kwh": null,
+      "s0100": 2.5,
+      "dcKw": 320,
+      "acKw": 11,
+      "trunkL": 350,
+      "note": "Mais 77 L no porta-malas dianteiro",
+      "source": "https://www.audi.com.br/pt/models/e-tron-gt/new-rs-etron-gt/",
+      "sourceExtra": "https://www.car.blog.br/2026/06/audi-rs-e-tron-gt-performance-preco.html",
+      "kind": "oficial"
     }
   },
   {
@@ -228,6 +296,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Audi_SQ6_e-tron_Automesse_Ludwigsburg_2024_IMG_1395.jpg"
+    },
+    "specs": {
+      "version": "SQ6",
+      "cv": 517,
+      "kwh": 100,
+      "s0100": 4.3,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": 499,
+      "note": "Potência no modo Launch Control. Mais 64 L no porta-malas dianteiro",
+      "source": "https://www.audi.com.br/pt/models/q6-e-tron/sq-6-sb-etron/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -259,6 +340,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BMW_i7_xDrive60_1X7A7476.jpg"
+    },
+    "specs": {
+      "version": "xDrive60 M Sport",
+      "cv": 544,
+      "kwh": 101.7,
+      "s0100": 4.7,
+      "dcKw": 195,
+      "acKw": null,
+      "trunkL": 500,
+      "note": "",
+      "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0433318PT/bmw-i7-inaugura-uma-nova-era-em-termos-de-luxo-entretenimento-e-mobilidade-el%C3%A9trica-no-brasil?language=pt",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -295,6 +389,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BMW_iX1_DSC_7507.jpg"
+    },
+    "specs": {
+      "version": "xDrive30 M Sport",
+      "cv": 306,
+      "kwh": 66.5,
+      "s0100": 5.6,
+      "dcKw": 130,
+      "acKw": null,
+      "trunkL": 490,
+      "note": "Bateria, recarga e porta-malas: material de imprensa da BMW",
+      "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
+      "sourceExtra": "https://www.press.bmwgroup.com/global/article/attachment/T0393974EN/567425",
+      "kind": "oficial"
     }
   },
   {
@@ -326,6 +433,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BMW_iX2_xDrive30_IMG_1811.jpg"
+    },
+    "specs": {
+      "version": "xDrive30 M Sport",
+      "cv": 306,
+      "kwh": 64.8,
+      "s0100": 5.6,
+      "dcKw": 130,
+      "acKw": 11,
+      "trunkL": 525,
+      "note": "Bateria, recarga e porta-malas: material de imprensa da BMW",
+      "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
+      "sourceExtra": "https://www.press.bmwgroup.com/global/article/attachment/T0437451EN/608982",
+      "kind": "oficial"
     }
   },
   {
@@ -357,6 +477,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg"
+    },
+    "specs": {
+      "version": "50 xDrive",
+      "cv": 469,
+      "kwh": 108.7,
+      "s0100": 4.9,
+      "dcKw": 400,
+      "acKw": null,
+      "trunkL": 520,
+      "note": "Mais 58 L no porta-malas dianteiro",
+      "source": "https://www.car.blog.br/2026/09/bmw-ix3-2027-chega-ao-brasil-preco-r.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -398,6 +531,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_IAA_2023_1X7A0634.jpg"
+    },
+    "specs": {
+      "version": "GS 180EV",
+      "cv": 95,
+      "kwh": 44.9,
+      "s0100": 10.9,
+      "dcKw": 60,
+      "acKw": 6.6,
+      "trunkL": 250,
+      "note": "",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_DolphinGS_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -439,6 +585,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Dolphin_Surf_IAA_2025_DSC_2256.jpg"
+    },
+    "specs": {
+      "version": "GL",
+      "cv": 75,
+      "kwh": 30.08,
+      "s0100": 14.9,
+      "dcKw": 30,
+      "acKw": 6.6,
+      "trunkL": 230,
+      "note": "Versão GS: bateria de 38,88 kWh e recarga DC de 40 kW",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_DolphinMini_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -470,6 +629,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Han_EV_DSC_8759.jpg"
+    },
+    "specs": {
+      "version": "AWD GS",
+      "cv": 517,
+      "kwh": 85.4,
+      "s0100": 3.9,
+      "dcKw": 120,
+      "acKw": 6.6,
+      "trunkL": 410,
+      "note": "",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Han_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -501,6 +673,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Seal_IAA_2023_1X7A0026.jpg"
+    },
+    "specs": {
+      "version": "AWD GS",
+      "cv": 531,
+      "kwh": 82.56,
+      "s0100": 3.8,
+      "dcKw": 150,
+      "acKw": 6.6,
+      "trunkL": 400,
+      "note": "Mais 53 L no porta-malas dianteiro",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Seal_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -532,6 +717,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg"
+    },
+    "specs": {
+      "version": "GS",
+      "cv": 531,
+      "kwh": 82.5,
+      "s0100": 4.5,
+      "dcKw": 150,
+      "acKw": 11,
+      "trunkL": 500,
+      "note": "Mais 58 L no porta-malas dianteiro",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Sealion7_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -563,6 +761,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2024_BYD_Tang_GIMS_2024_1X7A2342.jpg"
+    },
+    "specs": {
+      "version": "AWD GS",
+      "cv": 517,
+      "kwh": 108.8,
+      "s0100": 4.9,
+      "dcKw": 170,
+      "acKw": 11,
+      "trunkL": 235,
+      "note": "Porta-malas com os 7 lugares em uso; 940 L com a 3ª fileira rebatida",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Tan_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -604,6 +815,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Atto_3_1X7A6495.jpg"
+    },
+    "specs": {
+      "version": "AWD GS",
+      "cv": 449,
+      "kwh": 74.88,
+      "s0100": 3.9,
+      "dcKw": 205,
+      "acKw": 11,
+      "trunkL": 490,
+      "note": "Mais 101 L no porta-malas dianteiro",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_YuanPlusAWD_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -635,6 +859,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:BYD_Yuan_Pro_IMG006.jpg"
+    },
+    "specs": {
+      "version": "GS",
+      "cv": 177,
+      "kwh": 45.12,
+      "s0100": 7.9,
+      "dcKw": 65,
+      "acKw": 6.6,
+      "trunkL": 265,
+      "note": "",
+      "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_YuanPro_V2.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -666,6 +903,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,_Avatr_11_%D0%BD%D0%B0_%D0%9E%D1%81%D0%B8%D1%91_10%D0%B0.jpg"
+    },
+    "specs": {
+      "version": "EV",
+      "cv": 585,
+      "kwh": 116,
+      "s0100": 3.9,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.car.blog.br/2026/03/caoa-changan-avatr-11-2026-preco-parte.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -697,6 +947,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:24_Chevrolet_Blazer_EV_RS.jpg"
+    },
+    "specs": {
+      "version": "RS",
+      "cv": 370,
+      "kwh": 102,
+      "s0100": 5.8,
+      "dcKw": 190,
+      "acKw": 22,
+      "trunkL": 436,
+      "note": "",
+      "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -728,6 +991,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Wuling_Starlight_S_006.jpg"
+    },
+    "specs": {
+      "version": "Premier",
+      "cv": 204,
+      "kwh": 60,
+      "s0100": 9.9,
+      "dcKw": 120,
+      "acKw": 6.6,
+      "trunkL": 403,
+      "note": "",
+      "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
+      "sourceExtra": "https://www.car.blog.br/2026/02/chevrolet-captiva-ev-2026-chega-ao.html",
+      "kind": "oficial"
     }
   },
   {
@@ -759,6 +1035,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Baojun_Yep_001.jpg"
+    },
+    "specs": {
+      "version": "Activ",
+      "cv": 102,
+      "kwh": 42,
+      "s0100": 11.2,
+      "dcKw": 50,
+      "acKw": 6.6,
+      "trunkL": 355,
+      "note": "Mais 35 L no porta-malas dianteiro",
+      "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+      "sourceExtra": "https://www.car.blog.br/2025/09/chevrolet-spark-euv-chega-ao-brasil.html",
+      "kind": "oficial"
     }
   },
   {
@@ -790,6 +1079,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Fiat_500e_(2020)_Auto_Zuerich_2021_IMG_0604.jpg"
+    },
+    "specs": {
+      "version": "Icon",
+      "cv": 118,
+      "kwh": 42,
+      "s0100": null,
+      "dcKw": 85,
+      "acKw": null,
+      "trunkL": 185,
+      "note": "Recarga DC: dado da imprensa",
+      "source": "https://www.media.stellantis.com/uploads/br/attachment/216/ft_fiat500e-6324ce95785a8.pdf",
+      "sourceExtra": "https://www.car.blog.br/2021/08/fiat-500e-2022-eletrico-chega-ao-brasil.html",
+      "kind": "oficial"
     }
   },
   {
@@ -821,6 +1123,19 @@ const VEHICLES = [
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_GAC_Aion_ES_No-plate_2024-09-14_-_2.jpg"
+    },
+    "specs": {
+      "version": "Plus",
+      "cv": 136,
+      "kwh": 55.2,
+      "s0100": null,
+      "dcKw": 68,
+      "acKw": 6.6,
+      "trunkL": 453,
+      "note": "",
+      "source": "https://www.gacgroup.com/pt-br/configuration/aion-es/2024",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -857,6 +1172,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2025_Aion_UT_500_Premium_(2).jpg"
+    },
+    "specs": {
+      "version": "Premium",
+      "cv": 204,
+      "kwh": 44.12,
+      "s0100": 8.6,
+      "dcKw": 87,
+      "acKw": 6.6,
+      "trunkL": 340,
+      "note": "Versão Elite: bateria de 60 kWh, 0-100 em 7,3 s",
+      "source": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -893,6 +1221,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2024_Aion_V_602_Luxury.jpg"
+    },
+    "specs": {
+      "version": "Elite",
+      "cv": 204,
+      "kwh": 75.3,
+      "s0100": 7.9,
+      "dcKw": 180,
+      "acKw": 6.6,
+      "trunkL": 427,
+      "note": "Dados da versão Elite (389 km); a Premium tem bateria menor (325 km)",
+      "source": "https://www.gacgroup.com/pt-br/configuration/aion-v/2024",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -929,6 +1270,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Aion_Y_004.jpg"
+    },
+    "specs": {
+      "version": "Premium",
+      "cv": 204,
+      "kwh": 63.2,
+      "s0100": 8.5,
+      "dcKw": 75,
+      "acKw": 6.6,
+      "trunkL": 361,
+      "note": "",
+      "source": "https://www.gacgroup.com/pt-br/configuration/aion-y/2024",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -965,6 +1319,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Aion_Hyper_HT_006.jpg"
+    },
+    "specs": {
+      "version": "Elite",
+      "cv": 340,
+      "kwh": 83,
+      "s0100": 5.8,
+      "dcKw": 280,
+      "acKw": 6.6,
+      "trunkL": 670,
+      "note": "Mais 55 L no porta-malas dianteiro",
+      "source": "https://www.gacgroup.com/pt-br/configuration/hyptec-ht/2024",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1001,6 +1368,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Geely_Xingyuan_001.jpg"
+    },
+    "specs": {
+      "version": "Pro",
+      "cv": 116,
+      "kwh": 39.4,
+      "s0100": 10.2,
+      "dcKw": 70,
+      "acKw": null,
+      "trunkL": 375,
+      "note": "Mais 70 L no porta-malas dianteiro",
+      "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1037,6 +1417,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg"
+    },
+    "specs": {
+      "version": "Pro",
+      "cv": 218,
+      "kwh": 60.22,
+      "s0100": 6.9,
+      "dcKw": 100,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.geelybrasil.com.br/ex5",
+      "sourceExtra": "https://www.car.blog.br/2026/09/geely-ex5-max-precos-detalhes.html",
+      "kind": "oficial"
     }
   },
   {
@@ -1083,6 +1476,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:ORA_Funky_Cat_1X7A0814.jpg"
+    },
+    "specs": {
+      "version": "BEV58",
+      "cv": 171,
+      "kwh": 58,
+      "s0100": 9,
+      "dcKw": 67,
+      "acKw": null,
+      "trunkL": 228,
+      "note": "Recarga DC: dado da imprensa",
+      "source": "https://www.gwmmotors.com.br/content/dam/gwm/pages/br/pt/models/ora-03-bev58/ficha-tecnica/gwm-ora-03-bev58-ficha-tecnica.pdf",
+      "sourceExtra": "https://www.car.blog.br/2025/04/gwm-ora-03-2026-precos-partem-de-r-169.html",
+      "kind": "oficial"
     }
   },
   {
@@ -1114,6 +1520,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Ora_5_004.jpg"
+    },
+    "specs": {
+      "version": "Única",
+      "cv": 204,
+      "kwh": 58.3,
+      "s0100": 7.7,
+      "dcKw": 120,
+      "acKw": 11,
+      "trunkL": 362,
+      "note": "",
+      "source": "https://www.car.blog.br/2026/06/gwm-ora-5-suv-eletrico-preco-fotos.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1155,6 +1574,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg"
+    },
+    "specs": {
+      "version": "AWD",
+      "cv": 325,
+      "kwh": 84,
+      "s0100": 5.3,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.hyundai.com.br/universo-hyundai/veiculos/e-gmp-hyundai.html",
+      "sourceExtra": "https://www.cnnbrasil.com.br/auto/hyundai-ioniq-5-abre-pre-venda-no-brasil-e-pode-rodar-374-km-saiba-preco/",
+      "kind": "oficial"
     }
   },
   {
@@ -1178,7 +1610,20 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.cnnbrasil.com.br/auto/quanto-custa-um-carro-eletrico-da-jac-motors-no-brasil/",
     "priceKind": "imprensa",
-    "priceNote": "o site da JAC estava fora do ar na coleta"
+    "priceNote": "o site da JAC estava fora do ar na coleta",
+    "specs": {
+      "version": "Única",
+      "cv": 193,
+      "kwh": 50.1,
+      "s0100": 5.9,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-J7-FICHA-1.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
+    }
   },
   {
     "id": "jac-e-js1",
@@ -1214,6 +1659,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:JAC_e-JS1,_Auto_2024,_Zurich_(PANA0126).jpg"
+    },
+    "specs": {
+      "version": "e-JS1",
+      "cv": 62,
+      "kwh": 31.4,
+      "s0100": 10.7,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.jacmotors.com.br/carros/e-js1/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1245,6 +1703,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:JAC_e-JS4_Auto_Zuerich_2023_1X7A1321.jpg"
+    },
+    "specs": {
+      "version": "Única",
+      "cv": 200,
+      "kwh": 55.1,
+      "s0100": 7.5,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS4-FICHA-1.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1304,6 +1775,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Kia_EV5_003.jpg"
+    },
+    "specs": {
+      "version": "Land",
+      "cv": 217.5,
+      "kwh": 88.16,
+      "s0100": 8.9,
+      "dcKw": null,
+      "acKw": 11,
+      "trunkL": 513,
+      "note": "",
+      "source": "https://www.kia.com.br/ev5",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1335,6 +1819,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2067.jpg"
+    },
+    "specs": {
+      "version": "Elétrico",
+      "cv": 218,
+      "kwh": null,
+      "s0100": null,
+      "dcKw": 140,
+      "acKw": 11,
+      "trunkL": 405,
+      "note": "",
+      "source": "https://www.car.blog.br/2026/04/leapmotor-b10-2026-suv-eletrico-de-r.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1366,6 +1863,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_EV_DSC_8756.jpg"
+    },
+    "specs": {
+      "version": "Elétrico",
+      "cv": 218,
+      "kwh": 69.9,
+      "s0100": 8.3,
+      "dcKw": 84,
+      "acKw": 11,
+      "trunkL": 465,
+      "note": "Mais 32 L no porta-malas dianteiro",
+      "source": "https://www.car.blog.br/2025/11/leapmotor-c10-chega-em-versoes-eletrica.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1397,6 +1907,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Lexus_RZ_450e_(XEBM15)_IMG_0680.jpg"
+    },
+    "specs": {
+      "version": "500e",
+      "cv": 381,
+      "kwh": 77,
+      "s0100": 4.6,
+      "dcKw": 150,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.car.blog.br/2026/05/lexus-rz-500e-chega-ao-brasil-preco-r.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1428,6 +1951,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_EQB_004.jpg"
+    },
+    "specs": {
+      "version": "250+",
+      "cv": 190,
+      "kwh": 70.5,
+      "s0100": 8.9,
+      "dcKw": 100,
+      "acKw": 11,
+      "trunkL": 495,
+      "note": "",
+      "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
+      "sourceExtra": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
+      "kind": "oficial"
     }
   },
   {
@@ -1490,6 +2026,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:MG_Cyberster,_BAS_24,_Brussels_(P1170240).jpg"
+    },
+    "specs": {
+      "version": "AWD 77 kWh",
+      "cv": 510,
+      "kwh": 77,
+      "s0100": 3.2,
+      "dcKw": 150,
+      "acKw": 11,
+      "trunkL": 249,
+      "note": "",
+      "source": "https://mgmotoroficial.com.br/pdfs/cyberster-ficha.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1531,6 +2080,19 @@ const VEHICLES = [
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_MG4_EV_No-plate_2024-09-14_-_2.jpg"
+    },
+    "specs": {
+      "version": "Comfort RWD 64 kWh",
+      "cv": 190,
+      "kwh": 64,
+      "s0100": 7.2,
+      "dcKw": 140,
+      "acKw": 11,
+      "trunkL": 350,
+      "note": "",
+      "source": "https://mgmotoroficial.com.br/pdfs/mg4-ficha.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1577,6 +2139,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:MG4_EV_(second_generation)_IMG_8032.jpg"
+    },
+    "specs": {
+      "version": "Comfort 43 kWh",
+      "cv": 150,
+      "kwh": 42.8,
+      "s0100": 9.6,
+      "dcKw": 82,
+      "acKw": 11,
+      "trunkL": 479,
+      "note": "Mais 98 L sob o assoalho. Versão Luxury 54 kWh: 160 cv, recarga DC de 87 kW",
+      "source": "https://mgmotoroficial.com.br/pdfs/mg4-urban-ficha.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1613,6 +2188,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2698.jpg"
+    },
+    "specs": {
+      "version": "Comfort RWD",
+      "cv": 205,
+      "kwh": 64,
+      "s0100": 6.3,
+      "dcKw": 150,
+      "acKw": 7,
+      "trunkL": 453,
+      "note": "",
+      "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1649,6 +2237,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7118.jpg"
+    },
+    "specs": {
+      "version": "E",
+      "cv": 184,
+      "kwh": 42.5,
+      "s0100": 7.9,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": 300,
+      "note": "",
+      "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0441429PT/o-novo-mini-aceman?language=pt",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1685,6 +2286,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mini_Hatch_(J01)_IMG_8959.jpg"
+    },
+    "specs": {
+      "version": "E",
+      "cv": 184,
+      "kwh": 40.7,
+      "s0100": 7.2,
+      "dcKw": null,
+      "acKw": 11,
+      "trunkL": null,
+      "note": "Versão SE: 218 cv",
+      "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0445464PT/pr%C3%A9-venda-do-novo-mini-cooper-e-come%C3%A7a-hoje",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1721,6 +2335,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_SE_IAA_2023_1X7A0735.jpg"
+    },
+    "specs": {
+      "version": "SE ALL4",
+      "cv": 306,
+      "kwh": 66.45,
+      "s0100": 5.8,
+      "dcKw": 130,
+      "acKw": null,
+      "trunkL": 460,
+      "note": "",
+      "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0443334PT/totalmente-novo-mini-countryman-se-chega-ao-brasil-com-motor-100-el%C3%A9trico-duas-vers%C3%B5es-e-marca-o-in%C3%ADcio-de-uma-nova-era-da-marca-no-pa%C3%ADs?language=pt",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1757,6 +2384,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_John_Cooper_Works_DSC_2680.jpg"
+    },
+    "specs": {
+      "version": "E",
+      "cv": 258,
+      "kwh": 54.2,
+      "s0100": 5.8,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "JCW Aceman E: 0-100 em 6,3 s",
+      "source": "https://www.car.blog.br/2025/07/mini-jcw-eletrico-chega-ao-brasil-com.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1788,6 +2428,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Omoda_E5_IMG_8107.jpg"
+    },
+    "specs": {
+      "version": "Única",
+      "cv": 204,
+      "kwh": 61.1,
+      "s0100": 7.6,
+      "dcKw": 80,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1854,6 +2507,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Electric_IMG_8088.jpg"
+    },
+    "specs": {
+      "version": "Cayenne Electric",
+      "cv": 442,
+      "kwh": 113,
+      "s0100": 4.8,
+      "dcKw": 400,
+      "acKw": 11,
+      "trunkL": 781,
+      "note": "Potência com Launch Control (408 cv em uso contínuo). Mais 90 L no porta-malas dianteiro",
+      "source": "https://www.car.blog.br/2026/05/novo-porsche-cayenne-electric-2027.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1900,6 +2566,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Porsche_Macan_XAB_White.jpg"
+    },
+    "specs": {
+      "version": "Macan Electric (RWD)",
+      "cv": 340,
+      "kwh": 100,
+      "s0100": 5.7,
+      "dcKw": 270,
+      "acKw": 11,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.car.blog.br/2024/11/novo-porsche-macan-2025-electric-preco.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -1961,6 +2640,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2024_Porsche_Taycan_GTS_IAA_2025_DSC_1988.jpg"
+    },
+    "specs": {
+      "version": "4S",
+      "cv": 544,
+      "kwh": null,
+      "s0100": 3.7,
+      "dcKw": 320,
+      "acKw": null,
+      "trunkL": null,
+      "note": "Potência com Launch Control (overboost)",
+      "source": "https://www.porsche.com/international/models/taycan/taycan-models/taycan-4s/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -1992,6 +2684,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg"
+    },
+    "specs": {
+      "version": "EV60 220",
+      "cv": 220,
+      "kwh": 60,
+      "s0100": 7.4,
+      "dcKw": 130,
+      "acKw": 22,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.renault.com.br/veiculos-eletricos/megane-e-tech/autonomia-e-carregamento.html",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2028,6 +2733,19 @@ const VEHICLES = [
       "license": "CC BY 3.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2025_Suzuki_e_Vitara_front_view.jpg"
+    },
+    "specs": {
+      "version": "4x4 ALLGRIP-e",
+      "cv": 184,
+      "kwh": 61,
+      "s0100": 7.4,
+      "dcKw": 150,
+      "acKw": 7,
+      "trunkL": 310,
+      "note": "Porta-malas com o banco traseiro na posição mais avançada",
+      "source": "https://www.suzukiveiculos.com.br/veiculos/evitara/",
+      "sourceExtra": "https://www.car.blog.br/2026/07/suzuki-e-vitara-2027-preco-ficha-tecnica-brasil.html",
+      "kind": "oficial"
     }
   },
   {
@@ -2094,6 +2812,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Volvo_EC40_Crystal_White_Pearl_-_front.jpg"
+    },
+    "specs": {
+      "version": "Single Motor",
+      "cv": 238,
+      "kwh": 69,
+      "s0100": 7.3,
+      "dcKw": 175,
+      "acKw": 11,
+      "trunkL": 404,
+      "note": "Mais 31 L no porta-malas dianteiro. Twin Motor Performance: 442 cv, 82 kWh, 0-100 em 4,6 s",
+      "source": "https://www.volvocars.com/br/cars/ec40-electric/specifications/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2125,6 +2856,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Volvo_ES90_IAA_2025_DSC_1357.jpg"
+    },
+    "specs": {
+      "version": "Twin Motor Performance",
+      "cv": 680,
+      "kwh": 106,
+      "s0100": 4,
+      "dcKw": 350,
+      "acKw": 11,
+      "trunkL": 442,
+      "note": "Mais 27 L no porta-malas dianteiro",
+      "source": "https://www.volvocars.com/br/cars/es90-electric/specifications/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2191,6 +2935,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Volvo_EX30_1X7A2476.jpg"
+    },
+    "specs": {
+      "version": "Single Motor",
+      "cv": 272,
+      "kwh": 51,
+      "s0100": 5.7,
+      "dcKw": 150,
+      "acKw": 11,
+      "trunkL": 318,
+      "note": "Twin Motor Performance: 428 cv, bateria de 69 kWh, 0-100 em 3,6 s",
+      "source": "https://www.volvocars.com/br/cars/ex30-electric/specifications/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2257,6 +3014,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:2024_Volvo_EX40_Ultra_Twin_Motor_Black_Edition.jpg"
+    },
+    "specs": {
+      "version": "Single Motor",
+      "cv": 238,
+      "kwh": 69,
+      "s0100": 7.3,
+      "dcKw": 175,
+      "acKw": 11,
+      "trunkL": 410,
+      "note": "Mais 31 L no porta-malas dianteiro. Twin Motor Performance: 442 cv, 82 kWh, 0-100 em 4,6 s",
+      "source": "https://www.volvocars.com/br/cars/ex40-electric/specifications/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2298,6 +3068,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Volvo_EX90_Auto_Zuerich_2024_DSC_6147.jpg"
+    },
+    "specs": {
+      "version": "Twin Motor",
+      "cv": 517,
+      "kwh": 111,
+      "s0100": 4.9,
+      "dcKw": 250,
+      "acKw": 11,
+      "trunkL": 324,
+      "note": "Porta-malas com os 7 lugares em uso; 697 L com a 3ª fileira rebatida. Mais 46 L na frente",
+      "source": "https://www.volvocars.com/br/cars/ex90-electric/specifications/",
+      "sourceExtra": "",
+      "kind": "oficial"
     }
   },
   {
@@ -2334,6 +3117,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mobileye_Zeekr_001,_IAA_Summit_2023,_Munich_(P1120233-RR).jpg"
+    },
+    "specs": {
+      "version": "Premium",
+      "cv": null,
+      "kwh": 100,
+      "s0100": null,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": null,
+      "note": "",
+      "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -2370,6 +3166,19 @@ const VEHICLES = [
       "license": "CC0",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_003.jpg"
+    },
+    "specs": {
+      "version": "Premium RWD",
+      "cv": 421,
+      "kwh": 100,
+      "s0100": 6,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": 616,
+      "note": "Mais 42 L no porta-malas dianteiro",
+      "source": "https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   },
   {
@@ -2406,6 +3215,19 @@ const VEHICLES = [
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Zeekr_X,_Almaty_(LRM_20240331_124050).jpg"
+    },
+    "specs": {
+      "version": "Premium RWD",
+      "cv": 272,
+      "kwh": 51,
+      "s0100": null,
+      "dcKw": null,
+      "acKw": null,
+      "trunkL": 362,
+      "note": "",
+      "source": "https://www.car.blog.br/2025/02/novo-zerkr-x-preco-parte-de-r-298-mil.html",
+      "sourceExtra": "",
+      "kind": "imprensa"
     }
   }
 ];

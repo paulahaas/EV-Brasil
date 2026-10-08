@@ -79,3 +79,20 @@ function consumoMeter(v) {
   const barras = [1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("");
   return `<span class="meter meter-${n}" title="Consumo ${texto.toLowerCase()} entre os elétricos (${formatNum(v.kwh100)} kWh/100 km)"><span class="meter-bars" aria-hidden="true">${barras}</span>Consumo ${texto.toLowerCase()}</span>`;
 }
+
+/**
+ * Ficha técnica (dados/fichas.json): linhas prontas para mostrar.
+ * Campo vazio = a marca não divulga (ou não encontramos fonte confiável).
+ */
+const FICHA_CAMPOS = [
+  { id: "cv", rotulo: "Potência", fmt: (n) => `${formatNum(n, n % 1 ? 1 : 0)} cv`, melhor: "maior" },
+  { id: "kwh", rotulo: "Bateria", fmt: (n) => `${formatNum(n, n % 1 ? 1 : 0)} kWh`, melhor: "maior" },
+  { id: "dcKw", rotulo: "Recarga rápida (DC)", fmt: (n) => `até ${formatNum(n, 0)} kW`, melhor: "maior" },
+  { id: "acKw", rotulo: "Recarga em casa (AC)", fmt: (n) => `até ${formatNum(n, n % 1 ? 1 : 0)} kW`, melhor: "maior" },
+  { id: "s0100", rotulo: "0 a 100 km/h", fmt: (n) => `${formatNum(n, 1)} s`, melhor: "menor" },
+  { id: "trunkL", rotulo: "Porta-malas", fmt: (n) => `${formatNum(n, 0)} litros`, melhor: "maior" },
+];
+function specText(v, campo) {
+  const n = v.specs && v.specs[campo.id];
+  return n === null || n === undefined ? null : campo.fmt(n);
+}

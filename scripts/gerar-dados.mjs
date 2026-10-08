@@ -4,6 +4,7 @@
  *   dados/precos-2026-10.jsonl               — preços coletados, um por linha, com fonte
  *   dados/modelos.json                       — cadastro: nome de exibição, carroceria, cor
  *   dados/fotos.json                         — fotos (Wikimedia Commons) e créditos
+ *   dados/fichas.json                        — ficha técnica (bateria, potência, recarga...) com fonte
  *
  * Uso: npm run dados
  */
@@ -13,6 +14,7 @@ const lerJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const inmetro = lerJson("dados/inmetro-pbev-2026-eletricos.json");
 const cadastro = lerJson("dados/modelos.json");
 const fotos = lerJson("dados/fotos.json").fotos;
+const fichas = lerJson("dados/fichas.json").fichas;
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
 
@@ -68,6 +70,21 @@ for (const e of inmetro) {
   porId.set(c.id, v);
 }
 
+// Ficha técnica em nomes curtos (o arquivo de dados usa nomes em português).
+const ficha = (f) => ({
+  version: f.versao,
+  cv: f.potencia_cv,
+  kwh: f.bateria_kwh,
+  s0100: f.zero_cem_s,
+  dcKw: f.recarga_dc_kw,
+  acKw: f.recarga_ac_kw,
+  trunkL: f.porta_malas_l,
+  note: f.nota || "",
+  source: f.fonte,
+  sourceExtra: f.fonte_extra || "",
+  kind: f.fonte_tipo,
+});
+
 const VEHICLES = [...porId.values()].map((v) => {
   const ps = precos.filter((p) => p.preco && v.chaves.has(chavePreco(p)));
   const menor = ps.sort((a, b) => a.preco - b.preco)[0];
@@ -84,6 +101,7 @@ const VEHICLES = [...porId.values()].map((v) => {
     priceKind: menor ? (OFICIAIS.some((d) => menor.fonte.includes(d)) ? "oficial" : "imprensa") : null,
     priceNote: menor ? notaPublica(menor.obs) : notaPublica((precos.find((p) => !p.preco && v.chaves.has(chavePreco(p))) || {}).obs),
     ...(fotos[v.id] ? { photo: fotos[v.id] } : {}),
+    ...(fichas[v.id] ? { specs: ficha(fichas[v.id]) } : {}),
   };
 }).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
 
@@ -94,6 +112,7 @@ const DATA_INFO = {
     url: "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular",
   },
   precos: { coleta: "05/10/2026" },
+  fichas: { coleta: "08/10/2026" },
 };
 
 const js = `/**
