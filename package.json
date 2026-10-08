@@ -7,8 +7,9 @@
     "start": "npx serve .",
     "dev": "npx serve .",
     "deploy": "firebase deploy --only hosting",
-    "dados": "node scripts/gerar-dados.mjs",
-    "imagens": "node scripts/gerar-imagens.mjs"
+    "dados": "node scripts/gerar-dados.mjs && node scripts/gerar-paginas.mjs",
+    "imagens": "node scripts/gerar-imagens.mjs",
+    "og": "node scripts/gerar-og.mjs"
   },
   "keywords": [
     "veiculos-eletricos",

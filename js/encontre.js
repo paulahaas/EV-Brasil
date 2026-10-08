@@ -110,9 +110,9 @@
       ];
       return `
         <li class="match">
-          <a class="match-media" href="veiculo.html?id=${encodeURIComponent(v.id)}" style="--glow:${v.color}">${carImage(v)}</a>
+          <a class="match-media" href="${modelUrl(v)}" style="--glow:${v.color}">${carImage(v)}</a>
           <div class="match-body">
-            <h3><a href="veiculo.html?id=${encodeURIComponent(v.id)}">${v.brand} ${v.model}</a></h3>
+            <h3><a href="${modelUrl(v)}">${v.brand} ${v.model}</a></h3>
             <p class="card-meta">${v.bodyType} · ${formatNum(v.kwh100)} kWh/100 km</p>
             <ul class="motivos">${motivos.map((m) => `<li>${m}</li>`).join("")}</ul>
           </div>

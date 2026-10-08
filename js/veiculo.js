@@ -1,11 +1,18 @@
 /**
- * Página de um modelo (veiculo.html?id=...).
+ * Página de um modelo: carros/<id>.html (gerada por scripts/gerar-paginas.mjs,
+ * com o id em <body data-id>). O endereço antigo veiculo.html?id=... redireciona.
  */
 (function () {
   mountChrome("veiculos");
 
   const root = document.getElementById("detailRoot");
-  const v = getVehicleById(new URLSearchParams(location.search).get("id"));
+  const id = document.body.dataset.id || new URLSearchParams(location.search).get("id");
+  const v = getVehicleById(id);
+  // Endereço antigo (veiculo.html?id=...): vai para a página própria do modelo.
+  if (v && !document.body.dataset.id) {
+    location.replace(modelUrl(v));
+    return;
+  }
 
   if (!v) {
     root.innerHTML = `

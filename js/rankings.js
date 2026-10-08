@@ -65,7 +65,7 @@
       <p class="ranking-criterio">${r.criterio}</p>
       <ol class="rank-list rank-list-big">
         ${r.lista.slice(0, 10).map((v) => `
-          <li><a href="veiculo.html?id=${encodeURIComponent(v.id)}">
+          <li><a href="${modelUrl(v)}">
             <span class="rank-name">${v.brand} ${v.model}<small>${v.bodyType} · ${priceText(v)}${v.priceKind === "imprensa" ? " (imprensa)" : ""}</small></span>
             <span class="rank-value">${r.valor(v)}</span>
           </a></li>`).join("")}

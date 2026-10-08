@@ -18,7 +18,7 @@
     }
   }
   if (heroVisual && heroCar) {
-    heroVisual.href = "veiculo.html?id=" + encodeURIComponent(heroCar.id);
+    heroVisual.href = modelUrl(heroCar);
     heroVisual.setAttribute("aria-label", `Ver ${heroCar.brand} ${heroCar.model}`);
   }
   const heroAll = document.getElementById("heroAll");
@@ -57,7 +57,7 @@
       <h3>${c.titulo}</h3>
       <ol class="rank-list">
         ${c.itens.map((v) => `
-          <li><a href="veiculo.html?id=${encodeURIComponent(v.id)}">
+          <li><a href="${modelUrl(v)}">
             <span class="rank-name">${v.brand} ${v.model}</span>
             <span class="rank-value">${c.valor(v)}</span>
           </a></li>`).join("")}

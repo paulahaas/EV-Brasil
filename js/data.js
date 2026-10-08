@@ -23,6 +23,11 @@ function formatNum(value, casas = 1) {
   return value.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
 }
 
+/** Endereço da página de um modelo (gerada por scripts/gerar-paginas.mjs). */
+function modelUrl(v) {
+  return `carros/${v.id}.html`;
+}
+
 /** Busca um veículo pelo id. */
 function getVehicleById(id) {
   return VEHICLES.find((v) => v.id === id) || null;
