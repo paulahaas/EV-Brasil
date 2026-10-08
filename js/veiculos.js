@@ -1,6 +1,7 @@
 /**
  * Lógica da página de catálogo (veiculos.html).
- * Busca por texto, filtros (tipo, marca, preço, autonomia), ordenação e contagem.
+ * Busca por texto, filtros (tipo, marca, preço, autonomia, recarga, porta-malas),
+ * ordenação e contagem.
  */
 (function () {
   mountChrome("veiculos");
@@ -11,6 +12,8 @@
     type: "Todos",
     maxPrice: 0,   // 0 = qualquer preço
     minRange: 0,   // 0 = qualquer autonomia
+    minDc: 0,      // 0 = qualquer recarga rápida (kW)
+    minTrunk: 0,   // 0 = qualquer porta-malas (litros)
     sort: "menor",
   };
 
@@ -27,6 +30,8 @@
   const brandSelect = document.getElementById("brandSelect");
   const priceSelect = document.getElementById("priceSelect");
   const rangeSelect = document.getElementById("rangeSelect");
+  const dcSelect = document.getElementById("dcSelect");
+  const trunkSelect = document.getElementById("trunkSelect");
   const typeFilters = document.getElementById("typeFilters");
   const sortSelect = document.getElementById("sortSelect");
   const clearBtn = document.getElementById("clearFilters");
@@ -64,6 +69,8 @@
     brandSelect.value = state.brand;
     priceSelect.value = String(state.maxPrice);
     rangeSelect.value = String(state.minRange);
+    dcSelect.value = String(state.minDc);
+    trunkSelect.value = String(state.minTrunk);
     sortSelect.value = state.sort;
     renderChips();
   }
@@ -82,8 +89,11 @@
       const okType = state.type === "Todos" || v.bodyType === state.type;
       const okPrice = !state.maxPrice || (v.price && v.price <= state.maxPrice);
       const okRange = !state.minRange || v.rangeMax >= state.minRange;
+      // Sem o dado na ficha técnica, o modelo sai do filtro (não dá para garantir).
+      const okDc = !state.minDc || (v.specs && v.specs.dcKw >= state.minDc);
+      const okTrunk = !state.minTrunk || (v.specs && v.specs.trunkL >= state.minTrunk);
       const okText = !q || `${v.brand} ${v.model} ${v.bodyType}`.toLowerCase().includes(q);
-      return okBrand && okType && okPrice && okRange && okText;
+      return okBrand && okType && okPrice && okRange && okDc && okTrunk && okText;
     });
 
     const ordens = {
@@ -91,6 +101,9 @@
       maior: porPreco(-1),
       autonomia: (a, b) => b.rangeMax - a.rangeMax,
       consumo: (a, b) => a.kwh100 - b.kwh100,
+      // Ordens pela ficha técnica: quem não tem o dado vai para o fim.
+      recarga: (a, b) => ((b.specs && b.specs.dcKw) || 0) - ((a.specs && a.specs.dcKw) || 0),
+      portamalas: (a, b) => ((b.specs && b.specs.trunkL) || 0) - ((a.specs && a.specs.trunkL) || 0),
       nome: (a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"),
     };
     list.sort(ordens[state.sort] || ordens.menor);
@@ -99,9 +112,9 @@
     emptyState.style.display = list.length ? "none" : "block";
     resultsCount.textContent = `${list.length} ${list.length === 1 ? "modelo" : "modelos"}`;
 
-    const filtrando = q || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange;
+    const filtrando = q || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange || state.minDc || state.minTrunk;
     clearBtn.hidden = !filtrando;
-    const ativos = [state.brand !== "Todas", state.type !== "Todos", state.maxPrice, state.minRange].filter(Boolean).length;
+    const ativos = [state.brand !== "Todas", state.type !== "Todos", state.maxPrice, state.minRange, state.minDc, state.minTrunk].filter(Boolean).length;
     toggleBtn.textContent = ativos ? `Filtros (${ativos})` : "Filtros";
   }
 
@@ -109,9 +122,11 @@
   brandSelect.addEventListener("change", () => { state.brand = brandSelect.value; render(); });
   priceSelect.addEventListener("change", () => { state.maxPrice = Number(priceSelect.value); render(); });
   rangeSelect.addEventListener("change", () => { state.minRange = Number(rangeSelect.value); render(); });
+  dcSelect.addEventListener("change", () => { state.minDc = Number(dcSelect.value); render(); });
+  trunkSelect.addEventListener("change", () => { state.minTrunk = Number(trunkSelect.value); render(); });
   sortSelect.addEventListener("change", () => { state.sort = sortSelect.value; render(); });
   clearBtn.addEventListener("click", () => {
-    Object.assign(state, { q: "", brand: "Todas", type: "Todos", maxPrice: 0, minRange: 0 });
+    Object.assign(state, { q: "", brand: "Todas", type: "Todos", maxPrice: 0, minRange: 0, minDc: 0, minTrunk: 0 });
     syncControls();
     render();
   });

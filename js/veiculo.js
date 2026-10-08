@@ -41,6 +41,28 @@
   }
   const obs = v.price && v.priceNote ? `<p class="fine-print">${escapeHtml(v.priceNote)}</p>` : "";
 
+  // Ficha técnica (bateria, potência, recarga...), com a fonte de cada modelo.
+  let ficha = "";
+  if (v.specs) {
+    const linhas = FICHA_CAMPOS.map((c) => {
+      const t = specText(v, c);
+      return `<tr><th scope="row">${c.rotulo}</th><td>${t || '<span class="spec-missing">não divulgado</span>'}</td></tr>`;
+    }).join("");
+    const host = (u) => u.split("/")[2].replace("www.", "");
+    const fonte = `<a class="text-link" href="${v.specs.source}" target="_blank" rel="noopener">${host(v.specs.source)}</a>` +
+      (v.specs.sourceExtra ? ` e <a class="text-link" href="${v.specs.sourceExtra}" target="_blank" rel="noopener">${host(v.specs.sourceExtra)}</a>` : "");
+    ficha = `
+      <div class="spec-section">
+        <h2>Ficha técnica</h2>
+        <table class="spec-table">
+          <caption>Versão ${escapeHtml(v.specs.version)}</caption>
+          <tbody>${linhas}</tbody>
+        </table>
+        ${v.specs.note ? `<p class="fine-print">${escapeHtml(v.specs.note)}.</p>` : ""}
+        <p class="fine-print">Fonte: ${fonte}${v.specs.kind === "imprensa" ? " (a marca não publica a ficha; dado da imprensa especializada)" : " (ficha da marca)"}, consultada em ${DATA_INFO.fichas.coleta}.</p>
+      </div>`;
+  }
+
   // Parecidos: mesma carroceria, preço mais próximo (ou autonomia, se não houver preço).
   const distancia = (x) => (v.price && x.price ? Math.abs(x.price - v.price) / 1000 : Math.abs(x.rangeMax - v.rangeMax) + 1000);
   const parecidos = VEHICLES.filter((x) => x.id !== v.id && x.bodyType === v.bodyType)
@@ -74,6 +96,7 @@
 
     <section id="versoes">
       <div class="container detail-cols">
+        <div class="detail-main">
         <div class="spec-section">
           <h2>Versões medidas pelo Inmetro</h2>
           <table class="spec-table versions-table">
@@ -81,6 +104,8 @@
             <tbody>${versoes}</tbody>
           </table>
           <p class="fine-print">Medição do Inmetro (${DATA_INFO.inmetro.titulo}, atualização de ${DATA_INFO.inmetro.atualizacao}), igual para todas as marcas. *Carregando em casa a R$ ${formatNum(TARIFA, 2)} por kWh.</p>
+        </div>
+        ${ficha}
         </div>
         <div class="spec-section">
           <h2>Sobre o preço</h2>

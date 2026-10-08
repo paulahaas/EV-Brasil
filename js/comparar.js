@@ -35,6 +35,13 @@
       valor: (v) => (v.price ? Math.round((v.rangeMin / v.price) * 100000) : null),
       melhor: "maior",
     },
+    // Ficha técnica (potência, bateria, recarga, 0 a 100, porta-malas).
+    ...FICHA_CAMPOS.map((c) => ({
+      rotulo: c.rotulo,
+      texto: (v) => specText(v, c) || '<span class="spec-missing">não divulgado</span>',
+      valor: (v) => (v.specs && v.specs[c.id]) || null,
+      melhor: c.melhor,
+    })),
     { rotulo: "Carroceria", texto: (v) => v.bodyType },
     { rotulo: "Categoria (Inmetro)", texto: (v) => v.category },
     { rotulo: "Versões", texto: (v) => String(v.versions.length) },
@@ -94,7 +101,7 @@
           <tbody>${LINHAS.map(linha).join("")}</tbody>
         </table>
       </div>
-      <p class="fine-print">Em azul, o melhor valor de cada linha. Autonomia e consumo: Inmetro (versão mais eficiente). Energia: carregando em casa a R$ 0,95 por kWh.</p>`;
+      <p class="fine-print">Em azul, o melhor valor de cada linha. Autonomia e consumo: Inmetro (versão mais eficiente). Ficha técnica: versão indicada na página de cada modelo. Energia: carregando em casa a R$ 0,95 por kWh.</p>`;
 
     // Mantém a escolha na URL, para o link poder ser compartilhado.
     const escolhidos = ids.filter(Boolean);
