@@ -89,8 +89,80 @@
             </div>
 
             <p class="fine-print" id="simConsumo"></p>
-            <p class="fine-print">Estimativa: não inclui manutenção, IPVA, seguro nem recarga em eletropostos pagos.</p>
+            <p class="fine-print">Estimativa: não inclui recarga em eletropostos pagos. Manutenção, IPVA e seguro estão no <a class="text-link" href="calculadora.html#custo-total">custo total</a>, logo abaixo.</p>
             <a class="btn btn-primary" id="simLink" href="veiculos.html">Ver este modelo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Custo total em 5 anos (js/custo-total.js). Usa o modelo, os km e os preços de energia de cima. -->
+    <section id="custo-total">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Custo total</span>
+            <h2 class="section-title">Quanto custa ter, em 5 anos</h2>
+            <p class="section-sub">Compra, energia, IPVA do seu estado, seguro e revisões, lado a lado com um carro a gasolina. Usa o modelo e os números da calculadora acima.</p>
+          </div>
+        </div>
+
+        <div class="sim">
+          <form class="sim-form" id="tcoForm">
+            <div class="field">
+              <label for="tcoUf">Seu estado (para o IPVA)</label>
+              <select id="tcoUf"></select>
+              <p class="fine-print tco-uf-nota" id="tcoUfNota"></p>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="tcoPrecoEv">Preço do elétrico (R$)</label>
+                <input type="number" id="tcoPrecoEv" min="0" step="1000" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="tcoPrecoGas">Carro a gasolina que você compararia (R$)</label>
+                <input type="number" id="tcoPrecoGas" min="0" step="1000" inputmode="numeric">
+              </div>
+            </div>
+            <div class="field">
+              <label for="tcoSeguro">Seguro (% do valor do carro por ano)</label>
+              <input type="number" id="tcoSeguro" min="0" step="0.5" inputmode="decimal">
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="tcoRevEv">Revisões do elétrico (R$ por ano)</label>
+                <input type="number" id="tcoRevEv" min="0" step="100" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="tcoRevGas">Revisões do carro a gasolina (R$ por ano)</label>
+                <input type="number" id="tcoRevGas" min="0" step="100" inputmode="numeric">
+              </div>
+            </div>
+            <p class="fine-print">Seguro e revisões são estimativas iniciais; troque pelas cotações e pelo plano de revisão da concessionária.</p>
+          </form>
+
+          <div class="sim-result" aria-live="polite">
+            <div class="sim-big" id="tcoDif"></div>
+            <div class="sim-label" id="tcoRotulo"></div>
+
+            <div class="sim-bars">
+              <div class="sim-bar-row">
+                <span>Gasolina</span>
+                <div class="sim-track"><div class="sim-bar sim-bar-gas" id="tcoBarGas"></div></div>
+                <strong id="tcoTotGas"></strong>
+              </div>
+              <div class="sim-bar-row">
+                <span>Elétrico</span>
+                <div class="sim-track"><div class="sim-bar" id="tcoBarEv"></div></div>
+                <strong id="tcoTotEv"></strong>
+              </div>
+              <p class="fine-print">Total gasto em 5 anos.</p>
+            </div>
+
+            <table class="spec-table tco-table">
+              <thead><tr><th scope="col">Em 5 anos</th><th scope="col">Elétrico</th><th scope="col">Gasolina</th></tr></thead>
+              <tbody id="tcoLinhas"></tbody>
+            </table>
+            <p class="fine-print" id="tcoNotas"></p>
           </div>
         </div>
       </div>
@@ -104,5 +176,6 @@
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
   <script src="js/simulador.js"></script>
+  <script src="js/custo-total.js"></script>
 </body>
 </html>
