@@ -35,7 +35,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/audi-a6-avant-e-tron.jpg",
+      "card": "assets/carros/audi-a6-avant-e-tron-960.jpg",
+      "author": "© M 93",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Avant_e-tron_%E2%80%93_f_12102025.jpg"
+    }
   },
   {
     "id": "audi-a6-e-tron",
@@ -63,7 +71,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/audi-a6-e-tron.jpg",
+      "card": "assets/carros/audi-a6-e-tron-960.jpg",
+      "author": "Damian B Oh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Sportback_e-tron_performance_S_Line_GH_Daytona_Gray_Pearl_Effect_(10).jpg"
+    }
   },
   {
     "id": "audi-q6-e-tron",
@@ -101,7 +117,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
     "priceKind": "imprensa",
-    "priceNote": "preço sugerido divulgado no lançamento (abr/2026); site da Audi não mostra preço"
+    "priceNote": "preço sugerido divulgado no lançamento (abr/2026); site da Audi não mostra preço",
+    "photo": {
+      "src": "assets/carros/audi-q6-e-tron.jpg",
+      "card": "assets/carros/audi-q6-e-tron-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_IAA_2023_1X7A0303.jpg"
+    }
   },
   {
     "id": "audi-q6-sportback-e-tron",
@@ -129,7 +153,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
     "priceKind": "imprensa",
-    "priceNote": "preço sugerido no lançamento (abr/2026)"
+    "priceNote": "preço sugerido no lançamento (abr/2026)",
+    "photo": {
+      "src": "assets/carros/audi-q6-sportback-e-tron.jpg",
+      "card": "assets/carros/audi-q6-sportback-e-tron-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9278.jpg"
+    }
   },
   {
     "id": "audi-rs-e-tron-gt",
@@ -152,7 +184,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/audi-rs-e-tron-gt.jpg",
+      "card": "assets/carros/audi-rs-e-tron-gt-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_RS_e-tron_GT_1X7A1874.jpg"
+    }
   },
   {
     "id": "audi-sq6-sportback-e-tron",
@@ -180,7 +220,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.car.blog.br/2026/04/audi-sq6-etron-2026-preco-brasil.html",
     "priceKind": "imprensa",
-    "priceNote": "preço sugerido no lançamento (abr/2026)"
+    "priceNote": "preço sugerido no lançamento (abr/2026)",
+    "photo": {
+      "src": "assets/carros/audi-sq6-sportback-e-tron.jpg",
+      "card": "assets/carros/audi-sq6-sportback-e-tron-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Audi_SQ6_e-tron_Automesse_Ludwigsburg_2024_IMG_1395.jpg"
+    }
   },
   {
     "id": "bmw-i7",
@@ -203,7 +251,15 @@ const VEHICLES = [
     "priceVersion": "xDrive60 M Sport",
     "priceSource": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/bmw-i7.jpg",
+      "card": "assets/carros/bmw-i7-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:BMW_i7_xDrive60_1X7A7476.jpg"
+    }
   },
   {
     "id": "bmw-ix1",
@@ -262,7 +318,15 @@ const VEHICLES = [
     "priceVersion": "xDrive30 M Sport",
     "priceSource": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/bmw-ix2.jpg",
+      "card": "assets/carros/bmw-ix2-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:BMW_iX2_xDrive30_IMG_1811.jpg"
+    }
   },
   {
     "id": "bmw-ix3",
@@ -285,7 +349,15 @@ const VEHICLES = [
     "priceVersion": "50 xDrive",
     "priceSource": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/bmw-ix3.jpg",
+      "card": "assets/carros/bmw-ix3-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg"
+    }
   },
   {
     "id": "byd-dolphin",
@@ -452,7 +524,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-sealion-7.jpg",
+      "card": "assets/carros/byd-sealion-7-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg"
+    }
   },
   {
     "id": "byd-tan",
@@ -547,7 +627,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-yuan-pro.jpg",
+      "card": "assets/carros/byd-yuan-pro-960.jpg",
+      "author": "Zotyefan",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Yuan_Pro_IMG006.jpg"
+    }
   },
   {
     "id": "avatr-11",
@@ -570,7 +658,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/avatr-11.jpg",
+      "card": "assets/carros/avatr-11-960.jpg",
+      "author": "Nikolai Bulykin",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,_Avatr_11_%D0%BD%D0%B0_%D0%9E%D1%81%D0%B8%D1%91_10%D0%B0.jpg"
+    }
   },
   {
     "id": "chevrolet-blazer-ev",
@@ -593,7 +689,15 @@ const VEHICLES = [
     "priceVersion": "RS",
     "priceSource": "https://www.chevrolet.com.br/eletrico/blazer-ev",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025"
+    "priceNote": "ano-modelo 2025",
+    "photo": {
+      "src": "assets/carros/chevrolet-blazer-ev.jpg",
+      "card": "assets/carros/chevrolet-blazer-ev-960.jpg",
+      "author": "HJUdall",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:24_Chevrolet_Blazer_EV_RS.jpg"
+    }
   },
   {
     "id": "chevrolet-captiva-ev",
@@ -616,7 +720,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.chevrolet.com.br/eletrico/captiva-ev",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/chevrolet-captiva-ev.jpg",
+      "card": "assets/carros/chevrolet-captiva-ev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Wuling_Starlight_S_006.jpg"
+    }
   },
   {
     "id": "chevrolet-spark-euv",
@@ -639,7 +751,15 @@ const VEHICLES = [
     "priceVersion": "ACTIV",
     "priceSource": "https://www.chevrolet.com.br/eletrico/spark-euv",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2027"
+    "priceNote": "ano-modelo 2027",
+    "photo": {
+      "src": "assets/carros/chevrolet-spark-euv.jpg",
+      "card": "assets/carros/chevrolet-spark-euv-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Baojun_Yep_001.jpg"
+    }
   },
   {
     "id": "fiat-500e",
@@ -693,7 +813,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.gacgroup.com/pt-br/sedan/aion-es",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/gac-aion-es.jpg",
+      "card": "assets/carros/gac-aion-es-960.jpg",
+      "author": "S5A-0043",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_GAC_Aion_ES_No-plate_2024-09-14_-_2.jpg"
+    }
   },
   {
     "id": "gac-aion-ut",
@@ -721,7 +849,15 @@ const VEHICLES = [
     "priceVersion": "PREMIUM",
     "priceSource": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
     "priceKind": "imprensa",
-    "priceNote": "preço de lançamento; o site da GAC não mostra o preço desta versão"
+    "priceNote": "preço de lançamento; o site da GAC não mostra o preço desta versão",
+    "photo": {
+      "src": "assets/carros/gac-aion-ut.jpg",
+      "card": "assets/carros/gac-aion-ut-960.jpg",
+      "author": "Chanokchon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:2025_Aion_UT_500_Premium_(2).jpg"
+    }
   },
   {
     "id": "gac-aion-v",
@@ -749,7 +885,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.gacgroup.com/pt-br/suv/aion-v",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/gac-aion-v.jpg",
+      "card": "assets/carros/gac-aion-v-960.jpg",
+      "author": "Chanokchon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Aion_V_602_Luxury.jpg"
+    }
   },
   {
     "id": "gac-aion-y",
@@ -813,7 +957,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/gac-hyptec-ht.jpg",
+      "card": "assets/carros/gac-hyptec-ht-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Aion_Hyper_HT_006.jpg"
+    }
   },
   {
     "id": "geely-ex2",
@@ -841,7 +993,15 @@ const VEHICLES = [
     "priceVersion": "PRO",
     "priceSource": "https://www.geelybrasil.com.br/ofertas",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/geely-ex2.jpg",
+      "card": "assets/carros/geely-ex2-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Geely_Xingyuan_001.jpg"
+    }
   },
   {
     "id": "geely-ex5",
@@ -869,7 +1029,15 @@ const VEHICLES = [
     "priceVersion": "PRO",
     "priceSource": "https://www.geelybrasil.com.br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "promoção à vista R$ 197.800 com bônus"
+    "priceNote": "promoção à vista R$ 197.800 com bônus",
+    "photo": {
+      "src": "assets/carros/geely-ex5.jpg",
+      "card": "assets/carros/geely-ex5-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg"
+    }
   },
   {
     "id": "gwm-ora-03",
@@ -938,7 +1106,15 @@ const VEHICLES = [
     "priceVersion": "5",
     "priceSource": "https://www.gwmmotors.com.br/pt/modelos/ora5",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/gwm-ora-5.jpg",
+      "card": "assets/carros/gwm-ora-5-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Ora_5_004.jpg"
+    }
   },
   {
     "id": "hyundai-ioniq-5",
@@ -971,7 +1147,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.cnnbrasil.com.br/auto/hyundai-ioniq-5-abre-pre-venda-no-brasil-e-pode-rodar-374-km-saiba-preco/",
     "priceKind": "imprensa",
-    "priceNote": "a imprensa cita valores entre R$ 339.990 e R$ 394.990"
+    "priceNote": "a imprensa cita valores entre R$ 339.990 e R$ 394.990",
+    "photo": {
+      "src": "assets/carros/hyundai-ioniq-5.jpg",
+      "card": "assets/carros/hyundai-ioniq-5-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg"
+    }
   },
   {
     "id": "jac-e-j7",
@@ -1053,7 +1237,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/jac-e-js4.jpg",
+      "card": "assets/carros/jac-e-js4-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:JAC_e-JS4_Auto_Zuerich_2023_1X7A1321.jpg"
+    }
   },
   {
     "id": "jac-iev330p",
@@ -1104,7 +1296,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "busca na imprensa",
     "priceKind": "imprensa",
-    "priceNote": "a Kia não mostra o preço no site"
+    "priceNote": "a Kia não mostra o preço no site",
+    "photo": {
+      "src": "assets/carros/kia-ev5.jpg",
+      "card": "assets/carros/kia-ev5-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Kia_EV5_003.jpg"
+    }
   },
   {
     "id": "leapmotor-b10",
@@ -1127,7 +1327,15 @@ const VEHICLES = [
     "priceVersion": "Elétrico",
     "priceSource": "https://www.leapmotor.com.br/b10/monte.html",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/leapmotor-b10.jpg",
+      "card": "assets/carros/leapmotor-b10-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2067.jpg"
+    }
   },
   {
     "id": "leapmotor-c10",
@@ -1150,7 +1358,15 @@ const VEHICLES = [
     "priceVersion": "Elétrico",
     "priceSource": "https://www.leapmotor.com.br/",
     "priceKind": "oficial",
-    "priceNote": "preço à vista para pessoa física, na página inicial do site"
+    "priceNote": "preço à vista para pessoa física, na página inicial do site",
+    "photo": {
+      "src": "assets/carros/leapmotor-c10.jpg",
+      "card": "assets/carros/leapmotor-c10-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_EV_DSC_8756.jpg"
+    }
   },
   {
     "id": "lexus-rz",
@@ -1173,7 +1389,15 @@ const VEHICLES = [
     "priceVersion": "500e",
     "priceSource": "busca na imprensa",
     "priceKind": "imprensa",
-    "priceNote": "preço de pré-venda"
+    "priceNote": "preço de pré-venda",
+    "photo": {
+      "src": "assets/carros/lexus-rz.jpg",
+      "card": "assets/carros/lexus-rz-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Lexus_RZ_450e_(XEBM15)_IMG_0680.jpg"
+    }
   },
   {
     "id": "mercedes-eqb",
@@ -1196,7 +1420,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
     "priceKind": "imprensa",
-    "priceNote": "preço de lançamento (jul/2025)"
+    "priceNote": "preço de lançamento (jul/2025)",
+    "photo": {
+      "src": "assets/carros/mercedes-eqb.jpg",
+      "card": "assets/carros/mercedes-eqb-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_EQB_004.jpg"
+    }
   },
   {
     "id": "mercedes-glb-ev",
@@ -1219,7 +1451,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/mercedes-glb-ev.jpg",
+      "card": "assets/carros/mercedes-glb-ev-960.jpg",
+      "author": "© M 93",
+      "license": "CC BY-SA 3.0 de",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLB_250%2B_mit_EQ-Technologie_AMG_Line_(X_244)_%E2%80%93_f1_18042026.jpg"
+    }
   },
   {
     "id": "mg-cyberster",
@@ -1242,7 +1482,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/mg-cyberster.jpg",
+      "card": "assets/carros/mg-cyberster-960.jpg",
+      "author": "Matti Blume",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:MG_Cyberster,_BAS_24,_Brussels_(P1170240).jpg"
+    }
   },
   {
     "id": "mg-mg4",
@@ -1275,7 +1523,15 @@ const VEHICLES = [
     "priceVersion": "COMFORT 64 KWH",
     "priceSource": "https://mgmotoroficial.com.br/oferta/mg4",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/mg-mg4.jpg",
+      "card": "assets/carros/mg-mg4-960.jpg",
+      "author": "S5A-0043",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_MG4_EV_No-plate_2024-09-14_-_2.jpg"
+    }
   },
   {
     "id": "mg-mg4-urban",
@@ -1313,7 +1569,15 @@ const VEHICLES = [
     "priceVersion": "COMFORT 43 KWH",
     "priceSource": "https://www.automotivebusiness.com.br/noticias/mg4-urban-chega-ao-brasil-por-129-990",
     "priceKind": "imprensa",
-    "priceNote": "preço de lançamento (jul/2026); o site da MG não mostra o preço"
+    "priceNote": "preço de lançamento (jul/2026); o site da MG não mostra o preço",
+    "photo": {
+      "src": "assets/carros/mg-mg4-urban.jpg",
+      "card": "assets/carros/mg-mg4-urban-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:MG4_EV_(second_generation)_IMG_8032.jpg"
+    }
   },
   {
     "id": "mg-s5",
@@ -1341,7 +1605,15 @@ const VEHICLES = [
     "priceVersion": "COMFORT",
     "priceSource": "https://mgmotoroficial.com.br/oferta/mgs5",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/mg-s5.jpg",
+      "card": "assets/carros/mg-s5-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2698.jpg"
+    }
   },
   {
     "id": "mini-aceman",
@@ -1369,7 +1641,15 @@ const VEHICLES = [
     "priceVersion": "E",
     "priceSource": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025/2026"
+    "priceNote": "ano-modelo 2025/2026",
+    "photo": {
+      "src": "assets/carros/mini-aceman.jpg",
+      "card": "assets/carros/mini-aceman-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7118.jpg"
+    }
   },
   {
     "id": "mini-cooper",
@@ -1433,7 +1713,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/mini-countryman.jpg",
+      "card": "assets/carros/mini-countryman-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_SE_IAA_2023_1X7A0735.jpg"
+    }
   },
   {
     "id": "mini-jcw",
@@ -1461,7 +1749,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/mini-jcw.jpg",
+      "card": "assets/carros/mini-jcw-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_John_Cooper_Works_DSC_2680.jpg"
+    }
   },
   {
     "id": "omoda-e5",
@@ -1484,7 +1780,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.webmotors.com.br/omoda/e5/2026",
     "priceKind": "imprensa",
-    "priceNote": "a Omoda não mostra o preço no site"
+    "priceNote": "a Omoda não mostra o preço no site",
+    "photo": {
+      "src": "assets/carros/omoda-e5.jpg",
+      "card": "assets/carros/omoda-e5-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Omoda_E5_IMG_8107.jpg"
+    }
   },
   {
     "id": "porsche-cayenne-electric",
@@ -1542,7 +1846,15 @@ const VEHICLES = [
     "priceVersion": "Electric",
     "priceSource": "https://www.carrosegaragem.com.br/porsche-cayenne-electric-brasil/",
     "priceKind": "imprensa",
-    "priceNote": "a Porsche não divulga preços no site; Coupé R$ 950 mil, S R$ 1,08 mi, Turbo R$ 1,41 mi (set/2026)"
+    "priceNote": "a Porsche não divulga preços no site; Coupé R$ 950 mil, S R$ 1,08 mi, Turbo R$ 1,41 mi (set/2026)",
+    "photo": {
+      "src": "assets/carros/porsche-cayenne-electric.jpg",
+      "card": "assets/carros/porsche-cayenne-electric-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Electric_IMG_8088.jpg"
+    }
   },
   {
     "id": "porsche-macan-electric",
@@ -1580,7 +1892,15 @@ const VEHICLES = [
     "priceVersion": "Electric",
     "priceSource": "https://www.vrum.com.br/mercado/2026/02/7348831-porsche-no-brasil-precos-atualizados-dos-modelos-e-o-mais-desejado.html",
     "priceKind": "imprensa",
-    "priceNote": "a Porsche não divulga preços no site; a imprensa cita o Macan a partir de R$ 580 mil (fev/2026)"
+    "priceNote": "a Porsche não divulga preços no site; a imprensa cita o Macan a partir de R$ 580 mil (fev/2026)",
+    "photo": {
+      "src": "assets/carros/porsche-macan-electric.jpg",
+      "card": "assets/carros/porsche-macan-electric-960.jpg",
+      "author": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Porsche_Macan_XAB_White.jpg"
+    }
   },
   {
     "id": "porsche-taycan",
@@ -1664,7 +1984,15 @@ const VEHICLES = [
     "priceVersion": "E-TECH",
     "priceSource": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/renault-megane-e-tech.jpg",
+      "card": "assets/carros/renault-megane-e-tech-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg"
+    }
   },
   {
     "id": "suzuki-e-vitara",
@@ -1692,7 +2020,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado"
+    "priceNote": "preço não encontrado",
+    "photo": {
+      "src": "assets/carros/suzuki-e-vitara.jpg",
+      "card": "assets/carros/suzuki-e-vitara-960.jpg",
+      "author": "La Revue Automobile",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:2025_Suzuki_e_Vitara_front_view.jpg"
+    }
   },
   {
     "id": "volvo-ec40",
@@ -1750,7 +2086,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.volvocars.com/br/cars/ec40-electric/",
     "priceKind": "oficial",
-    "priceNote": "versão superior a partir de R$ 405.950"
+    "priceNote": "versão superior a partir de R$ 405.950",
+    "photo": {
+      "src": "assets/carros/volvo-ec40.jpg",
+      "card": "assets/carros/volvo-ec40-960.jpg",
+      "author": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Volvo_EC40_Crystal_White_Pearl_-_front.jpg"
+    }
   },
   {
     "id": "volvo-es90",
@@ -1773,7 +2117,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.volvocars.com/br/cars/es90-electric/",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/volvo-es90.jpg",
+      "card": "assets/carros/volvo-es90-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Volvo_ES90_IAA_2025_DSC_1357.jpg"
+    }
   },
   {
     "id": "volvo-ex30",
@@ -1897,7 +2249,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.volvocars.com/br/cars/ex40-electric/",
     "priceKind": "oficial",
-    "priceNote": "versão superior a partir de R$ 400.950"
+    "priceNote": "versão superior a partir de R$ 400.950",
+    "photo": {
+      "src": "assets/carros/volvo-ex40.jpg",
+      "card": "assets/carros/volvo-ex40-960.jpg",
+      "author": "Chanokchon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Volvo_EX40_Ultra_Twin_Motor_Black_Edition.jpg"
+    }
   },
   {
     "id": "volvo-ex90",
@@ -1930,7 +2290,15 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.volvocars.com/br/cars/ex90-electric/",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/volvo-ex90.jpg",
+      "card": "assets/carros/volvo-ex90-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Volvo_EX90_Auto_Zuerich_2024_DSC_6147.jpg"
+    }
   },
   {
     "id": "zeekr-001",
@@ -1958,7 +2326,15 @@ const VEHICLES = [
     "priceVersion": "Premium",
     "priceSource": "https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860",
     "priceKind": "imprensa",
-    "priceNote": "a imprensa cita a faixa de R$ 495 mil a R$ 542 mil"
+    "priceNote": "a imprensa cita a faixa de R$ 495 mil a R$ 542 mil",
+    "photo": {
+      "src": "assets/carros/zeekr-001.jpg",
+      "card": "assets/carros/zeekr-001-960.jpg",
+      "author": "Matti Blume",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Mobileye_Zeekr_001,_IAA_Summit_2023,_Munich_(P1120233-RR).jpg"
+    }
   },
   {
     "id": "zeekr-7x",
@@ -1986,7 +2362,15 @@ const VEHICLES = [
     "priceVersion": "Premium RWD",
     "priceSource": "https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860",
     "priceKind": "imprensa",
-    "priceNote": "a Zeekr não mostra o preço no site; versão Flagship AWD R$ 468.000"
+    "priceNote": "a Zeekr não mostra o preço no site; versão Flagship AWD R$ 468.000",
+    "photo": {
+      "src": "assets/carros/zeekr-7x.jpg",
+      "card": "assets/carros/zeekr-7x-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_003.jpg"
+    }
   },
   {
     "id": "zeekr-x",

@@ -120,6 +120,390 @@
    "license": "CC BY-SA 4.0",
    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
    "page": "https://commons.wikimedia.org/wiki/File:Mini_Hatch_(J01)_IMG_8959.jpg"
+  },
+  "audi-a6-avant-e-tron": {
+   "src": "assets/carros/audi-a6-avant-e-tron.jpg",
+   "card": "assets/carros/audi-a6-avant-e-tron-960.jpg",
+   "author": "© M 93",
+   "license": "CC BY-SA 3.0 de",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Avant_e-tron_%E2%80%93_f_12102025.jpg"
+  },
+  "audi-a6-e-tron": {
+   "src": "assets/carros/audi-a6-e-tron.jpg",
+   "card": "assets/carros/audi-a6-e-tron-960.jpg",
+   "author": "Damian B Oh",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_A6_Sportback_e-tron_performance_S_Line_GH_Daytona_Gray_Pearl_Effect_(10).jpg"
+  },
+  "audi-q6-e-tron": {
+   "src": "assets/carros/audi-q6-e-tron.jpg",
+   "card": "assets/carros/audi-q6-e-tron-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_IAA_2023_1X7A0303.jpg"
+  },
+  "audi-q6-sportback-e-tron": {
+   "src": "assets/carros/audi-q6-sportback-e-tron.jpg",
+   "card": "assets/carros/audi-q6-sportback-e-tron-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_Q6_e-tron_Sportback_DSC_9278.jpg"
+  },
+  "audi-rs-e-tron-gt": {
+   "src": "assets/carros/audi-rs-e-tron-gt.jpg",
+   "card": "assets/carros/audi-rs-e-tron-gt-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_RS_e-tron_GT_1X7A1874.jpg"
+  },
+  "audi-sq6-sportback-e-tron": {
+   "src": "assets/carros/audi-sq6-sportback-e-tron.jpg",
+   "card": "assets/carros/audi-sq6-sportback-e-tron-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Audi_SQ6_e-tron_Automesse_Ludwigsburg_2024_IMG_1395.jpg"
+  },
+  "bmw-i7": {
+   "src": "assets/carros/bmw-i7.jpg",
+   "card": "assets/carros/bmw-i7-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:BMW_i7_xDrive60_1X7A7476.jpg"
+  },
+  "bmw-ix2": {
+   "src": "assets/carros/bmw-ix2.jpg",
+   "card": "assets/carros/bmw-ix2-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:BMW_iX2_xDrive30_IMG_1811.jpg"
+  },
+  "bmw-ix3": {
+   "src": "assets/carros/bmw-ix3.jpg",
+   "card": "assets/carros/bmw-ix3-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:BMW_iX3_NA5_IAA_2025_DSC_1684.jpg"
+  },
+  "byd-sealion-7": {
+   "src": "assets/carros/byd-sealion-7.jpg",
+   "card": "assets/carros/byd-sealion-7-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_07_EV_DSC_8264.jpg"
+  },
+  "byd-yuan-pro": {
+   "src": "assets/carros/byd-yuan-pro.jpg",
+   "card": "assets/carros/byd-yuan-pro-960.jpg",
+   "author": "Zotyefan",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:BYD_Yuan_Pro_IMG006.jpg"
+  },
+  "avatr-11": {
+   "src": "assets/carros/avatr-11.jpg",
+   "card": "assets/carros/avatr-11-960.jpg",
+   "author": "Nikolai Bulykin",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82,_Avatr_11_%D0%BD%D0%B0_%D0%9E%D1%81%D0%B8%D1%91_10%D0%B0.jpg"
+  },
+  "chevrolet-blazer-ev": {
+   "src": "assets/carros/chevrolet-blazer-ev.jpg",
+   "card": "assets/carros/chevrolet-blazer-ev-960.jpg",
+   "author": "HJUdall",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:24_Chevrolet_Blazer_EV_RS.jpg"
+  },
+  "chevrolet-captiva-ev": {
+   "src": "assets/carros/chevrolet-captiva-ev.jpg",
+   "card": "assets/carros/chevrolet-captiva-ev-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Wuling_Starlight_S_006.jpg"
+  },
+  "chevrolet-spark-euv": {
+   "src": "assets/carros/chevrolet-spark-euv.jpg",
+   "card": "assets/carros/chevrolet-spark-euv-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Baojun_Yep_001.jpg"
+  },
+  "gac-aion-es": {
+   "src": "assets/carros/gac-aion-es.jpg",
+   "card": "assets/carros/gac-aion-es-960.jpg",
+   "author": "S5A-0043",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_GAC_Aion_ES_No-plate_2024-09-14_-_2.jpg"
+  },
+  "gac-aion-ut": {
+   "src": "assets/carros/gac-aion-ut.jpg",
+   "card": "assets/carros/gac-aion-ut-960.jpg",
+   "author": "Chanokchon",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:2025_Aion_UT_500_Premium_(2).jpg"
+  },
+  "gac-hyptec-ht": {
+   "src": "assets/carros/gac-hyptec-ht.jpg",
+   "card": "assets/carros/gac-hyptec-ht-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Aion_Hyper_HT_006.jpg"
+  },
+  "geely-ex2": {
+   "src": "assets/carros/geely-ex2.jpg",
+   "card": "assets/carros/geely-ex2-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Geely_Xingyuan_001.jpg"
+  },
+  "geely-ex5": {
+   "src": "assets/carros/geely-ex5.jpg",
+   "card": "assets/carros/geely-ex5-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_001.jpg"
+  },
+  "gwm-ora-5": {
+   "src": "assets/carros/gwm-ora-5.jpg",
+   "card": "assets/carros/gwm-ora-5-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Ora_5_004.jpg"
+  },
+  "hyundai-ioniq-5": {
+   "src": "assets/carros/hyundai-ioniq-5.jpg",
+   "card": "assets/carros/hyundai-ioniq-5-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Hyundai_Ioniq_5_IAA_2021_1X7A0189.jpg"
+  },
+  "jac-e-js4": {
+   "src": "assets/carros/jac-e-js4.jpg",
+   "card": "assets/carros/jac-e-js4-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:JAC_e-JS4_Auto_Zuerich_2023_1X7A1321.jpg"
+  },
+  "kia-ev5": {
+   "src": "assets/carros/kia-ev5.jpg",
+   "card": "assets/carros/kia-ev5-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Kia_EV5_003.jpg"
+  },
+  "leapmotor-b10": {
+   "src": "assets/carros/leapmotor-b10.jpg",
+   "card": "assets/carros/leapmotor-b10-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_B10_IAA_2025_DSC_2067.jpg"
+  },
+  "leapmotor-c10": {
+   "src": "assets/carros/leapmotor-c10.jpg",
+   "card": "assets/carros/leapmotor-c10-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_EV_DSC_8756.jpg"
+  },
+  "lexus-rz": {
+   "src": "assets/carros/lexus-rz.jpg",
+   "card": "assets/carros/lexus-rz-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Lexus_RZ_450e_(XEBM15)_IMG_0680.jpg"
+  },
+  "mercedes-eqb": {
+   "src": "assets/carros/mercedes-eqb.jpg",
+   "card": "assets/carros/mercedes-eqb-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_EQB_004.jpg"
+  },
+  "mg-cyberster": {
+   "src": "assets/carros/mg-cyberster.jpg",
+   "card": "assets/carros/mg-cyberster-960.jpg",
+   "author": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:MG_Cyberster,_BAS_24,_Brussels_(P1170240).jpg"
+  },
+  "mg-mg4": {
+   "src": "assets/carros/mg-mg4.jpg",
+   "card": "assets/carros/mg-mg4-960.jpg",
+   "author": "S5A-0043",
+   "license": "CC BY 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:(SGP-Singapore)_Showcar_MG4_EV_No-plate_2024-09-14_-_2.jpg"
+  },
+  "mg-mg4-urban": {
+   "src": "assets/carros/mg-mg4-urban.jpg",
+   "card": "assets/carros/mg-mg4-urban-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:MG4_EV_(second_generation)_IMG_8032.jpg"
+  },
+  "mg-s5": {
+   "src": "assets/carros/mg-s5.jpg",
+   "card": "assets/carros/mg-s5-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:MGS5_EV_DSC_2698.jpg"
+  },
+  "mini-aceman": {
+   "src": "assets/carros/mini-aceman.jpg",
+   "card": "assets/carros/mini-aceman-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_DSC_7118.jpg"
+  },
+  "mini-countryman": {
+   "src": "assets/carros/mini-countryman.jpg",
+   "card": "assets/carros/mini-countryman-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mini_Countryman_(U25)_SE_IAA_2023_1X7A0735.jpg"
+  },
+  "mini-jcw": {
+   "src": "assets/carros/mini-jcw.jpg",
+   "card": "assets/carros/mini-jcw-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mini_Aceman_John_Cooper_Works_DSC_2680.jpg"
+  },
+  "omoda-e5": {
+   "src": "assets/carros/omoda-e5.jpg",
+   "card": "assets/carros/omoda-e5-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Omoda_E5_IMG_8107.jpg"
+  },
+  "porsche-cayenne-electric": {
+   "src": "assets/carros/porsche-cayenne-electric.jpg",
+   "card": "assets/carros/porsche-cayenne-electric-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_Electric_IMG_8088.jpg"
+  },
+  "porsche-macan-electric": {
+   "src": "assets/carros/porsche-macan-electric.jpg",
+   "card": "assets/carros/porsche-macan-electric-960.jpg",
+   "author": "Ethan Llamas",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Porsche_Macan_XAB_White.jpg"
+  },
+  "renault-megane-e-tech": {
+   "src": "assets/carros/renault-megane-e-tech.jpg",
+   "card": "assets/carros/renault-megane-e-tech-960.jpg",
+   "author": "Alexander Migl",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Renault_Megane_E-Tech_IAA_2021_1X7A0073.jpg"
+  },
+  "suzuki-e-vitara": {
+   "src": "assets/carros/suzuki-e-vitara.jpg",
+   "card": "assets/carros/suzuki-e-vitara-960.jpg",
+   "author": "La Revue Automobile",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:2025_Suzuki_e_Vitara_front_view.jpg"
+  },
+  "volvo-ec40": {
+   "src": "assets/carros/volvo-ec40.jpg",
+   "card": "assets/carros/volvo-ec40-960.jpg",
+   "author": "Ethan Llamas",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Volvo_EC40_Crystal_White_Pearl_-_front.jpg"
+  },
+  "volvo-es90": {
+   "src": "assets/carros/volvo-es90.jpg",
+   "card": "assets/carros/volvo-es90-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Volvo_ES90_IAA_2025_DSC_1357.jpg"
+  },
+  "volvo-ex40": {
+   "src": "assets/carros/volvo-ex40.jpg",
+   "card": "assets/carros/volvo-ex40-960.jpg",
+   "author": "Chanokchon",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:2024_Volvo_EX40_Ultra_Twin_Motor_Black_Edition.jpg"
+  },
+  "volvo-ex90": {
+   "src": "assets/carros/volvo-ex90.jpg",
+   "card": "assets/carros/volvo-ex90-960.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Volvo_EX90_Auto_Zuerich_2024_DSC_6147.jpg"
+  },
+  "zeekr-001": {
+   "src": "assets/carros/zeekr-001.jpg",
+   "card": "assets/carros/zeekr-001-960.jpg",
+   "author": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mobileye_Zeekr_001,_IAA_Summit_2023,_Munich_(P1120233-RR).jpg"
+  },
+  "zeekr-7x": {
+   "src": "assets/carros/zeekr-7x.jpg",
+   "card": "assets/carros/zeekr-7x-960.jpg",
+   "author": "JustAnotherCarDesigner",
+   "license": "CC0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Zeekr_7X_003.jpg"
+  },
+  "gac-aion-v": {
+   "src": "assets/carros/gac-aion-v.jpg",
+   "card": "assets/carros/gac-aion-v-960.jpg",
+   "author": "Chanokchon",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:2024_Aion_V_602_Luxury.jpg"
+  },
+  "mercedes-glb-ev": {
+   "src": "assets/carros/mercedes-glb-ev.jpg",
+   "card": "assets/carros/mercedes-glb-ev-960.jpg",
+   "author": "© M 93",
+   "license": "CC BY-SA 3.0 de",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
+   "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLB_250%2B_mit_EQ-Technologie_AMG_Line_(X_244)_%E2%80%93_f1_18042026.jpg"
   }
  }
 }
