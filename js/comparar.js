@@ -64,7 +64,7 @@
       <th scope="col">
         <select class="select" data-coluna="${coluna}" aria-label="Modelo ${coluna + 1}">${opcoes(id, coluna)}</select>
         ${v ? `
-          <a class="compare-car" href="veiculo.html?id=${encodeURIComponent(v.id)}" style="--glow:${v.color}">
+          <a class="compare-car" href="${modelUrl(v)}" style="--glow:${v.color}">
             ${carImage(v)}
             <span class="compare-name">${v.brand} ${v.model}</span>
             <span class="compare-meta">${v.bodyType} · ${v.category}</span>

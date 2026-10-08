@@ -113,7 +113,7 @@
             text-anchor="${i === 0 ? "start" : i === ticksX.length - 1 ? "end" : "middle"}">${reais(t, pequeno)}</text>`).join("")}
         <text class="viz-axis" x="${M.l + iw}" y="${H - 4}" text-anchor="end">${pequeno ? "Preço em R$ (escala log.) →" : 'Preço "a partir de" (escala logarítmica) →'}</text>
         ${visiveis.map((p, i) => `
-          <a href="veiculo.html?id=${encodeURIComponent(p.v.id)}" class="viz-pt" data-i="${pontos.indexOf(p)}"
+          <a href="${modelUrl(p.v)}" class="viz-pt" data-i="${pontos.indexOf(p)}"
              aria-label="${p.v.brand} ${p.v.model}: ${formatBRL(p.x)}, ${p.y} km">
             <circle cx="${sx(p.x)}" cy="${sy(p.y)}" r="${r}" style="fill:${p.g.cor}"></circle>
           </a>`).join("")}
@@ -164,7 +164,7 @@
       ev.preventDefault();
       if (!q) return;
       if (ev.pointerType === "touch" && atual !== q) { mostrar(q); return; }
-      location.href = `veiculo.html?id=${encodeURIComponent(q.p.v.id)}`;
+      location.href = `${modelUrl(q.p.v)}`;
     });
     area.querySelectorAll(".viz-pt").forEach((el) => {
       el.addEventListener("focus", () => mostrar(pos.find((q) => pontos.indexOf(q.p) === Number(el.dataset.i))));
@@ -176,7 +176,7 @@
   const tabela = raiz.querySelector(".viz-table tbody");
   if (tabela) {
     tabela.innerHTML = [...pontos].sort((a, b) => a.x - b.x).map((p) => `
-      <tr><td><a class="text-link" href="veiculo.html?id=${encodeURIComponent(p.v.id)}">${p.v.brand} ${p.v.model}</a></td>
+      <tr><td><a class="text-link" href="${modelUrl(p.v)}">${p.v.brand} ${p.v.model}</a></td>
       <td>${p.g.nome}</td><td>${formatBRL(p.x)}</td><td>${p.y} km</td></tr>`).join("");
   }
 

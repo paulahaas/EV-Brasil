@@ -106,7 +106,7 @@ function specBar(v) {
 function createCard(v) {
   const nota = priceNoteShort(v);
   return `
-    <a class="card" href="veiculo.html?id=${encodeURIComponent(v.id)}">
+    <a class="card" href="${modelUrl(v)}">
       <div class="card-media ${hasPhoto(v) ? "has-photo" : ""}" style="--glow:${v.color}">
         ${carImage(v)}
       </div>

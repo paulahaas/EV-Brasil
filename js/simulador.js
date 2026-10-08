@@ -65,7 +65,7 @@
     document.getElementById("simBarGasolina").style.width = (custoGasolina / maior) * 100 + "%";
     document.getElementById("simBarEletrico").style.width = (custoEletrico / maior) * 100 + "%";
 
-    document.getElementById("simLink").href = "veiculo.html?id=" + encodeURIComponent(v.id);
+    document.getElementById("simLink").href = modelUrl(v);
   }
 
   form.addEventListener("input", calcular);
