@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPVA de carro elétrico em 2026: regra de cada estado — EV Brasil</title>
+  <meta name="description" content="Quais estados isentam o carro elétrico de IPVA em 2026, quais dão desconto e quais cobram a alíquota normal. Tabela dos 27 estados com fonte.">
+  <link rel="canonical" href="https://ev-brasil.web.app/guia-ipva-carro-eletrico.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="IPVA de carro elétrico em 2026, estado por estado">
+  <meta property="og:description" content="Quais estados isentam o carro elétrico de IPVA em 2026, quais dão desconto e quais cobram a alíquota normal. Tabela dos 27 estados com fonte.">
+  <meta property="og:url" content="https://ev-brasil.web.app/guia-ipva-carro-eletrico.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumb"><a href="index.html">Início</a> · <a href="guias.html">Guias</a> · <span>IPVA de carro elétrico em 2026, estado por estado</span></nav>
+        <span class="eyebrow">Guia</span>
+        <h1 class="section-title">IPVA do elétrico por estado</h1>
+        <p class="section-sub">Isenção, desconto ou alíquota normal: a regra de 2026 nos 27 estados.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container prose">
+        <p class="lead">Em boa parte do país o carro elétrico paga menos IPVA, e em vários estados não paga nada. Mas as regras mudam de um estado para outro, e algumas têm limite de valor ou de prazo.</p>
+
+        <div class="table-wrap">
+          <table class="spec-table guide-table" id="ipvaTabela">
+            <thead><tr><th scope="col">Estado</th><th scope="col">Gasolina</th><th scope="col">Elétrico</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="fine-print" id="ipvaNota"></p>
+
+        <h2>Como ler a tabela</h2>
+        <ul>
+          <li><strong>Gasolina</strong> é a alíquota normal de automóvel no estado. Quando o estado cobra por faixa (de potência ou de valor), mostramos a mais alta.</li>
+          <li><strong>Elétrico</strong> é a regra de 2026 para carro 100% elétrico: isenção, alíquota menor ou desconto. Onde a lista que usamos não cita o estado, mostramos a alíquota normal; confirme na Sefaz, pode haver benefício.</li>
+          <li>O IPVA é calculado sobre o valor venal do carro (tabela FIPE), que cai a cada ano.</li>
+        </ul>
+
+        <h2>Quanto isso pesa no bolso</h2>
+        <p>
+          Num carro de R$ 150 mil, 4% de IPVA são R$ 6 mil no primeiro ano. Para ver a diferença em 5 anos no seu estado,
+          somada a energia, seguro e revisões, use o <a class="text-link" href="calculadora.html#custo-total">custo total da calculadora</a>.
+        </p>
+        <div class="guide-sources">
+          <h2>Fontes</h2>
+          <ul>
+            <li><a class="text-link" href="https://www.vrum.com.br/noticias/2026/07/7466052-ipva-2026-para-eletricos-a-lista-de-estados-com-isencao-ou-desconto.html" target="_blank" rel="noopener">Vrum: IPVA 2026 para elétricos, a lista de estados com isenção ou desconto (jul/2026)</a></li>
+            <li><a class="text-link" href="https://www.cnnbrasil.com.br/auto/ipva-2026-saiba-quais-estados-cobram-os-impostos-mais-caros-e-baratos/" target="_blank" rel="noopener">CNN Brasil: IPVA 2026, os estados mais caros e mais baratos</a></li>
+            <li><a class="text-link" href="https://valorfinal.com.br/tabela-fipe/ipva" target="_blank" rel="noopener">Valor Final: alíquotas de IPVA 2026 por estado</a></li>
+          </ul>
+          <p>Texto do EV Brasil, revisado em outubro de 2026. Achou algo desatualizado? O site da marca e a Sefaz do seu estado valem mais que o nosso.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("guias");
+    // Tabela a partir dos mesmos dados da calculadora (dados/ipva-2026.json).
+    const pct = (n) => `${formatNum(n, Number.isInteger(n) ? 0 : Number.isInteger(n * 10) ? 1 : 2)}%`;
+    const eletrico = (e) => {
+      if (e.teto_valor) return `<strong>Isento</strong> até R$ ${formatNum(e.teto_valor / 1000, 0)} mil`;
+      if (e.eletrico === 0) return "<strong>Isento</strong>";
+      return e.eletrico < e.gasolina ? `<strong>${pct(e.eletrico)}</strong>` : pct(e.eletrico);
+    };
+    document.querySelector("#ipvaTabela tbody").innerHTML = Object.values(IPVA)
+      .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"))
+      .map((e) => `<tr><td>${e.nome}</td><td>${pct(e.gasolina)}</td><td>${eletrico(e)}<small>${escapeHtml(e.nota)}</small></td></tr>`)
+      .join("");
+    document.getElementById("ipvaNota").textContent = `Regras de 2026, coletadas em ${DATA_INFO.ipva.coleta}. As leis mudam com frequência: confirme na Secretaria da Fazenda (Sefaz) do seu estado antes de comprar.`;
+  </script>
+</body>
+</html>

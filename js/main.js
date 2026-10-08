@@ -12,6 +12,7 @@ function renderHeader(active) {
     { href: "rankings.html", label: "Rankings", key: "rankings" },
     { href: "comparar.html", label: "Comparar", key: "comparar" },
     { href: "calculadora.html", label: "Calculadora", key: "calculadora" },
+    { href: "guias.html", label: "Guias", key: "guias" },
   ];
   const nav = links
     .map(
@@ -72,6 +73,7 @@ function renderFooter() {
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
           <a href="calculadora.html">Calculadora de economia</a>
+          <a href="guias.html">Guias do primeiro elétrico</a>
         </div>
         <div class="footer-col">
           <h4>Carrocerias</h4>

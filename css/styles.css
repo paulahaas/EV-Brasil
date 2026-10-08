@@ -444,6 +444,24 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .prose h2 { font-size: 1.35rem; margin: 36px 0 10px; }
 .prose h2:first-child { margin-top: 0; }
 .prose p { color: var(--text-dim); margin-bottom: 12px; }
+.prose .lead { font-size: 1.12rem; color: var(--text); line-height: 1.6; margin-bottom: 8px; }
+.prose ul { margin: 0 0 14px; padding-left: 20px; color: var(--text-dim); }
+.prose li { margin-bottom: 8px; line-height: 1.55; }
+.prose li strong, .prose p strong { color: var(--text); }
+.table-wrap { overflow-x: auto; margin: 6px 0 4px; }
+.guide-table th { font-size: 0.82rem; font-weight: 500; color: var(--text-mute); text-align: left; padding: 0 8px 8px 4px; }
+.guide-table td { padding: 12px 8px 12px 4px; vertical-align: top; }
+.guide-table td:first-child { width: auto; }
+.guide-table td:last-child { text-align: left; }
+.guide-table small { display: block; color: var(--text-mute); font-size: 0.78rem; font-weight: 400; margin-top: 3px; }
+.guide-sources { margin-top: 44px; padding-top: 8px; border-top: 1px solid var(--stroke); }
+.guide-sources h2 { font-size: 1rem; }
+.guide-sources li, .guide-sources p { font-size: 0.88rem; }
+.guide-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.guide-card { display: block; background: var(--bg-elev); border-radius: var(--radius); padding: 26px 24px; transition: background 0.2s; }
+.guide-card:hover { background: var(--bg-elev-2); }
+.guide-card h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.guide-card p { margin-bottom: 14px; }
 
 /* ---------------- Por onde começar (home) ---------------- */
 .tools { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
