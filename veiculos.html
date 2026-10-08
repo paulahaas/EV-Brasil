@@ -31,6 +31,9 @@
     <div class="filterbar">
       <div class="container filters">
         <input class="search" type="search" id="searchInput" placeholder="Buscar marca ou modelo" aria-label="Buscar marca ou modelo">
+        <!-- No celular, os filtros ficam recolhidos atrás deste botão -->
+        <button type="button" class="chip filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filtersMore">Filtros</button>
+        <div class="filters-more" id="filtersMore">
         <div class="filter-group" id="typeFilters"></div>
         <div class="spacer"></div>
         <select class="select" id="brandSelect" aria-label="Marca"></select>
@@ -56,6 +59,7 @@
           <option value="nome">Marca e modelo (A–Z)</option>
         </select>
         <button type="button" class="chip" id="clearFilters" hidden>Limpar filtros</button>
+        </div>
       </div>
     </div>
 

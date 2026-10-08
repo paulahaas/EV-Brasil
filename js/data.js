@@ -59,3 +59,23 @@ function firstNumber(text) {
   const m = String(text).replace(/\./g, "").match(/\d+(,\d+)?/);
   return m ? parseFloat(m[0].replace(",", ".")) : 0;
 }
+
+/**
+ * Nível de consumo entre os elétricos do catálogo (1 = muito baixo ... 5 = muito alto).
+ * Comparação do EV Brasil, feita em quintis do consumo do Inmetro — não é o selo
+ * oficial do Inmetro (que dá "A" a quase todos os elétricos).
+ */
+const NIVEIS_CONSUMO = ["Muito baixo", "Baixo", "Médio", "Alto", "Muito alto"];
+const CONSUMOS_ORDENADOS = VEHICLES.map((v) => v.kwh100).sort((a, b) => a - b);
+function consumoNivel(v) {
+  const abaixo = CONSUMOS_ORDENADOS.filter((k) => k < v.kwh100).length;
+  const n = Math.min(5, Math.floor((abaixo / CONSUMOS_ORDENADOS.length) * 5) + 1);
+  return { n, texto: NIVEIS_CONSUMO[n - 1] };
+}
+
+/** Medidor de 5 barrinhas para o nível de consumo (o texto carrega o significado). */
+function consumoMeter(v) {
+  const { n, texto } = consumoNivel(v);
+  const barras = [1, 2, 3, 4, 5].map((i) => `<i class="${i <= n ? "on" : ""}"></i>`).join("");
+  return `<span class="meter meter-${n}" title="Consumo ${texto.toLowerCase()} entre os elétricos (${formatNum(v.kwh100)} kWh/100 km)"><span class="meter-bars" aria-hidden="true">${barras}</span>Consumo ${texto.toLowerCase()}</span>`;
+}

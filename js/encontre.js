@@ -125,6 +125,14 @@
     document.getElementById("quizCompare").hidden = melhores.length < 2;
   }
 
+  // Atalho flutuante para as sugestões, só enquanto elas estão fora da tela (celular).
+  const jump = document.getElementById("quizJump");
+  if (jump && "IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => {
+      jump.hidden = e.isIntersecting || window.innerWidth > 900;
+    }).observe(document.querySelector(".quiz-results"));
+  }
+
   form.addEventListener("change", calcular);
   calcular();
 })();

@@ -7,7 +7,9 @@
   "autonomia_km": 280,
   "mj_km": 0.41,
   "kmle_cidade": "58,59",
-  "kmle_estrada": "41,9"
+  "kmle_estrada": "41,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -17,7 +19,9 @@
   "autonomia_km": 280,
   "mj_km": 0.41,
   "kmle_cidade": "58,6",
-  "kmle_estrada": "41,9"
+  "kmle_estrada": "41,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -27,7 +31,9 @@
   "autonomia_km": 224,
   "mj_km": 0.39,
   "kmle_cidade": "60,6",
-  "kmle_estrada": "44,4"
+  "kmle_estrada": "44,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -37,7 +43,9 @@
   "autonomia_km": 227,
   "mj_km": 0.46,
   "kmle_cidade": "47,3",
-  "kmle_estrada": "40,4"
+  "kmle_estrada": "40,4",
+  "classe_categoria": "C",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -47,7 +55,9 @@
   "autonomia_km": 181,
   "mj_km": 0.5,
   "kmle_cidade": "46,6",
-  "kmle_estrada": "35,0"
+  "kmle_estrada": "35,0",
+  "classe_categoria": "E",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -57,7 +67,9 @@
   "autonomia_km": 181,
   "mj_km": 0.5,
   "kmle_cidade": "46,6",
-  "kmle_estrada": "35,0"
+  "kmle_estrada": "35,0",
+  "classe_categoria": "E",
+  "classe_geral": "A"
  },
  {
   "categoria": "Sub Compacto",
@@ -67,7 +79,9 @@
   "autonomia_km": 185,
   "mj_km": 0.44,
   "kmle_cidade": "52,7",
-  "kmle_estrada": "39,6"
+  "kmle_estrada": "39,6",
+  "classe_categoria": "B",
+  "classe_geral": "A"
  },
  {
   "categoria": "Compacto",
@@ -77,7 +91,9 @@
   "autonomia_km": 239,
   "mj_km": 0.46,
   "kmle_cidade": "48,0",
-  "kmle_estrada": "39,7"
+  "kmle_estrada": "39,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Compacto",
@@ -87,7 +103,9 @@
   "autonomia_km": 312,
   "mj_km": 0.48,
   "kmle_cidade": "46,1",
-  "kmle_estrada": "38,4"
+  "kmle_estrada": "38,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Compacto",
@@ -97,7 +115,9 @@
   "autonomia_km": 306,
   "mj_km": 0.48,
   "kmle_cidade": "43,8",
-  "kmle_estrada": "40,2"
+  "kmle_estrada": "40,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Compacto",
@@ -107,7 +127,9 @@
   "autonomia_km": 220,
   "mj_km": 0.59,
   "kmle_cidade": "37,8",
-  "kmle_estrada": "30,8"
+  "kmle_estrada": "30,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -117,7 +139,9 @@
   "autonomia_km": 291,
   "mj_km": 0.42,
   "kmle_cidade": "51,9",
-  "kmle_estrada": "43,5"
+  "kmle_estrada": "43,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -127,7 +151,9 @@
   "autonomia_km": 330,
   "mj_km": 0.51,
   "kmle_cidade": "42,1",
-  "kmle_estrada": "36,8"
+  "kmle_estrada": "36,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -137,7 +163,9 @@
   "autonomia_km": 272,
   "mj_km": 0.49,
   "kmle_cidade": "45,8",
-  "kmle_estrada": "36,7"
+  "kmle_estrada": "36,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -147,7 +175,9 @@
   "autonomia_km": 250,
   "mj_km": 0.51,
   "kmle_cidade": "44,0",
-  "kmle_estrada": "35,7"
+  "kmle_estrada": "35,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -157,7 +187,9 @@
   "autonomia_km": 258,
   "mj_km": 0.5,
   "kmle_cidade": "47,4",
-  "kmle_estrada": "34,9"
+  "kmle_estrada": "34,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -167,7 +199,9 @@
   "autonomia_km": 289,
   "mj_km": 0.39,
   "kmle_cidade": "60,1",
-  "kmle_estrada": "45,2"
+  "kmle_estrada": "45,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -177,7 +211,9 @@
   "autonomia_km": 289,
   "mj_km": 0.39,
   "kmle_cidade": "60,1",
-  "kmle_estrada": "45,2"
+  "kmle_estrada": "45,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -187,7 +223,9 @@
   "autonomia_km": 315,
   "mj_km": 0.51,
   "kmle_cidade": "42,8",
-  "kmle_estrada": "36,1"
+  "kmle_estrada": "36,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -197,7 +235,9 @@
   "autonomia_km": 295,
   "mj_km": 0.54,
   "kmle_cidade": "41,1",
-  "kmle_estrada": "33,7"
+  "kmle_estrada": "33,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -207,7 +247,9 @@
   "autonomia_km": 232,
   "mj_km": 0.52,
   "kmle_cidade": "41,7",
-  "kmle_estrada": "35,7"
+  "kmle_estrada": "35,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -217,7 +259,9 @@
   "autonomia_km": 315,
   "mj_km": 0.51,
   "kmle_cidade": "42,8",
-  "kmle_estrada": "36,1"
+  "kmle_estrada": "36,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -227,7 +271,9 @@
   "autonomia_km": 307,
   "mj_km": 0.47,
   "kmle_cidade": "47,5",
-  "kmle_estrada": "39,1"
+  "kmle_estrada": "39,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -237,7 +283,9 @@
   "autonomia_km": 364,
   "mj_km": 0.5,
   "kmle_cidade": "43,3",
-  "kmle_estrada": "37,4"
+  "kmle_estrada": "37,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -247,7 +295,9 @@
   "autonomia_km": 364,
   "mj_km": 0.5,
   "kmle_cidade": "43,3",
-  "kmle_estrada": "37,4"
+  "kmle_estrada": "37,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -257,7 +307,9 @@
   "autonomia_km": 279,
   "mj_km": 0.59,
   "kmle_cidade": "36,3",
-  "kmle_estrada": "32,7"
+  "kmle_estrada": "32,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -267,7 +319,9 @@
   "autonomia_km": 253,
   "mj_km": 0.46,
   "kmle_cidade": "47,6",
-  "kmle_estrada": "40,2"
+  "kmle_estrada": "40,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -277,7 +331,9 @@
   "autonomia_km": 270,
   "mj_km": 0.52,
   "kmle_cidade": "40,8",
-  "kmle_estrada": "36,7"
+  "kmle_estrada": "36,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -287,7 +343,9 @@
   "autonomia_km": 312,
   "mj_km": 0.5,
   "kmle_cidade": "41,2",
-  "kmle_estrada": "39,8"
+  "kmle_estrada": "39,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -297,7 +355,9 @@
   "autonomia_km": 261,
   "mj_km": 0.55,
   "kmle_cidade": "38,2",
-  "kmle_estrada": "35,3"
+  "kmle_estrada": "35,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -307,7 +367,9 @@
   "autonomia_km": 337,
   "mj_km": 0.51,
   "kmle_cidade": "41,4",
-  "kmle_estrada": "38,8"
+  "kmle_estrada": "38,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -317,7 +379,9 @@
   "autonomia_km": 317,
   "mj_km": 0.54,
   "kmle_cidade": "41,5",
-  "kmle_estrada": "34,3"
+  "kmle_estrada": "34,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -327,7 +391,9 @@
   "autonomia_km": 293,
   "mj_km": 0.58,
   "kmle_cidade": "37,8",
-  "kmle_estrada": "31,6"
+  "kmle_estrada": "31,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -337,7 +403,9 @@
   "autonomia_km": 250,
   "mj_km": 0.55,
   "kmle_cidade": "40,1",
-  "kmle_estrada": "33,9"
+  "kmle_estrada": "33,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -347,7 +415,9 @@
   "autonomia_km": 250,
   "mj_km": 0.55,
   "kmle_cidade": "40,1",
-  "kmle_estrada": "33,9"
+  "kmle_estrada": "33,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -357,7 +427,9 @@
   "autonomia_km": 338,
   "mj_km": 0.52,
   "kmle_cidade": "43,2",
-  "kmle_estrada": "35,3"
+  "kmle_estrada": "35,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -367,7 +439,9 @@
   "autonomia_km": 338,
   "mj_km": 0.52,
   "kmle_cidade": "43,2",
-  "kmle_estrada": "35,3"
+  "kmle_estrada": "35,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -377,7 +451,9 @@
   "autonomia_km": 338,
   "mj_km": 0.52,
   "kmle_cidade": "43,2",
-  "kmle_estrada": "35,3"
+  "kmle_estrada": "35,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Médio",
@@ -387,7 +463,9 @@
   "autonomia_km": 316,
   "mj_km": 0.62,
   "kmle_cidade": "33,4",
-  "kmle_estrada": "32,0"
+  "kmle_estrada": "32,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -397,7 +475,9 @@
   "autonomia_km": 324,
   "mj_km": 0.6,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "32,0"
+  "kmle_estrada": "32,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -407,7 +487,9 @@
   "autonomia_km": 345,
   "mj_km": 0.55,
   "kmle_cidade": "37,4",
-  "kmle_estrada": "36,1"
+  "kmle_estrada": "36,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -417,7 +499,9 @@
   "autonomia_km": 327,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "32,8"
+  "kmle_estrada": "32,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -427,7 +511,9 @@
   "autonomia_km": 378,
   "mj_km": 0.58,
   "kmle_cidade": "38,3",
-  "kmle_estrada": "32,0"
+  "kmle_estrada": "32,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -437,7 +523,9 @@
   "autonomia_km": 318,
   "mj_km": 0.57,
   "kmle_cidade": "36,5",
-  "kmle_estrada": "35,0"
+  "kmle_estrada": "35,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -447,7 +535,9 @@
   "autonomia_km": 318,
   "mj_km": 0.57,
   "kmle_cidade": "36,5",
-  "kmle_estrada": "35,0"
+  "kmle_estrada": "35,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -457,7 +547,9 @@
   "autonomia_km": 310,
   "mj_km": 0.57,
   "kmle_cidade": "38,3",
-  "kmle_estrada": "32,3"
+  "kmle_estrada": "32,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -467,7 +559,9 @@
   "autonomia_km": 253,
   "mj_km": 0.51,
   "kmle_cidade": "43,7",
-  "kmle_estrada": "35,3"
+  "kmle_estrada": "35,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -477,7 +571,9 @@
   "autonomia_km": 349,
   "mj_km": 0.49,
   "kmle_cidade": "44,8",
-  "kmle_estrada": "37,1"
+  "kmle_estrada": "37,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -487,7 +583,9 @@
   "autonomia_km": 351,
   "mj_km": 0.51,
   "kmle_cidade": "43,0",
-  "kmle_estrada": "36,7"
+  "kmle_estrada": "36,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -497,7 +595,9 @@
   "autonomia_km": 351,
   "mj_km": 0.51,
   "kmle_cidade": "43,0",
-  "kmle_estrada": "36,7"
+  "kmle_estrada": "36,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -507,7 +607,9 @@
   "autonomia_km": 358,
   "mj_km": 0.42,
   "kmle_cidade": "53,0",
-  "kmle_estrada": "42,8"
+  "kmle_estrada": "42,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -517,7 +619,9 @@
   "autonomia_km": 358,
   "mj_km": 0.42,
   "kmle_cidade": "53,0",
-  "kmle_estrada": "42,8"
+  "kmle_estrada": "42,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -527,7 +631,9 @@
   "autonomia_km": 299,
   "mj_km": 0.4,
   "kmle_cidade": "56,8",
-  "kmle_estrada": "44,0"
+  "kmle_estrada": "44,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -537,7 +643,9 @@
   "autonomia_km": 299,
   "mj_km": 0.4,
   "kmle_cidade": "56,8",
-  "kmle_estrada": "44,0"
+  "kmle_estrada": "44,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -547,7 +655,9 @@
   "autonomia_km": 320,
   "mj_km": 0.61,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "31,8"
+  "kmle_estrada": "31,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -557,7 +667,9 @@
   "autonomia_km": 320,
   "mj_km": 0.61,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "31,8"
+  "kmle_estrada": "31,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -567,7 +679,9 @@
   "autonomia_km": 345,
   "mj_km": 0.51,
   "kmle_cidade": "44,7",
-  "kmle_estrada": "35,2"
+  "kmle_estrada": "35,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -577,7 +691,9 @@
   "autonomia_km": 385,
   "mj_km": 0.51,
   "kmle_cidade": "41,7",
-  "kmle_estrada": "37,2"
+  "kmle_estrada": "37,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -587,7 +703,9 @@
   "autonomia_km": 385,
   "mj_km": 0.51,
   "kmle_cidade": "41,7",
-  "kmle_estrada": "37,2"
+  "kmle_estrada": "37,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -597,7 +715,9 @@
   "autonomia_km": 385,
   "mj_km": 0.51,
   "kmle_cidade": "41,7",
-  "kmle_estrada": "37,2"
+  "kmle_estrada": "37,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -607,7 +727,9 @@
   "autonomia_km": 404,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,6"
+  "kmle_estrada": "32,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -617,7 +739,9 @@
   "autonomia_km": 404,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,6"
+  "kmle_estrada": "32,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -627,7 +751,9 @@
   "autonomia_km": 404,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,6"
+  "kmle_estrada": "32,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -637,7 +763,9 @@
   "autonomia_km": 404,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,6"
+  "kmle_estrada": "32,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Grande",
@@ -647,7 +775,9 @@
   "autonomia_km": 404,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,6"
+  "kmle_estrada": "32,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -657,7 +787,9 @@
   "autonomia_km": 474,
   "mj_km": 0.6,
   "kmle_cidade": "37,0",
-  "kmle_estrada": "31,1"
+  "kmle_estrada": "31,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -667,7 +799,9 @@
   "autonomia_km": 445,
   "mj_km": 0.59,
   "kmle_cidade": "36,4",
-  "kmle_estrada": "31,8"
+  "kmle_estrada": "31,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -677,7 +811,9 @@
   "autonomia_km": 411,
   "mj_km": 0.64,
   "kmle_cidade": "34,0",
-  "kmle_estrada": "29,6"
+  "kmle_estrada": "29,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -687,7 +823,9 @@
   "autonomia_km": 411,
   "mj_km": 0.64,
   "kmle_cidade": "34,0",
-  "kmle_estrada": "29,6"
+  "kmle_estrada": "29,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -697,7 +835,9 @@
   "autonomia_km": 411,
   "mj_km": 0.64,
   "kmle_cidade": "33,8",
-  "kmle_estrada": "29,3"
+  "kmle_estrada": "29,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -707,7 +847,9 @@
   "autonomia_km": 427,
   "mj_km": 0.61,
   "kmle_cidade": "35,4",
-  "kmle_estrada": "31,2"
+  "kmle_estrada": "31,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -717,7 +859,9 @@
   "autonomia_km": 428,
   "mj_km": 0.6,
   "kmle_cidade": "35,1",
-  "kmle_estrada": "31,9"
+  "kmle_estrada": "31,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -727,7 +871,9 @@
   "autonomia_km": 424,
   "mj_km": 0.61,
   "kmle_cidade": "35,3",
-  "kmle_estrada": "30,6"
+  "kmle_estrada": "30,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -737,7 +883,9 @@
   "autonomia_km": 424,
   "mj_km": 0.61,
   "kmle_cidade": "35,3",
-  "kmle_estrada": "30,6"
+  "kmle_estrada": "30,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -747,7 +895,9 @@
   "autonomia_km": 432,
   "mj_km": 0.6,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "31,5"
+  "kmle_estrada": "31,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -757,7 +907,9 @@
   "autonomia_km": 431,
   "mj_km": 0.61,
   "kmle_cidade": "34,8",
-  "kmle_estrada": "31,8"
+  "kmle_estrada": "31,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -767,7 +919,9 @@
   "autonomia_km": 443,
   "mj_km": 0.59,
   "kmle_cidade": "36,5",
-  "kmle_estrada": "32,2"
+  "kmle_estrada": "32,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -777,7 +931,9 @@
   "autonomia_km": 348,
   "mj_km": 0.8,
   "kmle_cidade": "25,2",
-  "kmle_estrada": "25,9"
+  "kmle_estrada": "25,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -787,7 +943,9 @@
   "autonomia_km": 467,
   "mj_km": 0.65,
   "kmle_cidade": "31,8",
-  "kmle_estrada": "30,3"
+  "kmle_estrada": "30,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -797,7 +955,9 @@
   "autonomia_km": 393,
   "mj_km": 0.61,
   "kmle_cidade": "35,1",
-  "kmle_estrada": "31,7"
+  "kmle_estrada": "31,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -807,7 +967,9 @@
   "autonomia_km": 498,
   "mj_km": 0.64,
   "kmle_cidade": "33,2",
-  "kmle_estrada": "30,3"
+  "kmle_estrada": "30,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -817,7 +979,9 @@
   "autonomia_km": 570,
   "mj_km": 0.54,
   "kmle_cidade": "38,7",
-  "kmle_estrada": "35,7"
+  "kmle_estrada": "35,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -827,7 +991,9 @@
   "autonomia_km": 349,
   "mj_km": 0.69,
   "kmle_cidade": "30,8",
-  "kmle_estrada": "28,1"
+  "kmle_estrada": "28,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -837,7 +1003,9 @@
   "autonomia_km": 372,
   "mj_km": 0.62,
   "kmle_cidade": "34,9",
-  "kmle_estrada": "30,5"
+  "kmle_estrada": "30,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -847,7 +1015,9 @@
   "autonomia_km": 430,
   "mj_km": 0.73,
   "kmle_cidade": "30,2",
-  "kmle_estrada": "25,3"
+  "kmle_estrada": "25,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -857,7 +1027,9 @@
   "autonomia_km": 360,
   "mj_km": 0.66,
   "kmle_cidade": "33,2",
-  "kmle_estrada": "28,2"
+  "kmle_estrada": "28,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -867,7 +1039,9 @@
   "autonomia_km": 497,
   "mj_km": 0.6,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "32,2"
+  "kmle_estrada": "32,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -877,7 +1051,9 @@
   "autonomia_km": 497,
   "mj_km": 0.6,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "32,2"
+  "kmle_estrada": "32,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -887,7 +1063,9 @@
   "autonomia_km": 481,
   "mj_km": 0.63,
   "kmle_cidade": "34,2",
-  "kmle_estrada": "30,4"
+  "kmle_estrada": "30,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -897,7 +1075,9 @@
   "autonomia_km": 443,
   "mj_km": 0.56,
   "kmle_cidade": "37,1",
-  "kmle_estrada": "35,6"
+  "kmle_estrada": "35,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -907,7 +1087,9 @@
   "autonomia_km": 304,
   "mj_km": 0.62,
   "kmle_cidade": "36,2",
-  "kmle_estrada": "28,9"
+  "kmle_estrada": "28,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -917,7 +1099,9 @@
   "autonomia_km": 314,
   "mj_km": 0.45,
   "kmle_cidade": "47,1",
-  "kmle_estrada": "42,9"
+  "kmle_estrada": "42,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -927,7 +1111,9 @@
   "autonomia_km": 431,
   "mj_km": 0.53,
   "kmle_cidade": "43,1",
-  "kmle_estrada": "33,4"
+  "kmle_estrada": "33,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -937,7 +1123,9 @@
   "autonomia_km": 431,
   "mj_km": 0.53,
   "kmle_cidade": "43,1",
-  "kmle_estrada": "33,4"
+  "kmle_estrada": "33,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -947,7 +1135,9 @@
   "autonomia_km": 389,
   "mj_km": 0.54,
   "kmle_cidade": "40,3",
-  "kmle_estrada": "34,6"
+  "kmle_estrada": "34,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -957,7 +1147,9 @@
   "autonomia_km": 325,
   "mj_km": 0.55,
   "kmle_cidade": "38,8",
-  "kmle_estrada": "34,7"
+  "kmle_estrada": "34,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -967,7 +1159,9 @@
   "autonomia_km": 349,
   "mj_km": 0.51,
   "kmle_cidade": "43,0",
-  "kmle_estrada": "37,1"
+  "kmle_estrada": "37,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -977,7 +1171,9 @@
   "autonomia_km": 413,
   "mj_km": 0.42,
   "kmle_cidade": "51,0",
-  "kmle_estrada": "44,7"
+  "kmle_estrada": "44,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -987,7 +1183,9 @@
   "autonomia_km": 374,
   "mj_km": 0.66,
   "kmle_cidade": "33,6",
-  "kmle_estrada": "28,1"
+  "kmle_estrada": "28,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -997,7 +1195,9 @@
   "autonomia_km": 374,
   "mj_km": 0.66,
   "kmle_cidade": "33,6",
-  "kmle_estrada": "28,1"
+  "kmle_estrada": "28,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1007,7 +1207,9 @@
   "autonomia_km": 374,
   "mj_km": 0.66,
   "kmle_cidade": "33,6",
-  "kmle_estrada": "28,1"
+  "kmle_estrada": "28,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1017,7 +1219,9 @@
   "autonomia_km": 263,
   "mj_km": 0.5,
   "kmle_cidade": "44,0",
-  "kmle_estrada": "37,1"
+  "kmle_estrada": "37,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1027,7 +1231,9 @@
   "autonomia_km": 402,
   "mj_km": 0.6,
   "kmle_cidade": "37,6",
-  "kmle_estrada": "30,5"
+  "kmle_estrada": "30,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1037,7 +1243,9 @@
   "autonomia_km": 402,
   "mj_km": 0.6,
   "kmle_cidade": "37,6",
-  "kmle_estrada": "30,5"
+  "kmle_estrada": "30,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1047,7 +1255,9 @@
   "autonomia_km": 338,
   "mj_km": 0.61,
   "kmle_cidade": "35,1",
-  "kmle_estrada": "30,8"
+  "kmle_estrada": "30,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1057,7 +1267,9 @@
   "autonomia_km": 288,
   "mj_km": 0.55,
   "kmle_cidade": "41,2",
-  "kmle_estrada": "32,8"
+  "kmle_estrada": "32,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1067,7 +1279,9 @@
   "autonomia_km": 357,
   "mj_km": 0.57,
   "kmle_cidade": "39,1",
-  "kmle_estrada": "32,3"
+  "kmle_estrada": "32,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1077,7 +1291,9 @@
   "autonomia_km": 376,
   "mj_km": 0.53,
   "kmle_cidade": "40,3",
-  "kmle_estrada": "36,6"
+  "kmle_estrada": "36,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1087,7 +1303,9 @@
   "autonomia_km": 427,
   "mj_km": 0.57,
   "kmle_cidade": "37,8",
-  "kmle_estrada": "33,4"
+  "kmle_estrada": "33,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1097,7 +1315,9 @@
   "autonomia_km": 443,
   "mj_km": 0.6,
   "kmle_cidade": "36,5",
-  "kmle_estrada": "31,0"
+  "kmle_estrada": "31,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1107,7 +1327,9 @@
   "autonomia_km": 435,
   "mj_km": 0.61,
   "kmle_cidade": "36,1",
-  "kmle_estrada": "30,3"
+  "kmle_estrada": "30,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1117,7 +1339,9 @@
   "autonomia_km": 438,
   "mj_km": 0.61,
   "kmle_cidade": "36,2",
-  "kmle_estrada": "30,4"
+  "kmle_estrada": "30,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1127,7 +1351,9 @@
   "autonomia_km": 441,
   "mj_km": 0.61,
   "kmle_cidade": "36,1",
-  "kmle_estrada": "30,6"
+  "kmle_estrada": "30,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1137,7 +1363,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1147,7 +1375,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1157,7 +1387,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1167,7 +1399,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1177,7 +1411,9 @@
   "autonomia_km": 524,
   "mj_km": 0.55,
   "kmle_cidade": "38,9",
-  "kmle_estrada": "34,3"
+  "kmle_estrada": "34,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1187,7 +1423,9 @@
   "autonomia_km": 426,
   "mj_km": 0.63,
   "kmle_cidade": "34,1",
-  "kmle_estrada": "30,1"
+  "kmle_estrada": "30,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1197,7 +1435,9 @@
   "autonomia_km": 426,
   "mj_km": 0.63,
   "kmle_cidade": "34,1",
-  "kmle_estrada": "30,1"
+  "kmle_estrada": "30,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1207,7 +1447,9 @@
   "autonomia_km": 423,
   "mj_km": 0.64,
   "kmle_cidade": "34,5",
-  "kmle_estrada": "29,0"
+  "kmle_estrada": "29,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Extra Grande",
@@ -1217,7 +1459,9 @@
   "autonomia_km": 491,
   "mj_km": 0.55,
   "kmle_cidade": "39,5",
-  "kmle_estrada": "34,0"
+  "kmle_estrada": "34,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Compacto 4x4",
@@ -1227,7 +1471,9 @@
   "autonomia_km": 333,
   "mj_km": 0.58,
   "kmle_cidade": "37,8",
-  "kmle_estrada": "31,8"
+  "kmle_estrada": "31,8",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Compacto 4x4",
@@ -1237,7 +1483,9 @@
   "autonomia_km": 327,
   "mj_km": 0.57,
   "kmle_cidade": "37,3",
-  "kmle_estrada": "33,4"
+  "kmle_estrada": "33,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1247,7 +1495,9 @@
   "autonomia_km": 294,
   "mj_km": 0.56,
   "kmle_cidade": "39,8",
-  "kmle_estrada": "33,1"
+  "kmle_estrada": "33,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1257,7 +1507,9 @@
   "autonomia_km": 294,
   "mj_km": 0.56,
   "kmle_cidade": "39,8",
-  "kmle_estrada": "33,1"
+  "kmle_estrada": "33,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1267,7 +1519,9 @@
   "autonomia_km": 364,
   "mj_km": 0.55,
   "kmle_cidade": "39,4",
-  "kmle_estrada": "34,3"
+  "kmle_estrada": "34,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1277,7 +1531,9 @@
   "autonomia_km": 364,
   "mj_km": 0.55,
   "kmle_cidade": "39,4",
-  "kmle_estrada": "34,3"
+  "kmle_estrada": "34,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1287,7 +1543,9 @@
   "autonomia_km": 364,
   "mj_km": 0.55,
   "kmle_cidade": "39,4",
-  "kmle_estrada": "34,3"
+  "kmle_estrada": "34,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande",
@@ -1297,7 +1555,9 @@
   "autonomia_km": 332,
   "mj_km": 0.55,
   "kmle_cidade": "39,5",
-  "kmle_estrada": "34,7"
+  "kmle_estrada": "34,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1307,7 +1567,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1317,7 +1579,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1327,7 +1591,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1337,7 +1603,9 @@
   "autonomia_km": 493,
   "mj_km": 0.63,
   "kmle_cidade": "35,0",
-  "kmle_estrada": "29,5"
+  "kmle_estrada": "29,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1347,7 +1615,9 @@
   "autonomia_km": 481,
   "mj_km": 0.64,
   "kmle_cidade": "34,3",
-  "kmle_estrada": "29,1"
+  "kmle_estrada": "29,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1357,7 +1627,9 @@
   "autonomia_km": 481,
   "mj_km": 0.64,
   "kmle_cidade": "34,3",
-  "kmle_estrada": "29,1"
+  "kmle_estrada": "29,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1367,7 +1639,9 @@
   "autonomia_km": 481,
   "mj_km": 0.64,
   "kmle_cidade": "34,3",
-  "kmle_estrada": "29,1"
+  "kmle_estrada": "29,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1377,7 +1651,9 @@
   "autonomia_km": 481,
   "mj_km": 0.64,
   "kmle_cidade": "34,3",
-  "kmle_estrada": "29,1"
+  "kmle_estrada": "29,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1387,7 +1663,9 @@
   "autonomia_km": 459,
   "mj_km": 0.68,
   "kmle_cidade": "32,6",
-  "kmle_estrada": "27,4"
+  "kmle_estrada": "27,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1397,7 +1675,9 @@
   "autonomia_km": 459,
   "mj_km": 0.68,
   "kmle_cidade": "32,6",
-  "kmle_estrada": "27,4"
+  "kmle_estrada": "27,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1407,7 +1687,9 @@
   "autonomia_km": 459,
   "mj_km": 0.68,
   "kmle_cidade": "32,6",
-  "kmle_estrada": "27,4"
+  "kmle_estrada": "27,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1417,7 +1699,9 @@
   "autonomia_km": 393,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "33,0"
+  "kmle_estrada": "33,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1427,7 +1711,9 @@
   "autonomia_km": 393,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "33,0"
+  "kmle_estrada": "33,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1437,7 +1723,9 @@
   "autonomia_km": 393,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "33,0"
+  "kmle_estrada": "33,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1447,7 +1735,9 @@
   "autonomia_km": 393,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "33,0"
+  "kmle_estrada": "33,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1457,7 +1747,9 @@
   "autonomia_km": 393,
   "mj_km": 0.59,
   "kmle_cidade": "35,7",
-  "kmle_estrada": "33,0"
+  "kmle_estrada": "33,0",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Utilitário Esportivo Grande 4x4",
@@ -1467,7 +1759,9 @@
   "autonomia_km": 304,
   "mj_km": 0.59,
   "kmle_cidade": "36,6",
-  "kmle_estrada": "32,2"
+  "kmle_estrada": "32,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1477,7 +1771,9 @@
   "autonomia_km": 170,
   "mj_km": 0.71,
   "kmle_cidade": "30,7",
-  "kmle_estrada": "26,3"
+  "kmle_estrada": "26,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1487,7 +1783,9 @@
   "autonomia_km": 258,
   "mj_km": 0.75,
   "kmle_cidade": "28,1",
-  "kmle_estrada": "26,1"
+  "kmle_estrada": "26,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1497,7 +1795,9 @@
   "autonomia_km": 156,
   "mj_km": 0.72,
   "kmle_cidade": "32,1",
-  "kmle_estrada": "24,5"
+  "kmle_estrada": "24,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1507,7 +1807,9 @@
   "autonomia_km": 239,
   "mj_km": 0.92,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "20,3"
+  "kmle_estrada": "20,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1517,7 +1819,9 @@
   "autonomia_km": 239,
   "mj_km": 0.92,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "20,3"
+  "kmle_estrada": "20,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1527,7 +1831,9 @@
   "autonomia_km": 239,
   "mj_km": 0.92,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "20,3"
+  "kmle_estrada": "20,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1537,7 +1843,9 @@
   "autonomia_km": 239,
   "mj_km": 0.92,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "20,3"
+  "kmle_estrada": "20,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1547,7 +1855,9 @@
   "autonomia_km": 262,
   "mj_km": 0.84,
   "kmle_cidade": "25,3",
-  "kmle_estrada": "23,1"
+  "kmle_estrada": "23,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1557,7 +1867,9 @@
   "autonomia_km": 262,
   "mj_km": 0.84,
   "kmle_cidade": "25,3",
-  "kmle_estrada": "23,1"
+  "kmle_estrada": "23,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1567,7 +1879,9 @@
   "autonomia_km": 262,
   "mj_km": 0.84,
   "kmle_cidade": "25,3",
-  "kmle_estrada": "23,1"
+  "kmle_estrada": "23,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1577,7 +1891,9 @@
   "autonomia_km": 262,
   "mj_km": 0.84,
   "kmle_cidade": "25,3",
-  "kmle_estrada": "23,1"
+  "kmle_estrada": "23,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1587,7 +1903,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1597,7 +1915,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1607,7 +1927,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1617,7 +1939,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1627,7 +1951,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1637,7 +1963,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1647,7 +1975,9 @@
   "autonomia_km": 203,
   "mj_km": 1.02,
   "kmle_cidade": "23,9",
-  "kmle_estrada": "16,5"
+  "kmle_estrada": "16,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1657,7 +1987,9 @@
   "autonomia_km": 162,
   "mj_km": 0.82,
   "kmle_cidade": "27,3",
-  "kmle_estrada": "22,1"
+  "kmle_estrada": "22,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1667,7 +1999,9 @@
   "autonomia_km": 189,
   "mj_km": 0.58,
   "kmle_cidade": "43,3",
-  "kmle_estrada": "28,3"
+  "kmle_estrada": "28,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1677,7 +2011,9 @@
   "autonomia_km": 202,
   "mj_km": 0.69,
   "kmle_cidade": "32,2",
-  "kmle_estrada": "26,3"
+  "kmle_estrada": "26,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1687,7 +2023,9 @@
   "autonomia_km": 187,
   "mj_km": 1.0,
   "kmle_cidade": "20,2",
-  "kmle_estrada": "20,5"
+  "kmle_estrada": "20,5",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1697,7 +2035,9 @@
   "autonomia_km": 179,
   "mj_km": 1.05,
   "kmle_cidade": "20,6",
-  "kmle_estrada": "18,1"
+  "kmle_estrada": "18,1",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1707,7 +2047,9 @@
   "autonomia_km": 198,
   "mj_km": 1.0,
   "kmle_cidade": "23,5",
-  "kmle_estrada": "17,6"
+  "kmle_estrada": "17,6",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1717,7 +2059,9 @@
   "autonomia_km": 260,
   "mj_km": 0.63,
   "kmle_cidade": "38,0",
-  "kmle_estrada": "27,4"
+  "kmle_estrada": "27,4",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1727,7 +2071,9 @@
   "autonomia_km": 206,
   "mj_km": 1.09,
   "kmle_cidade": "21,1",
-  "kmle_estrada": "16,3"
+  "kmle_estrada": "16,3",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1737,7 +2083,9 @@
   "autonomia_km": 206,
   "mj_km": 1.09,
   "kmle_cidade": "21,1",
-  "kmle_estrada": "16,3"
+  "kmle_estrada": "16,3",
+  "classe_categoria": "A",
+  "classe_geral": "B"
  },
  {
   "categoria": "Comercial",
@@ -1747,7 +2095,9 @@
   "autonomia_km": 258,
   "mj_km": 0.75,
   "kmle_cidade": "28,1",
-  "kmle_estrada": "26,1"
+  "kmle_estrada": "26,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1757,7 +2107,9 @@
   "autonomia_km": 210,
   "mj_km": 0.6,
   "kmle_cidade": "37,5",
-  "kmle_estrada": "30,3"
+  "kmle_estrada": "30,3",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Comercial",
@@ -1767,7 +2119,9 @@
   "autonomia_km": 185,
   "mj_km": 0.44,
   "kmle_cidade": "52,7",
-  "kmle_estrada": "39,6"
+  "kmle_estrada": "39,6",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Picape",
@@ -1777,7 +2131,9 @@
   "autonomia_km": 226,
   "mj_km": 0.75,
   "kmle_cidade": "29,2",
-  "kmle_estrada": "25,1"
+  "kmle_estrada": "25,1",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1787,7 +2143,9 @@
   "autonomia_km": 342,
   "mj_km": 0.56,
   "kmle_cidade": "38,9",
-  "kmle_estrada": "33,9"
+  "kmle_estrada": "33,9",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1797,7 +2155,9 @@
   "autonomia_km": 425,
   "mj_km": 0.67,
   "kmle_cidade": "30,7",
-  "kmle_estrada": "30,2"
+  "kmle_estrada": "30,2",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1807,7 +2167,9 @@
   "autonomia_km": 415,
   "mj_km": 0.69,
   "kmle_cidade": "30,0",
-  "kmle_estrada": "28,5"
+  "kmle_estrada": "28,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1817,7 +2179,9 @@
   "autonomia_km": 415,
   "mj_km": 0.69,
   "kmle_cidade": "30,0",
-  "kmle_estrada": "28,5"
+  "kmle_estrada": "28,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1827,7 +2191,9 @@
   "autonomia_km": 415,
   "mj_km": 0.69,
   "kmle_cidade": "30,0",
-  "kmle_estrada": "28,5"
+  "kmle_estrada": "28,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1837,7 +2203,9 @@
   "autonomia_km": 415,
   "mj_km": 0.69,
   "kmle_cidade": "30,0",
-  "kmle_estrada": "28,5"
+  "kmle_estrada": "28,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1847,7 +2215,9 @@
   "autonomia_km": 415,
   "mj_km": 0.69,
   "kmle_cidade": "30,0",
-  "kmle_estrada": "28,5"
+  "kmle_estrada": "28,5",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  },
  {
   "categoria": "Esportivo",
@@ -1857,6 +2227,8 @@
   "autonomia_km": 442,
   "mj_km": 0.64,
   "kmle_cidade": "33,7",
-  "kmle_estrada": "29,7"
+  "kmle_estrada": "29,7",
+  "classe_categoria": "A",
+  "classe_geral": "A"
  }
 ]

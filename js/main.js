@@ -114,6 +114,7 @@ function createCard(v) {
         <h3 class="card-title">${v.brand} ${v.model}</h3>
         <p class="card-meta">${v.bodyType} · ${v.versions.length} ${v.versions.length === 1 ? "versão" : "versões"}</p>
         <p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-meter">${consumoMeter(v)}</p>
         <p class="card-price">${priceText(v)}</p>
         ${nota ? `<p class="card-note">${nota}</p>` : ""}
       </div>

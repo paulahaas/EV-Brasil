@@ -21,7 +21,7 @@
   const LINHAS = [
     { rotulo: "Preço a partir de", texto: (v) => priceText(v) + (priceNoteShort(v) ? `<small>${priceNoteShort(v)}</small>` : ""), valor: (v) => v.price, melhor: "menor" },
     { rotulo: "Autonomia (Inmetro)", texto: (v) => rangeText(v), valor: (v) => v.rangeMax, melhor: "maior" },
-    { rotulo: "Consumo", texto: (v) => `${formatNum(v.kwh100)} kWh/100 km`, valor: (v) => v.kwh100, melhor: "menor" },
+    { rotulo: "Consumo", texto: (v) => `${formatNum(v.kwh100)} kWh/100 km<small class="meter-small">${consumoNivel(v).texto} entre os elétricos</small>`, valor: (v) => v.kwh100, melhor: "menor" },
     {
       rotulo: "Energia a cada 100 km",
       texto: (v) => (v.kwh100 * TARIFA).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
@@ -77,7 +77,7 @@
     return `
       <tr>
         <th scope="row">${l.rotulo}</th>
-        ${carros.map((v, i) => `<td class="${alvo !== null && valores[i] === alvo ? "best" : ""}">${v ? l.texto(v) : ""}</td>`).join("")}
+        ${carros.map((v, i) => `<td class="${alvo !== null && valores[i] === alvo ? "best" : ""}"${i === 0 ? ` data-rotulo="${l.rotulo}"` : ""}>${v ? l.texto(v) : ""}</td>`).join("")}
       </tr>`;
   }
 
