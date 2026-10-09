@@ -65,6 +65,8 @@ body::before {
 }
 
 a { color: inherit; text-decoration: none; }
+/* Contorno de foco para quem navega pelo teclado (não aparece no clique do mouse). */
+:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 3px; border-radius: 4px; }
 img, svg { display: block; max-width: 100%; }
 [hidden] { display: none !important; }
 
@@ -326,6 +328,8 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 /* ---------------- Página de detalhes ---------------- */
 .breadcrumb { color: var(--text-mute); font-size: 0.82rem; margin-bottom: 18px; }
 .breadcrumb a:hover { color: var(--text); }
+/* Área de toque maior nos links do caminho, sem mudar o visual. */
+.breadcrumb a { display: inline-block; padding: 12px 4px; margin: -12px -4px; }
 .model-hero { padding-top: clamp(20px, 4vh, 40px); min-height: calc(100vh - var(--header-h)); min-height: calc(100svh - var(--header-h)); }
 .detail-desc { color: var(--text-dim); font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.5; max-width: 860px; }
 .detail-cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(32px, 6vw, 80px); margin-top: clamp(48px, 7vw, 80px); align-items: start; }
@@ -337,6 +341,8 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .spec-table td:first-child { color: var(--text-dim); width: 45%; }
 .spec-table td:last-child { text-align: right; font-weight: 600; }
 .detail-main { display: grid; gap: clamp(40px, 5vw, 56px); }
+.model-tabs { display: none; }
+.spec-section[id], #parecidos { scroll-margin-top: calc(var(--header-h) + 64px); }
 .spec-table caption { text-align: left; color: var(--text-mute); font-size: 0.85rem; padding-bottom: 6px; caption-side: top; }
 .spec-table tbody th { padding: 15px 4px; text-align: left; font-weight: 400; color: var(--text-dim); width: 45%; }
 .spec-missing { color: var(--text-mute); font-weight: 400; font-size: 0.9rem; }
@@ -595,6 +601,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .viz-pt circle { stroke: var(--bg-elev); stroke-width: 2; transition: r 0.15s ease; }
 .viz-pt.on circle, .viz-pt:focus circle { r: 9; }
 .viz-pt:focus { outline: none; }
+.viz-pt:focus-visible circle { stroke: #fff; stroke-width: 3; }
 .viz-tip {
   position: absolute; z-index: 2; pointer-events: none; min-width: 170px;
   display: grid; gap: 2px; padding: 10px 12px; border-radius: var(--radius-sm);
@@ -659,7 +666,32 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
   .tiles { grid-template-columns: 1fr; }
   .tile { min-height: 0; gap: 24px; }
   .features { grid-template-columns: 1fr 1fr; }
-  .detail-cols { grid-template-columns: 1fr; }
+  /* Página do carro: o preço sobe para logo depois das versões, e uma barra de
+     atalhos fica grudada no topo para pular entre as seções. */
+  .detail-cols { display: flex; flex-direction: column; gap: 48px; margin-top: 24px; }
+  .detail-main { display: contents; }
+  .detail-cols > *, .detail-main > * { order: 2; }
+  #versoes { order: 0; }
+  #preco { order: 1; }
+  .model-tabs {
+    position: sticky; top: var(--header-h); z-index: 50; display: flex; gap: 6px; overflow-x: auto;
+    padding: 10px 16px; background: rgba(6, 16, 36, 0.88); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--stroke); scrollbar-width: none;
+  }
+  .model-tabs::-webkit-scrollbar { display: none; }
+  .model-tabs a {
+    flex-shrink: 0; display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px;
+    border: 1px solid var(--stroke); border-radius: 100px; color: var(--text-dim); font-size: 0.88rem; white-space: nowrap;
+  }
+  .model-tabs a:hover, .model-tabs a:active { color: var(--text); border-color: var(--accent-2); }
+  #detalhes { padding-top: 0; }
+
+  /* Alvos de toque de pelo menos 44 px no celular. */
+  .nav-cta .btn, .nav-toggle { min-height: 44px; align-items: center; justify-content: center; }
+  .brand { min-height: 44px; }
+  .filters-toggle, .filters .search, .select, .chip, .viz-key { min-height: 44px; }
+  .filters-toggle, .chip { align-items: center; }
+  .footer-col a { padding: 11px 0; margin-bottom: 0; }
   .sim { grid-template-columns: 1fr; }
   .tools, .rank-cols { grid-template-columns: 1fr 1fr; }
   .quiz-layout { grid-template-columns: 1fr; }
