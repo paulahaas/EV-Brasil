@@ -89,6 +89,26 @@
           <p class="fine-print">Preços de lançamento e pré-venda vêm da imprensa e podem ser de outra versão. A partir de outubro de 2026, guardamos o preço oficial todo mês.</p>`;
   }
 
+  // Quanto vale usado: tabela FIPE de cada ano-modelo, comparada com o zero km.
+  let usado = "";
+  if (v.fipe) {
+    const f = v.fipe;
+    const ano = new Date().getFullYear();
+    // Ano-modelo do ano que vem e deste ano são praticamente novos; o resumo usa o mais antigo.
+    const maisAntigo = f.used[f.used.length - 1];
+    const linhas = f.used.map((u) => `<tr><th scope="row">${u.year}</th><td>${formatBRL(u.value)}</td><td>${u.loss > 0 ? `−${formatNum(u.loss, 0)}%` : u.loss < 0 ? `+${formatNum(-u.loss, 0)}%` : "igual"}</td></tr>`).join("");
+    usado = `
+      <div class="spec-section">
+        <h2>Quanto vale usado</h2>
+        ${maisAntigo.year < ano ? `<p class="fipe-resumo">Um ${escapeHtml(v.model)} ${maisAntigo.year} vale hoje <strong>${formatBRL(maisAntigo.value)}</strong> na FIPE: ${maisAntigo.loss > 0 ? `${formatNum(maisAntigo.loss, 0)}% a menos` : "o mesmo"} que um ${f.refYear ? `${f.refYear}` : "zero km"} (${formatBRL(f.zero)}).</p>` : ""}
+        <table class="spec-table fipe-table">
+          <thead><tr><th scope="col">Ano-modelo</th><th scope="col">Valor FIPE</th><th scope="col">x ${f.refYear || "zero km"}</th></tr></thead>
+          <tbody><tr><th scope="row">${f.refYear ? `${f.refYear} (o mais novo na FIPE)` : "Zero km"}</th><td>${formatBRL(f.zero)}</td><td>—</td></tr>${linhas}</tbody>
+        </table>
+        <p class="fine-print">Tabela FIPE de ${escapeHtml(DATA_INFO.fipe.referencia)}, versão ${escapeHtml(f.version)}. A FIPE é a média de preços de anúncios e negócios; o valor de um carro específico depende de quilometragem, estado e saúde da bateria. Fonte: <a class="text-link" href="${DATA_INFO.fipe.fonte}" target="_blank" rel="noopener">veiculos.fipe.org.br</a>.</p>
+      </div>`;
+  }
+
   // Segurança (Latin NCAP / Euro NCAP) e garantia da marca.
   const host2 = (u) => u.split("/")[2].replace("www.", "");
   let seguranca;
@@ -168,6 +188,7 @@
         ${ficha}
         ${viajar}
         ${segGarantia}
+        ${usado}
         </div>
         <div class="spec-section">
           <h2>Sobre o preço</h2>
