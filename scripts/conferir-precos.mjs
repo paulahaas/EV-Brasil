@@ -67,6 +67,22 @@ function valores(html) {
   return { texto, achados: [...achados].filter((n) => n >= 50000).sort((a, b) => a - b) };
 }
 
+// O preço só conta se aparecer perto do nome do modelo: numa página com vários
+// carros, o mesmo valor pode ser de outro modelo (ex.: R$ 149.990 do Atto 2
+// confundido com o do Dolphin).
+const JANELA = 160;
+const semAcento = (t) => t.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+function pertoDoModelo(texto, p) {
+  const t = semAcento(texto);
+  const nome = semAcento(p.modelo);
+  const alvo = brl(p.preco);
+  for (let i = t.indexOf(alvo); i !== -1; i = t.indexOf(alvo, i + 1)) {
+    const antes = t.slice(Math.max(0, i - JANELA), i);
+    if (antes.includes(nome)) return true;
+  }
+  return false;
+}
+
 const resultado = new Map();
 let feitas = 0;
 async function trabalhar(fila) {
@@ -86,7 +102,7 @@ console.log("\n");
 const linhas = precos.map((p) => {
   const r = resultado.get(p.fonte);
   if (!r) return { p, status: "à mão", agora: "" };
-  const presente = r.achados.includes(p.preco) || r.texto.includes(brl(p.preco));
+  const presente = pertoDoModelo(r.texto, p);
   return { p, status: presente ? "ok" : "revisar", agora: presente ? "" : r.achados.map((n) => "R$ " + brl(n)).slice(0, 8).join(", ") || "nenhum preço na página" };
 });
 const conta = (s) => linhas.filter((l) => l.status === s).length;
