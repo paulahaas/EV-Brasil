@@ -77,6 +77,7 @@ function renderFooter() {
           <a href="comparar.html">Comparar modelos</a>
           <a href="calculadora.html">Calculadora de economia</a>
           <a href="viagem.html">Dá para viajar?</a>
+          <a href="novidades.html">Lançamentos</a>
           <a href="guias.html">Guias do primeiro elétrico</a>
         </div>
         <div class="footer-col">
