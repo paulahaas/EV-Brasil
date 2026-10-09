@@ -59,7 +59,7 @@
     const fonte = `<a class="text-link" href="${v.specs.source}" target="_blank" rel="noopener">${host(v.specs.source)}</a>` +
       (v.specs.sourceExtra ? ` e <a class="text-link" href="${v.specs.sourceExtra}" target="_blank" rel="noopener">${host(v.specs.sourceExtra)}</a>` : "");
     ficha = `
-      <div class="spec-section">
+      <div class="spec-section" id="ficha">
         <h2>Ficha técnica</h2>
         <table class="spec-table">
           <caption>Versão ${escapeHtml(v.specs.version)}</caption>
@@ -98,7 +98,7 @@
     const maisAntigo = f.used[f.used.length - 1];
     const linhas = f.used.map((u) => `<tr><th scope="row">${u.year}</th><td>${formatBRL(u.value)}</td><td>${u.loss > 0 ? `−${formatNum(u.loss, 0)}%` : u.loss < 0 ? `+${formatNum(-u.loss, 0)}%` : "igual"}</td></tr>`).join("");
     usado = `
-      <div class="spec-section">
+      <div class="spec-section" id="usado">
         <h2>Quanto vale usado</h2>
         ${maisAntigo.year < ano ? `<p class="fipe-resumo">Um ${escapeHtml(v.model)} ${maisAntigo.year} vale hoje <strong>${formatBRL(maisAntigo.value)}</strong> na FIPE: ${maisAntigo.loss > 0 ? `${formatNum(maisAntigo.loss, 0)}% a menos` : "o mesmo"} que um ${f.refYear ? `${f.refYear}` : "zero km"} (${formatBRL(f.zero)}).</p>` : ""}
         <table class="spec-table fipe-table">
@@ -135,7 +135,7 @@
     : `<p class="fine-print">Não encontramos a garantia da ${escapeHtml(v.brand)} em fonte confiável. Pergunte na concessionária.</p>`;
   const viajar = `<p class="fine-print"><a class="text-link" href="viagem.html?modelo=${encodeURIComponent(v.id)}">Dá para viajar com ele? Veja quantas paradas uma viagem precisa →</a></p>`;
   const segGarantia = `
-      <div class="spec-section">
+      <div class="spec-section" id="seguranca">
         <h2>Segurança e garantia</h2>
         <h3 class="spec-sub">Teste de colisão</h3>
         ${seguranca}
@@ -174,10 +174,18 @@
       </div>
     </section>
 
-    <section id="versoes">
+    <section id="detalhes">
+      <nav class="model-tabs" aria-label="Nesta página">
+        <a href="#versoes">Versões</a>
+        <a href="#preco">Preço</a>
+        ${ficha ? `<a href="#ficha">Ficha técnica</a>` : ""}
+        <a href="#seguranca">Segurança</a>
+        ${usado ? `<a href="#usado">Usado</a>` : ""}
+        ${parecidos.length ? `<a href="#parecidos">Parecidos</a>` : ""}
+      </nav>
       <div class="container detail-cols">
         <div class="detail-main">
-        <div class="spec-section">
+        <div class="spec-section" id="versoes">
           <h2>Versões medidas pelo Inmetro</h2>
           <table class="spec-table versions-table">
             <thead><tr><th>Versão</th><th>Autonomia</th><th>kWh/100 km</th><th>Energia a cada 100 km*</th></tr></thead>
@@ -190,7 +198,7 @@
         ${segGarantia}
         ${usado}
         </div>
-        <div class="spec-section">
+        <div class="spec-section" id="preco">
           <h2>Sobre o preço</h2>
           <div class="notice">
             <p class="notice-price">${priceText(v)}</p>
@@ -204,7 +212,7 @@
     </section>
 
     ${parecidos.length ? `
-    <section>
+    <section id="parecidos">
       <div class="container">
         <div class="section-head">
           <h2 class="section-title">Parecidos com o ${v.model}</h2>
