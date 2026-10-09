@@ -197,7 +197,7 @@ fs.writeFileSync("js/catalogo.js", js);
 const SITE = "https://ev-brasil.web.app";
 const paginas = ["/", "/veiculos.html", "/encontre.html", "/rankings.html", "/comparar.html",
   "/calculadora.html", "/viagem.html", "/novidades.html", "/metodologia.html", "/guias.html", "/guia-carregar-em-casa.html",
-  "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", "/guia-motorista-aplicativo.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`)];
+  "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", "/guia-motorista-aplicativo.html", "/guia-onde-recarregar.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`)];
 const urls = paginas.map((p) => `  <url><loc>${SITE}${p}</loc></url>`).join("\n");
 fs.writeFileSync("sitemap.xml",
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
