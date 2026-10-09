@@ -23,6 +23,9 @@ const DATA_INFO = {
         "https://valorfinal.com.br/tabela-fipe/ipva"
       ]
     }
+  },
+  "seguranca": {
+    "coleta": "09/10/2026"
   }
 };
 
@@ -69,6 +72,13 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/models/a6/a-6-avant-e-tron/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -118,6 +128,21 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/models/a6/a-6-e-tron/index1",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/audi/a6+e-tron/1105/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -177,6 +202,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
       "sourceExtra": "https://www.audi.com.br/pt/models/q6-e-tron/q6-e-tron/",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/audi/q6+e-tron/1056/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -226,6 +266,13 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -270,6 +317,13 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/models/e-tron-gt/new-rs-etron-gt/",
       "sourceExtra": "https://www.car.blog.br/2026/06/audi-rs-e-tron-gt-performance-preco.html",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -319,6 +373,13 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/models/q6-e-tron/sq-6-sb-etron/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "4 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.audi.com.br/pt/garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -412,6 +473,14 @@ const VEHICLES = [
       "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
       "sourceExtra": "https://www.press.bmwgroup.com/global/article/attachment/T0393974EN/567425",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/bmw/x1/0997/",
+      "testedAs": "BMW X1",
+      "note": "Nota do X1, que vale para a versão elétrica iX1"
     }
   },
   {
@@ -456,6 +525,14 @@ const VEHICLES = [
       "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
       "sourceExtra": "https://www.press.bmwgroup.com/global/article/attachment/T0437451EN/608982",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/bmw/x2/1065/",
+      "testedAs": "BMW X2",
+      "note": "Nota do X2, que vale para a versão elétrica iX2"
     }
   },
   {
@@ -500,6 +577,14 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/09/bmw-ix3-2027-chega-ao-brasil-preco-r.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2026,
+      "source": "https://www.euroncap.com/assessments/bmw/ix3/1232/",
+      "testedAs": "",
+      "note": ""
     }
   },
   {
@@ -554,6 +639,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_DolphinGS_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Latin NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.latinncap.com/po/area-imprensa/noticia/867617e084abbd/byd-dolphin-plus-primeiro-fabricante-chines-e-primeiro-carro-eletrico-a-obter-cinco-estrelas-no-latin-ncap",
+      "testedAs": "BYD Dolphin Plus",
+      "note": "Também tem 5 estrelas no Euro NCAP (2023)"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -608,6 +708,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_DolphinMini_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/byd/dolphin+surf/1209/",
+      "testedAs": "BYD Dolphin Surf",
+      "note": "Vendido na Europa como Dolphin Surf"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -652,6 +767,13 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Han_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -696,6 +818,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Seal_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2023,
+      "source": "https://www.euroncap.com/assessments/byd/seal/1044/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -740,6 +877,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Sealion7_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/byd/sealion+7/1117/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -784,6 +936,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_Tan_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2023,
+      "source": "https://www.euroncap.com/assessments/byd/tang/1049/",
+      "testedAs": "BYD Tang",
+      "note": "Vendido na Europa como Tang"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -838,6 +1005,21 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_YuanPlusAWD_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/byd/atto+3/0992/",
+      "testedAs": "BYD Atto 3",
+      "note": "Vendido na Europa como Atto 3"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -882,6 +1064,13 @@ const VEHICLES = [
       "source": "https://www.byd.com/material/__CN/byd-site/br/fichas-tecnicas-2026/update-13-07-2026/07-13-2026---ficha-txiunica/BYD_YuanPro_V2.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 200 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+      "kind": "imprensa",
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     }
   },
   {
@@ -970,6 +1159,13 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+      "kind": "oficial",
+      "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
     }
   },
   {
@@ -1014,6 +1210,13 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
       "sourceExtra": "https://www.car.blog.br/2026/02/chevrolet-captiva-ev-2026-chega-ao.html",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+      "kind": "oficial",
+      "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
     }
   },
   {
@@ -1058,6 +1261,13 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
       "sourceExtra": "https://www.car.blog.br/2025/09/chevrolet-spark-euv-chega-ao-brasil.html",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+      "kind": "oficial",
+      "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
     }
   },
   {
@@ -1102,6 +1312,14 @@ const VEHICLES = [
       "source": "https://www.media.stellantis.com/uploads/br/attachment/216/ft_fiat500e-6324ce95785a8.pdf",
       "sourceExtra": "https://www.car.blog.br/2021/08/fiat-500e-2022-eletrico-chega-ao-brasil.html",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 4,
+      "year": 2021,
+      "source": "https://www.euroncap.com/assessments/fiat/500e/0911/",
+      "testedAs": "",
+      "note": ""
     }
   },
   {
@@ -1146,6 +1364,13 @@ const VEHICLES = [
       "source": "https://www.gacgroup.com/pt-br/configuration/aion-es/2024",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "5 anos ou 150 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+      "kind": "oficial",
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     }
   },
   {
@@ -1195,6 +1420,21 @@ const VEHICLES = [
       "source": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2026,
+      "source": "https://www.euroncap.com/assessments/aion/ut/1236/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos ou 150 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+      "kind": "oficial",
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     }
   },
   {
@@ -1244,6 +1484,21 @@ const VEHICLES = [
       "source": "https://www.gacgroup.com/pt-br/configuration/aion-v/2024",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/aion/v/1169/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos ou 150 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+      "kind": "oficial",
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     }
   },
   {
@@ -1293,6 +1548,13 @@ const VEHICLES = [
       "source": "https://www.gacgroup.com/pt-br/configuration/aion-y/2024",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "5 anos ou 150 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+      "kind": "oficial",
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     }
   },
   {
@@ -1342,6 +1604,13 @@ const VEHICLES = [
       "source": "https://www.gacgroup.com/pt-br/configuration/hyptec-ht/2024",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "5 anos ou 150 mil km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+      "kind": "oficial",
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     }
   },
   {
@@ -1391,6 +1660,21 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2026,
+      "source": "https://www.euroncap.com/assessments/geely/e2/1246/",
+      "testedAs": "Geely E2",
+      "note": "Vendido na Europa como Geely E2"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 150 mil km",
+      "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1440,6 +1724,21 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/ex5",
       "sourceExtra": "https://www.car.blog.br/2026/09/geely-ex5-max-precos-detalhes.html",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/geely/ex5/1136/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 150 mil km",
+      "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1499,6 +1798,21 @@ const VEHICLES = [
       "source": "https://www.gwmmotors.com.br/content/dam/gwm/pages/br/pt/models/ora-03-bev58/ficha-tecnica/gwm-ora-03-bev58-ficha-tecnica.pdf",
       "sourceExtra": "https://www.car.blog.br/2025/04/gwm-ora-03-2026-precos-partem-de-r-169.html",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/gwm/ora+03/1002/",
+      "testedAs": "ORA Funky Cat",
+      "note": "Vendido na Europa como Ora Funky Cat"
+    },
+    "warranty": {
+      "vehicle": "5 anos, sem limite de km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1543,6 +1857,13 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/06/gwm-ora-5-suv-eletrico-preco-fotos.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "warranty": {
+      "vehicle": "5 anos, sem limite de km",
+      "battery": "8 anos ou 200 mil km",
+      "source": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1597,6 +1918,21 @@ const VEHICLES = [
       "source": "https://www.hyundai.com.br/universo-hyundai/veiculos/e-gmp-hyundai.html",
       "sourceExtra": "https://www.cnnbrasil.com.br/auto/hyundai-ioniq-5-abre-pre-venda-no-brasil-e-pode-rodar-374-km-saiba-preco/",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2021,
+      "source": "https://www.euroncap.com/assessments/hyundai/ioniq+5/0893/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.hyundai.com.br/universo-hyundai/dicas/bateria-carro-eletrico.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1633,6 +1969,13 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-J7-FICHA-1.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "5 anos ou 100 mil km",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
+      "kind": "oficial",
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
     }
   },
   {
@@ -1682,6 +2025,21 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/carros/e-js1/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Latin NCAP",
+      "stars": 0,
+      "year": 2022,
+      "source": "https://www.latinncap.com/po/resultado/173/jac-e-js1--e10x--e-s1--s1-+-2-airbags",
+      "testedAs": "",
+      "note": "Estrutura instável no impacto frontal; sem controle de estabilidade nem frenagem automática na versão testada"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "5 anos ou 100 mil km",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
+      "kind": "oficial",
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
     }
   },
   {
@@ -1726,6 +2084,13 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS4-FICHA-1.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "5 anos ou 100 mil km",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
+      "kind": "oficial",
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
     }
   },
   {
@@ -1749,7 +2114,14 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": ""
+    "priceNote": "",
+    "warranty": {
+      "vehicle": null,
+      "battery": "5 anos ou 100 mil km",
+      "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
+      "kind": "oficial",
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+    }
   },
   {
     "id": "kia-ev5",
@@ -1798,6 +2170,21 @@ const VEHICLES = [
       "source": "https://www.kia.com.br/ev5",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/kia/ev5/1158/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.kia.com.br/garantia",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1842,6 +2229,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/04/leapmotor-b10-2026-suv-eletrico-de-r.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/leapmotor/b10/1217/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 150 mil km",
+      "battery": "8 anos",
+      "source": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
+      "kind": "imprensa",
+      "note": "Ano-modelo 2027, com revisões na rede autorizada"
     }
   },
   {
@@ -1886,6 +2288,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/11/leapmotor-c10-chega-em-versoes-eletrica.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/leapmotor/c10/1070/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos ou 150 mil km",
+      "battery": "8 anos",
+      "source": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
+      "kind": "imprensa",
+      "note": "Ano-modelo 2027, com revisões na rede autorizada"
     }
   },
   {
@@ -1930,6 +2347,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/05/lexus-rz-500e-chega-ao-brasil-preco-r.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2023,
+      "source": "https://www.euroncap.com/assessments/lexus/rz/1043/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos (até 10 anos com o programa LexusCare)",
+      "battery": null,
+      "source": "https://www.lexus.com.br/pt/servicing-and-support/warranty-coverage.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -1974,6 +2406,21 @@ const VEHICLES = [
       "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
       "sourceExtra": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2019,
+      "source": "https://www.euroncap.com/assessments/mercedes-benz/eqb/0794pm/",
+      "testedAs": "",
+      "note": "Nota do GLB (2019), estendida ao EQB; protocolo mais antigo"
+    },
+    "warranty": {
+      "vehicle": "3 anos",
+      "battery": null,
+      "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2005,6 +2452,13 @@ const VEHICLES = [
       "license": "CC BY-SA 3.0 de",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.pt-br",
       "page": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_GLB_250%2B_mit_EQ-Technologie_AMG_Line_(X_244)_%E2%80%93_f1_18042026.jpg"
+    },
+    "warranty": {
+      "vehicle": "3 anos",
+      "battery": null,
+      "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2049,6 +2503,13 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/cyberster-ficha.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "7 anos ou 150 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2103,6 +2564,21 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mg4-ficha.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/mg/4+electric/1001/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "7 anos ou 150 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2162,6 +2638,21 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mg4-urban-ficha.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/mg/mg4+ev+urban/1156/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "7 anos ou 150 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2211,6 +2702,21 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/mg/mgs5+ev/1109/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "7 anos ou 150 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2260,6 +2766,21 @@ const VEHICLES = [
       "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0441429PT/o-novo-mini-aceman?language=pt",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/mini/aceman/1127/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "2 anos, sem limite de km",
+      "battery": "8 anos ou 100 mil km",
+      "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2309,6 +2830,21 @@ const VEHICLES = [
       "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0445464PT/pr%C3%A9-venda-do-novo-mini-cooper-e-come%C3%A7a-hoje",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/mini/cooper+e/1066/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "2 anos, sem limite de km",
+      "battery": "8 anos ou 100 mil km",
+      "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2358,6 +2894,21 @@ const VEHICLES = [
       "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0443334PT/totalmente-novo-mini-countryman-se-chega-ao-brasil-com-motor-100-el%C3%A9trico-duas-vers%C3%B5es-e-marca-o-in%C3%ADcio-de-uma-nova-era-da-marca-no-pa%C3%ADs?language=pt",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/mini/countryman/1069/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "2 anos, sem limite de km",
+      "battery": "8 anos ou 100 mil km",
+      "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2407,6 +2958,13 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/07/mini-jcw-eletrico-chega-ao-brasil-com.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "warranty": {
+      "vehicle": "2 anos, sem limite de km",
+      "battery": "8 anos ou 100 mil km",
+      "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2530,6 +3088,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/05/novo-porsche-cayenne-electric-2027.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/porsche/cayenne/1201/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
+      "kind": "oficial",
+      "note": "Garante ao menos 70% da capacidade até o fim do prazo"
     }
   },
   {
@@ -2589,6 +3162,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2024/11/novo-porsche-macan-2025-electric-preco.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/porsche/macan/1018/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
+      "kind": "oficial",
+      "note": "Garante ao menos 70% da capacidade até o fim do prazo"
     }
   },
   {
@@ -2663,6 +3251,21 @@ const VEHICLES = [
       "source": "https://www.porsche.com/international/models/taycan/taycan-models/taycan-4s/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2019,
+      "source": "https://www.euroncap.com/assessments/porsche/taycan/0800/",
+      "testedAs": "",
+      "note": "Teste de 2019; protocolo mais antigo"
+    },
+    "warranty": {
+      "vehicle": null,
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
+      "kind": "oficial",
+      "note": "Garante ao menos 70% da capacidade até o fim do prazo"
     }
   },
   {
@@ -2707,6 +3310,21 @@ const VEHICLES = [
       "source": "https://www.renault.com.br/veiculos-eletricos/megane-e-tech/autonomia-e-carregamento.html",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/renault/megane+e-tech/0921/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "3 anos",
+      "battery": "8 anos ou 120 mil km",
+      "source": "https://www.renault.com.br/electric-vehicles/megane-e-tech.html",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2756,6 +3374,21 @@ const VEHICLES = [
       "source": "https://www.suzukiveiculos.com.br/veiculos/evitara/",
       "sourceExtra": "https://www.car.blog.br/2026/07/suzuki-e-vitara-2027-preco-ficha-tecnica-brasil.html",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 4,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/suzuki/e+vitara/1160/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "5 anos, sem limite de km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.suzukiveiculos.com.br/suzuki-garantia/",
+      "kind": "oficial",
+      "note": ""
     }
   },
   {
@@ -2835,6 +3468,21 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/cars/ec40-electric/specifications/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2022,
+      "source": "https://www.euroncap.com/assessments/volvo/c40+recharge/0957/",
+      "testedAs": "Volvo C40 Recharge",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "3 anos ou 100 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
+      "kind": "oficial",
+      "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     }
   },
   {
@@ -2879,6 +3527,13 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/cars/es90-electric/specifications/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "warranty": {
+      "vehicle": "3 anos ou 100 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
+      "kind": "oficial",
+      "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     }
   },
   {
@@ -2958,6 +3613,21 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/cars/ex30-electric/specifications/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/volvo/ex30/1098/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "3 anos ou 100 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
+      "kind": "oficial",
+      "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     }
   },
   {
@@ -3037,6 +3707,21 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/cars/ex40-electric/specifications/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2018,
+      "source": "https://www.euroncap.com/assessments/volvo/xc40/0725/",
+      "testedAs": "Volvo XC40",
+      "note": "Teste de 2018 do XC40, que inclui a versão elétrica; protocolo mais antigo"
+    },
+    "warranty": {
+      "vehicle": "3 anos ou 100 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
+      "kind": "oficial",
+      "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     }
   },
   {
@@ -3091,6 +3776,21 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/cars/ex90-electric/specifications/",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/volvo/ex90/1180/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "3 anos ou 100 mil km",
+      "battery": "8 anos ou 160 mil km",
+      "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
+      "kind": "oficial",
+      "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     }
   },
   {
@@ -3140,6 +3840,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/zeekr/1/1037/",
+      "testedAs": "Zeekr 001",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos",
+      "battery": "8 anos",
+      "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
+      "kind": "imprensa",
+      "note": "Informado no lançamento, em fevereiro de 2025"
     }
   },
   {
@@ -3189,6 +3904,21 @@ const VEHICLES = [
       "source": "https://atarde.com.br/autos/zeekr-7x-no-brasil-precos-versoes-e-ficha-tecnica-1395860",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2025,
+      "source": "https://www.euroncap.com/assessments/zeekr/7x/1123/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos",
+      "battery": "8 anos",
+      "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
+      "kind": "imprensa",
+      "note": "Informado no lançamento, em fevereiro de 2025"
     }
   },
   {
@@ -3238,6 +3968,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/02/novo-zerkr-x-preco-parte-de-r-298-mil.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "safety": {
+      "program": "Euro NCAP",
+      "stars": 5,
+      "year": 2024,
+      "source": "https://www.euroncap.com/assessments/zeekr/x/1038/",
+      "testedAs": "",
+      "note": ""
+    },
+    "warranty": {
+      "vehicle": "6 anos",
+      "battery": "8 anos",
+      "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
+      "kind": "imprensa",
+      "note": "Informado no lançamento, em fevereiro de 2025"
     }
   }
 ];

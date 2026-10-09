@@ -100,6 +100,11 @@ const FICHA_CAMPOS = [
   { id: "s0100", rotulo: "0 a 100 km/h", fmt: (n) => `${formatNum(n, 1)} s`, melhor: "menor" },
   { id: "trunkL", rotulo: "Porta-malas", fmt: (n) => `${formatNum(n, 0)} litros`, melhor: "maior" },
 ];
+/** Estrelas da nota de segurança, em texto: "★★★★☆". */
+function starsText(n) {
+  return "★".repeat(n) + "☆".repeat(5 - n);
+}
+
 function specText(v, campo) {
   const n = v.specs && v.specs[campo.id];
   return n === null || n === undefined ? null : campo.fmt(n);

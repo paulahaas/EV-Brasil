@@ -1,0 +1,127 @@
+{
+ "_leia": "Garantia por marca (chave = marca como em js/catalogo.js): veículo e bateria de alta tensão, uso particular, no Brasil. null = não encontrado em fonte confiável. Marca ausente (BMW, Fiat, Omoda, Caoa Changan) = sem dado confirmado. Coleta: outubro de 2026.",
+ "garantias": {
+  "BYD": {
+   "veiculo": "6 anos ou 200 mil km",
+   "bateria": "8 anos ou 200 mil km",
+   "fonte": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
+   "tipo": "imprensa",
+   "nota": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+  },
+  "GWM": {
+   "veiculo": "5 anos, sem limite de km",
+   "bateria": "8 anos ou 200 mil km",
+   "fonte": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
+   "tipo": "oficial"
+  },
+  "Volvo": {
+   "veiculo": "3 anos ou 100 mil km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.volvocars.com/br/l/proprietario/garantia/",
+   "tipo": "oficial",
+   "nota": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
+  },
+  "GAC": {
+   "veiculo": "5 anos ou 150 mil km",
+   "bateria": "8 anos ou 200 mil km",
+   "fonte": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
+   "tipo": "oficial",
+   "nota": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+  },
+  "MG": {
+   "veiculo": "7 anos ou 150 mil km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
+   "tipo": "oficial"
+  },
+  "Leapmotor": {
+   "veiculo": "6 anos ou 150 mil km",
+   "bateria": "8 anos",
+   "fonte": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
+   "tipo": "imprensa",
+   "nota": "Ano-modelo 2027, com revisões na rede autorizada"
+  },
+  "Zeekr": {
+   "veiculo": "6 anos",
+   "bateria": "8 anos",
+   "fonte": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
+   "tipo": "imprensa",
+   "nota": "Informado no lançamento, em fevereiro de 2025"
+  },
+  "Audi": {
+   "veiculo": "4 anos, sem limite de km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.audi.com.br/pt/garantia/",
+   "tipo": "oficial"
+  },
+  "Porsche": {
+   "veiculo": null,
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
+   "tipo": "oficial",
+   "nota": "Garante ao menos 70% da capacidade até o fim do prazo"
+  },
+  "Mini": {
+   "veiculo": "2 anos, sem limite de km",
+   "bateria": "8 anos ou 100 mil km",
+   "fonte": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
+   "tipo": "oficial"
+  },
+  "Kia": {
+   "veiculo": "5 anos, sem limite de km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.kia.com.br/garantia",
+   "tipo": "oficial"
+  },
+  "Hyundai": {
+   "veiculo": "5 anos, sem limite de km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.hyundai.com.br/universo-hyundai/dicas/bateria-carro-eletrico.html",
+   "tipo": "oficial"
+  },
+  "Chevrolet": {
+   "veiculo": null,
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.chevrolet.com.br/eletrico/spark-euv",
+   "tipo": "oficial",
+   "nota": "Spark EUV: 3 anos ou 100 mil km para o veículo"
+  },
+  "Renault": {
+   "veiculo": "3 anos",
+   "bateria": "8 anos ou 120 mil km",
+   "fonte": "https://www.renault.com.br/electric-vehicles/megane-e-tech.html",
+   "tipo": "oficial"
+  },
+  "Suzuki": {
+   "veiculo": "5 anos, sem limite de km",
+   "bateria": "8 anos ou 160 mil km",
+   "fonte": "https://www.suzukiveiculos.com.br/suzuki-garantia/",
+   "tipo": "oficial"
+  },
+  "JAC": {
+   "veiculo": null,
+   "bateria": "5 anos ou 100 mil km",
+   "fonte": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
+   "tipo": "oficial",
+   "nota": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+  },
+  "Mercedes-Benz": {
+   "veiculo": "3 anos",
+   "bateria": null,
+   "fonte": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
+   "tipo": "oficial"
+  },
+  "Lexus": {
+   "veiculo": "5 anos (até 10 anos com o programa LexusCare)",
+   "bateria": null,
+   "fonte": "https://www.lexus.com.br/pt/servicing-and-support/warranty-coverage.html",
+   "tipo": "oficial"
+  },
+  "Geely": {
+   "veiculo": null,
+   "bateria": "8 anos ou 150 mil km",
+   "fonte": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+   "tipo": "oficial"
+  }
+ }
+}
