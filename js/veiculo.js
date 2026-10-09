@@ -70,6 +70,39 @@
       </div>`;
   }
 
+  // Segurança (Latin NCAP / Euro NCAP) e garantia da marca.
+  const host2 = (u) => u.split("/")[2].replace("www.", "");
+  let seguranca;
+  if (v.safety) {
+    const s = v.safety;
+    seguranca = `
+        <p class="safety-stars" aria-label="${s.stars} de 5 estrelas"><span class="stars s${s.stars}">${starsText(s.stars)}</span> <strong>${s.stars} ${s.stars === 1 ? "estrela" : "estrelas"}</strong> no ${s.program} (${s.year})</p>
+        ${s.testedAs ? `<p class="fine-print">Testado como ${escapeHtml(s.testedAs)}.</p>` : ""}
+        ${s.note ? `<p class="fine-print">${escapeHtml(s.note)}.</p>` : ""}
+        <p class="fine-print">Fonte: <a class="text-link" href="${s.source}" target="_blank" rel="noopener">${host2(s.source)}</a>.${s.program === "Euro NCAP" ? " Teste europeu, com a versão vendida lá: o Latin NCAP, da América Latina, não testou este modelo." : ""}</p>`;
+  } else {
+    seguranca = `<p class="fine-print">Este modelo não foi testado pelo Latin NCAP nem pelo Euro NCAP.</p>`;
+  }
+  const g = v.warranty;
+  const garantiaHtml = g ? `
+        <table class="spec-table">
+          <tbody>
+            <tr><th scope="row">Veículo</th><td>${g.vehicle ? escapeHtml(g.vehicle) : '<span class="spec-missing">não divulgado</span>'}</td></tr>
+            <tr><th scope="row">Bateria</th><td>${g.battery ? escapeHtml(g.battery) : '<span class="spec-missing">não divulgado</span>'}</td></tr>
+          </tbody>
+        </table>
+        ${g.note ? `<p class="fine-print">${escapeHtml(g.note)}.</p>` : ""}
+        <p class="fine-print">Garantia da ${escapeHtml(v.brand)} para uso particular. Fonte: <a class="text-link" href="${g.source}" target="_blank" rel="noopener">${host2(g.source)}</a>${g.kind === "imprensa" ? " (imprensa)" : ""}. Confirme no termo de garantia do carro.</p>`
+    : `<p class="fine-print">Não encontramos a garantia da ${escapeHtml(v.brand)} em fonte confiável. Pergunte na concessionária.</p>`;
+  const segGarantia = `
+      <div class="spec-section">
+        <h2>Segurança e garantia</h2>
+        <h3 class="spec-sub">Teste de colisão</h3>
+        ${seguranca}
+        <h3 class="spec-sub">Garantia</h3>
+        ${garantiaHtml}
+      </div>`;
+
   // Parecidos: mesma carroceria, preço mais próximo (ou autonomia, se não houver preço).
   const distancia = (x) => (v.price && x.price ? Math.abs(x.price - v.price) / 1000 : Math.abs(x.rangeMax - v.rangeMax) + 1000);
   const parecidos = VEHICLES.filter((x) => x.id !== v.id && x.bodyType === v.bodyType)
@@ -113,6 +146,7 @@
           <p class="fine-print">Medição do Inmetro (${DATA_INFO.inmetro.titulo}, atualização de ${DATA_INFO.inmetro.atualizacao}), igual para todas as marcas. *Carregando em casa a R$ ${formatNum(TARIFA, 2)} por kWh.</p>
         </div>
         ${ficha}
+        ${segGarantia}
         </div>
         <div class="spec-section">
           <h2>Sobre o preço</h2>

@@ -6,6 +6,8 @@
  *   dados/fotos.json                         — fotos (Wikimedia Commons) e créditos
  *   dados/fichas.json                        — ficha técnica (bateria, potência, recarga...) com fonte
  *   dados/ipva-2026.json                     — IPVA por estado (gasolina e elétrico), para a calculadora
+ *   dados/seguranca.json                     — nota Latin NCAP / Euro NCAP de cada modelo
+ *   dados/garantias.json                     — garantia do veículo e da bateria, por marca
  *
  * Uso: npm run dados
  */
@@ -17,6 +19,8 @@ const cadastro = lerJson("dados/modelos.json");
 const fotos = lerJson("dados/fotos.json").fotos;
 const fichas = lerJson("dados/fichas.json").fichas;
 const ipva = lerJson("dados/ipva-2026.json");
+const seguranca = lerJson("dados/seguranca.json").seguranca;
+const garantias = lerJson("dados/garantias.json").garantias;
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
 
@@ -87,6 +91,12 @@ const ficha = (f) => ({
   kind: f.fonte_tipo,
 });
 
+const notaNcap = (s) => ({
+  program: s.programa, stars: s.estrelas, year: s.ano, source: s.fonte,
+  testedAs: s.testado_como || "", note: s.nota || "",
+});
+const garantia = (g) => ({ vehicle: g.veiculo, battery: g.bateria, source: g.fonte, kind: g.tipo, note: g.nota || "" });
+
 const VEHICLES = [...porId.values()].map((v) => {
   const ps = precos.filter((p) => p.preco && v.chaves.has(chavePreco(p)));
   const menor = ps.sort((a, b) => a.preco - b.preco)[0];
@@ -104,6 +114,8 @@ const VEHICLES = [...porId.values()].map((v) => {
     priceNote: menor ? notaPublica(menor.obs) : notaPublica((precos.find((p) => !p.preco && v.chaves.has(chavePreco(p))) || {}).obs),
     ...(fotos[v.id] ? { photo: fotos[v.id] } : {}),
     ...(fichas[v.id] ? { specs: ficha(fichas[v.id]) } : {}),
+    ...(seguranca[v.id] ? { safety: notaNcap(seguranca[v.id]) } : {}),
+    ...(garantias[v.brand] ? { warranty: garantia(garantias[v.brand]) } : {}),
   };
 }).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
 
@@ -116,6 +128,7 @@ const DATA_INFO = {
   precos: { coleta: "05/10/2026" },
   fichas: { coleta: "08/10/2026" },
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
+  seguranca: { coleta: "09/10/2026" },
 };
 
 const js = `/**

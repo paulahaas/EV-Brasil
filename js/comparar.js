@@ -42,6 +42,18 @@
       valor: (v) => (v.specs && v.specs[c.id]) || null,
       melhor: c.melhor,
     })),
+    {
+      rotulo: "Segurança (teste de colisão)",
+      texto: (v) => (v.safety
+        ? `<span class="stars s${v.safety.stars}">${starsText(v.safety.stars)}</span>${v.safety.program} ${v.safety.year}`
+        : '<span class="spec-missing">não testado</span>'),
+      valor: (v) => (v.safety ? v.safety.stars + 1 : null), // +1: zero estrela também é um valor
+      melhor: "maior",
+    },
+    {
+      rotulo: "Garantia da bateria",
+      texto: (v) => (v.warranty && v.warranty.battery ? v.warranty.battery : '<span class="spec-missing">não divulgado</span>'),
+    },
     { rotulo: "Carroceria", texto: (v) => v.bodyType },
     { rotulo: "Categoria (Inmetro)", texto: (v) => v.category },
     { rotulo: "Versões", texto: (v) => String(v.versions.length) },

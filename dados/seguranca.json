@@ -1,0 +1,280 @@
+{
+ "_leia": "Nota de segurança de cada modelo (chave = id). Latin NCAP quando o modelo foi testado na América Latina; senão Euro NCAP (teste europeu, com a versão vendida lá; os protocolos ficam mais rígidos com os anos, então notas de anos diferentes não são diretamente comparáveis). Modelo ausente = não testado por nenhum dos dois. Coleta: outubro de 2026.",
+ "seguranca": {
+  "byd-dolphin-mini": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/byd/dolphin+surf/1209/",
+   "testado_como": "BYD Dolphin Surf",
+   "nota": "Vendido na Europa como Dolphin Surf"
+  },
+  "byd-seal": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2023,
+   "fonte": "https://www.euroncap.com/assessments/byd/seal/1044/"
+  },
+  "byd-sealion-7": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/byd/sealion+7/1117/"
+  },
+  "byd-yuan-plus": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/byd/atto+3/0992/",
+   "testado_como": "BYD Atto 3",
+   "nota": "Vendido na Europa como Atto 3"
+  },
+  "byd-tan": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2023,
+   "fonte": "https://www.euroncap.com/assessments/byd/tang/1049/",
+   "testado_como": "BYD Tang",
+   "nota": "Vendido na Europa como Tang"
+  },
+  "gwm-ora-03": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/gwm/ora+03/1002/",
+   "testado_como": "ORA Funky Cat",
+   "nota": "Vendido na Europa como Ora Funky Cat"
+  },
+  "volvo-ex30": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/volvo/ex30/1098/"
+  },
+  "volvo-ex40": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2018,
+   "fonte": "https://www.euroncap.com/assessments/volvo/xc40/0725/",
+   "testado_como": "Volvo XC40",
+   "nota": "Teste de 2018 do XC40, que inclui a versão elétrica; protocolo mais antigo"
+  },
+  "volvo-ec40": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/volvo/c40+recharge/0957/",
+   "testado_como": "Volvo C40 Recharge"
+  },
+  "volvo-ex90": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/volvo/ex90/1180/"
+  },
+  "bmw-ix1": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/bmw/x1/0997/",
+   "testado_como": "BMW X1",
+   "nota": "Nota do X1, que vale para a versão elétrica iX1"
+  },
+  "bmw-ix2": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/bmw/x2/1065/",
+   "testado_como": "BMW X2",
+   "nota": "Nota do X2, que vale para a versão elétrica iX2"
+  },
+  "bmw-ix3": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2026,
+   "fonte": "https://www.euroncap.com/assessments/bmw/ix3/1232/"
+  },
+  "mini-cooper": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/mini/cooper+e/1066/"
+  },
+  "mini-aceman": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/mini/aceman/1127/"
+  },
+  "mini-countryman": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/mini/countryman/1069/"
+  },
+  "audi-q6-e-tron": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/audi/q6+e-tron/1056/"
+  },
+  "audi-a6-e-tron": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/audi/a6+e-tron/1105/"
+  },
+  "porsche-taycan": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2019,
+   "fonte": "https://www.euroncap.com/assessments/porsche/taycan/0800/",
+   "nota": "Teste de 2019; protocolo mais antigo"
+  },
+  "porsche-macan-electric": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/porsche/macan/1018/"
+  },
+  "porsche-cayenne-electric": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/porsche/cayenne/1201/"
+  },
+  "mg-mg4": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/mg/4+electric/1001/"
+  },
+  "mg-mg4-urban": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/mg/mg4+ev+urban/1156/"
+  },
+  "mg-s5": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/mg/mgs5+ev/1109/"
+  },
+  "kia-ev5": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/kia/ev5/1158/"
+  },
+  "hyundai-ioniq-5": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2021,
+   "fonte": "https://www.euroncap.com/assessments/hyundai/ioniq+5/0893/"
+  },
+  "renault-megane-e-tech": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2022,
+   "fonte": "https://www.euroncap.com/assessments/renault/megane+e-tech/0921/"
+  },
+  "fiat-500e": {
+   "programa": "Euro NCAP",
+   "estrelas": 4,
+   "ano": 2021,
+   "fonte": "https://www.euroncap.com/assessments/fiat/500e/0911/"
+  },
+  "zeekr-001": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/zeekr/1/1037/",
+   "testado_como": "Zeekr 001"
+  },
+  "zeekr-x": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/zeekr/x/1038/"
+  },
+  "zeekr-7x": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/zeekr/7x/1123/"
+  },
+  "leapmotor-b10": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/leapmotor/b10/1217/"
+  },
+  "leapmotor-c10": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.euroncap.com/assessments/leapmotor/c10/1070/"
+  },
+  "lexus-rz": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2023,
+   "fonte": "https://www.euroncap.com/assessments/lexus/rz/1043/"
+  },
+  "mercedes-eqb": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2019,
+   "fonte": "https://www.euroncap.com/assessments/mercedes-benz/eqb/0794pm/",
+   "nota": "Nota do GLB (2019), estendida ao EQB; protocolo mais antigo"
+  },
+  "suzuki-e-vitara": {
+   "programa": "Euro NCAP",
+   "estrelas": 4,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/suzuki/e+vitara/1160/"
+  },
+  "gac-aion-v": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/aion/v/1169/"
+  },
+  "gac-aion-ut": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2026,
+   "fonte": "https://www.euroncap.com/assessments/aion/ut/1236/"
+  },
+  "geely-ex5": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2025,
+   "fonte": "https://www.euroncap.com/assessments/geely/ex5/1136/"
+  },
+  "geely-ex2": {
+   "programa": "Euro NCAP",
+   "estrelas": 5,
+   "ano": 2026,
+   "fonte": "https://www.euroncap.com/assessments/geely/e2/1246/",
+   "testado_como": "Geely E2",
+   "nota": "Vendido na Europa como Geely E2"
+  },
+  "byd-dolphin": {
+   "programa": "Latin NCAP",
+   "estrelas": 5,
+   "ano": 2024,
+   "fonte": "https://www.latinncap.com/po/area-imprensa/noticia/867617e084abbd/byd-dolphin-plus-primeiro-fabricante-chines-e-primeiro-carro-eletrico-a-obter-cinco-estrelas-no-latin-ncap",
+   "testado_como": "BYD Dolphin Plus",
+   "nota": "Também tem 5 estrelas no Euro NCAP (2023)"
+  },
+  "jac-e-js1": {
+   "programa": "Latin NCAP",
+   "estrelas": 0,
+   "ano": 2022,
+   "fonte": "https://www.latinncap.com/po/resultado/173/jac-e-js1--e10x--e-s1--s1-+-2-airbags",
+   "nota": "Estrutura instável no impacto frontal; sem controle de estabilidade nem frenagem automática na versão testada"
+  }
+ }
+}
