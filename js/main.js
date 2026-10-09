@@ -5,6 +5,9 @@
  * em um único lugar (aqui) e o site inteiro atualizar junto.
  */
 
+/* Logo: medidor de carga quase cheio com um raio (mesmo desenho de assets/favicon.svg). */
+const LOGO_SVG = `<svg viewBox="0 0 36 36" width="30" height="30" aria-hidden="true"><circle cx="18" cy="18" r="14" fill="none" stroke="#1e293b" stroke-width="4"/><path d="M18 4a14 14 0 1 1-12.1 7" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/><path d="M19.6 10 13 19.5h4.6l-1.4 6.5 6.7-9.6h-4.7l1.4-6.4Z" fill="#fbbf24"/></svg>`;
+
 /* ---------------- Cabeçalho ---------------- */
 function renderHeader(active) {
   const links = [
@@ -26,7 +29,7 @@ function renderHeader(active) {
   <div class="container nav">
 
     <a href="index.html" class="brand">
-      <span class="logo-mark">⚡</span>
+      <span class="logo-mark">${LOGO_SVG}</span>
       <span>EV<span class="accent">Brasil</span></span>
     </a>
 
@@ -61,7 +64,7 @@ function renderFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand">
-            <span class="logo-mark">⚡</span>
+            <span class="logo-mark">${LOGO_SVG}</span>
             <span>EV<span class="accent">Brasil</span></span>
           </a>
           <p>Guia independente dos carros elétricos à venda no Brasil. Não vendemos carros: comparamos, com dados oficiais.</p>
