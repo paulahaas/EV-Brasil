@@ -32,6 +32,9 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
+/* Barras de rolagem escuras, no tom do site (tabelas, menus e a própria página). */
+* { scrollbar-color: #3a4558 transparent; scrollbar-width: thin; }
+
 body {
   font-family: var(--font);
   background: var(--bg);
