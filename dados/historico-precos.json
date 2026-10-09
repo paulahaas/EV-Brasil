@@ -1,0 +1,487 @@
+{
+ "_leia": "Histórico de preço 'a partir de' de cada modelo (chave = id). tipo: 'coleta' = nossa coleta mensal (gravada automaticamente por npm run dados, um ponto por mês); 'lançamento' / 'pré-venda' / 'publicado' = preço divulgado pela imprensa ou pela marca naquela data, que pode ser de outra versão. Não edite os pontos de coleta à mão.",
+ "historico": {
+  "bmw-i7": [
+   {
+    "mes": "2023-08",
+    "preco": 1282950,
+    "fonte": "https://www.car.blog.br/2023/08/bmw-i7-eletrico-chega-ao-brasil-com.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 1373950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
+    "tipo": "coleta"
+   }
+  ],
+  "bmw-ix3": [
+   {
+    "mes": "2026-09",
+    "preco": 582950,
+    "fonte": "https://www.car.blog.br/2026/09/bmw-ix3-50-xdrive-eletrico-brasil-preco.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 582950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
+    "tipo": "coleta"
+   }
+  ],
+  "mini-cooper": [
+   {
+    "mes": "2024-10",
+    "preco": 209990,
+    "fonte": "https://www.car.blog.br/2024/10/novo-mini-cooper-2025-eletrico-tem-pre.html",
+    "tipo": "pré-venda"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 264990,
+    "fonte": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
+    "tipo": "coleta"
+   }
+  ],
+  "mini-aceman": [
+   {
+    "mes": "2025-02",
+    "preco": 254990,
+    "fonte": "https://www.car.blog.br/2025/02/mini-aceman-2025-eletrico-preco-r.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 275990,
+    "fonte": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
+    "tipo": "coleta"
+   }
+  ],
+  "mini-countryman": [
+   {
+    "mes": "2024-06",
+    "preco": 294990,
+    "fonte": "https://www.car.blog.br/2024/06/novo-mini-countryman-se-2025-eletrico.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "mini-jcw": [
+   {
+    "mes": "2025-07",
+    "preco": 330990,
+    "fonte": "https://www.car.blog.br/2025/07/mini-jcw-eletrico-chega-ao-brasil-com.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "audi-q6-e-tron": [
+   {
+    "mes": "2026-04",
+    "preco": 695990,
+    "fonte": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "audi-sq6-sportback-e-tron": [
+   {
+    "mes": "2026-04",
+    "preco": 790990,
+    "fonte": "https://www.car.blog.br/2026/04/audi-sq6-etron-2026-preco-brasil.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "audi-rs-e-tron-gt": [
+   {
+    "mes": "2026-06",
+    "preco": 1334990,
+    "fonte": "https://www.car.blog.br/2026/06/audi-rs-e-tron-gt-performance-preco.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "lexus-rz": [
+   {
+    "mes": "2025-12",
+    "preco": 499990,
+    "fonte": "https://www.car.blog.br/2025/12/novo-lexus-rz-500e-estreia-no-brasil.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "leapmotor-c10": [
+   {
+    "mes": "2025-11",
+    "preco": 189990,
+    "fonte": "https://www.car.blog.br/2025/11/leapmotor-c10-chega-em-versoes-eletrica.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 214990,
+    "fonte": "https://www.leapmotor.com.br/",
+    "tipo": "coleta"
+   }
+  ],
+  "leapmotor-b10": [
+   {
+    "mes": "2026-04",
+    "preco": 182990,
+    "fonte": "https://www.car.blog.br/2026/04/leapmotor-b10-2026-suv-eletrico-de-r.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 182990,
+    "fonte": "https://www.leapmotor.com.br/b10/monte.html",
+    "tipo": "coleta"
+   }
+  ],
+  "mg-mg4-urban": [
+   {
+    "mes": "2026-07",
+    "preco": 129990,
+    "fonte": "https://www.car.blog.br/2026/07/mg4-urban-brasil-preco-detalhes.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "mg-s5": [
+   {
+    "mes": "2025-11",
+    "preco": 195800,
+    "fonte": "https://www.car.blog.br/2025/11/mgs5-suv-eletrico-chega-por-r-r-195800.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 218800,
+    "fonte": "https://mgmotoroficial.com.br/oferta/mgs5",
+    "tipo": "coleta"
+   }
+  ],
+  "chevrolet-captiva-ev": [
+   {
+    "mes": "2026-02",
+    "preco": 199990,
+    "fonte": "https://www.car.blog.br/2026/02/chevrolet-captiva-ev-2026-chega-ao.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 199990,
+    "fonte": "https://www.chevrolet.com.br/eletrico/captiva-ev",
+    "tipo": "coleta"
+   }
+  ],
+  "chevrolet-blazer-ev": [
+   {
+    "mes": "2025-05",
+    "preco": 503190,
+    "fonte": "https://www.car.blog.br/2025/05/chevrolet-blazer-rs-2025-eletrico-preco.html",
+    "tipo": "publicado"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 503190,
+    "fonte": "https://www.chevrolet.com.br/eletrico/blazer-ev",
+    "tipo": "coleta"
+   }
+  ],
+  "suzuki-e-vitara": [
+   {
+    "mes": "2026-07",
+    "preco": 219990,
+    "fonte": "https://www.car.blog.br/2026/07/suzuki-e-vitara-2027-preco-ficha-tecnica-brasil.html",
+    "tipo": "publicado"
+   }
+  ],
+  "omoda-e5": [
+   {
+    "mes": "2025-04",
+    "preco": 209990,
+    "fonte": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "geely-ex2": [
+   {
+    "mes": "2025-11",
+    "preco": 119990,
+    "fonte": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 124600,
+    "fonte": "https://www.geelybrasil.com.br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "hyundai-ioniq-5": [
+   {
+    "mes": "2024-09",
+    "preco": 394900,
+    "fonte": "https://www.car.blog.br/2024/09/hyundai-ioniq-5-preco-r-394900-fotos.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "avatr-11": [
+   {
+    "mes": "2026-03",
+    "preco": 599990,
+    "fonte": "https://www.car.blog.br/2026/03/caoa-changan-avatr-11-2026-preco-parte.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "renault-megane-e-tech": [
+   {
+    "mes": "2023-09",
+    "preco": 279990,
+    "fonte": "https://www.car.blog.br/2023/09/megane-e-tech-100-eletrico-preco-no.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 279990,
+    "fonte": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
+    "tipo": "coleta"
+   }
+  ],
+  "fiat-500e": [
+   {
+    "mes": "2021-08",
+    "preco": 239990,
+    "fonte": "https://www.car.blog.br/2021/08/fiat-500e-2022-eletrico-chega-ao-brasil.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 214990,
+    "fonte": "https://500e.fiat.com.br/monte.html",
+    "tipo": "coleta"
+   }
+  ],
+  "volvo-es90": [
+   {
+    "mes": "2026-08",
+    "preco": 659950,
+    "fonte": "https://www.car.blog.br/2026/08/volvo-es90-2027-preco-fotos-detalhes.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 659950,
+    "fonte": "https://www.volvocars.com/br/cars/es90-electric/",
+    "tipo": "coleta"
+   }
+  ],
+  "mercedes-eqb": [
+   {
+    "mes": "2025-07",
+    "preco": 399990,
+    "fonte": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
+    "tipo": "lançamento"
+   }
+  ],
+  "gac-aion-ut": [
+   {
+    "mes": "2026-06",
+    "preco": 139990,
+    "fonte": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
+    "tipo": "lançamento"
+   }
+  ],
+  "gwm-ora-5": [
+   {
+    "mes": "2026-06",
+    "preco": 159000,
+    "fonte": "https://www.car.blog.br/2026/06/gwm-ora-5-suv-eletrico-preco-fotos.html",
+    "tipo": "lançamento"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 163990,
+    "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora5",
+    "tipo": "coleta"
+   }
+  ],
+  "gwm-ora-03": [
+   {
+    "mes": "2025-04",
+    "preco": 169000,
+    "fonte": "https://www.car.blog.br/2025/04/gwm-ora-03-2026-precos-partem-de-r-169.html",
+    "tipo": "publicado"
+   },
+   {
+    "mes": "2026-10",
+    "preco": 169000,
+    "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
+    "tipo": "coleta"
+   }
+  ],
+  "bmw-ix1": [
+   {
+    "mes": "2026-10",
+    "preco": 485950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
+    "tipo": "coleta"
+   }
+  ],
+  "bmw-ix2": [
+   {
+    "mes": "2026-10",
+    "preco": 495950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-dolphin": [
+   {
+    "mes": "2026-10",
+    "preco": 149990,
+    "fonte": "https://www.byd.com/br/condicoes",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-dolphin-mini": [
+   {
+    "mes": "2026-10",
+    "preco": 118990,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-han": [
+   {
+    "mes": "2026-10",
+    "preco": 559800,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-seal": [
+   {
+    "mes": "2026-10",
+    "preco": 299990,
+    "fonte": "https://www.byd.com/br/condicoes",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-sealion-7": [
+   {
+    "mes": "2026-10",
+    "preco": 339990,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-tan": [
+   {
+    "mes": "2026-10",
+    "preco": 426800,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-yuan-plus": [
+   {
+    "mes": "2026-10",
+    "preco": 269990,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "byd-yuan-pro": [
+   {
+    "mes": "2026-10",
+    "preco": 182990,
+    "fonte": "https://www.byd.com/br/condicoes",
+    "tipo": "coleta"
+   }
+  ],
+  "chevrolet-spark-euv": [
+   {
+    "mes": "2026-10",
+    "preco": 146990,
+    "fonte": "https://www.chevrolet.com.br/eletrico/spark-euv",
+    "tipo": "coleta"
+   }
+  ],
+  "gac-aion-es": [
+   {
+    "mes": "2026-10",
+    "preco": 170990,
+    "fonte": "https://www.gacgroup.com/pt-br/sedan/aion-es",
+    "tipo": "coleta"
+   }
+  ],
+  "gac-aion-v": [
+   {
+    "mes": "2026-10",
+    "preco": 219990,
+    "fonte": "https://www.gacgroup.com/pt-br/suv/aion-v",
+    "tipo": "coleta"
+   }
+  ],
+  "gac-aion-y": [
+   {
+    "mes": "2026-10",
+    "preco": 175990,
+    "fonte": "https://www.gacgroup.com/pt-br/suv/aion-y",
+    "tipo": "coleta"
+   }
+  ],
+  "gac-hyptec-ht": [
+   {
+    "mes": "2026-10",
+    "preco": 314990,
+    "fonte": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
+    "tipo": "coleta"
+   }
+  ],
+  "geely-ex5": [
+   {
+    "mes": "2026-10",
+    "preco": 207800,
+    "fonte": "https://www.geelybrasil.com.br/ofertas",
+    "tipo": "coleta"
+   }
+  ],
+  "mg-mg4": [
+   {
+    "mes": "2026-10",
+    "preco": 184600,
+    "fonte": "https://mgmotoroficial.com.br/oferta/mg4",
+    "tipo": "coleta"
+   }
+  ],
+  "volvo-ec40": [
+   {
+    "mes": "2026-10",
+    "preco": 350950,
+    "fonte": "https://www.volvocars.com/br/cars/ec40-electric/",
+    "tipo": "coleta"
+   }
+  ],
+  "volvo-ex30": [
+   {
+    "mes": "2026-10",
+    "preco": 249950,
+    "fonte": "https://www.volvocars.com/br/cars/ex30-electric/",
+    "tipo": "coleta"
+   }
+  ],
+  "volvo-ex40": [
+   {
+    "mes": "2026-10",
+    "preco": 345950,
+    "fonte": "https://www.volvocars.com/br/cars/ex40-electric/",
+    "tipo": "coleta"
+   }
+  ],
+  "volvo-ex90": [
+   {
+    "mes": "2026-10",
+    "preco": 849950,
+    "fonte": "https://www.volvocars.com/br/cars/ex90-electric/",
+    "tipo": "coleta"
+   }
+  ]
+ }
+}

@@ -8,6 +8,7 @@
  *   dados/ipva-2026.json                     — IPVA por estado (gasolina e elétrico), para a calculadora
  *   dados/seguranca.json                     — nota Latin NCAP / Euro NCAP de cada modelo
  *   dados/garantias.json                     — garantia do veículo e da bateria, por marca
+ *   dados/historico-precos.json              — histórico de preço; o ponto do mês da coleta é gravado aqui
  *
  * Uso: npm run dados
  */
@@ -21,6 +22,7 @@ const fichas = lerJson("dados/fichas.json").fichas;
 const ipva = lerJson("dados/ipva-2026.json");
 const seguranca = lerJson("dados/seguranca.json").seguranca;
 const garantias = lerJson("dados/garantias.json").garantias;
+const historicoDoc = lerJson("dados/historico-precos.json");
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
 
@@ -46,7 +48,7 @@ function chavePreco(p) {
 // As observações da coleta misturam notas internas ("preço 'De'", "conferir") com
 // informações úteis ao leitor ("outras versões a partir de..."). Só as úteis vão ao site.
 function notaPublica(obs) {
-  const internas = /^(preço 'de'.*|a partir de|preço único|à vista|a partir de, à vista|configurador oficial|conferir|preço sugerido, à vista.*|oferta (válida|de) .*)$/i;
+  const internas = /^(preço 'de'.*|a partir de|preço único|à vista|a partir de, à vista|configurador oficial|conferir|preço não encontrado|preço sugerido, à vista.*|oferta (válida|de) .*)$/i;
   return String(obs || "")
     .split(";")
     .map((t) => t.replace(/\s*—\s*conferir$/i, "").trim())
@@ -97,6 +99,9 @@ const notaNcap = (s) => ({
 });
 const garantia = (g) => ({ vehicle: g.veiculo, battery: g.bateria, source: g.fonte, kind: g.tipo, note: g.nota || "" });
 
+// Data da coleta de preços (dia/mês/ano). Mude junto com o arquivo de preços.
+const DATA_INFO_COLETA = "05/10/2026";
+
 const VEHICLES = [...porId.values()].map((v) => {
   const ps = precos.filter((p) => p.preco && v.chaves.has(chavePreco(p)));
   const menor = ps.sort((a, b) => a.preco - b.preco)[0];
@@ -119,13 +124,31 @@ const VEHICLES = [...porId.values()].map((v) => {
   };
 }).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
 
+// Histórico de preços: grava (ou atualiza) o ponto do mês desta coleta em
+// dados/historico-precos.json e anexa a série ordenada a cada modelo.
+{
+  const [, mes, ano] = DATA_INFO_COLETA.split("/");
+  const chave = `${ano}-${mes}`;
+  for (const v of VEHICLES) {
+    const pontos = (historicoDoc.historico[v.id] ||= []);
+    const i = pontos.findIndex((p) => p.tipo === "coleta" && p.mes === chave);
+    if (i >= 0) pontos.splice(i, 1);
+    // Só preço oficial entra na coleta mensal: o da imprensa pode ser de uma matéria antiga.
+    if (v.price && v.priceKind === "oficial") pontos.push({ mes: chave, preco: v.price, fonte: v.priceSource, tipo: "coleta" });
+    pontos.sort((a, b) => a.mes.localeCompare(b.mes));
+    if (!pontos.length) delete historicoDoc.historico[v.id];
+    else v.priceHistory = pontos.map((p) => ({ month: p.mes, price: p.preco, source: p.fonte, kind: p.tipo }));
+  }
+  fs.writeFileSync("dados/historico-precos.json", JSON.stringify(historicoDoc, null, 1) + "\n");
+}
+
 const DATA_INFO = {
   inmetro: {
     titulo: "Tabela PBE Veicular 2026 (18º ciclo)",
     atualizacao: "14/08/2026",
     url: "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular",
   },
-  precos: { coleta: "05/10/2026" },
+  precos: { coleta: DATA_INFO_COLETA },
   fichas: { coleta: "08/10/2026" },
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
   seguranca: { coleta: "09/10/2026" },
