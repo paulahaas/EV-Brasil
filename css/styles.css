@@ -703,7 +703,8 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
   .filters .spacer { display: none; }
   .search { flex: 1 1 100%; }
   .tools, .rank-cols { grid-template-columns: 1fr; }
-  .match { grid-template-columns: 110px 1fr; gap: 12px; }
+  .match { grid-template-columns: 1fr; gap: 12px; }
+  .match-media { aspect-ratio: 16 / 7; }
   /* Comparador no celular: as 3 colunas cabem na tela e o nome de cada linha
      vai em cima dos valores, ocupando a largura toda. */
   .compare { min-width: 0; }

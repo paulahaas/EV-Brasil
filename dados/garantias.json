@@ -1,12 +1,17 @@
 {
- "_leia": "Garantia por marca (chave = marca como em js/catalogo.js): veículo e bateria de alta tensão, uso particular, no Brasil. null = não encontrado em fonte confiável. Marca ausente (BMW, Fiat, Omoda, Caoa Changan) = sem dado confirmado. Coleta: outubro de 2026.",
+ "_leia": "Garantia por marca (chave = marca como em js/catalogo.js): veículo e bateria de alta tensão, uso particular, no Brasil. null = não encontrado em fonte confiável. Marca ausente (BMW, Fiat, Omoda, Caoa Changan) = sem dado confirmado. Coleta: outubro de 2026. 'comercial' = garantia para táxi e aplicativo, só das marcas que publicam essa regra.",
  "garantias": {
   "BYD": {
    "veiculo": "6 anos ou 200 mil km",
    "bateria": "8 anos ou 200 mil km",
    "fonte": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
    "tipo": "imprensa",
-   "nota": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+   "nota": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+   "comercial": {
+    "veiculo": "6 anos ou 100 mil km",
+    "bateria": "8 anos ou 200 mil km",
+    "fonte": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+   }
   },
   "GWM": {
    "veiculo": "5 anos, sem limite de km",
@@ -26,7 +31,12 @@
    "bateria": "8 anos ou 200 mil km",
    "fonte": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
    "tipo": "oficial",
-   "nota": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+   "nota": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+   "comercial": {
+    "veiculo": "1 ano ou 150 mil km",
+    "bateria": "5 anos ou 500 mil km",
+    "fonte": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+   }
   },
   "MG": {
    "veiculo": "7 anos ou 150 mil km",
@@ -77,7 +87,12 @@
    "veiculo": "5 anos, sem limite de km",
    "bateria": "8 anos ou 160 mil km",
    "fonte": "https://www.hyundai.com.br/universo-hyundai/dicas/bateria-carro-eletrico.html",
-   "tipo": "oficial"
+   "tipo": "oficial",
+   "comercial": {
+    "veiculo": "5 anos ou 100 mil km",
+    "bateria": null,
+    "fonte": "https://www.hyundai.com.br/manutencao.html"
+   }
   },
   "Chevrolet": {
    "veiculo": null,
@@ -103,7 +118,12 @@
    "bateria": "5 anos ou 100 mil km",
    "fonte": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
    "tipo": "oficial",
-   "nota": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+   "nota": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo",
+   "comercial": {
+    "veiculo": null,
+    "bateria": "3 anos ou 200 mil km",
+    "fonte": "https://www.jacmotors.com.br/carros/"
+   }
   },
   "Mercedes-Benz": {
    "veiculo": "3 anos",

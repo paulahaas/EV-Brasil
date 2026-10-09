@@ -100,7 +100,10 @@ const notaNcap = (s) => ({
   program: s.programa, stars: s.estrelas, year: s.ano, source: s.fonte,
   testedAs: s.testado_como || "", note: s.nota || "",
 });
-const garantia = (g) => ({ vehicle: g.veiculo, battery: g.bateria, source: g.fonte, kind: g.tipo, note: g.nota || "" });
+const garantia = (g) => ({
+  vehicle: g.veiculo, battery: g.bateria, source: g.fonte, kind: g.tipo, note: g.nota || "",
+  ...(g.comercial ? { commercial: { vehicle: g.comercial.veiculo, battery: g.comercial.bateria, source: g.comercial.fonte } } : {}),
+});
 
 // Data da coleta de preços (dia/mês/ano). Mude junto com o arquivo de preços.
 const DATA_INFO_COLETA = "05/10/2026";
