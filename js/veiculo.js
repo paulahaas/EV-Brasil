@@ -133,6 +133,7 @@
         ${g.note ? `<p class="fine-print">${escapeHtml(g.note)}.</p>` : ""}
         <p class="fine-print">Garantia da ${escapeHtml(v.brand)} para uso particular. Fonte: <a class="text-link" href="${g.source}" target="_blank" rel="noopener">${host2(g.source)}</a>${g.kind === "imprensa" ? " (imprensa)" : ""}. Confirme no termo de garantia do carro.</p>`
     : `<p class="fine-print">Não encontramos a garantia da ${escapeHtml(v.brand)} em fonte confiável. Pergunte na concessionária.</p>`;
+  const viajar = `<p class="fine-print"><a class="text-link" href="viagem.html?modelo=${encodeURIComponent(v.id)}">Dá para viajar com ele? Veja quantas paradas uma viagem precisa →</a></p>`;
   const segGarantia = `
       <div class="spec-section">
         <h2>Segurança e garantia</h2>
@@ -185,6 +186,7 @@
           <p class="fine-print">Medição do Inmetro (${DATA_INFO.inmetro.titulo}, atualização de ${DATA_INFO.inmetro.atualizacao}), igual para todas as marcas. *Carregando em casa a R$ ${formatNum(TARIFA, 2)} por kWh.</p>
         </div>
         ${ficha}
+        ${viajar}
         ${segGarantia}
         ${usado}
         </div>

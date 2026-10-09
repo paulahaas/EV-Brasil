@@ -4635,3 +4635,123 @@ const IPVA = {
     "nota": "A isenção de Tocantins vale só até o fim de 2026; a partir de 2027, usamos a alíquota normal"
   }
 };
+
+const NOVIDADES = {
+  "atualizado": "09/10/2026",
+  "chegando": [
+    {
+      "marca": "Baic",
+      "modelo": "Arcfox T1",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Cadillac",
+      "modelo": "Lyriq",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Cadillac",
+      "modelo": "Optiq",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Cadillac",
+      "modelo": "Vistiq",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Denza",
+      "modelo": "B3",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Denza",
+      "modelo": "D9",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Denza",
+      "modelo": "Z",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "DFM",
+      "modelo": "Box",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "DFM",
+      "modelo": "Vigo",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "Ioniq 9",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Kia",
+      "modelo": "EV3",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.mobiauto.com.br/revista/18-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/11183"
+    },
+    {
+      "marca": "Leapmotor",
+      "modelo": "C16",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Lotus",
+      "modelo": "Eletre",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Lotus",
+      "modelo": "Emeya",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "MG",
+      "modelo": "IM6",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Omoda",
+      "modelo": "4",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.mobiauto.com.br/revista/18-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/11183"
+    },
+    {
+      "marca": "Volvo",
+      "modelo": "EX60",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Zeekr",
+      "modelo": "007 GT",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    },
+    {
+      "marca": "Zeekr",
+      "modelo": "009",
+      "previsao": "2º semestre de 2026",
+      "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
+    }
+  ]
+};

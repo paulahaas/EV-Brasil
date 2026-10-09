@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dá para viajar de carro elétrico? Planeje as paradas — EV Brasil</title>
+  <meta name="description" content="Escolha o carro elétrico e a distância: veja quantas paradas para recarga a viagem precisa, quanto tempo cada uma leva e quanto custa a energia na estrada.">
+  <link rel="canonical" href="https://ev-brasil.web.app/viagem.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dá para viajar de carro elétrico?">
+  <meta property="og:description" content="Escolha o carro elétrico e a distância: veja quantas paradas para recarga a viagem precisa, quanto tempo cada uma leva e quanto custa a energia na estrada.">
+  <meta property="og:url" content="https://ev-brasil.web.app/viagem.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Planejador de viagem</span>
+        <h1 class="section-title">Dá para viajar?</h1>
+        <p class="section-sub">Escolha o carro e a distância: veja quantas paradas para recarga a viagem precisa e quanto tempo cada uma leva.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container">
+        <div class="sim">
+          <form class="sim-form" id="tripForm">
+            <div class="field">
+              <label for="tripModelo">Carro</label>
+              <select id="tripModelo"></select>
+            </div>
+            <div class="field">
+              <label for="tripVersao">Versão</label>
+              <select id="tripVersao"></select>
+            </div>
+            <div class="field">
+              <label for="tripRota">Trajeto</label>
+              <select id="tripRota"></select>
+            </div>
+            <div class="field">
+              <label for="tripKm">Distância: <strong id="tripKmValor"></strong></label>
+              <input type="range" id="tripKm" min="50" max="1500" step="10">
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="tripCarga">Sai com a bateria em (%)</label>
+                <input type="number" id="tripCarga" min="20" max="100" step="5" inputmode="numeric">
+              </div>
+              <div class="field">
+                <label for="tripEstrada">Autonomia na estrada (% do Inmetro)</label>
+                <input type="number" id="tripEstrada" min="50" max="120" step="5" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="tripPosto">Carregador nas paradas</label>
+                <select id="tripPosto">
+                  <option value="50">Rápido, 50 kW</option>
+                  <option value="100">Rápido, 100 kW</option>
+                  <option value="150">Ultrarrápido, 150 kW</option>
+                  <option value="350">Ultrarrápido, 350 kW</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="tripPreco">Energia no eletroposto (R$ por kWh)</label>
+                <input type="number" id="tripPreco" min="0" step="0.1" inputmode="decimal">
+              </div>
+            </div>
+            <p class="fine-print">Na estrada, a 110–120 km/h e com ar-condicionado, o carro roda menos que o número do Inmetro. Ajuste a porcentagem ao seu jeito de dirigir. Veja o guia <a class="text-link" href="guia-autonomia-real.html">Autonomia real</a>.</p>
+          </form>
+
+          <div class="sim-result" aria-live="polite">
+            <div class="sim-big" id="tripParadas"></div>
+            <div class="sim-label" id="tripRotulo"></div>
+
+            <div class="trip-map" id="tripMapa" aria-hidden="true"></div>
+
+            <div class="specbar sim-stats">
+              <div class="spec"><span class="v" id="tripTempoParada"></span><span class="k">por parada</span></div>
+              <div class="spec"><span class="v" id="tripTempoTotal"></span><span class="k">recarregando</span></div>
+              <div class="spec"><span class="v" id="tripCusto"></span><span class="k">em energia</span></div>
+              <div class="spec"><span class="v" id="tripChegada"></span><span class="k">bateria ao chegar</span></div>
+            </div>
+
+            <p class="fine-print" id="tripNotas"></p>
+            <a class="btn btn-primary" id="tripLink" href="veiculos.html">Ver este modelo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/viagem.js"></script>
+</body>
+</html>

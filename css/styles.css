@@ -407,6 +407,14 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .sim-stats .spec .v { font-size: 1.15rem; }
 .sim-result .form-hint { display: block; }
 .sim-result .btn { margin-top: 20px; }
+/* Planejador de viagem: linha do trajeto com saída, paradas e chegada */
+.trip-map { position: relative; height: 70px; margin: 26px 8px 18px; }
+.trip-line { position: absolute; left: 0; right: 0; top: 14px; height: 4px; border-radius: 4px; background: var(--bg-elev-2); }
+.trip-dot { position: absolute; top: 8px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; border: 3px solid var(--bg-elev); }
+.trip-start, .trip-end { background: var(--text-dim); }
+.trip-stop { background: #fbbf24; }
+.trip-stop em { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-style: normal; font-size: 0.75rem; color: var(--text-dim); white-space: nowrap; }
+.trip-ends { position: absolute; left: 0; right: 0; top: 46px; display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-mute); }
 .tco-table { margin-bottom: 14px; }
 .tco-table th { font-size: 0.82rem; font-weight: 500; color: var(--text-mute); text-align: right; padding: 0 4px 8px; }
 .tco-table th:first-child, .tco-table td:first-child { text-align: left; }
@@ -702,3 +710,13 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 }
 .tco-uf-nota { margin-top: 8px; }
 .spec-sub.hist-sub { margin-top: 28px; }
+/* Lançamentos */
+.section-title-sm { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.novo-item { display: flex; flex-direction: column; gap: 8px; }
+.novo-data { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-2); }
+.chegando { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 22px 0 10px; }
+.chegando-item { display: flex; flex-direction: column; gap: 2px; background: var(--bg-elev); border-radius: var(--radius); padding: 16px 18px; transition: background 0.2s; }
+.chegando-item:hover { background: var(--bg-elev-2); }
+.chegando-marca { font-size: 0.8rem; color: var(--text-mute); }
+.chegando-item strong { font-size: 1.05rem; }
+.chegando-prev { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }

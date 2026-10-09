@@ -24,6 +24,7 @@ const ipva = lerJson("dados/ipva-2026.json");
 const seguranca = lerJson("dados/seguranca.json").seguranca;
 const garantias = lerJson("dados/garantias.json").garantias;
 const historicoDoc = lerJson("dados/historico-precos.json");
+const novidades = lerJson("dados/novidades.json");
 const fipe = fs.existsSync("dados/fipe.json") ? lerJson("dados/fipe.json") : { modelos: {} };
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
@@ -180,13 +181,15 @@ const DATA_INFO = ${JSON.stringify(DATA_INFO, null, 2)};
 const VEHICLES = ${JSON.stringify(VEHICLES, null, 2)};
 
 const IPVA = ${JSON.stringify(ipva.estados, null, 2)};
+
+const NOVIDADES = ${JSON.stringify({ atualizado: novidades.atualizado, chegando: novidades.chegando }, null, 2)};
 `;
 fs.writeFileSync("js/catalogo.js", js);
 
 // sitemap.xml: páginas fixas + uma por modelo.
 const SITE = "https://ev-brasil.web.app";
 const paginas = ["/", "/veiculos.html", "/encontre.html", "/rankings.html", "/comparar.html",
-  "/calculadora.html", "/metodologia.html", "/guias.html", "/guia-carregar-em-casa.html",
+  "/calculadora.html", "/viagem.html", "/novidades.html", "/metodologia.html", "/guias.html", "/guia-carregar-em-casa.html",
   "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`)];
 const urls = paginas.map((p) => `  <url><loc>${SITE}${p}</loc></url>`).join("\n");
 fs.writeFileSync("sitemap.xml",
