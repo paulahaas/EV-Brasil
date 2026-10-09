@@ -400,6 +400,14 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .sim-stats .spec .v { font-size: 1.15rem; }
 .sim-result .form-hint { display: block; }
 .sim-result .btn { margin-top: 20px; }
+/* Planejador de viagem: linha do trajeto com saída, paradas e chegada */
+.trip-map { position: relative; height: 70px; margin: 26px 8px 18px; }
+.trip-line { position: absolute; left: 0; right: 0; top: 14px; height: 4px; border-radius: 4px; background: var(--bg-elev-2); }
+.trip-dot { position: absolute; top: 8px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; border: 3px solid var(--bg-elev); }
+.trip-start, .trip-end { background: var(--text-dim); }
+.trip-stop { background: #fbbf24; }
+.trip-stop em { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-style: normal; font-size: 0.75rem; color: var(--text-dim); white-space: nowrap; }
+.trip-ends { position: absolute; left: 0; right: 0; top: 46px; display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-mute); }
 .tco-table { margin-bottom: 14px; }
 .tco-table th { font-size: 0.82rem; font-weight: 500; color: var(--text-mute); text-align: right; padding: 0 4px 8px; }
 .tco-table th:first-child, .tco-table td:first-child { text-align: left; }
