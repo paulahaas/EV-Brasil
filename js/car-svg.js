@@ -109,12 +109,6 @@ function photoCredit(vehicle) {
   return `<p class="photo-credit">Foto: <a href="${p.page}" target="_blank" rel="noopener">${escapeHtml(p.author)}</a> · ${escapeHtml(p.license)}</p>`;
 }
 
-/** Foto de fundo de tela cheia — usada só no painel de abertura da home. */
-function panelBackground(vehicle) {
-  if (!hasPhoto(vehicle)) return "";
-  return `<img class="panel-bg" ${fotoAttrs(vehicle, "tela")} alt="" fetchpriority="high">${photoCredit(vehicle)}`;
-}
-
 /** Miolo dos painéis de modelo: foto grande emoldurada ou silhueta. */
 function panelVisual(vehicle) {
   return carImage(vehicle, hasPhoto(vehicle));

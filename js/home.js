@@ -4,23 +4,7 @@
 (function () {
   mountChrome("home");
 
-  // Abertura: foto de fundo do BYD Seal (a foto de salão, que funciona bem em tela cheia).
-  const heroCar = getVehicleById("byd-seal") || VEHICLES.find(hasPhoto);
-  const heroPanel = document.getElementById("heroPanel");
-  const heroVisual = document.getElementById("heroVisual");
-  if (heroPanel && heroCar) {
-    heroPanel.style.setProperty("--glow", heroCar.color);
-    if (hasPhoto(heroCar)) {
-      heroPanel.classList.add("has-photo");
-      heroPanel.insertAdjacentHTML("afterbegin", panelBackground(heroCar));
-    } else if (heroVisual) {
-      heroVisual.innerHTML = carImage(heroCar);
-    }
-  }
-  if (heroVisual && heroCar) {
-    heroVisual.href = modelUrl(heroCar);
-    heroVisual.setAttribute("aria-label", `Ver ${heroCar.brand} ${heroCar.model}`);
-  }
+  // Abertura: só texto; o botão mostra quantos carros há no catálogo.
   const heroAll = document.getElementById("heroAll");
   if (heroAll) heroAll.textContent = `Ver os ${VEHICLES.length} carros`;
 

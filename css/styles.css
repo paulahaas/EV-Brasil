@@ -602,6 +602,24 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .meter-small { color: var(--text-mute) !important; }
 .prose h3 { font-size: 1.05rem; margin: 22px 0 8px; }
 
+/* ---------------- Abertura da home (só texto) ---------------- */
+body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
+.hero-text { position: relative; overflow: hidden; padding: calc(var(--header-h) + clamp(40px, 9vw, 120px)) 0 clamp(40px, 7vw, 96px); }
+.hero-text::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(ellipse 55% 60% at 85% 20%, rgba(47, 107, 255, 0.22), transparent 70%),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 48px 48px;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+.hero-title { font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1.02; margin: 14px 0 18px; }
+.hero-title span { color: var(--accent-2); }
+.hero-sub { color: var(--text-dim); font-size: clamp(1rem, 1.5vw, 1.2rem); max-width: 36rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-actions .btn { padding: 14px 24px; }
+@media (max-width: 640px) { .hero-actions .btn { flex: 1 1 100%; text-align: center; } }
+
 /* ---------------- Rodapé ---------------- */
 .footer { border-top: 1px solid var(--stroke); padding: 60px 0 40px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 44px; }
