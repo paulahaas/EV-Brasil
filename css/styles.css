@@ -1,6 +1,7 @@
 /* =================================================================
    EV Brasil — Folha de estilo principal
-   Tema: modo noturno, cinza escuro + azul escuro.
+   Tema: azul-noite. Fundo marinho profundo com um brilho azul que muda
+   devagar (body::before), títulos finos em Sora, botões brancos.
    Layout inspirado em Tesla (painéis de tela cheia, cabeçalho mínimo)
    e Nike (títulos pesados, cards sem moldura, filtros em pílula).
    -----------------------------------------------------------------
@@ -8,23 +9,25 @@
    ================================================================= */
 
 :root {
-  --bg: #0a0e17;            /* fundo principal (quase preto azulado) */
-  --bg-elev: #10151f;       /* superfícies elevadas (cards) */
-  --bg-elev-2: #161c28;     /* superfícies mais claras */
-  --stroke: #232b3a;        /* bordas sutis */
-  --text: #eef2f8;          /* texto principal */
-  --text-dim: #9aa6b8;      /* texto secundário */
-  --text-mute: #66718a;     /* texto terciário */
-  --accent: #2f6bff;        /* azul de destaque */
-  --accent-2: #4f8bff;      /* azul claro */
-  --accent-soft: rgba(47, 107, 255, 0.14);
+  --bg: #061024;            /* fundo principal (azul-marinho profundo) */
+  --bg-elev: #0c1a33;       /* superfícies elevadas (cards) */
+  --bg-elev-2: #122442;     /* superfícies mais claras */
+  --bg-glass: rgba(12, 26, 51, 0.55); /* superfícies que deixam ver o brilho do fundo */
+  --stroke: #1c2f52;        /* bordas sutis */
+  --text: #f4f7fc;          /* texto principal */
+  --text-dim: #a9b8d3;      /* texto secundário */
+  --text-mute: #8fa0bf;     /* texto terciário (contraste de pelo menos 4,5:1) */
+  --accent: #2f6bff;        /* azul de destaque (barras, foco) */
+  --accent-2: #9cc0ff;      /* azul-gelo (links, destaques em texto) */
+  --accent-soft: rgba(156, 192, 255, 0.12);
   --danger: #fca5a5;
   --danger-soft: rgba(239, 68, 68, 0.12);
-  --radius: 14px;
-  --radius-sm: 8px;
+  --radius: 16px;
+  --radius-sm: 10px;
   --maxw: 1320px;
   --header-h: 60px;
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --font-display: "Sora", "Inter", -apple-system, "Segoe UI", sans-serif;
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -33,7 +36,7 @@
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
 /* Barras de rolagem escuras, no tom do site (tabelas, menus e a própria página). */
-* { scrollbar-color: #3a4558 transparent; scrollbar-width: thin; }
+* { scrollbar-color: #24395f transparent; scrollbar-width: thin; }
 
 body {
   font-family: var(--font);
@@ -44,6 +47,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Brilho do fundo: manchas azuis desfocadas que se deslocam e mudam de tom devagar. */
+body::before {
+  content: ""; position: fixed; inset: -20%; z-index: -3; pointer-events: none;
+  background:
+    radial-gradient(40% 45% at 20% 25%, rgba(47, 107, 255, 0.5), transparent 70%),
+    radial-gradient(38% 42% at 80% 20%, rgba(40, 140, 255, 0.38), transparent 70%),
+    radial-gradient(45% 50% at 65% 85%, rgba(88, 80, 236, 0.4), transparent 70%);
+  filter: blur(40px);
+  animation: ceu 24s ease-in-out infinite alternate;
+}
+@keyframes ceu {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg);     filter: blur(40px) hue-rotate(0deg); }
+  33%  { transform: translate3d(4%, -3%, 0) rotate(8deg);  filter: blur(40px) hue-rotate(-18deg); }
+  66%  { transform: translate3d(-3%, 4%, 0) rotate(-6deg); filter: blur(40px) hue-rotate(28deg); }
+  100% { transform: translate3d(2%, 2%, 0) rotate(4deg);   filter: blur(40px) hue-rotate(12deg); }
+}
+
 a { color: inherit; text-decoration: none; }
 img, svg { display: block; max-width: 100%; }
 [hidden] { display: none !important; }
@@ -51,7 +71,8 @@ img, svg { display: block; max-width: 100%; }
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
 /* ---------------- Tipografia ---------------- */
-h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.03em; line-height: 1.1; }
+h1, h2 { font-weight: 300; }
 
 .eyebrow {
   display: block;
@@ -62,21 +83,19 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   color: var(--accent-2);
 }
 
-/* Título de impacto: caixa alta, pesado e apertado. */
+/* Título de impacto: grande, fino e apertado. */
 .display {
   font-size: clamp(2.6rem, 8vw, 6.5rem);
-  font-weight: 800;
-  text-transform: uppercase;
+  font-weight: 300;
   letter-spacing: -0.04em;
   line-height: 0.95;
 }
 
 .section-title {
-  font-size: clamp(1.7rem, 3.4vw, 2.6rem);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.03em;
-  line-height: 1;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
 }
 .eyebrow + .section-title { margin-top: 10px; }
 .section-sub { color: var(--text-dim); max-width: 620px; margin-top: 14px; font-size: 1.05rem; }
@@ -93,10 +112,10 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 }
 .btn:active { transform: scale(0.97); }
 .btn:disabled { opacity: 0.6; cursor: wait; }
-.btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-2); }
-.btn-ghost { background: rgba(255, 255, 255, 0.08); color: var(--text); backdrop-filter: blur(8px); }
-.btn-ghost:hover { background: rgba(255, 255, 255, 0.14); }
+.btn-primary { background: #fff; color: var(--bg); }
+.btn-primary:hover { background: #dbe7ff; }
+.btn-ghost { background: rgba(255, 255, 255, 0.06); color: var(--text); border-color: rgba(255, 255, 255, 0.22); backdrop-filter: blur(8px); }
+.btn-ghost:hover { background: rgba(255, 255, 255, 0.12); }
 .btn-light { background: var(--text); color: var(--bg); border-radius: 100px; }
 .btn-light:hover { background: #fff; }
 .btn-danger { background: var(--danger-soft); color: var(--danger); border-color: rgba(239, 68, 68, 0.35); }
@@ -109,8 +128,8 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 /* ---------------- Cabeçalho / navegação ---------------- */
 .header {
   position: sticky; top: 0; z-index: 100; height: var(--header-h);
-  backdrop-filter: saturate(180%) blur(18px);
-  background: rgba(10, 14, 23, 0.82);
+  backdrop-filter: blur(18px);
+  background: rgba(6, 16, 36, 0.86);
   border-bottom: 1px solid var(--stroke);
   transition: background 0.3s ease, border-color 0.3s ease;
 }
@@ -158,9 +177,7 @@ body.home .header:not(.is-scrolled):not(.open) {
 }
 .panel::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    radial-gradient(ellipse 58% 34% at 50% 66%, color-mix(in srgb, var(--glow, var(--accent)) 30%, transparent), transparent 72%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-elev) 58%, var(--bg) 100%);
+  background: radial-gradient(ellipse 58% 34% at 50% 66%, color-mix(in srgb, var(--glow, var(--accent)) 14%, transparent), transparent 72%);
 }
 .panel-head { max-width: 900px; }
 
@@ -191,7 +208,7 @@ body.home .header:not(.is-scrolled):not(.open) {
   border-radius: var(--radius); box-shadow: var(--shadow);
 }
 a.panel-visual:hover .car-photo { filter: brightness(1.05); }
-.panel-title { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 600; letter-spacing: -0.03em; margin-top: 10px; }
+.panel-title { font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 300; letter-spacing: -0.03em; margin-top: 10px; }
 .panel-hero .display { margin-top: 14px; }
 .panel-sub { color: var(--text-dim); font-size: clamp(1rem, 1.6vw, 1.2rem); margin-top: 10px; }
 .panel-visual { align-self: center; display: block; width: min(1000px, 100%); }
@@ -219,36 +236,30 @@ section { padding: clamp(64px, 9vw, 110px) 0; }
 /* ---------------- Blocos de categoria (home) ---------------- */
 .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .tile {
-  position: relative; isolation: isolate; overflow: hidden;
   display: flex; flex-direction: column; justify-content: space-between;
-  min-height: clamp(340px, 38vw, 480px); padding: 28px;
-  border-radius: var(--radius); background: var(--bg-elev);
+  min-height: clamp(300px, 30vw, 400px); padding: 28px;
+  border-radius: var(--radius); border: 1px solid rgba(156, 192, 255, 0.14);
+  background: linear-gradient(180deg, rgba(12, 26, 51, 0.35), rgba(12, 26, 51, 0.7));
+  transition: border-color 0.3s ease;
 }
-.tile::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background: radial-gradient(ellipse 80% 50% at 50% 46%, color-mix(in srgb, var(--glow) 24%, transparent), transparent 72%);
-  transition: opacity 0.3s ease; opacity: 0.8;
-}
-.tile:hover::before { opacity: 1; }
-.tile-visual { margin: auto 0; }
-.tile-bg { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-.tile.has-photo::before { opacity: 1; background: linear-gradient(180deg, rgba(10, 14, 23, 0) 30%, rgba(10, 14, 23, 0.92) 100%); }
-.tile.has-photo:hover .tile-bg { transform: scale(1.04); }
-.tile.has-photo { min-height: 0; aspect-ratio: 4 / 3; }
-.tile-visual .car-svg { width: 100%; transition: transform 0.5s ease; }
-.tile:hover .car-svg { transform: scale(1.05); }
+.tile:hover { border-color: rgba(156, 192, 255, 0.4); }
+/* Silhueta do tipo de carro, só em linhas (desenho em home.js). */
+.tile-line { width: 100%; margin: 28px auto 0; overflow: visible; }
+.tile-line path, .tile-line circle { fill: none; stroke: #dbe7ff; stroke-width: 1.4; stroke-linejoin: round; transition: stroke 0.3s ease, filter 0.3s ease; }
+.tile-line .vid { stroke: rgba(156, 192, 255, 0.55); stroke-width: 1; }
+.tile-line .chao { stroke: rgba(156, 192, 255, 0.25); stroke-width: 1; }
+.tile:hover .tile-line path:first-child { stroke: #fff; filter: drop-shadow(0 0 6px rgba(120, 170, 255, 0.7)); }
 .tile-body { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .tile-count { color: var(--text-dim); font-size: 0.85rem; }
-.tile.has-photo .tile-count { color: rgba(238, 242, 248, 0.9); }
-.tile.has-photo .tile-body { text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
-.tile-title { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; text-transform: uppercase; letter-spacing: -0.03em; margin-bottom: 12px; }
+.tile-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); font-weight: 300; letter-spacing: -0.04em; margin-bottom: 12px; }
 
 /* ---------------- Faixa de métricas ---------------- */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--stroke); border-bottom: 1px solid var(--stroke); }
 .stat { text-align: center; padding: clamp(24px, 4vw, 44px) 12px; }
 .stat + .stat { border-left: 1px solid var(--stroke); }
-.stat .num { font-size: clamp(1.8rem, 4.5vw, 3.2rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
-.stat .lbl { color: var(--text-mute); font-size: 0.78rem; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
+.stat { background: var(--bg-glass); }
+.stat .num { font-family: var(--font-display); font-size: clamp(1.8rem, 4.5vw, 3.2rem); font-weight: 300; letter-spacing: -0.04em; line-height: 1; }
+.stat .lbl { color: var(--accent-2); font-size: 0.78rem; margin-top: 10px; text-transform: uppercase; letter-spacing: 0.1em; }
 
 /* ---------------- Grade de veículos ---------------- */
 /* Cards sem moldura: o carro num bloco, o texto solto embaixo. */
@@ -257,7 +268,7 @@ section { padding: clamp(64px, 9vw, 110px) 0; }
 .card-media {
   position: relative; isolation: isolate; overflow: hidden;
   display: grid; place-items: center; aspect-ratio: 4 / 3; padding: 24px;
-  border-radius: var(--radius); background: var(--bg-elev);
+  border-radius: var(--radius); background: var(--bg-glass);
 }
 .card-media::before {
   content: ""; position: absolute; inset: 0; z-index: -1;
@@ -427,7 +438,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 
 /* ---------------- Faixa de ponta a ponta (home) ---------------- */
 .band {
-  text-align: center; background: var(--bg-elev);
+  text-align: center; background: var(--bg-glass);
   border-top: 1px solid var(--stroke); border-bottom: 1px solid var(--stroke);
 }
 .band .display { font-size: clamp(2rem, 6vw, 4.5rem); margin-top: 14px; }
@@ -564,7 +575,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 /* Cores dos grupos validadas para o fundo escuro (contraste e daltonismo). */
 .viz {
   --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70;
-  background: var(--bg-elev); border-radius: var(--radius); padding: clamp(16px, 3vw, 28px);
+  background: var(--bg-glass); border-radius: var(--radius); padding: clamp(16px, 3vw, 28px);
 }
 .viz-legend { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
 .viz-key {
@@ -576,7 +587,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .viz-count { color: var(--text-mute); font-variant-numeric: tabular-nums; }
 .viz-stage { position: relative; }
 .viz-plot svg { display: block; touch-action: manipulation; }
-.viz-grid { stroke: #1d2431; stroke-width: 1; }
+.viz-grid { stroke: #17294a; stroke-width: 1; }
 .viz-tick { fill: var(--text-mute); font-size: 11px; font-variant-numeric: tabular-nums; }
 .viz-axis { fill: var(--text-mute); font-size: 11px; }
 .viz-label { fill: var(--text-dim); font-size: 12px; font-weight: 500; pointer-events: none; }
@@ -600,7 +611,7 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .card-meter { margin-top: 6px; }
 .meter { display: inline-flex; align-items: center; gap: 8px; font-size: 0.8rem; color: var(--text-dim); }
 .meter-bars { display: inline-flex; gap: 2px; }
-.meter-bars i { width: 6px; height: 12px; border-radius: 2px; background: var(--bg-elev-2); }
+.meter-bars i { width: 6px; height: 12px; border-radius: 2px; background: rgba(156, 192, 255, 0.18); }
 .meter-bars i.on { background: var(--accent-2); }
 .meter-small { color: var(--text-mute) !important; }
 .prose h3 { font-size: 1.05rem; margin: 22px 0 8px; }
@@ -608,16 +619,8 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 /* ---------------- Abertura da home (só texto) ---------------- */
 body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
 .hero-text { position: relative; overflow: hidden; padding: calc(var(--header-h) + clamp(40px, 9vw, 120px)) 0 clamp(40px, 7vw, 96px); }
-.hero-text::before {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    radial-gradient(ellipse 55% 60% at 85% 20%, rgba(47, 107, 255, 0.22), transparent 70%),
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 48px 48px,
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) 0 0 / 48px 48px;
-  mask-image: linear-gradient(to bottom, #000 55%, transparent);
-}
-.hero-title { font-size: clamp(2.3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1.02; margin: 14px 0 18px; }
-.hero-title span { color: var(--accent-2); }
+.hero-title { font-size: clamp(2.6rem, 6.8vw, 5.8rem); font-weight: 300; letter-spacing: -0.045em; line-height: 1.02; margin: 14px 0 18px; }
+.hero-title span { color: var(--accent-2); font-weight: 400; }
 .hero-sub { color: var(--text-dim); font-size: clamp(1rem, 1.5vw, 1.2rem); max-width: 36rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .hero-actions .btn { padding: 14px 24px; }
@@ -654,7 +657,7 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
   }
 
   .tiles { grid-template-columns: 1fr; }
-  .tile { min-height: 320px; }
+  .tile { min-height: 0; gap: 24px; }
   .features { grid-template-columns: 1fr 1fr; }
   .detail-cols { grid-template-columns: 1fr; }
   .sim { grid-template-columns: 1fr; }
@@ -743,3 +746,6 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
 .chegando-item strong { font-size: 1.05rem; }
 .chegando-prev { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
 .fipe-table thead th:first-child { text-align: left; }
+
+/* Quem pede menos movimento vê o brilho do fundo parado. */
+@media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
