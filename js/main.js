@@ -73,6 +73,7 @@ function renderFooter() {
           <h4>Pesquisar</h4>
           <a href="encontre.html">Qual elétrico é para mim?</a>
           <a href="veiculos.html">Todos os carros</a>
+          <a href="eletricos/">Listas prontas</a>
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
           <a href="calculadora.html">Calculadora de economia</a>
