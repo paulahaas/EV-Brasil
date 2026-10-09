@@ -305,6 +305,16 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
   cursor: pointer; transition: all 0.18s ease;
 }
 .chip:hover { color: var(--text); border-color: var(--text-mute); }
+a.chip { display: inline-flex; align-items: center; gap: 6px; }
+
+/* ---------------- Listas para buscas (eletricos/) ---------------- */
+.lista-intro { max-width: 760px; margin-top: 0; }
+.lista-grid { margin-top: clamp(28px, 4vw, 44px); }
+.lista-fontes { margin-top: 40px; }
+.lista-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.lista-outras { font-size: 1.4rem; margin: 32px 0 16px; }
+.lista-chips { margin-bottom: 32px; }
+.lista-n { color: var(--text-mute); font-size: 0.78rem; }
 .chip.active { background: var(--text); border-color: var(--text); color: var(--bg); }
 .filters .spacer { flex: 1; }
 .filters-toggle { display: none; }
