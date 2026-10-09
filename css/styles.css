@@ -703,3 +703,13 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 }
 .tco-uf-nota { margin-top: 8px; }
 .spec-sub.hist-sub { margin-top: 28px; }
+/* Lançamentos */
+.section-title-sm { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.novo-item { display: flex; flex-direction: column; gap: 8px; }
+.novo-data { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-2); }
+.chegando { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin: 22px 0 10px; }
+.chegando-item { display: flex; flex-direction: column; gap: 2px; background: var(--bg-elev); border-radius: var(--radius); padding: 16px 18px; transition: background 0.2s; }
+.chegando-item:hover { background: var(--bg-elev-2); }
+.chegando-marca { font-size: 0.8rem; color: var(--text-mute); }
+.chegando-item strong { font-size: 1.05rem; }
+.chegando-prev { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }

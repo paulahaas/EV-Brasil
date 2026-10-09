@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lançamentos de carros elétricos no Brasil — EV Brasil</title>
+  <meta name="description" content="Os carros elétricos que chegaram ao Brasil nos últimos meses e os que estão anunciados para chegar, com data e fonte.">
+  <link rel="canonical" href="https://ev-brasil.web.app/novidades.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Lançamentos de carros elétricos no Brasil">
+  <meta property="og:description" content="Os carros elétricos que chegaram ao Brasil nos últimos meses e os que estão anunciados para chegar, com data e fonte.">
+  <meta property="og:url" content="https://ev-brasil.web.app/novidades.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Lançamentos</span>
+        <h1 class="section-title">Chegou ao Brasil</h1>
+        <p class="section-sub">Os elétricos que chegaram nos últimos 12 meses e os que já foram anunciados para o país.</p>
+      </div>
+    </section>
+
+    <section class="section-flush">
+      <div class="container">
+        <div class="section-head"><h2 class="section-title section-title-sm">Chegaram há pouco</h2></div>
+        <div class="grid" id="novosGrid"></div>
+        <p class="fine-print">Data do lançamento no Brasil pela imprensa ou pela marca. Modelos sem essa data registrada não aparecem aqui; veja todos no <a class="text-link" href="veiculos.html">catálogo</a>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head"><h2 class="section-title section-title-sm">Chegando</h2></div>
+        <p class="section-sub">Anunciados para o Brasil, mas ainda sem medição do Inmetro, por isso ainda fora do catálogo. Datas e versões podem mudar.</p>
+        <div class="chegando" id="chegando"></div>
+        <p class="fine-print" id="chegandoNota"></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/novidades.js"></script>
+</body>
+</html>
