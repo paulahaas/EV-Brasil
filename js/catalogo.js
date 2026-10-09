@@ -107,7 +107,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/audi-a6-e-tron.jpg",
       "card": "assets/carros/audi-a6-e-tron-960.jpg",
@@ -217,7 +217,15 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-04",
+        "price": 695990,
+        "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "audi-q6-sportback-e-tron",
@@ -296,7 +304,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/audi-rs-e-tron-gt.jpg",
       "card": "assets/carros/audi-rs-e-tron-gt-960.jpg",
@@ -324,7 +332,15 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-06",
+        "price": 1334990,
+        "source": "https://www.car.blog.br/2026/06/audi-rs-e-tron-gt-performance-preco.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "audi-sq6-sportback-e-tron",
@@ -380,7 +396,15 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-04",
+        "price": 790990,
+        "source": "https://www.car.blog.br/2026/04/audi-sq6-etron-2026-preco-brasil.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "bmw-i7",
@@ -424,7 +448,21 @@ const VEHICLES = [
       "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0433318PT/bmw-i7-inaugura-uma-nova-era-em-termos-de-luxo-entretenimento-e-mobilidade-el%C3%A9trica-no-brasil?language=pt",
       "sourceExtra": "",
       "kind": "oficial"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2023-08",
+        "price": 1282950,
+        "source": "https://www.car.blog.br/2023/08/bmw-i7-eletrico-chega-ao-brasil-com.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 1373950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "bmw-ix1",
@@ -481,7 +519,15 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/bmw/x1/0997/",
       "testedAs": "BMW X1",
       "note": "Nota do X1, que vale para a versão elétrica iX1"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 485950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "bmw-ix2",
@@ -533,7 +579,15 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/bmw/x2/1065/",
       "testedAs": "BMW X2",
       "note": "Nota do X2, que vale para a versão elétrica iX2"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 495950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "bmw-ix3",
@@ -585,7 +639,21 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/bmw/ix3/1232/",
       "testedAs": "",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-09",
+        "price": 582950,
+        "source": "https://www.car.blog.br/2026/09/bmw-ix3-50-xdrive-eletrico-brasil-preco.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 582950,
+        "source": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-dolphin",
@@ -654,7 +722,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 149990,
+        "source": "https://www.byd.com/br/condicoes",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-dolphin-mini",
@@ -723,7 +799,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 118990,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-han",
@@ -774,7 +858,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 559800,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-seal",
@@ -833,7 +925,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 299990,
+        "source": "https://www.byd.com/br/condicoes",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-sealion-7",
@@ -892,7 +992,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 339990,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-tan",
@@ -951,7 +1059,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 426800,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-yuan-plus",
@@ -1020,7 +1136,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 269990,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "byd-yuan-pro",
@@ -1071,7 +1195,15 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 182990,
+        "source": "https://www.byd.com/br/condicoes",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "avatr-11",
@@ -1094,7 +1226,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/avatr-11.jpg",
       "card": "assets/carros/avatr-11-960.jpg",
@@ -1115,7 +1247,15 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/03/caoa-changan-avatr-11-2026-preco-parte.html",
       "sourceExtra": "",
       "kind": "imprensa"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-03",
+        "price": 599990,
+        "source": "https://www.car.blog.br/2026/03/caoa-changan-avatr-11-2026-preco-parte.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "chevrolet-blazer-ev",
@@ -1166,7 +1306,21 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-05",
+        "price": 503190,
+        "source": "https://www.car.blog.br/2025/05/chevrolet-blazer-rs-2025-eletrico-preco.html",
+        "kind": "publicado"
+      },
+      {
+        "month": "2026-10",
+        "price": 503190,
+        "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "chevrolet-captiva-ev",
@@ -1217,7 +1371,21 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-02",
+        "price": 199990,
+        "source": "https://www.car.blog.br/2026/02/chevrolet-captiva-ev-2026-chega-ao.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 199990,
+        "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "chevrolet-spark-euv",
@@ -1268,7 +1436,15 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 146990,
+        "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "fiat-500e",
@@ -1320,7 +1496,21 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/fiat/500e/0911/",
       "testedAs": "",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2021-08",
+        "price": 239990,
+        "source": "https://www.car.blog.br/2021/08/fiat-500e-2022-eletrico-chega-ao-brasil.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 214990,
+        "source": "https://500e.fiat.com.br/monte.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gac-aion-es",
@@ -1371,7 +1561,15 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 170990,
+        "source": "https://www.gacgroup.com/pt-br/sedan/aion-es",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gac-aion-ut",
@@ -1435,7 +1633,15 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-06",
+        "price": 139990,
+        "source": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "gac-aion-v",
@@ -1499,7 +1705,15 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 219990,
+        "source": "https://www.gacgroup.com/pt-br/suv/aion-v",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gac-aion-y",
@@ -1555,7 +1769,15 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 175990,
+        "source": "https://www.gacgroup.com/pt-br/suv/aion-y",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gac-hyptec-ht",
@@ -1611,7 +1833,15 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 314990,
+        "source": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "geely-ex2",
@@ -1675,7 +1905,21 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-11",
+        "price": 119990,
+        "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 124600,
+        "source": "https://www.geelybrasil.com.br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "geely-ex5",
@@ -1739,7 +1983,15 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 207800,
+        "source": "https://www.geelybrasil.com.br/ofertas",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gwm-ora-03",
@@ -1813,7 +2065,21 @@ const VEHICLES = [
       "source": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-04",
+        "price": 169000,
+        "source": "https://www.car.blog.br/2025/04/gwm-ora-03-2026-precos-partem-de-r-169.html",
+        "kind": "publicado"
+      },
+      {
+        "month": "2026-10",
+        "price": 169000,
+        "source": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "gwm-ora-5",
@@ -1864,7 +2130,21 @@ const VEHICLES = [
       "source": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-06",
+        "price": 159000,
+        "source": "https://www.car.blog.br/2026/06/gwm-ora-5-suv-eletrico-preco-fotos.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 163990,
+        "source": "https://www.gwmmotors.com.br/pt/modelos/ora5",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "hyundai-ioniq-5",
@@ -1933,7 +2213,15 @@ const VEHICLES = [
       "source": "https://www.hyundai.com.br/universo-hyundai/dicas/bateria-carro-eletrico.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2024-09",
+        "price": 394900,
+        "source": "https://www.car.blog.br/2024/09/hyundai-ioniq-5-preco-r-394900-fotos.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "jac-e-j7",
@@ -2063,7 +2351,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/jac-e-js4.jpg",
       "card": "assets/carros/jac-e-js4-960.jpg",
@@ -2244,7 +2532,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
       "kind": "imprensa",
       "note": "Ano-modelo 2027, com revisões na rede autorizada"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-04",
+        "price": 182990,
+        "source": "https://www.car.blog.br/2026/04/leapmotor-b10-2026-suv-eletrico-de-r.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 182990,
+        "source": "https://www.leapmotor.com.br/b10/monte.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "leapmotor-c10",
@@ -2303,7 +2605,21 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
       "kind": "imprensa",
       "note": "Ano-modelo 2027, com revisões na rede autorizada"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-11",
+        "price": 189990,
+        "source": "https://www.car.blog.br/2025/11/leapmotor-c10-chega-em-versoes-eletrica.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 214990,
+        "source": "https://www.leapmotor.com.br/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "lexus-rz",
@@ -2362,7 +2678,15 @@ const VEHICLES = [
       "source": "https://www.lexus.com.br/pt/servicing-and-support/warranty-coverage.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-12",
+        "price": 499990,
+        "source": "https://www.car.blog.br/2025/12/novo-lexus-rz-500e-estreia-no-brasil.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "mercedes-eqb",
@@ -2421,7 +2745,15 @@ const VEHICLES = [
       "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-07",
+        "price": 399990,
+        "source": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "mercedes-glb-ev",
@@ -2444,7 +2776,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/mercedes-glb-ev.jpg",
       "card": "assets/carros/mercedes-glb-ev-960.jpg",
@@ -2579,7 +2911,15 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 184600,
+        "source": "https://mgmotoroficial.com.br/oferta/mg4",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "mg-mg4-urban",
@@ -2653,7 +2993,15 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-07",
+        "price": 129990,
+        "source": "https://www.car.blog.br/2026/07/mg4-urban-brasil-preco-detalhes.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "mg-s5",
@@ -2717,7 +3065,21 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-11",
+        "price": 195800,
+        "source": "https://www.car.blog.br/2025/11/mgs5-suv-eletrico-chega-por-r-r-195800.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 218800,
+        "source": "https://mgmotoroficial.com.br/oferta/mgs5",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "mini-aceman",
@@ -2781,7 +3143,21 @@ const VEHICLES = [
       "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-02",
+        "price": 254990,
+        "source": "https://www.car.blog.br/2025/02/mini-aceman-2025-eletrico-preco-r.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 275990,
+        "source": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "mini-cooper",
@@ -2845,7 +3221,21 @@ const VEHICLES = [
       "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2024-10",
+        "price": 209990,
+        "source": "https://www.car.blog.br/2024/10/novo-mini-cooper-2025-eletrico-tem-pre.html",
+        "kind": "pré-venda"
+      },
+      {
+        "month": "2026-10",
+        "price": 264990,
+        "source": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "mini-countryman",
@@ -2873,7 +3263,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/mini-countryman.jpg",
       "card": "assets/carros/mini-countryman-960.jpg",
@@ -2909,7 +3299,15 @@ const VEHICLES = [
       "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2024-06",
+        "price": 294990,
+        "source": "https://www.car.blog.br/2024/06/novo-mini-countryman-se-2025-eletrico.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "mini-jcw",
@@ -2937,7 +3335,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/mini-jcw.jpg",
       "card": "assets/carros/mini-jcw-960.jpg",
@@ -2965,7 +3363,15 @@ const VEHICLES = [
       "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-07",
+        "price": 330990,
+        "source": "https://www.car.blog.br/2025/07/mini-jcw-eletrico-chega-ao-brasil-com.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "omoda-e5",
@@ -3009,7 +3415,15 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
       "sourceExtra": "",
       "kind": "imprensa"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2025-04",
+        "price": 209990,
+        "source": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
+        "kind": "lançamento"
+      }
+    ]
   },
   {
     "id": "porsche-cayenne-electric",
@@ -3325,7 +3739,21 @@ const VEHICLES = [
       "source": "https://www.renault.com.br/electric-vehicles/megane-e-tech.html",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2023-09",
+        "price": 279990,
+        "source": "https://www.car.blog.br/2023/09/megane-e-tech-100-eletrico-preco-no.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 279990,
+        "source": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "suzuki-e-vitara",
@@ -3353,7 +3781,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não encontrado",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/suzuki-e-vitara.jpg",
       "card": "assets/carros/suzuki-e-vitara-960.jpg",
@@ -3389,7 +3817,15 @@ const VEHICLES = [
       "source": "https://www.suzukiveiculos.com.br/suzuki-garantia/",
       "kind": "oficial",
       "note": ""
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-07",
+        "price": 219990,
+        "source": "https://www.car.blog.br/2026/07/suzuki-e-vitara-2027-preco-ficha-tecnica-brasil.html",
+        "kind": "publicado"
+      }
+    ]
   },
   {
     "id": "volvo-ec40",
@@ -3483,7 +3919,15 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 350950,
+        "source": "https://www.volvocars.com/br/cars/ec40-electric/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "volvo-es90",
@@ -3534,7 +3978,21 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-08",
+        "price": 659950,
+        "source": "https://www.car.blog.br/2026/08/volvo-es90-2027-preco-fotos-detalhes.html",
+        "kind": "lançamento"
+      },
+      {
+        "month": "2026-10",
+        "price": 659950,
+        "source": "https://www.volvocars.com/br/cars/es90-electric/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "volvo-ex30",
@@ -3628,7 +4086,15 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 249950,
+        "source": "https://www.volvocars.com/br/cars/ex30-electric/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "volvo-ex40",
@@ -3722,7 +4188,15 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 345950,
+        "source": "https://www.volvocars.com/br/cars/ex40-electric/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "volvo-ex90",
@@ -3791,7 +4265,15 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
-    }
+    },
+    "priceHistory": [
+      {
+        "month": "2026-10",
+        "price": 849950,
+        "source": "https://www.volvocars.com/br/cars/ex90-electric/",
+        "kind": "coleta"
+      }
+    ]
   },
   {
     "id": "zeekr-001",

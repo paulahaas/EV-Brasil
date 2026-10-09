@@ -100,6 +100,28 @@ const FICHA_CAMPOS = [
   { id: "s0100", rotulo: "0 a 100 km/h", fmt: (n) => `${formatNum(n, 1)} s`, melhor: "menor" },
   { id: "trunkL", rotulo: "Porta-malas", fmt: (n) => `${formatNum(n, 0)} litros`, melhor: "maior" },
 ];
+/** "2021-08" -> "ago/2021" */
+const MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+function monthText(m) {
+  const [ano, mes] = m.split("-");
+  return `${MESES[Number(mes) - 1]}/${ano}`;
+}
+
+/**
+ * Variação do preço: primeiro ponto do histórico x preço de hoje.
+ * Só quando há preço atual e pelo menos um ponto anterior. Diferenças
+ * abaixo de 1% contam como "mesmo preço" (fontes arredondam diferente).
+ */
+function priceTrend(v) {
+  // Preço de pré-venda costuma ser promocional: não serve de base para a comparação.
+  const h = (v.priceHistory || []).filter((p) => p.kind !== "pré-venda");
+  if (!v.price || h.length < 2) return null;
+  const primeiro = h[0];
+  const delta = v.price - primeiro.price;
+  const pct = (delta / primeiro.price) * 100;
+  return { delta, pct, since: primeiro, stable: Math.abs(pct) < 1 };
+}
+
 /** Estrelas da nota de segurança, em texto: "★★★★☆". */
 function starsText(n) {
   return "★".repeat(n) + "☆".repeat(5 - n);

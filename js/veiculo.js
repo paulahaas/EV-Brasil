@@ -70,6 +70,25 @@
       </div>`;
   }
 
+  // Histórico de preço (dados/historico-precos.json), do mais recente ao mais antigo.
+  const TIPOS = { coleta: "nossa coleta, site da marca", "lançamento": "lançamento", "pré-venda": "pré-venda", publicado: "preço publicado" };
+  let historico = "";
+  const hist = v.priceHistory || [];
+  const anteriores = hist.filter((p) => p.kind !== "coleta");
+  if (anteriores.length) {
+    const t = priceTrend(v);
+    let resumo = "";
+    if (t && t.stable) resumo = `Mesmo preço de ${monthText(t.since.month)}.`;
+    else if (t) resumo = `${formatBRL(Math.abs(t.delta))} ${t.delta < 0 ? "a menos" : "a mais"} que em ${monthText(t.since.month)} (${t.delta < 0 ? "−" : "+"}${formatNum(Math.abs(t.pct), 0)}%).`;
+    historico = `
+          <h3 class="spec-sub hist-sub">Histórico de preço</h3>
+          ${resumo ? `<p class="price-trend ${t && !t.stable ? (t.delta < 0 ? "down" : "up") : ""}">${resumo}</p>` : ""}
+          <ul class="price-history">
+            ${[...hist].reverse().map((p) => `<li><span>${monthText(p.month)}</span><strong>${formatBRL(p.price)}</strong><a class="text-link" href="${p.source}" target="_blank" rel="noopener">${TIPOS[p.kind] || p.kind}</a></li>`).join("")}
+          </ul>
+          <p class="fine-print">Preços de lançamento e pré-venda vêm da imprensa e podem ser de outra versão. A partir de outubro de 2026, guardamos o preço oficial todo mês.</p>`;
+  }
+
   // Segurança (Latin NCAP / Euro NCAP) e garantia da marca.
   const host2 = (u) => u.split("/")[2].replace("www.", "");
   let seguranca;
@@ -155,6 +174,7 @@
             <p>${sobrePreco}</p>
           </div>
           ${obs}
+          ${historico}
           <p class="fine-print"><a class="text-link" href="metodologia.html">Como coletamos os dados</a></p>
         </div>
       </div>

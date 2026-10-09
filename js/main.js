@@ -122,6 +122,12 @@ function createCard(v) {
         <p class="card-meter">${consumoMeter(v)}</p>
         <p class="card-price">${priceText(v)}</p>
         ${nota ? `<p class="card-note">${nota}</p>` : ""}
+        ${(() => {
+          // Variação desde o lançamento, quando é relevante (3% ou mais).
+          const t = priceTrend(v);
+          if (!t || Math.abs(t.pct) < 3) return "";
+          return `<p class="card-trend ${t.delta < 0 ? "down" : "up"}">${t.delta < 0 ? "↓" : "↑"} ${formatNum(Math.abs(t.pct), 0)}% desde ${monthText(t.since.month)}</p>`;
+        })()}
       </div>
     </a>`;
 }
