@@ -38,8 +38,7 @@ function sobreposicao({ marca, titulo, linhas }) {
       </linearGradient>
     </defs>
     <rect width="${W}" height="${H}" fill="url(#g)"/>
-    <rect x="56" y="48" width="44" height="44" rx="10" fill="#3b82f6"/>
-    <path d="M80 56 L68 74 H78 L74 86 L88 66 H78 Z" fill="#fbbf24"/>
+    <g transform="translate(54 46) scale(1.33)"><circle cx="18" cy="18" r="14" fill="none" stroke="#334155" stroke-width="4"/><path d="M18 4a14 14 0 1 1-12.1 7" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/><path d="M19.6 10 13 19.5h4.6l-1.4 6.5 6.7-9.6h-4.7l1.4-6.4Z" fill="#fbbf24"/></g>
     <text x="114" y="80" font-family="${FONTE}" font-size="30" font-weight="700" fill="#ffffff">EV<tspan fill="#60a5fa">Brasil</tspan></text>
     ${marca ? `<text x="56" y="${H - 168}" font-family="${FONTE}" font-size="26" font-weight="600" letter-spacing="3" fill="#60a5fa">${esc(marca.toUpperCase())}</text>` : ""}
     <text x="56" y="${H - 100}" font-family="${FONTE}" font-size="${tamTitulo}" font-weight="800" fill="#ffffff">${esc(titulo)}</text>
