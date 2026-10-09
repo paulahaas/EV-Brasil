@@ -890,7 +890,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Dolphin EV GS (Elétrico)",
@@ -994,7 +999,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Dolphin Mini GL",
@@ -1075,7 +1085,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Han EV  (Elétrico)",
@@ -1169,7 +1184,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Seal (Elétrico)",
@@ -1258,7 +1278,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Sealion 7 AWD (Elétrico)",
@@ -1337,7 +1362,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "TAN EV AWD (Elétrico)",
@@ -1441,7 +1471,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Yuan Plus AWD",
@@ -1512,7 +1547,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
-      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+      "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra",
+      "commercial": {
+        "vehicle": "6 anos ou 100 mil km",
+        "battery": "8 anos ou 200 mil km",
+        "source": "https://www.otempo.com.br/autotempo/2026/5/14/byd-reduz-garantia-de-bateria-para-motoristas-de-app-no-brasil"
+      }
     },
     "fipe": {
       "version": "Yuan Pro (Elétrico)",
@@ -1975,7 +2015,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
-      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+      "commercial": {
+        "vehicle": "1 ano ou 150 mil km",
+        "battery": "5 anos ou 500 mil km",
+        "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+      }
     },
     "fipe": {
       "version": "AION ES Plus (Elétrico)",
@@ -2064,7 +2109,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
-      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+      "commercial": {
+        "vehicle": "1 ano ou 150 mil km",
+        "battery": "5 anos ou 500 mil km",
+        "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+      }
     },
     "fipe": {
       "version": "AION UT Premium (Elétrico)",
@@ -2148,7 +2198,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
-      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+      "commercial": {
+        "vehicle": "1 ano ou 150 mil km",
+        "battery": "5 anos ou 500 mil km",
+        "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+      }
     },
     "fipe": {
       "version": "AION V Elite (Elétrico)",
@@ -2234,7 +2289,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
-      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+      "commercial": {
+        "vehicle": "1 ano ou 150 mil km",
+        "battery": "5 anos ou 500 mil km",
+        "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+      }
     },
     "fipe": {
       "version": "AION Y Premium (Elétrico)",
@@ -2320,7 +2380,12 @@ const VEHICLES = [
       "battery": "8 anos ou 200 mil km",
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
-      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+      "note": "Uso particular; algumas campanhas ampliam a garantia do veículo",
+      "commercial": {
+        "vehicle": "1 ano ou 150 mil km",
+        "battery": "5 anos ou 500 mil km",
+        "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf"
+      }
     },
     "fipe": {
       "version": "HYPTEC HT Elite (Elétrico)",
@@ -2775,7 +2840,12 @@ const VEHICLES = [
       "battery": "8 anos ou 160 mil km",
       "source": "https://www.hyundai.com.br/universo-hyundai/dicas/bateria-carro-eletrico.html",
       "kind": "oficial",
-      "note": ""
+      "note": "",
+      "commercial": {
+        "vehicle": "5 anos ou 100 mil km",
+        "battery": null,
+        "source": "https://www.hyundai.com.br/manutencao.html"
+      }
     },
     "fipe": {
       "version": "IONIQ 5 SIGNATURE (Elétrico)",
@@ -2838,7 +2908,12 @@ const VEHICLES = [
       "battery": "5 anos ou 100 mil km",
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
-      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo",
+      "commercial": {
+        "vehicle": null,
+        "battery": "3 anos ou 200 mil km",
+        "source": "https://www.jacmotors.com.br/carros/"
+      }
     },
     "fipe": {
       "version": "E-J7 193cv 5p Aut. (Elétrico)",
@@ -2919,7 +2994,12 @@ const VEHICLES = [
       "battery": "5 anos ou 100 mil km",
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
-      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo",
+      "commercial": {
+        "vehicle": null,
+        "battery": "3 anos ou 200 mil km",
+        "source": "https://www.jacmotors.com.br/carros/"
+      }
     },
     "fipe": {
       "version": "e-JS1 62cv 5p Aut. (Elétrico)",
@@ -3007,7 +3087,12 @@ const VEHICLES = [
       "battery": "5 anos ou 100 mil km",
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
-      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo",
+      "commercial": {
+        "vehicle": null,
+        "battery": "3 anos ou 200 mil km",
+        "source": "https://www.jacmotors.com.br/carros/"
+      }
     },
     "fipe": {
       "version": "e-JS4 150CV 5p Aut. (Elétrico)",
@@ -3054,7 +3139,12 @@ const VEHICLES = [
       "battery": "5 anos ou 100 mil km",
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
-      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+      "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo",
+      "commercial": {
+        "vehicle": null,
+        "battery": "3 anos ou 200 mil km",
+        "source": "https://www.jacmotors.com.br/carros/"
+      }
     },
     "fipe": {
       "version": "iEV 330P CD 150cv Aut. (Elétrico)",
