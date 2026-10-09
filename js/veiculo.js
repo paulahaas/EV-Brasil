@@ -171,6 +171,7 @@
           <a href="comparar.html?ids=${encodeURIComponent(v.id)}" class="btn btn-primary btn-wide">Comparar com outros</a>
           <a href="calculadora.html?modelo=${encodeURIComponent(v.id)}" class="btn btn-ghost btn-wide">Calcular minha economia</a>
         </div>
+        ${shareBar(`${v.brand} ${v.model}: autonomia, consumo e preço no EV Brasil`)}
       </div>
     </section>
 

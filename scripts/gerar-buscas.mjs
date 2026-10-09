@@ -218,6 +218,7 @@ for (const l of LISTAS) {
           <a class="btn btn-primary" href="${l.catalogo}">Ver no catálogo</a>
           <a class="btn btn-ghost" href="comparar.html?ids=${m.slice(0, 3).map((v) => v.id).join(",")}">Comparar os três primeiros</a>
         </p>
+        <div data-share-bar="${esc(l.h1)} — EV Brasil"></div>
       </div>
     </section>
 

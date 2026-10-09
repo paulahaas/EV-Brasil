@@ -307,6 +307,19 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .chip:hover { color: var(--text); border-color: var(--text-mute); }
 a.chip { display: inline-flex; align-items: center; gap: 6px; }
 
+/* ---------------- Compartilhar ---------------- */
+.share { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 18px; }
+.share-label { color: var(--text-mute); font-size: 0.85rem; margin-right: 4px; }
+.share-btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px;
+  border: 1px solid var(--stroke); border-radius: 100px; background: transparent;
+  color: var(--text-dim); font: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.share-btn:hover { color: var(--text); border-color: var(--accent-2); }
+.share-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.panel-foot .share { justify-content: center; margin-top: 0; }
+
 /* ---------------- Listas para buscas (eletricos/) ---------------- */
 .lista-intro { max-width: 760px; margin-top: 0; }
 .lista-grid { margin-top: clamp(28px, 4vw, 44px); }
@@ -701,6 +714,7 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
   .brand { min-height: 44px; }
   .filters-toggle, .filters .search, .select, .chip, .viz-key { min-height: 44px; }
   .filters-toggle, .chip { align-items: center; }
+  .share-btn { min-height: 44px; }
   .footer-col a { padding: 11px 0; margin-bottom: 0; }
   .sim { grid-template-columns: 1fr; }
   .tools, .rank-cols { grid-template-columns: 1fr 1fr; }

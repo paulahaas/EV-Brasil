@@ -146,12 +146,67 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
+/* ---------------- Compartilhar ---------------- */
+// Botões de compartilhar: WhatsApp, copiar o link e, onde o aparelho oferece
+// (celular), o menu de compartilhar do próprio sistema. Sempre compartilham o
+// endereço atual da página (no comparador, com os modelos escolhidos).
+const ICONE_WHATSAPP = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>`;
+const ICONE_LINK = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>`;
+const ICONE_MAIS = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 3v12M7 8l5-5 5 5M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/></svg>`;
+
+function shareBar(texto) {
+  return `
+    <div class="share" data-share-text="${escapeHtml(texto || "")}">
+      <span class="share-label">Compartilhar</span>
+      <a class="share-btn" data-share="whatsapp" href="https://wa.me/" target="_blank" rel="noopener">${ICONE_WHATSAPP}WhatsApp</a>
+      <button type="button" class="share-btn" data-share="copiar">${ICONE_LINK}<span>Copiar link</span></button>
+      ${navigator.share ? `<button type="button" class="share-btn" data-share="mais">${ICONE_MAIS}Mais opções</button>` : ""}
+    </div>`;
+}
+
+// (fora do navegador, ex.: no gerador de páginas, não há document)
+if (typeof document !== "undefined") document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-share]");
+  if (!btn) return;
+  const bar = btn.closest(".share");
+  const url = location.href.split("#")[0];
+  const h1 = document.querySelector("h1");
+  const texto = (bar && bar.dataset.shareText) || (h1 ? h1.textContent.trim() : document.title);
+  const tipo = btn.dataset.share;
+  if (tipo === "whatsapp") {
+    // O link é montado na hora do clique, com o endereço atual.
+    btn.href = `https://wa.me/?text=${encodeURIComponent(`${texto} ${url}`)}`;
+    return;
+  }
+  if (tipo === "mais") {
+    navigator.share({ title: texto, text: texto, url }).catch(() => {});
+    return;
+  }
+  if (tipo === "copiar") {
+    const rotulo = btn.querySelector("span");
+    const pronto = () => { rotulo.textContent = "Link copiado ✓"; setTimeout(() => (rotulo.textContent = "Copiar link"), 2200); };
+    // Sem a API da área de transferência (ou sem permissão), copia por um campo escondido.
+    const reserva = () => {
+      const campo = document.createElement("textarea");
+      campo.value = url; campo.setAttribute("readonly", ""); campo.style.cssText = "position:fixed;opacity:0";
+      document.body.appendChild(campo); campo.select();
+      const ok = document.execCommand("copy");
+      campo.remove();
+      if (ok) pronto(); else rotulo.textContent = "Não deu para copiar";
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(pronto, reserva);
+    else reserva();
+  }
+});
+
 /* ---------------- Inicialização comum ---------------- */
 function mountChrome(activeKey) {
   const headerSlot = document.getElementById("header-slot");
   const footerSlot = document.getElementById("footer-slot");
   if (headerSlot) headerSlot.innerHTML = renderHeader(activeKey);
   if (footerSlot) footerSlot.innerHTML = renderFooter();
+  // Páginas fixas marcam onde vão os botões com <div data-share-bar></div>.
+  document.querySelectorAll("[data-share-bar]").forEach((el) => (el.outerHTML = shareBar(el.dataset.shareBar)));
 
   // Na home o cabeçalho começa transparente sobre o painel e ganha fundo ao rolar.
   const header = document.getElementById("siteHeader");
