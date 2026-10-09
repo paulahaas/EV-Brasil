@@ -531,7 +531,7 @@ const VEHICLES = [
     "kwh100": 11.7,
     "price": 149990,
     "priceVersion": "GS",
-    "priceSource": "https://www.byd.com/br/ofertas",
+    "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
     "priceNote": "",
     "photo": {
@@ -631,7 +631,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025",
+    "priceNote": "ano-modelo 2025; último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
     "photo": {
       "src": "assets/carros/byd-han.jpg",
       "card": "assets/carros/byd-han-960.jpg",
@@ -673,7 +673,7 @@ const VEHICLES = [
     "kwh100": 17.2,
     "price": 299990,
     "priceVersion": "AWD",
-    "priceSource": "https://www.byd.com/br/ofertas",
+    "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
     "priceNote": "",
     "photo": {
@@ -719,7 +719,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
     "photo": {
       "src": "assets/carros/byd-sealion-7.jpg",
       "card": "assets/carros/byd-sealion-7-960.jpg",
@@ -763,7 +763,7 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025",
+    "priceNote": "ano-modelo 2025; último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
     "photo": {
       "src": "assets/carros/byd-tan.jpg",
       "card": "assets/carros/byd-tan-960.jpg",
@@ -817,7 +817,7 @@ const VEHICLES = [
     "priceVersion": "AWD",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
     "photo": {
       "src": "assets/carros/byd-yuan-plus.jpg",
       "card": "assets/carros/byd-yuan-plus-960.jpg",
@@ -859,7 +859,7 @@ const VEHICLES = [
     "kwh100": 14.2,
     "price": 182990,
     "priceVersion": "",
-    "priceSource": "https://www.byd.com/br/ofertas",
+    "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
     "priceNote": "",
     "photo": {

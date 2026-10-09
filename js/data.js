@@ -56,7 +56,10 @@ function priceText(v) {
 /** Aviso curto sobre a origem do preço (vazio quando é do site oficial). */
 function priceNoteShort(v) {
   if (!v.price) return "";
-  return v.priceKind === "imprensa" ? "Valor publicado na imprensa" : "";
+  if (v.priceKind === "imprensa") return "Valor publicado na imprensa";
+  // Preço oficial que a marca tirou do site: mostramos o último publicado, com aviso.
+  if (/último preço publicado/i.test(v.priceNote || "")) return "Último preço publicado pela marca";
+  return "";
 }
 
 /** Primeiro número de um texto: "1.100 km" -> 1100, "44,9" -> 44.9. */

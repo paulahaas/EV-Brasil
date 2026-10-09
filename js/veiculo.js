@@ -46,7 +46,7 @@
   } else {
     sobrePreco = `<strong>Valor publicado na imprensa</strong>: a marca não mostra o preço no site oficial. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>. Confirme com uma concessionária.`;
   }
-  const obs = v.price && v.priceNote ? `<p class="fine-print">${escapeHtml(v.priceNote)}</p>` : "";
+  const obs = v.price && v.priceNote ? `<p class="fine-print">${escapeHtml(v.priceNote.charAt(0).toUpperCase() + v.priceNote.slice(1))}.</p>` : "";
 
   // Ficha técnica (bateria, potência, recarga...), com a fonte de cada modelo.
   let ficha = "";
