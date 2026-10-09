@@ -108,12 +108,16 @@ const DATA_INFO_COLETA = "05/10/2026";
 // FIPE: valor de zero km e de cada ano-modelo usado, com a perda em relação ao zero.
 const valoresFipe = (f) => {
   if (!f) return null;
-  const zero = f.valores.find((x) => x.ano === "0km");
-  const usados = f.valores.filter((x) => x.ano !== "0km").sort((a, b) => b.ano - a.ano);
+  let zero = f.valores.find((x) => x.ano === "0km");
+  let usados = f.valores.filter((x) => x.ano !== "0km").sort((a, b) => b.ano - a.ano);
+  // Sem valor de zero km na FIPE: compara com o ano-modelo mais novo da tabela.
+  let refYear = null;
+  if (!zero && usados.length > 1) { zero = usados[0]; refYear = Number(usados[0].ano); usados = usados.slice(1); }
   if (!zero || !usados.length) return null;
   return {
     version: f.versao,
     zero: zero.valor,
+    refYear,
     used: usados.map((u) => ({ year: Number(u.ano), value: u.valor, loss: Math.round((1 - u.valor / zero.valor) * 1000) / 10 })),
   };
 };

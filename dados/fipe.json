@@ -1,0 +1,1267 @@
+{
+ "_leia": "Valores da tabela FIPE (gerado por scripts/coletar-fipe.mjs — não edite à mão). '0km' = valor de zero quilômetro; os demais, por ano-modelo.",
+ "referencia": "outubro/2026",
+ "fonte": "https://veiculos.fipe.org.br/",
+ "modelos": {
+  "audi-a6-avant-e-tron": {
+   "versao": "A6 Avant E-Tron S-Line",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 699993,
+     "codigoFipe": "008332-1"
+    },
+    {
+     "ano": "2027",
+     "valor": 641893,
+     "codigoFipe": "008332-1"
+    }
+   ]
+  },
+  "audi-a6-e-tron": {
+   "versao": "A6 Sport. e-tron Perf. Black (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 650990,
+     "codigoFipe": "008315-1"
+    },
+    {
+     "ano": "2026",
+     "valor": 578952,
+     "codigoFipe": "008315-1"
+    },
+    {
+     "ano": "2025",
+     "valor": 516520,
+     "codigoFipe": "008315-1"
+    }
+   ]
+  },
+  "audi-q6-e-tron": {
+   "versao": "Q6 E-Tron Quattro S-Line",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 702661,
+     "codigoFipe": "008331-3"
+    },
+    {
+     "ano": "2026",
+     "valor": 603222,
+     "codigoFipe": "008331-3"
+    }
+   ]
+  },
+  "audi-q6-sportback-e-tron": {
+   "versao": "Q6 E-Tron Quattro Sportback Performance Black",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 603114,
+     "codigoFipe": "008324-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 512995,
+     "codigoFipe": "008324-0"
+    }
+   ]
+  },
+  "audi-sq6-sportback-e-tron": {
+   "versao": "SQ6 Sportback E-Tron Quattro (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 810710,
+     "codigoFipe": "008325-9"
+    },
+    {
+     "ano": "2026",
+     "valor": 685247,
+     "codigoFipe": "008325-9"
+    },
+    {
+     "ano": "2025",
+     "valor": 602401,
+     "codigoFipe": "008325-9"
+    }
+   ]
+  },
+  "audi-rs-e-tron-gt": {
+   "versao": "RS E-TRON GT Quattro Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "2024",
+     "valor": 940439,
+     "codigoFipe": "008274-0"
+    },
+    {
+     "ano": "2023",
+     "valor": 561049,
+     "codigoFipe": "008274-0"
+    },
+    {
+     "ano": "2022",
+     "valor": 432775,
+     "codigoFipe": "008274-0"
+    }
+   ]
+  },
+  "bmw-i7": {
+   "versao": "i7 XDrive 60 M Sport Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 1372402,
+     "codigoFipe": "009313-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 1148550,
+     "codigoFipe": "009313-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 914703,
+     "codigoFipe": "009313-0"
+    },
+    {
+     "ano": "2024",
+     "valor": 851851,
+     "codigoFipe": "009313-0"
+    }
+   ]
+  },
+  "bmw-ix1": {
+   "versao": "iX 1 xDrive 30 M Sport (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 468376,
+     "codigoFipe": "009309-2"
+    },
+    {
+     "ano": "2026",
+     "valor": 353695,
+     "codigoFipe": "009309-2"
+    },
+    {
+     "ano": "2025",
+     "valor": 321881,
+     "codigoFipe": "009309-2"
+    },
+    {
+     "ano": "2024",
+     "valor": 270885,
+     "codigoFipe": "009309-2"
+    }
+   ]
+  },
+  "bmw-ix2": {
+   "versao": "iX 2 xDrive 30 M Sport (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 497164,
+     "codigoFipe": "009319-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 411045,
+     "codigoFipe": "009319-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 344379,
+     "codigoFipe": "009319-0"
+    },
+    {
+     "ano": "2024",
+     "valor": 332056,
+     "codigoFipe": "009319-0"
+    }
+   ]
+  },
+  "bmw-ix3": {
+   "versao": "iX 3 XDrive 50 M Sport",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 582953,
+     "codigoFipe": "009330-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 489589,
+     "codigoFipe": "009330-0"
+    }
+   ]
+  },
+  "byd-dolphin": {
+   "versao": "Dolphin EV GS (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 147055,
+     "codigoFipe": "095007-6"
+    },
+    {
+     "ano": "2027",
+     "valor": 133010,
+     "codigoFipe": "095007-6"
+    },
+    {
+     "ano": "2026",
+     "valor": 129551,
+     "codigoFipe": "095007-6"
+    },
+    {
+     "ano": "2025",
+     "valor": 121374,
+     "codigoFipe": "095007-6"
+    },
+    {
+     "ano": "2024",
+     "valor": 117564,
+     "codigoFipe": "095007-6"
+    }
+   ]
+  },
+  "byd-dolphin-mini": {
+   "versao": "Dolphin Mini GL",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 119679,
+     "codigoFipe": "095022-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 112634,
+     "codigoFipe": "095022-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 106009,
+     "codigoFipe": "095022-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 103220,
+     "codigoFipe": "095022-0"
+    }
+   ]
+  },
+  "byd-han": {
+   "versao": "Han EV  (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 551838,
+     "codigoFipe": "095003-3"
+    },
+    {
+     "ano": "2025",
+     "valor": 365914,
+     "codigoFipe": "095003-3"
+    },
+    {
+     "ano": "2024",
+     "valor": 285451,
+     "codigoFipe": "095003-3"
+    },
+    {
+     "ano": "2023",
+     "valor": 276448,
+     "codigoFipe": "095003-3"
+    },
+    {
+     "ano": "2022",
+     "valor": 254616,
+     "codigoFipe": "095003-3"
+    }
+   ]
+  },
+  "byd-seal": {
+   "versao": "Seal (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 299673,
+     "codigoFipe": "095008-4"
+    },
+    {
+     "ano": "2027",
+     "valor": 271532,
+     "codigoFipe": "095008-4"
+    },
+    {
+     "ano": "2025",
+     "valor": 221377,
+     "codigoFipe": "095008-4"
+    },
+    {
+     "ano": "2024",
+     "valor": 204101,
+     "codigoFipe": "095008-4"
+    }
+   ]
+  },
+  "byd-sealion-7": {
+   "versao": "Sealion 7 AWD (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 339063,
+     "codigoFipe": "095020-3"
+    },
+    {
+     "ano": "2027",
+     "valor": 318713,
+     "codigoFipe": "095020-3"
+    }
+   ]
+  },
+  "byd-tan": {
+   "versao": "TAN EV AWD (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 429964,
+     "codigoFipe": "095001-7"
+    },
+    {
+     "ano": "2025",
+     "valor": 342490,
+     "codigoFipe": "095001-7"
+    },
+    {
+     "ano": "2024",
+     "valor": 295554,
+     "codigoFipe": "095001-7"
+    },
+    {
+     "ano": "2023",
+     "valor": 247964,
+     "codigoFipe": "095001-7"
+    },
+    {
+     "ano": "2022",
+     "valor": 236214,
+     "codigoFipe": "095001-7"
+    }
+   ]
+  },
+  "byd-yuan-plus": {
+   "versao": "Yuan Plus AWD",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 269214,
+     "codigoFipe": "095021-1"
+    },
+    {
+     "ano": "2027",
+     "valor": 239699,
+     "codigoFipe": "095021-1"
+    }
+   ]
+  },
+  "byd-yuan-pro": {
+   "versao": "Yuan Pro (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 182990,
+     "codigoFipe": "095015-7"
+    },
+    {
+     "ano": "2027",
+     "valor": 169094,
+     "codigoFipe": "095015-7"
+    },
+    {
+     "ano": "2026",
+     "valor": 162916,
+     "codigoFipe": "095015-7"
+    },
+    {
+     "ano": "2025",
+     "valor": 152985,
+     "codigoFipe": "095015-7"
+    }
+   ]
+  },
+  "avatr-11": {
+   "versao": "AVATR11",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 621995,
+     "codigoFipe": "308002-1"
+    },
+    {
+     "ano": "2027",
+     "valor": 559589,
+     "codigoFipe": "308002-1"
+    },
+    {
+     "ano": "2026",
+     "valor": 534349,
+     "codigoFipe": "308002-1"
+    }
+   ]
+  },
+  "chevrolet-blazer-ev": {
+   "versao": "BLAZER EV RS 347cv (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 503190,
+     "codigoFipe": "004553-5"
+    },
+    {
+     "ano": "2025",
+     "valor": 420597,
+     "codigoFipe": "004553-5"
+    },
+    {
+     "ano": "2024",
+     "valor": 328235,
+     "codigoFipe": "004553-5"
+    }
+   ]
+  },
+  "chevrolet-captiva-ev": {
+   "versao": "CAPTIVA EV Premier",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 209017,
+     "codigoFipe": "004563-2"
+    },
+    {
+     "ano": "2026",
+     "valor": 185147,
+     "codigoFipe": "004563-2"
+    }
+   ]
+  },
+  "chevrolet-spark-euv": {
+   "versao": "SPARK EUV ACTIV",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 151927,
+     "codigoFipe": "004560-8"
+    },
+    {
+     "ano": "2026",
+     "valor": 137349,
+     "codigoFipe": "004560-8"
+    },
+    {
+     "ano": "2025",
+     "valor": 128913,
+     "codigoFipe": "004560-8"
+    }
+   ]
+  },
+  "fiat-500e": {
+   "versao": "500e ICON (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 214990,
+     "codigoFipe": "001541-5"
+    },
+    {
+     "ano": "2022",
+     "valor": 129811,
+     "codigoFipe": "001541-5"
+    }
+   ]
+  },
+  "gac-aion-es": {
+   "versao": "AION ES Plus (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 168790,
+     "codigoFipe": "304002-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 152674,
+     "codigoFipe": "304002-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 137195,
+     "codigoFipe": "304002-0"
+    }
+   ]
+  },
+  "gac-aion-ut": {
+   "versao": "AION UT Premium (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 139990,
+     "codigoFipe": "304011-9"
+    },
+    {
+     "ano": "2027",
+     "valor": 126761,
+     "codigoFipe": "304011-9"
+    }
+   ]
+  },
+  "gac-aion-v": {
+   "versao": "AION V Elite (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 219990,
+     "codigoFipe": "304006-2"
+    },
+    {
+     "ano": "2027",
+     "valor": 201755,
+     "codigoFipe": "304006-2"
+    },
+    {
+     "ano": "2026",
+     "valor": 192581,
+     "codigoFipe": "304006-2"
+    },
+    {
+     "ano": "2025",
+     "valor": 182676,
+     "codigoFipe": "304006-2"
+    }
+   ]
+  },
+  "gac-aion-y": {
+   "versao": "AION Y Premium (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 175990,
+     "codigoFipe": "304007-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 164556,
+     "codigoFipe": "304007-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 158962,
+     "codigoFipe": "304007-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 148684,
+     "codigoFipe": "304007-0"
+    }
+   ]
+  },
+  "gac-hyptec-ht": {
+   "versao": "HYPTEC HT Elite (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 314990,
+     "codigoFipe": "304004-6"
+    },
+    {
+     "ano": "2027",
+     "valor": 270631,
+     "codigoFipe": "304004-6"
+    },
+    {
+     "ano": "2026",
+     "valor": 256578,
+     "codigoFipe": "304004-6"
+    },
+    {
+     "ano": "2025",
+     "valor": 233811,
+     "codigoFipe": "304004-6"
+    }
+   ]
+  },
+  "geely-ex2": {
+   "versao": "EX2 PRO",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 125671,
+     "codigoFipe": "088005-1"
+    },
+    {
+     "ano": "2026",
+     "valor": 115414,
+     "codigoFipe": "088005-1"
+    }
+   ]
+  },
+  "geely-ex5": {
+   "versao": "EX5 PRO (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 192410,
+     "codigoFipe": "088003-5"
+    },
+    {
+     "ano": "2026",
+     "valor": 163500,
+     "codigoFipe": "088003-5"
+    }
+   ]
+  },
+  "gwm-ora-03": {
+   "versao": "Ora 03",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 168670,
+     "codigoFipe": "096011-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 149074,
+     "codigoFipe": "096011-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 142623,
+     "codigoFipe": "096011-0"
+    }
+   ]
+  },
+  "gwm-ora-5": {
+   "versao": "Ora 05",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 163900,
+     "codigoFipe": "096018-7"
+    },
+    {
+     "ano": "2027",
+     "valor": 142088,
+     "codigoFipe": "096018-7"
+    }
+   ]
+  },
+  "hyundai-ioniq-5": {
+   "versao": "IONIQ 5 SIGNATURE (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 400120,
+     "codigoFipe": "015250-1"
+    },
+    {
+     "ano": "2025",
+     "valor": 293046,
+     "codigoFipe": "015250-1"
+    }
+   ]
+  },
+  "jac-e-j7": {
+   "versao": "E-J7 193cv 5p Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 250803,
+     "codigoFipe": "080035-0"
+    },
+    {
+     "ano": "2023",
+     "valor": 136918,
+     "codigoFipe": "080035-0"
+    },
+    {
+     "ano": "2022",
+     "valor": 133358,
+     "codigoFipe": "080035-0"
+    }
+   ]
+  },
+  "jac-e-js1": {
+   "versao": "e-JS1 62cv 5p Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 119900,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2027",
+     "valor": 104715,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2026",
+     "valor": 95350,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2025",
+     "valor": 82468,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2024",
+     "valor": 79734,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2023",
+     "valor": 72674,
+     "codigoFipe": "080031-7"
+    },
+    {
+     "ano": "2022",
+     "valor": 69595,
+     "codigoFipe": "080031-7"
+    }
+   ]
+  },
+  "jac-e-js4": {
+   "versao": "e-JS4 150CV 5p Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 245977,
+     "codigoFipe": "080030-9"
+    },
+    {
+     "ano": "2023",
+     "valor": 110908,
+     "codigoFipe": "080030-9"
+    },
+    {
+     "ano": "2022",
+     "valor": 108024,
+     "codigoFipe": "080030-9"
+    }
+   ]
+  },
+  "jac-iev330p": {
+   "versao": "iEV 330P CD 150cv Aut. (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 346015,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2025",
+     "valor": 312022,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2024",
+     "valor": 281443,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2023",
+     "valor": 262443,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2022",
+     "valor": 242196,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2021",
+     "valor": 236288,
+     "codigoFipe": "080023-6"
+    },
+    {
+     "ano": "2020",
+     "valor": 212402,
+     "codigoFipe": "080023-6"
+    }
+   ]
+  },
+  "kia-ev5": {
+   "versao": "EV5 Land (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 382047,
+     "codigoFipe": "018103-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 285892,
+     "codigoFipe": "018103-0"
+    }
+   ]
+  },
+  "leapmotor-b10": {
+   "versao": "B10 (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 181285,
+     "codigoFipe": "305003-3"
+    },
+    {
+     "ano": "2027",
+     "valor": 166847,
+     "codigoFipe": "305003-3"
+    },
+    {
+     "ano": "2026",
+     "valor": 161189,
+     "codigoFipe": "305003-3"
+    }
+   ]
+  },
+  "leapmotor-c10": {
+   "versao": "C10 (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 205620,
+     "codigoFipe": "305001-7"
+    },
+    {
+     "ano": "2027",
+     "valor": 185621,
+     "codigoFipe": "305001-7"
+    },
+    {
+     "ano": "2026",
+     "valor": 177749,
+     "codigoFipe": "305001-7"
+    }
+   ]
+  },
+  "lexus-rz": {
+   "versao": "RZ-500e",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 500833,
+     "codigoFipe": "057060-5"
+    },
+    {
+     "ano": "2027",
+     "valor": 421830,
+     "codigoFipe": "057060-5"
+    }
+   ]
+  },
+  "mercedes-eqb": {
+   "versao": "EQB 250+",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 354634,
+     "codigoFipe": "021558-9"
+    },
+    {
+     "ano": "2026",
+     "valor": 328275,
+     "codigoFipe": "021558-9"
+    },
+    {
+     "ano": "2025",
+     "valor": 318402,
+     "codigoFipe": "021558-9"
+    }
+   ]
+  },
+  "mg-cyberster": {
+   "versao": "Cyberster AWD",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 529800,
+     "codigoFipe": "076003-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 497629,
+     "codigoFipe": "076003-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 475918,
+     "codigoFipe": "076003-0"
+    }
+   ]
+  },
+  "mg-mg4": {
+   "versao": "4 Comfort",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 172958,
+     "codigoFipe": "076006-4"
+    },
+    {
+     "ano": "2027",
+     "valor": 164120,
+     "codigoFipe": "076006-4"
+    },
+    {
+     "ano": "2026",
+     "valor": 159147,
+     "codigoFipe": "076006-4"
+    }
+   ]
+  },
+  "mg-mg4-urban": {
+   "versao": "4 Urban Comfort 43",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 134572,
+     "codigoFipe": "076010-2"
+    },
+    {
+     "ano": "2027",
+     "valor": 117619,
+     "codigoFipe": "076010-2"
+    }
+   ]
+  },
+  "mg-s5": {
+   "versao": "S5 Comfort",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 206133,
+     "codigoFipe": "076004-8"
+    },
+    {
+     "ano": "2027",
+     "valor": 188126,
+     "codigoFipe": "076004-8"
+    },
+    {
+     "ano": "2026",
+     "valor": 173627,
+     "codigoFipe": "076004-8"
+    }
+   ]
+  },
+  "mini-aceman": {
+   "versao": "Aceman E (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 279530,
+     "codigoFipe": "071062-8"
+    },
+    {
+     "ano": "2026",
+     "valor": 234695,
+     "codigoFipe": "071062-8"
+    },
+    {
+     "ano": "2025",
+     "valor": 198816,
+     "codigoFipe": "071062-8"
+    }
+   ]
+  },
+  "mini-cooper": {
+   "versao": "COOPER E 3p (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 266682,
+     "codigoFipe": "071060-1"
+    },
+    {
+     "ano": "2026",
+     "valor": 207513,
+     "codigoFipe": "071060-1"
+    },
+    {
+     "ano": "2025",
+     "valor": 197588,
+     "codigoFipe": "071060-1"
+    },
+    {
+     "ano": "2024",
+     "valor": 181605,
+     "codigoFipe": "071060-1"
+    }
+   ]
+  },
+  "mini-jcw": {
+   "versao": "COOPER John Works E 3p",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 346520,
+     "codigoFipe": "071066-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 283144,
+     "codigoFipe": "071066-0"
+    },
+    {
+     "ano": "2025",
+     "valor": 262205,
+     "codigoFipe": "071066-0"
+    }
+   ]
+  },
+  "omoda-e5": {
+   "versao": "E5 FWD (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 205366,
+     "codigoFipe": "302001-0"
+    },
+    {
+     "ano": "2026",
+     "valor": 175733,
+     "codigoFipe": "302001-0"
+    }
+   ]
+  },
+  "porsche-macan-electric": {
+   "versao": "Macan (Elétrico)",
+   "valores": [
+    {
+     "ano": "2026",
+     "valor": 650982,
+     "codigoFipe": "035169-5"
+    },
+    {
+     "ano": "2025",
+     "valor": 565862,
+     "codigoFipe": "035169-5"
+    }
+   ]
+  },
+  "porsche-taycan": {
+   "versao": "Taycan (Elétrico)",
+   "valores": [
+    {
+     "ano": "2026",
+     "valor": 859995,
+     "codigoFipe": "035134-2"
+    },
+    {
+     "ano": "2025",
+     "valor": 806460,
+     "codigoFipe": "035134-2"
+    },
+    {
+     "ano": "2024",
+     "valor": 543083,
+     "codigoFipe": "035134-2"
+    },
+    {
+     "ano": "2023",
+     "valor": 490168,
+     "codigoFipe": "035134-2"
+    },
+    {
+     "ano": "2022",
+     "valor": 446611,
+     "codigoFipe": "035134-2"
+    },
+    {
+     "ano": "2021",
+     "valor": 430249,
+     "codigoFipe": "035134-2"
+    }
+   ]
+  },
+  "renault-megane-e-tech": {
+   "versao": "Megane E-Tech (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 268310,
+     "codigoFipe": "025321-9"
+    },
+    {
+     "ano": "2025",
+     "valor": 189644,
+     "codigoFipe": "025321-9"
+    },
+    {
+     "ano": "2024",
+     "valor": 161629,
+     "codigoFipe": "025321-9"
+    }
+   ]
+  },
+  "suzuki-e-vitara": {
+   "versao": "e-Vitara 4STYLE ALLGRIP",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 219990,
+     "codigoFipe": "028084-4"
+    },
+    {
+     "ano": "2027",
+     "valor": 190424,
+     "codigoFipe": "028084-4"
+    },
+    {
+     "ano": "2026",
+     "valor": 180712,
+     "codigoFipe": "028084-4"
+    }
+   ]
+  },
+  "volvo-ec40": {
+   "versao": "EC40 Plus P6 (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 350116,
+     "codigoFipe": "029174-9"
+    },
+    {
+     "ano": "2027",
+     "valor": 301566,
+     "codigoFipe": "029174-9"
+    },
+    {
+     "ano": "2026",
+     "valor": 271948,
+     "codigoFipe": "029174-9"
+    },
+    {
+     "ano": "2025",
+     "valor": 252195,
+     "codigoFipe": "029174-9"
+    }
+   ]
+  },
+  "volvo-ex30": {
+   "versao": "EX30 E40 Core (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 226392,
+     "codigoFipe": "029164-1"
+    },
+    {
+     "ano": "2025",
+     "valor": 201201,
+     "codigoFipe": "029164-1"
+    },
+    {
+     "ano": "2024",
+     "valor": 176338,
+     "codigoFipe": "029164-1"
+    }
+   ]
+  },
+  "volvo-ex40": {
+   "versao": "EX40 Plus P6 (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 345950,
+     "codigoFipe": "029175-7"
+    },
+    {
+     "ano": "2027",
+     "valor": 307900,
+     "codigoFipe": "029175-7"
+    },
+    {
+     "ano": "2026",
+     "valor": 264175,
+     "codigoFipe": "029175-7"
+    },
+    {
+     "ano": "2025",
+     "valor": 250060,
+     "codigoFipe": "029175-7"
+    }
+   ]
+  },
+  "volvo-ex90": {
+   "versao": "EX90 Twin Ultra AWD (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 793945,
+     "codigoFipe": "029176-5"
+    },
+    {
+     "ano": "2025",
+     "valor": 557292,
+     "codigoFipe": "029176-5"
+    }
+   ]
+  },
+  "zeekr-001": {
+   "versao": "001 Premium AWD (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 495000,
+     "codigoFipe": "301001-5"
+    },
+    {
+     "ano": "2025",
+     "valor": 385833,
+     "codigoFipe": "301001-5"
+    }
+   ]
+  },
+  "zeekr-7x": {
+   "versao": "7X Flagship AWD",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 468000,
+     "codigoFipe": "301005-8"
+    },
+    {
+     "ano": "2027",
+     "valor": 425089,
+     "codigoFipe": "301005-8"
+    },
+    {
+     "ano": "2026",
+     "valor": 397440,
+     "codigoFipe": "301005-8"
+    }
+   ]
+  },
+  "zeekr-x": {
+   "versao": "X Premium (Elétrico)",
+   "valores": [
+    {
+     "ano": "0km",
+     "valor": 298000,
+     "codigoFipe": "301003-1"
+    },
+    {
+     "ano": "2025",
+     "valor": 229884,
+     "codigoFipe": "301003-1"
+    }
+   ]
+  }
+ }
+}

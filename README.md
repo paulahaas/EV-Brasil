@@ -85,6 +85,16 @@ Abre a página oficial de cada preço no Chrome (sem janela) e gera
 O script não muda nenhum dado. Depois de corrigir `dados/precos-2026-10.jsonl` e a data
 de coleta em `scripts/gerar-dados.mjs`, rode `npm run dados` e `npm run og`.
 
+## 💸 Atualizar a FIPE (todo mês)
+
+```bash
+npm run fipe
+npm run dados
+```
+
+Consulta o site oficial da FIPE devagar (leva uns 50 minutos, para não ser bloqueado) e
+grava `dados/fipe.json`. A versão de cada modelo na FIPE fica em `dados/fipe-mapa.json`.
+
 ## ▶️ Rodar localmente
 
 ```bash

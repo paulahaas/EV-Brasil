@@ -26,6 +26,10 @@ const DATA_INFO = {
   },
   "seguranca": {
     "coleta": "09/10/2026"
+  },
+  "fipe": {
+    "referencia": "outubro/2026",
+    "fonte": "https://veiculos.fipe.org.br/"
   }
 };
 
@@ -79,6 +83,18 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "A6 Avant E-Tron S-Line",
+      "zero": 699993,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 641893,
+          "loss": 8.3
+        }
+      ]
     }
   },
   {
@@ -143,6 +159,23 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "A6 Sport. e-tron Perf. Black (Elétrico)",
+      "zero": 650990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 578952,
+          "loss": 11.1
+        },
+        {
+          "year": 2025,
+          "value": 516520,
+          "loss": 20.7
+        }
+      ]
     }
   },
   {
@@ -218,6 +251,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "Q6 E-Tron Quattro S-Line",
+      "zero": 702661,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 603222,
+          "loss": 14.2
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-04",
@@ -281,6 +326,18 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "Q6 E-Tron Quattro Sportback Performance Black",
+      "zero": 603114,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 512995,
+          "loss": 14.9
+        }
+      ]
     }
   },
   {
@@ -332,6 +389,23 @@ const VEHICLES = [
       "source": "https://www.audi.com.br/pt/garantia/",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "RS E-TRON GT Quattro Aut. (Elétrico)",
+      "zero": 940439,
+      "refYear": 2024,
+      "used": [
+        {
+          "year": 2023,
+          "value": 561049,
+          "loss": 40.3
+        },
+        {
+          "year": 2022,
+          "value": 432775,
+          "loss": 54
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -397,6 +471,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "SQ6 Sportback E-Tron Quattro (Elétrico)",
+      "zero": 810710,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 685247,
+          "loss": 15.5
+        },
+        {
+          "year": 2025,
+          "value": 602401,
+          "loss": 25.7
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-04",
@@ -448,6 +539,28 @@ const VEHICLES = [
       "source": "https://www.press.bmwgroup.com/brazil/article/detail/T0433318PT/bmw-i7-inaugura-uma-nova-era-em-termos-de-luxo-entretenimento-e-mobilidade-el%C3%A9trica-no-brasil?language=pt",
       "sourceExtra": "",
       "kind": "oficial"
+    },
+    "fipe": {
+      "version": "i7 XDrive 60 M Sport Aut. (Elétrico)",
+      "zero": 1372402,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 1148550,
+          "loss": 16.3
+        },
+        {
+          "year": 2025,
+          "value": 914703,
+          "loss": 33.4
+        },
+        {
+          "year": 2024,
+          "value": 851851,
+          "loss": 37.9
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -520,6 +633,28 @@ const VEHICLES = [
       "testedAs": "BMW X1",
       "note": "Nota do X1, que vale para a versão elétrica iX1"
     },
+    "fipe": {
+      "version": "iX 1 xDrive 30 M Sport (Elétrico)",
+      "zero": 468376,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 353695,
+          "loss": 24.5
+        },
+        {
+          "year": 2025,
+          "value": 321881,
+          "loss": 31.3
+        },
+        {
+          "year": 2024,
+          "value": 270885,
+          "loss": 42.2
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -580,6 +715,28 @@ const VEHICLES = [
       "testedAs": "BMW X2",
       "note": "Nota do X2, que vale para a versão elétrica iX2"
     },
+    "fipe": {
+      "version": "iX 2 xDrive 30 M Sport (Elétrico)",
+      "zero": 497164,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 411045,
+          "loss": 17.3
+        },
+        {
+          "year": 2025,
+          "value": 344379,
+          "loss": 30.7
+        },
+        {
+          "year": 2024,
+          "value": 332056,
+          "loss": 33.2
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -639,6 +796,18 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/bmw/ix3/1232/",
       "testedAs": "",
       "note": ""
+    },
+    "fipe": {
+      "version": "iX 3 XDrive 50 M Sport",
+      "zero": 582953,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 489589,
+          "loss": 16
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -723,6 +892,33 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Dolphin EV GS (Elétrico)",
+      "zero": 147055,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 133010,
+          "loss": 9.6
+        },
+        {
+          "year": 2026,
+          "value": 129551,
+          "loss": 11.9
+        },
+        {
+          "year": 2025,
+          "value": 121374,
+          "loss": 17.5
+        },
+        {
+          "year": 2024,
+          "value": 117564,
+          "loss": 20.1
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -800,6 +996,28 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Dolphin Mini GL",
+      "zero": 119679,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 112634,
+          "loss": 5.9
+        },
+        {
+          "year": 2026,
+          "value": 106009,
+          "loss": 11.4
+        },
+        {
+          "year": 2025,
+          "value": 103220,
+          "loss": 13.8
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -858,6 +1076,33 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+    },
+    "fipe": {
+      "version": "Han EV  (Elétrico)",
+      "zero": 551838,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 365914,
+          "loss": 33.7
+        },
+        {
+          "year": 2024,
+          "value": 285451,
+          "loss": 48.3
+        },
+        {
+          "year": 2023,
+          "value": 276448,
+          "loss": 49.9
+        },
+        {
+          "year": 2022,
+          "value": 254616,
+          "loss": 53.9
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -926,6 +1171,28 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Seal (Elétrico)",
+      "zero": 299673,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 271532,
+          "loss": 9.4
+        },
+        {
+          "year": 2025,
+          "value": 221377,
+          "loss": 26.1
+        },
+        {
+          "year": 2024,
+          "value": 204101,
+          "loss": 31.9
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -993,6 +1260,18 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Sealion 7 AWD (Elétrico)",
+      "zero": 339063,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 318713,
+          "loss": 6
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1059,6 +1338,33 @@ const VEHICLES = [
       "source": "https://www.cnnbrasil.com.br/auto/byd-altera-politica-de-garantia-para-modelos-2026-27-veja-o-que-mudou/",
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
+    },
+    "fipe": {
+      "version": "TAN EV AWD (Elétrico)",
+      "zero": 429964,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 342490,
+          "loss": 20.3
+        },
+        {
+          "year": 2024,
+          "value": 295554,
+          "loss": 31.3
+        },
+        {
+          "year": 2023,
+          "value": 247964,
+          "loss": 42.3
+        },
+        {
+          "year": 2022,
+          "value": 236214,
+          "loss": 45.1
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1137,6 +1443,18 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Yuan Plus AWD",
+      "zero": 269214,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 239699,
+          "loss": 11
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1196,6 +1514,28 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Regra da linha 2026/2027, uso particular. Modelos anteriores mantêm as condições da compra"
     },
+    "fipe": {
+      "version": "Yuan Pro (Elétrico)",
+      "zero": 182990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 169094,
+          "loss": 7.6
+        },
+        {
+          "year": 2026,
+          "value": 162916,
+          "loss": 11
+        },
+        {
+          "year": 2025,
+          "value": 152985,
+          "loss": 16.4
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1247,6 +1587,23 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/03/caoa-changan-avatr-11-2026-preco-parte.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "fipe": {
+      "version": "AVATR11",
+      "zero": 621995,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 559589,
+          "loss": 10
+        },
+        {
+          "year": 2026,
+          "value": 534349,
+          "loss": 14.1
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1306,6 +1663,23 @@ const VEHICLES = [
       "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
+    },
+    "fipe": {
+      "version": "BLAZER EV RS 347cv (Elétrico)",
+      "zero": 503190,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 420597,
+          "loss": 16.4
+        },
+        {
+          "year": 2024,
+          "value": 328235,
+          "loss": 34.8
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1372,6 +1746,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
     },
+    "fipe": {
+      "version": "CAPTIVA EV Premier",
+      "zero": 209017,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 185147,
+          "loss": 11.4
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-02",
@@ -1437,6 +1823,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "Spark EUV: 3 anos ou 100 mil km para o veículo"
     },
+    "fipe": {
+      "version": "SPARK EUV ACTIV",
+      "zero": 151927,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 137349,
+          "loss": 9.6
+        },
+        {
+          "year": 2025,
+          "value": 128913,
+          "loss": 15.1
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1496,6 +1899,18 @@ const VEHICLES = [
       "source": "https://www.euroncap.com/assessments/fiat/500e/0911/",
       "testedAs": "",
       "note": ""
+    },
+    "fipe": {
+      "version": "500e ICON (Elétrico)",
+      "zero": 214990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2022,
+          "value": 129811,
+          "loss": 39.6
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1561,6 +1976,23 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+    },
+    "fipe": {
+      "version": "AION ES Plus (Elétrico)",
+      "zero": 168790,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 152674,
+          "loss": 9.5
+        },
+        {
+          "year": 2025,
+          "value": 137195,
+          "loss": 18.7
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1634,6 +2066,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     },
+    "fipe": {
+      "version": "AION UT Premium (Elétrico)",
+      "zero": 139990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 126761,
+          "loss": 9.4
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-06",
@@ -1706,6 +2150,28 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     },
+    "fipe": {
+      "version": "AION V Elite (Elétrico)",
+      "zero": 219990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 201755,
+          "loss": 8.3
+        },
+        {
+          "year": 2026,
+          "value": 192581,
+          "loss": 12.5
+        },
+        {
+          "year": 2025,
+          "value": 182676,
+          "loss": 17
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1770,6 +2236,28 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
     },
+    "fipe": {
+      "version": "AION Y Premium (Elétrico)",
+      "zero": 175990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 164556,
+          "loss": 6.5
+        },
+        {
+          "year": 2026,
+          "value": 158962,
+          "loss": 9.7
+        },
+        {
+          "year": 2025,
+          "value": 148684,
+          "loss": 15.5
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -1833,6 +2321,28 @@ const VEHICLES = [
       "source": "https://br-www-resouce-cdn.gacgroup.com/BR/Texto_legal-dezembro_2025.pdf",
       "kind": "oficial",
       "note": "Uso particular; algumas campanhas ampliam a garantia do veículo"
+    },
+    "fipe": {
+      "version": "HYPTEC HT Elite (Elétrico)",
+      "zero": 314990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 270631,
+          "loss": 14.1
+        },
+        {
+          "year": 2026,
+          "value": 256578,
+          "loss": 18.5
+        },
+        {
+          "year": 2025,
+          "value": 233811,
+          "loss": 25.8
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1905,6 +2415,18 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "EX2 PRO",
+      "zero": 125671,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 115414,
+          "loss": 8.2
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -1983,6 +2505,18 @@ const VEHICLES = [
       "source": "https://www.geelybrasil.com.br/geely-ex2-chega-ao-brasil",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "EX5 PRO (Elétrico)",
+      "zero": 192410,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 163500,
+          "loss": 15
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -2066,6 +2600,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "Ora 03",
+      "zero": 168670,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 149074,
+          "loss": 11.6
+        },
+        {
+          "year": 2026,
+          "value": 142623,
+          "loss": 15.4
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2025-04",
@@ -2130,6 +2681,18 @@ const VEHICLES = [
       "source": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-ora-03-conquista-premio-melhor-revenda-entre-eletricos-ate-rdollar-300-mil-da-quatro-rodas",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "Ora 05",
+      "zero": 163900,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 142088,
+          "loss": 13.3
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -2214,6 +2777,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "IONIQ 5 SIGNATURE (Elétrico)",
+      "zero": 400120,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 293046,
+          "loss": 26.8
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2024-09",
@@ -2264,6 +2839,23 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
       "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+    },
+    "fipe": {
+      "version": "E-J7 193cv 5p Aut. (Elétrico)",
+      "zero": 250803,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2023,
+          "value": 136918,
+          "loss": 45.4
+        },
+        {
+          "year": 2022,
+          "value": 133358,
+          "loss": 46.8
+        }
+      ]
     }
   },
   {
@@ -2328,6 +2920,43 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
       "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+    },
+    "fipe": {
+      "version": "e-JS1 62cv 5p Aut. (Elétrico)",
+      "zero": 119900,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 104715,
+          "loss": 12.7
+        },
+        {
+          "year": 2026,
+          "value": 95350,
+          "loss": 20.5
+        },
+        {
+          "year": 2025,
+          "value": 82468,
+          "loss": 31.2
+        },
+        {
+          "year": 2024,
+          "value": 79734,
+          "loss": 33.5
+        },
+        {
+          "year": 2023,
+          "value": 72674,
+          "loss": 39.4
+        },
+        {
+          "year": 2022,
+          "value": 69595,
+          "loss": 42
+        }
+      ]
     }
   },
   {
@@ -2379,6 +3008,23 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
       "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+    },
+    "fipe": {
+      "version": "e-JS4 150CV 5p Aut. (Elétrico)",
+      "zero": 245977,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2023,
+          "value": 110908,
+          "loss": 54.9
+        },
+        {
+          "year": 2022,
+          "value": 108024,
+          "loss": 56.1
+        }
+      ]
     }
   },
   {
@@ -2409,6 +3055,43 @@ const VEHICLES = [
       "source": "https://www.jacmotors.com.br/wp-content/uploads/2025/12/E-JS1-MANUAL-1.pdf",
       "kind": "oficial",
       "note": "Cobre a bateria se a saúde (SOH) cair abaixo de 75% no prazo"
+    },
+    "fipe": {
+      "version": "iEV 330P CD 150cv Aut. (Elétrico)",
+      "zero": 346015,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 312022,
+          "loss": 9.8
+        },
+        {
+          "year": 2024,
+          "value": 281443,
+          "loss": 18.7
+        },
+        {
+          "year": 2023,
+          "value": 262443,
+          "loss": 24.2
+        },
+        {
+          "year": 2022,
+          "value": 242196,
+          "loss": 30
+        },
+        {
+          "year": 2021,
+          "value": 236288,
+          "loss": 31.7
+        },
+        {
+          "year": 2020,
+          "value": 212402,
+          "loss": 38.6
+        }
+      ]
     }
   },
   {
@@ -2473,6 +3156,18 @@ const VEHICLES = [
       "source": "https://www.kia.com.br/garantia",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "EV5 Land (Elétrico)",
+      "zero": 382047,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 285892,
+          "loss": 25.2
+        }
+      ]
     }
   },
   {
@@ -2532,6 +3227,23 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2026/09/leapmotor-b10-c10-2027-garantia-seis-anos-brasil.html",
       "kind": "imprensa",
       "note": "Ano-modelo 2027, com revisões na rede autorizada"
+    },
+    "fipe": {
+      "version": "B10 (Elétrico)",
+      "zero": 181285,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 166847,
+          "loss": 8
+        },
+        {
+          "year": 2026,
+          "value": 161189,
+          "loss": 11.1
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -2606,6 +3318,23 @@ const VEHICLES = [
       "kind": "imprensa",
       "note": "Ano-modelo 2027, com revisões na rede autorizada"
     },
+    "fipe": {
+      "version": "C10 (Elétrico)",
+      "zero": 205620,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 185621,
+          "loss": 9.7
+        },
+        {
+          "year": 2026,
+          "value": 177749,
+          "loss": 13.6
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2025-11",
@@ -2679,6 +3408,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "RZ-500e",
+      "zero": 500833,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 421830,
+          "loss": 15.8
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2025-12",
@@ -2745,6 +3486,23 @@ const VEHICLES = [
       "source": "https://imprensa.mercedes-benz.com.br/releases/mercedes-benz-eqb-250-chega-com-mais-autonomia-e-eficiencia-no-mercado-brasileiro",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "EQB 250+",
+      "zero": 354634,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 328275,
+          "loss": 7.4
+        },
+        {
+          "year": 2025,
+          "value": 318402,
+          "loss": 10.2
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -2842,6 +3600,23 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "Cyberster AWD",
+      "zero": 529800,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 497629,
+          "loss": 6.1
+        },
+        {
+          "year": 2026,
+          "value": 475918,
+          "loss": 10.2
+        }
+      ]
     }
   },
   {
@@ -2911,6 +3686,23 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "4 Comfort",
+      "zero": 172958,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 164120,
+          "loss": 5.1
+        },
+        {
+          "year": 2026,
+          "value": 159147,
+          "loss": 8
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -2994,6 +3786,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "4 Urban Comfort 43",
+      "zero": 134572,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 117619,
+          "loss": 12.6
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-07",
@@ -3065,6 +3869,23 @@ const VEHICLES = [
       "source": "https://mgmotoroficial.com.br/pdfs/mgs5-ficha.pdf",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "S5 Comfort",
+      "zero": 206133,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 188126,
+          "loss": 8.7
+        },
+        {
+          "year": 2026,
+          "value": 173627,
+          "loss": 15.8
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -3144,6 +3965,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "Aceman E (Elétrico)",
+      "zero": 279530,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 234695,
+          "loss": 16
+        },
+        {
+          "year": 2025,
+          "value": 198816,
+          "loss": 28.9
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2025-02",
@@ -3221,6 +4059,28 @@ const VEHICLES = [
       "source": "https://www.mini.com.br/pt_BR/home/services/mini-service.html",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "COOPER E 3p (Elétrico)",
+      "zero": 266682,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 207513,
+          "loss": 22.2
+        },
+        {
+          "year": 2025,
+          "value": 197588,
+          "loss": 25.9
+        },
+        {
+          "year": 2024,
+          "value": 181605,
+          "loss": 31.9
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -3364,6 +4224,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": ""
     },
+    "fipe": {
+      "version": "COOPER John Works E 3p",
+      "zero": 346520,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 283144,
+          "loss": 18.3
+        },
+        {
+          "year": 2025,
+          "value": 262205,
+          "loss": 24.3
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2025-07",
@@ -3415,6 +4292,18 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
       "sourceExtra": "",
       "kind": "imprensa"
+    },
+    "fipe": {
+      "version": "E5 FWD (Elétrico)",
+      "zero": 205366,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2026,
+          "value": 175733,
+          "loss": 14.4
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -3591,6 +4480,18 @@ const VEHICLES = [
       "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
       "kind": "oficial",
       "note": "Garante ao menos 70% da capacidade até o fim do prazo"
+    },
+    "fipe": {
+      "version": "Macan (Elétrico)",
+      "zero": 650982,
+      "refYear": 2026,
+      "used": [
+        {
+          "year": 2025,
+          "value": 565862,
+          "loss": 13.1
+        }
+      ]
     }
   },
   {
@@ -3680,6 +4581,38 @@ const VEHICLES = [
       "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
       "kind": "oficial",
       "note": "Garante ao menos 70% da capacidade até o fim do prazo"
+    },
+    "fipe": {
+      "version": "Taycan (Elétrico)",
+      "zero": 859995,
+      "refYear": 2026,
+      "used": [
+        {
+          "year": 2025,
+          "value": 806460,
+          "loss": 6.2
+        },
+        {
+          "year": 2024,
+          "value": 543083,
+          "loss": 36.9
+        },
+        {
+          "year": 2023,
+          "value": 490168,
+          "loss": 43
+        },
+        {
+          "year": 2022,
+          "value": 446611,
+          "loss": 48.1
+        },
+        {
+          "year": 2021,
+          "value": 430249,
+          "loss": 50
+        }
+      ]
     }
   },
   {
@@ -3739,6 +4672,23 @@ const VEHICLES = [
       "source": "https://www.renault.com.br/electric-vehicles/megane-e-tech.html",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "Megane E-Tech (Elétrico)",
+      "zero": 268310,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 189644,
+          "loss": 29.3
+        },
+        {
+          "year": 2024,
+          "value": 161629,
+          "loss": 39.8
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -3817,6 +4767,23 @@ const VEHICLES = [
       "source": "https://www.suzukiveiculos.com.br/suzuki-garantia/",
       "kind": "oficial",
       "note": ""
+    },
+    "fipe": {
+      "version": "e-Vitara 4STYLE ALLGRIP",
+      "zero": 219990,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 190424,
+          "loss": 13.4
+        },
+        {
+          "year": 2026,
+          "value": 180712,
+          "loss": 17.9
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -3919,6 +4886,28 @@ const VEHICLES = [
       "source": "https://www.volvocars.com/br/l/proprietario/garantia/",
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
+    },
+    "fipe": {
+      "version": "EC40 Plus P6 (Elétrico)",
+      "zero": 350116,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 301566,
+          "loss": 13.9
+        },
+        {
+          "year": 2026,
+          "value": 271948,
+          "loss": 22.3
+        },
+        {
+          "year": 2025,
+          "value": 252195,
+          "loss": 28
+        }
+      ]
     },
     "priceHistory": [
       {
@@ -4087,6 +5076,23 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     },
+    "fipe": {
+      "version": "EX30 E40 Core (Elétrico)",
+      "zero": 226392,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 201201,
+          "loss": 11.1
+        },
+        {
+          "year": 2024,
+          "value": 176338,
+          "loss": 22.1
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -4189,6 +5195,28 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     },
+    "fipe": {
+      "version": "EX40 Plus P6 (Elétrico)",
+      "zero": 345950,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 307900,
+          "loss": 11
+        },
+        {
+          "year": 2026,
+          "value": 264175,
+          "loss": 23.6
+        },
+        {
+          "year": 2025,
+          "value": 250060,
+          "loss": 27.7
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -4266,6 +5294,18 @@ const VEHICLES = [
       "kind": "oficial",
       "note": "A bateria é reparada ou trocada se a capacidade cair abaixo de 70% nesse período"
     },
+    "fipe": {
+      "version": "EX90 Twin Ultra AWD (Elétrico)",
+      "zero": 793945,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 557292,
+          "loss": 29.8
+        }
+      ]
+    },
     "priceHistory": [
       {
         "month": "2026-10",
@@ -4337,6 +5377,18 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
       "kind": "imprensa",
       "note": "Informado no lançamento, em fevereiro de 2025"
+    },
+    "fipe": {
+      "version": "001 Premium AWD (Elétrico)",
+      "zero": 495000,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 385833,
+          "loss": 22.1
+        }
+      ]
     }
   },
   {
@@ -4401,6 +5453,23 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
       "kind": "imprensa",
       "note": "Informado no lançamento, em fevereiro de 2025"
+    },
+    "fipe": {
+      "version": "7X Flagship AWD",
+      "zero": 468000,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2027,
+          "value": 425089,
+          "loss": 9.2
+        },
+        {
+          "year": 2026,
+          "value": 397440,
+          "loss": 15.1
+        }
+      ]
     }
   },
   {
@@ -4465,6 +5534,18 @@ const VEHICLES = [
       "source": "https://www.car.blog.br/2025/02/zeekr-001-esportivo-eletrico-precos.html",
       "kind": "imprensa",
       "note": "Informado no lançamento, em fevereiro de 2025"
+    },
+    "fipe": {
+      "version": "X Premium (Elétrico)",
+      "zero": 298000,
+      "refYear": null,
+      "used": [
+        {
+          "year": 2025,
+          "value": 229884,
+          "loss": 22.9
+        }
+      ]
     }
   }
 ];

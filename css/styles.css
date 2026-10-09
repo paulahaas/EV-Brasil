@@ -720,3 +720,4 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .chegando-marca { font-size: 0.8rem; color: var(--text-mute); }
 .chegando-item strong { font-size: 1.05rem; }
 .chegando-prev { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
+.fipe-table thead th:first-child { text-align: left; }
