@@ -10,7 +10,8 @@
     "dados": "node scripts/gerar-dados.mjs && node scripts/gerar-paginas.mjs",
     "imagens": "node scripts/gerar-imagens.mjs",
     "og": "node scripts/gerar-og.mjs",
-    "precos": "node scripts/conferir-precos.mjs"
+    "precos": "node scripts/conferir-precos.mjs",
+    "fipe": "node scripts/coletar-fipe.mjs"
   },
   "keywords": [
     "veiculos-eletricos",

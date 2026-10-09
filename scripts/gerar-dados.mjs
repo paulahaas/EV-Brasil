@@ -9,6 +9,7 @@
  *   dados/seguranca.json                     — nota Latin NCAP / Euro NCAP de cada modelo
  *   dados/garantias.json                     — garantia do veículo e da bateria, por marca
  *   dados/historico-precos.json              — histórico de preço; o ponto do mês da coleta é gravado aqui
+ *   dados/fipe.json                          — valores FIPE (zero km e usados), de scripts/coletar-fipe.mjs
  *
  * Uso: npm run dados
  */
@@ -23,6 +24,7 @@ const ipva = lerJson("dados/ipva-2026.json");
 const seguranca = lerJson("dados/seguranca.json").seguranca;
 const garantias = lerJson("dados/garantias.json").garantias;
 const historicoDoc = lerJson("dados/historico-precos.json");
+const fipe = fs.existsSync("dados/fipe.json") ? lerJson("dados/fipe.json") : { modelos: {} };
 const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
   .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
 
@@ -102,6 +104,19 @@ const garantia = (g) => ({ vehicle: g.veiculo, battery: g.bateria, source: g.fon
 // Data da coleta de preços (dia/mês/ano). Mude junto com o arquivo de preços.
 const DATA_INFO_COLETA = "05/10/2026";
 
+// FIPE: valor de zero km e de cada ano-modelo usado, com a perda em relação ao zero.
+const valoresFipe = (f) => {
+  if (!f) return null;
+  const zero = f.valores.find((x) => x.ano === "0km");
+  const usados = f.valores.filter((x) => x.ano !== "0km").sort((a, b) => b.ano - a.ano);
+  if (!zero || !usados.length) return null;
+  return {
+    version: f.versao,
+    zero: zero.valor,
+    used: usados.map((u) => ({ year: Number(u.ano), value: u.valor, loss: Math.round((1 - u.valor / zero.valor) * 1000) / 10 })),
+  };
+};
+
 const VEHICLES = [...porId.values()].map((v) => {
   const ps = precos.filter((p) => p.preco && v.chaves.has(chavePreco(p)));
   const menor = ps.sort((a, b) => a.preco - b.preco)[0];
@@ -121,6 +136,7 @@ const VEHICLES = [...porId.values()].map((v) => {
     ...(fichas[v.id] ? { specs: ficha(fichas[v.id]) } : {}),
     ...(seguranca[v.id] ? { safety: notaNcap(seguranca[v.id]) } : {}),
     ...(garantias[v.brand] ? { warranty: garantia(garantias[v.brand]) } : {}),
+    ...(valoresFipe(fipe.modelos[v.id]) ? { fipe: valoresFipe(fipe.modelos[v.id]) } : {}),
   };
 }).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
 
@@ -152,6 +168,7 @@ const DATA_INFO = {
   fichas: { coleta: "08/10/2026" },
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
   seguranca: { coleta: "09/10/2026" },
+  fipe: { referencia: fipe.referencia || "", fonte: "https://veiculos.fipe.org.br/" },
 };
 
 const js = `/**

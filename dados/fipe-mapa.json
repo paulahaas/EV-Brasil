@@ -1,0 +1,265 @@
+{
+ "_leia": "Versão de cada modelo na tabela FIPE (marca como aparece na FIPE + expressão que acha o nome da versão). Usado por scripts/coletar-fipe.mjs. De preferência, a mesma versão do preço 'a partir de'.",
+ "modelos": {
+  "audi-a6-avant-e-tron": {
+   "marca": "Audi",
+   "versao": "A6.*Avant.*e-?tron"
+  },
+  "audi-a6-e-tron": {
+   "marca": "Audi",
+   "versao": "A6 (?!.*Avant).*e-?tron"
+  },
+  "audi-q6-e-tron": {
+   "marca": "Audi",
+   "versao": "^Q6 E-Tron Quattro S-Line"
+  },
+  "audi-q6-sportback-e-tron": {
+   "marca": "Audi",
+   "versao": "^Q6 E-Tron Quattro Sportback"
+  },
+  "audi-sq6-sportback-e-tron": {
+   "marca": "Audi",
+   "versao": "^SQ6 Sportback"
+  },
+  "audi-rs-e-tron-gt": {
+   "marca": "Audi",
+   "versao": "^RS E-TRON GT"
+  },
+  "bmw-i7": {
+   "marca": "BMW",
+   "versao": "^i7 XDrive 60"
+  },
+  "bmw-ix1": {
+   "marca": "BMW",
+   "versao": "^iX 1 xDrive 30"
+  },
+  "bmw-ix2": {
+   "marca": "BMW",
+   "versao": "^iX 2 xDrive 30"
+  },
+  "bmw-ix3": {
+   "marca": "BMW",
+   "versao": "^iX 3 XDrive 50"
+  },
+  "byd-dolphin": {
+   "marca": "BYD",
+   "versao": "^Dolphin EV GS"
+  },
+  "byd-dolphin-mini": {
+   "marca": "BYD",
+   "versao": "^Dolphin Mini GL"
+  },
+  "byd-han": {
+   "marca": "BYD",
+   "versao": "^Han EV"
+  },
+  "byd-seal": {
+   "marca": "BYD",
+   "versao": "^Seal \\("
+  },
+  "byd-sealion-7": {
+   "marca": "BYD",
+   "versao": "^Sealion 7"
+  },
+  "byd-tan": {
+   "marca": "BYD",
+   "versao": "^TAN EV"
+  },
+  "byd-yuan-plus": {
+   "marca": "BYD",
+   "versao": "^Yuan Plus AWD"
+  },
+  "byd-yuan-pro": {
+   "marca": "BYD",
+   "versao": "^Yuan Pro"
+  },
+  "avatr-11": {
+   "marca": "Caoa Changan",
+   "versao": "^AVATR ?11"
+  },
+  "chevrolet-blazer-ev": {
+   "marca": "GM - Chevrolet",
+   "versao": "^BLAZER EV"
+  },
+  "chevrolet-captiva-ev": {
+   "marca": "GM - Chevrolet",
+   "versao": "^CAPTIVA EV"
+  },
+  "chevrolet-spark-euv": {
+   "marca": "GM - Chevrolet",
+   "versao": "^SPARK EUV"
+  },
+  "fiat-500e": {
+   "marca": "Fiat",
+   "versao": "^500e ICON"
+  },
+  "gac-aion-es": {
+   "marca": "GAC",
+   "versao": "^AION ES"
+  },
+  "gac-aion-ut": {
+   "marca": "GAC",
+   "versao": "^AION UT Premium"
+  },
+  "gac-aion-v": {
+   "marca": "GAC",
+   "versao": "^AION V"
+  },
+  "gac-aion-y": {
+   "marca": "GAC",
+   "versao": "^AION Y Premium"
+  },
+  "gac-hyptec-ht": {
+   "marca": "GAC",
+   "versao": "^HYPTEC HT Elite"
+  },
+  "geely-ex2": {
+   "marca": "GEELY",
+   "versao": "^EX2 PRO"
+  },
+  "geely-ex5": {
+   "marca": "GEELY",
+   "versao": "^EX5 PRO \\(El"
+  },
+  "gwm-ora-03": {
+   "marca": "GWM",
+   "versao": "^Ora 03\\s*$"
+  },
+  "gwm-ora-5": {
+   "marca": "GWM",
+   "versao": "^Ora 05"
+  },
+  "hyundai-ioniq-5": {
+   "marca": "Hyundai",
+   "versao": "^IONIQ 5"
+  },
+  "jac-e-j7": {
+   "marca": "JAC",
+   "versao": "^E-J7"
+  },
+  "jac-e-js1": {
+   "marca": "JAC",
+   "versao": "^e-JS1 62cv"
+  },
+  "jac-e-js4": {
+   "marca": "JAC",
+   "versao": "^e-JS4"
+  },
+  "jac-iev330p": {
+   "marca": "JAC",
+   "versao": "IEV ?330"
+  },
+  "kia-ev5": {
+   "marca": "Kia Motors",
+   "versao": "^EV5"
+  },
+  "leapmotor-b10": {
+   "marca": "Leapmotor",
+   "versao": "^B10 \\(El"
+  },
+  "leapmotor-c10": {
+   "marca": "Leapmotor",
+   "versao": "^C10 \\(El"
+  },
+  "lexus-rz": {
+   "marca": "Lexus",
+   "versao": "^RZ"
+  },
+  "mercedes-eqb": {
+   "marca": "Mercedes-Benz",
+   "versao": "^EQB 250\\+"
+  },
+  "mercedes-glb-ev": {
+   "marca": "Mercedes-Benz",
+   "versao": "^GLB.*(EV|El[eé]tric)"
+  },
+  "mg-cyberster": {
+   "marca": "MG",
+   "versao": "^Cyberster"
+  },
+  "mg-mg4": {
+   "marca": "MG",
+   "versao": "^(MG ?)?4\\b(?!.*Urban)"
+  },
+  "mg-mg4-urban": {
+   "marca": "MG",
+   "versao": "Urban"
+  },
+  "mg-s5": {
+   "marca": "MG",
+   "versao": "^S5 Comfort"
+  },
+  "mini-aceman": {
+   "marca": "MINI",
+   "versao": "^Aceman E \\("
+  },
+  "mini-cooper": {
+   "marca": "MINI",
+   "versao": "^COOPER E\\b"
+  },
+  "mini-countryman": {
+   "marca": "MINI",
+   "versao": "Countryman.*SE(?!.*H[ií]b)"
+  },
+  "mini-jcw": {
+   "marca": "MINI",
+   "versao": "John Works E\\b"
+  },
+  "omoda-e5": {
+   "marca": "Omoda",
+   "versao": "^E5"
+  },
+  "porsche-cayenne-electric": {
+   "marca": "Porsche",
+   "versao": "Cayenne.*(Electric|El[eé]tric)"
+  },
+  "porsche-macan-electric": {
+   "marca": "Porsche",
+   "versao": "Macan.*(Electric|El[eé]tric)"
+  },
+  "porsche-taycan": {
+   "marca": "Porsche",
+   "versao": "^Taycan \\(El"
+  },
+  "renault-megane-e-tech": {
+   "marca": "Renault",
+   "versao": "^Megane E-Tech"
+  },
+  "suzuki-e-vitara": {
+   "marca": "Suzuki",
+   "versao": "^e-Vitara"
+  },
+  "volvo-ec40": {
+   "marca": "Volvo",
+   "versao": "^EC40 Plus P6"
+  },
+  "volvo-es90": {
+   "marca": "Volvo",
+   "versao": "ES90"
+  },
+  "volvo-ex30": {
+   "marca": "Volvo",
+   "versao": "^EX30 E40 Core"
+  },
+  "volvo-ex40": {
+   "marca": "Volvo",
+   "versao": "^EX40 Plus P6"
+  },
+  "volvo-ex90": {
+   "marca": "Volvo",
+   "versao": "^EX90"
+  },
+  "zeekr-001": {
+   "marca": "ZEEKR",
+   "versao": "^001 Premium"
+  },
+  "zeekr-7x": {
+   "marca": "ZEEKR",
+   "versao": "^7X"
+  },
+  "zeekr-x": {
+   "marca": "ZEEKR",
+   "versao": "^X Premium"
+  }
+ }
+}

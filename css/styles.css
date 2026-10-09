@@ -334,6 +334,13 @@ a.card:hover .car-svg, .card-link:hover .car-svg, .card-link:hover .has-photo im
 .price-trend.down, .card-trend.down { color: #4ade80; }
 .price-trend.up, .card-trend.up { color: var(--text-dim); }
 .card-trend { font-size: 0.8rem; margin-top: 2px; }
+.fipe-resumo { color: var(--text-dim); margin-bottom: 12px; }
+.fipe-resumo strong { color: var(--text); }
+.fipe-table th { font-size: 0.82rem; font-weight: 500; color: var(--text-mute); padding: 0 4px 8px; }
+.fipe-table tbody th { font-size: inherit; font-weight: 400; color: var(--text-dim); padding: 12px 4px; }
+.fipe-table td { padding: 12px 4px; text-align: right; font-variant-numeric: tabular-nums; }
+.fipe-table td:last-child { color: var(--text-dim); font-weight: 500; }
+.fipe-table thead th:not(:first-child) { text-align: right; }
 .spec-sub { font-size: 0.95rem; font-weight: 600; color: var(--text-dim); margin: 22px 0 10px; }
 .spec-sub:first-of-type { margin-top: 0; }
 .safety-stars { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; color: var(--text-dim); margin-bottom: 6px; }
