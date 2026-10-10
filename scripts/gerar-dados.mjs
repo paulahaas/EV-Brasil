@@ -10,6 +10,7 @@
  *   dados/garantias.json                     — garantia do veículo e da bateria, por marca
  *   dados/historico-precos.json              — histórico de preço; o ponto do mês da coleta é gravado aqui
  *   dados/fipe.json                          — valores FIPE (zero km e usados), de scripts/coletar-fipe.mjs
+ *   dados/combustao.json                     — carros a combustão de referência (elétrico x combustão)
  *
  * Uso: npm run dados
  */
@@ -166,6 +167,28 @@ const VEHICLES = [...porId.values()].map((v) => {
   fs.writeFileSync("dados/historico-precos.json", JSON.stringify(historicoDoc, null, 1) + "\n");
 }
 
+// Elétrico x combustão: cada elétrico ganha o carro a combustão de referência
+// (dados/combustao.json, preço zero km da FIPE) da mesma carroceria e preço mais
+// próximo. Só compara quando os preços não ficam longe demais (até 60% de diferença).
+const combustaoDoc = lerJson("dados/combustao.json");
+const COMBUSTAO = {};
+for (const [id, c] of Object.entries(combustaoDoc.carros)) {
+  const f = (fipe.combustao || {})[id];
+  if (f) COMBUSTAO[id] = { name: c.nome, version: c.versao, bodyType: c.carroceria, kmL: c.consumo, price: f.valor, fipeVersion: f.versao };
+}
+{
+  const parecida = { Perua: "Sedã", Esportivo: "Sedã", Picape: "SUV" };
+  for (const v of VEHICLES) {
+    if (!v.price) continue;
+    const tipo = parecida[v.bodyType] || v.bodyType;
+    const distancia = (c) => Math.abs(Math.log(c.price / v.price));
+    const [melhor] = Object.entries(COMBUSTAO).filter(([, c]) => c.bodyType === tipo).sort((a, b) => distancia(a[1]) - distancia(b[1]));
+    const irmao = Object.keys(COMBUSTAO).find((id) => (combustaoDoc.carros[id].eletricos || []).includes(v.id));
+    if (irmao) v.gasRef = irmao;
+    else if (melhor && distancia(melhor[1]) <= Math.log(1.6)) v.gasRef = melhor[0];
+  }
+}
+
 const DATA_INFO = {
   inmetro: {
     titulo: "Tabela PBE Veicular 2026 (18º ciclo)",
@@ -190,6 +213,8 @@ const VEHICLES = ${JSON.stringify(VEHICLES, null, 2)};
 const IPVA = ${JSON.stringify(ipva.estados, null, 2)};
 
 const NOVIDADES = ${JSON.stringify({ atualizado: novidades.atualizado, chegando: novidades.chegando }, null, 2)};
+
+const COMBUSTAO = ${JSON.stringify(COMBUSTAO, null, 2)};
 `;
 fs.writeFileSync("js/catalogo.js", js);
 

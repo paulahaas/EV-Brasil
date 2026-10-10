@@ -270,7 +270,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2026/04/audi-q6-etron-2026-preco-brasil.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "audi-q6-sportback-e-tron",
@@ -338,7 +339,8 @@ const VEHICLES = [
           "loss": 14.9
         }
       ]
-    }
+    },
+    "gasRef": "porsche-macan"
   },
   {
     "id": "audi-rs-e-tron-gt",
@@ -495,7 +497,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2026/04/audi-sq6-etron-2026-preco-brasil.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "bmw-i7",
@@ -662,7 +665,8 @@ const VEHICLES = [
         "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "bmw-ix2",
@@ -744,7 +748,8 @@ const VEHICLES = [
         "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "bmw-ix3",
@@ -822,7 +827,8 @@ const VEHICLES = [
         "source": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "byd-dolphin",
@@ -931,7 +937,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/condicoes",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "vw-polo"
   },
   {
     "id": "byd-dolphin-mini",
@@ -1035,7 +1042,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "vw-polo"
   },
   {
     "id": "byd-han",
@@ -1126,7 +1134,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-320i"
   },
   {
     "id": "byd-seal",
@@ -1220,7 +1229,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/condicoes",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-320i"
   },
   {
     "id": "byd-sealion-7",
@@ -1304,7 +1314,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "byd-tan",
@@ -1403,7 +1414,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "byd-yuan-plus",
@@ -1497,7 +1509,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "byd-yuan-pro",
@@ -1583,7 +1596,8 @@ const VEHICLES = [
         "source": "https://www.byd.com/br/condicoes",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "jeep-compass"
   },
   {
     "id": "avatr-11",
@@ -1734,7 +1748,8 @@ const VEHICLES = [
         "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "chevrolet-captiva-ev",
@@ -1811,7 +1826,8 @@ const VEHICLES = [
         "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "chevrolet-spark-euv",
@@ -1887,7 +1903,8 @@ const VEHICLES = [
         "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "hyundai-creta"
   },
   {
     "id": "fiat-500e",
@@ -1965,7 +1982,8 @@ const VEHICLES = [
         "source": "https://500e.fiat.com.br/monte.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "mini-cooper-s"
   },
   {
     "id": "gac-aion-es",
@@ -2046,7 +2064,8 @@ const VEHICLES = [
         "source": "https://www.gacgroup.com/pt-br/sedan/aion-es",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla"
   },
   {
     "id": "gac-aion-ut",
@@ -2135,7 +2154,8 @@ const VEHICLES = [
         "source": "https://primoauto.com.br/gac-aion-ut-chega-ao-brasil-a-partir-de-139-990",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "vw-polo"
   },
   {
     "id": "gac-aion-v",
@@ -2234,7 +2254,8 @@ const VEHICLES = [
         "source": "https://www.gacgroup.com/pt-br/suv/aion-v",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "gac-aion-y",
@@ -2325,7 +2346,8 @@ const VEHICLES = [
         "source": "https://www.gacgroup.com/pt-br/suv/aion-y",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "jeep-compass"
   },
   {
     "id": "gac-hyptec-ht",
@@ -2416,7 +2438,8 @@ const VEHICLES = [
         "source": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "geely-ex2",
@@ -2506,7 +2529,8 @@ const VEHICLES = [
         "source": "https://www.geelybrasil.com.br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "chevrolet-tracker"
   },
   {
     "id": "geely-ex5",
@@ -2590,7 +2614,8 @@ const VEHICLES = [
         "source": "https://www.geelybrasil.com.br/ofertas",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "gwm-ora-03",
@@ -2695,7 +2720,8 @@ const VEHICLES = [
         "source": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "vw-polo"
   },
   {
     "id": "gwm-ora-5",
@@ -2772,7 +2798,8 @@ const VEHICLES = [
         "source": "https://www.gwmmotors.com.br/pt/modelos/ora5",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "nissan-kicks"
   },
   {
     "id": "hyundai-ioniq-5",
@@ -2866,7 +2893,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2024/09/hyundai-ioniq-5-preco-r-394900-fotos.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "jac-e-j7",
@@ -2931,7 +2959,8 @@ const VEHICLES = [
           "loss": 46.8
         }
       ]
-    }
+    },
+    "gasRef": "bmw-320i"
   },
   {
     "id": "jac-e-js1",
@@ -3037,7 +3066,8 @@ const VEHICLES = [
           "loss": 42
         }
       ]
-    }
+    },
+    "gasRef": "vw-polo"
   },
   {
     "id": "jac-e-js4",
@@ -3258,7 +3288,8 @@ const VEHICLES = [
           "loss": 25.2
         }
       ]
-    }
+    },
+    "gasRef": "bmw-x1"
   },
   {
     "id": "leapmotor-b10",
@@ -3348,7 +3379,8 @@ const VEHICLES = [
         "source": "https://www.leapmotor.com.br/b10/monte.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "jeep-compass"
   },
   {
     "id": "leapmotor-c10",
@@ -3438,7 +3470,8 @@ const VEHICLES = [
         "source": "https://www.leapmotor.com.br/",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "lexus-rz",
@@ -3517,7 +3550,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2025/12/novo-lexus-rz-500e-estreia-no-brasil.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "mercedes-eqb",
@@ -3601,7 +3635,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2025/07/mercedes-benz-eqb-250-2026-preco-r.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "mercedes-glb-ev",
@@ -3895,7 +3930,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2026/07/mg4-urban-brasil-preco-detalhes.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "vw-polo"
   },
   {
     "id": "mg-s5",
@@ -3990,7 +4026,8 @@ const VEHICLES = [
         "source": "https://mgmotoroficial.com.br/oferta/mgs5",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "mini-aceman",
@@ -4085,7 +4122,8 @@ const VEHICLES = [
         "source": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "mini-cooper",
@@ -4185,7 +4223,8 @@ const VEHICLES = [
         "source": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "mini-cooper-s"
   },
   {
     "id": "mini-countryman",
@@ -4402,7 +4441,8 @@ const VEHICLES = [
         "source": "https://www.car.blog.br/2025/04/omoda-e5-eletrico-preco-r-209990-brasil.html",
         "kind": "lançamento"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "porsche-cayenne-electric",
@@ -4496,7 +4536,8 @@ const VEHICLES = [
       "source": "https://www.porsche.com/brazil/pt/accessoriesandservice/porscheservice/vehicleinformation/",
       "kind": "oficial",
       "note": "Garante ao menos 70% da capacidade até o fim do prazo"
-    }
+    },
+    "gasRef": "porsche-macan"
   },
   {
     "id": "porsche-macan-electric",
@@ -4582,7 +4623,8 @@ const VEHICLES = [
           "loss": 13.1
         }
       ]
-    }
+    },
+    "gasRef": "porsche-macan"
   },
   {
     "id": "porsche-taycan",
@@ -4793,7 +4835,8 @@ const VEHICLES = [
         "source": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "suzuki-e-vitara",
@@ -5006,7 +5049,8 @@ const VEHICLES = [
         "source": "https://www.volvocars.com/br/cars/ec40-electric/",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "volvo-es90",
@@ -5190,7 +5234,8 @@ const VEHICLES = [
         "source": "https://www.volvocars.com/br/cars/ex30-electric/",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "volvo-ex40",
@@ -5314,7 +5359,8 @@ const VEHICLES = [
         "source": "https://www.volvocars.com/br/cars/ex40-electric/",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "bmw-x1"
   },
   {
     "id": "volvo-ex90",
@@ -5403,7 +5449,8 @@ const VEHICLES = [
         "source": "https://www.volvocars.com/br/cars/ex90-electric/",
         "kind": "coleta"
       }
-    ]
+    ],
+    "gasRef": "porsche-macan"
   },
   {
     "id": "zeekr-001",
@@ -5479,7 +5526,8 @@ const VEHICLES = [
           "loss": 22.1
         }
       ]
-    }
+    },
+    "gasRef": "bmw-320i"
   },
   {
     "id": "zeekr-7x",
@@ -5560,7 +5608,8 @@ const VEHICLES = [
           "loss": 15.1
         }
       ]
-    }
+    },
+    "gasRef": "bmw-x1"
   },
   {
     "id": "zeekr-x",
@@ -5636,7 +5685,8 @@ const VEHICLES = [
           "loss": 22.9
         }
       ]
-    }
+    },
+    "gasRef": "bmw-x1"
   }
 ];
 
@@ -5925,4 +5975,111 @@ const NOVIDADES = {
       "fonte": "https://www.cnnbrasil.com.br/auto/veja-os-20-carros-eletricos-que-serao-lancados-no-segundo-semestre-de-2026/"
     }
   ]
+};
+
+const COMBUSTAO = {
+  "hyundai-hb20": {
+    "name": "Hyundai HB20",
+    "version": "Comfort 1.0",
+    "bodyType": "Hatch",
+    "kmL": 14.2,
+    "price": 90448,
+    "fipeVersion": "HB20 Comfort 1.0 Flex 12V Mec."
+  },
+  "vw-polo": {
+    "name": "Volkswagen Polo",
+    "version": "Sense TSI automático",
+    "bodyType": "Hatch",
+    "kmL": 14.3,
+    "price": 107832,
+    "fipeVersion": "Polo Sense TSI 1.0 Flex 12V Aut"
+  },
+  "mini-cooper-s": {
+    "name": "Mini Cooper S",
+    "version": "5 portas",
+    "bodyType": "Hatch",
+    "kmL": 12.7,
+    "price": 324090,
+    "fipeVersion": "COOPER S 2.0 Turbo 16V 5p Aut."
+  },
+  "chevrolet-onix-plus": {
+    "name": "Chevrolet Onix Plus",
+    "version": "LT 1.0 turbo automático",
+    "bodyType": "Sedã",
+    "kmL": 13.7,
+    "price": 119480,
+    "fipeVersion": "ONIX SEDAN Plus LT 1.0 12V TB Flex Aut."
+  },
+  "toyota-corolla": {
+    "name": "Toyota Corolla",
+    "version": "XEi 2.0",
+    "bodyType": "Sedã",
+    "kmL": 12.8,
+    "price": 176046,
+    "fipeVersion": "Corolla XEi 2.0 Flex 16V Aut."
+  },
+  "bmw-320i": {
+    "name": "BMW 320i",
+    "version": "GP",
+    "bodyType": "Sedã",
+    "kmL": 11.9,
+    "price": 352527,
+    "fipeVersion": "320iA 2.0 Turbo/ActiveFlex 16V/GP  4p"
+  },
+  "chevrolet-tracker": {
+    "name": "Chevrolet Tracker",
+    "version": "LT 1.0 turbo automático",
+    "bodyType": "SUV",
+    "kmL": 12.4,
+    "price": 140650,
+    "fipeVersion": "TRACKER LT 1.0 Turbo 12V Flex Aut."
+  },
+  "nissan-kicks": {
+    "name": "Nissan Kicks",
+    "version": "Sense 1.0 turbo automático",
+    "bodyType": "SUV",
+    "kmL": 12.7,
+    "price": 158594,
+    "fipeVersion": "KICKS Sense 1.0 Turbo Flex Aut."
+  },
+  "hyundai-creta": {
+    "name": "Hyundai Creta",
+    "version": "Comfort 1.0 turbo",
+    "bodyType": "SUV",
+    "kmL": 12.3,
+    "price": 143276,
+    "fipeVersion": "Creta Comfort 1.0 TB 12V Flex Aut."
+  },
+  "toyota-corolla-cross": {
+    "name": "Toyota Corolla Cross",
+    "version": "XRE 2.0",
+    "bodyType": "SUV",
+    "kmL": 12.2,
+    "price": 197854,
+    "fipeVersion": "Corolla Cross XRE 2.0 16V Flex Aut."
+  },
+  "jeep-compass": {
+    "name": "Jeep Compass",
+    "version": "Longitude T270",
+    "bodyType": "SUV",
+    "kmL": 10.9,
+    "price": 192903,
+    "fipeVersion": "COMPASS LONG. T270 1.3 TB 4x2 Flex Aut."
+  },
+  "bmw-x1": {
+    "name": "BMW X1",
+    "version": "sDrive20i GP",
+    "bodyType": "SUV",
+    "kmL": 11.5,
+    "price": 332474,
+    "fipeVersion": "X1 SDRIVE 20i GP 2.0 TB Aut."
+  },
+  "porsche-macan": {
+    "name": "Porsche Macan",
+    "version": "2.0 turbo",
+    "bodyType": "SUV",
+    "kmL": 7.8,
+    "price": 662500,
+    "fipeVersion": "Macan 2.0 Turbo"
+  }
 };

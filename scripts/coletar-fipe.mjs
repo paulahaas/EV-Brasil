@@ -9,8 +9,12 @@
  * (uma consulta a cada poucos segundos) e espera quando recebe a página de
  * bloqueio. Leva uns 15 minutos. Rode uma vez por mês, depois do dia 1º.
  *
+ * Também busca o preço zero km dos carros a combustão de referência
+ * (dados/combustao.json), usados na comparação "elétrico x combustão".
+ *
  * Uso: npm run fipe            (todos)
  *      npm run fipe -- byd-dolphin volvo-ex30   (só alguns)
+ *      npm run fipe -- --combustao              (só os carros a combustão)
  */
 import fs from "node:fs";
 
@@ -50,9 +54,13 @@ console.log(`Tabela FIPE: ${mesRef}`);
 
 const marcas = await consultar("ConsultarMarcas", base);
 const modelosDaMarca = {};
-const pedidos = process.argv.slice(2);
-const ids = Object.keys(mapa).filter((id) => !pedidos.length || pedidos.includes(id));
+const soCombustao = process.argv.includes("--combustao");
+const pedidos = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const ids = soCombustao ? [] : Object.keys(mapa).filter((id) => !pedidos.length || pedidos.includes(id));
 const resultado = { ...anterior.modelos };
+const combustao = JSON.parse(fs.readFileSync("dados/combustao.json", "utf8")).carros;
+const resultadoCombustao = { ...(anterior.combustao || {}) };
+const idsCombustao = pedidos.length ? [] : Object.keys(combustao);
 
 for (const id of ids) {
   const { marca, versao } = mapa[id];
@@ -80,10 +88,35 @@ for (const id of ids) {
   console.log(`${id}: ${modelo.Label.trim()} — ${valores.map((x) => `${x.ano} R$ ${x.valor.toLocaleString("pt-BR")}`).join(" · ")}`);
 }
 
+// Carros a combustão: só o valor mais novo (zero km, ou o ano-modelo mais recente).
+for (const id of idsCombustao) {
+  const { marca, versao } = combustao[id].fipe;
+  const m = marcas.find((x) => x.Label.toLowerCase() === marca.toLowerCase());
+  if (!m) { console.log(`${id}: marca "${marca}" não existe na FIPE`); continue; }
+  modelosDaMarca[m.Value] ||= (await consultar("ConsultarModelos", { ...base, codigoMarca: Number(m.Value) })).Modelos;
+  const modelo = modelosDaMarca[m.Value].find((x) => new RegExp(versao, "i").test(x.Label));
+  if (!modelo) { console.log(`${id}: versão não encontrada na FIPE`); delete resultadoCombustao[id]; continue; }
+  const anos = await consultar("ConsultarAnoModelo", { ...base, codigoMarca: Number(m.Value), codigoModelo: modelo.Value });
+  const maisNovo = [...anos].sort((a, b) => Number(b.Value.split("-")[0]) - Number(a.Value.split("-")[0]))[0];
+  if (!maisNovo) continue;
+  const [ano, combustivel] = maisNovo.Value.split("-");
+  const v = await consultar("ConsultarValorComTodosParametros", {
+    ...base, codigoMarca: Number(m.Value), codigoModelo: modelo.Value,
+    anoModelo: Number(ano), codigoTipoCombustivel: Number(combustivel), tipoConsulta: "tradicional",
+  });
+  if (!v || !v.Valor) continue;
+  resultadoCombustao[id] = {
+    versao: modelo.Label.trim(), ano: ano === "32000" ? "0km" : ano,
+    valor: Number(v.Valor.replace(/[^\d,]/g, "").replace(",", ".")), codigoFipe: v.CodigoFipe,
+  };
+  console.log(`${id}: ${modelo.Label.trim()} — ${resultadoCombustao[id].ano} R$ ${resultadoCombustao[id].valor.toLocaleString("pt-BR")}`);
+}
+
 fs.writeFileSync(SAIDA, JSON.stringify({
   _leia: "Valores da tabela FIPE (gerado por scripts/coletar-fipe.mjs — não edite à mão). '0km' = valor de zero quilômetro; os demais, por ano-modelo.",
   referencia: mesRef,
   fonte: "https://veiculos.fipe.org.br/",
   modelos: resultado,
+  combustao: resultadoCombustao,
 }, null, 1) + "\n");
 console.log(`\n${Object.keys(resultado).length} modelos em ${SAIDA} (tabela ${mesRef})`);
