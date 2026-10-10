@@ -82,9 +82,33 @@
     return sinal * (a.price - b.price);
   };
 
+  // Busca tolerante: ignora acentos, espaços e hífens ("ex 30" acha "EX30") e troca "ph" por "f"
+  // ("dolfin" acha "Dolphin"). Se nada combinar, aceita uma letra errada em palavras de
+  // 4 letras ou mais ("tayca" acha "Taycan").
+  const simples = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/ph/g, "f").replace(/y/g, "i");
+  const junto = (s) => simples(s).replace(/[^a-z0-9]/g, "");
+  function quaseIgual(a, b) {
+    if (Math.abs(a.length - b.length) > 1) return false;
+    let i = 0, j = 0, erros = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) { i++; j++; continue; }
+      if (++erros > 1) return false;
+      if (a.length > b.length) i++; else if (b.length > a.length) j++; else { i++; j++; }
+    }
+    return erros + (a.length - i) + (b.length - j) <= 1;
+  }
+  function combina(v, busca, tolerante) {
+    const texto = `${v.brand} ${v.model} ${v.bodyType} ${v.bodyType === "Sedã" ? "sedan" : ""}`;
+    const tudo = junto(texto);
+    if (tudo.includes(junto(busca))) return true;
+    const palavras = simples(texto).split(/[^a-z0-9]+/).filter(Boolean);
+    return simples(busca).split(/[^a-z0-9]+/).filter(Boolean).every((t) =>
+      tudo.includes(t) || (tolerante && t.length >= 4 && palavras.some((w) => quaseIgual(t, w) || quaseIgual(t, w.slice(0, t.length)))));
+  }
+
   function render() {
-    const q = state.q.toLowerCase();
-    const list = VEHICLES.filter((v) => {
+    const q = state.q;
+    const filtrar = (tolerante) => VEHICLES.filter((v) => {
       const okBrand = state.brand === "Todas" || v.brand === state.brand;
       const okType = state.type === "Todos" || v.bodyType === state.type;
       const okPrice = !state.maxPrice || (v.price && v.price <= state.maxPrice);
@@ -92,9 +116,11 @@
       // Sem o dado na ficha técnica, o modelo sai do filtro (não dá para garantir).
       const okDc = !state.minDc || (v.specs && v.specs.dcKw >= state.minDc);
       const okTrunk = !state.minTrunk || (v.specs && v.specs.trunkL >= state.minTrunk);
-      const okText = !q || `${v.brand} ${v.model} ${v.bodyType}`.toLowerCase().includes(q);
+      const okText = !q || combina(v, q, tolerante);
       return okBrand && okType && okPrice && okRange && okDc && okTrunk && okText;
     });
+    let list = filtrar(false);
+    if (!list.length && q) list = filtrar(true);
 
     const ordens = {
       menor: porPreco(1),

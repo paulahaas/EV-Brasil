@@ -329,6 +329,18 @@ a.chip { display: inline-flex; align-items: center; gap: 6px; }
 .lista-chips { margin-bottom: 32px; }
 .lista-n { color: var(--text-mute); font-size: 0.78rem; }
 .preco-caiu { color: #4ade80; font-weight: 600; }
+
+/* ---------------- Glossário ---------------- */
+.glossario-indice { margin: 18px 0 8px; }
+.glossario h2 { scroll-margin-top: calc(var(--header-h) + 16px); }
+.glossario-lista { margin: 0; }
+.glossario-item { padding: 16px 0; border-bottom: 1px solid var(--stroke); scroll-margin-top: calc(var(--header-h) + 16px); }
+.glossario-item:target { background: var(--accent-soft); margin: 0 -12px; padding: 16px 12px; border-radius: var(--radius-sm); }
+.glossario-item dt { font-family: var(--font-display); font-size: 1.1rem; color: var(--text); margin-bottom: 6px; }
+.glossario-item dd { margin: 0; color: var(--text-dim); line-height: 1.6; }
+/* Termo explicado no glossário (nos guias): sublinhado pontilhado discreto. */
+a.termo { color: inherit; text-decoration: underline dotted rgba(156, 192, 255, 0.6); text-underline-offset: 4px; cursor: help; }
+a.termo:hover { color: var(--accent-2); }
 .preco-subiu { color: #fca5a5; font-weight: 600; }
 .chip.active { background: var(--text); border-color: var(--text); color: var(--bg); }
 .filters .spacer { flex: 1; }
