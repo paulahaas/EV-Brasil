@@ -81,6 +81,7 @@ function renderFooter() {
           <a href="viagem.html">Dá para viajar?</a>
           <a href="novidades.html">Lançamentos</a>
           <a href="guias.html">Guias do primeiro elétrico</a>
+          <a href="glossario.html">Glossário</a>
         </div>
         <div class="footer-col">
           <h4>Carrocerias</h4>

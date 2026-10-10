@@ -1,0 +1,143 @@
+{
+ "_leia": "Termos do glossário (glossario.html), gerado por scripts/gerar-glossario.mjs. curto = uma frase, que aparece ao passar o mouse nos guias; texto = explicação completa; padroes = como o termo aparece nos textos (expressão regular, sem diferenciar maiúsculas), para virar link na primeira vez que aparece em cada guia.",
+ "termos": [
+  {
+   "id": "kwh", "termo": "kWh (quilowatt-hora)", "grupo": "Bateria e energia",
+   "curto": "Quantidade de energia: o tamanho da bateria e o que você paga na conta de luz.",
+   "texto": "É a unidade de energia, como o litro é para a gasolina. Serve para dizer o tamanho da bateria (uma de 60 kWh guarda 60 kWh de energia) e é o que a conta de luz e os eletropostos cobram. Em casa, o kWh custa perto de R$ 1; na recarga rápida da rua, de R$ 2 a R$ 3.",
+   "padroes": ["\\bkWh\\b(?!/)"]
+  },
+  {
+   "id": "kw", "termo": "kW (quilowatt)", "grupo": "Bateria e energia",
+   "curto": "Potência: a velocidade com que a energia entra (recarga) ou sai (motor).",
+   "texto": "É a potência, ou seja, a velocidade da energia. Na recarga, diz quanto rápido a bateria enche: um carregador de 7 kW coloca 7 kWh por hora; um de 100 kW, até 100 kWh por hora. No motor, 1 kW equivale a cerca de 1,36 cavalo (cv).",
+   "padroes": ["\\bkW\\b"]
+  },
+  {
+   "id": "consumo", "termo": "Consumo (kWh/100 km)", "grupo": "Bateria e energia",
+   "curto": "Quanta energia o carro gasta para rodar 100 km: é o \"km por litro\" do elétrico.",
+   "texto": "Diz quantos kWh o carro gasta a cada 100 km. Quanto menor, mais econômico. Um elétrico compacto gasta de 11 a 14 kWh/100 km; um SUV grande, mais de 20. Multiplicando pelo preço do kWh, você tem o custo de rodar 100 km. É o número medido pelo Inmetro que o EV Brasil usa em todas as contas.",
+   "padroes": ["kWh/100 ?km", "kWh a cada 100 km"]
+  },
+  {
+   "id": "autonomia", "termo": "Autonomia", "grupo": "Bateria e energia",
+   "curto": "Quantos quilômetros o carro roda com a bateria cheia.",
+   "texto": "É a distância que o carro percorre com uma carga completa. O número oficial no Brasil é o do Inmetro, medido do mesmo jeito para todas as marcas. Na prática varia: na estrada, com ar-condicionado e em velocidade alta, o carro roda menos; no trânsito da cidade, às vezes até mais.",
+   "padroes": ["\\bautonomia\\b"]
+  },
+  {
+   "id": "inmetro", "termo": "Inmetro e PBE Veicular", "grupo": "Bateria e energia",
+   "curto": "Programa do governo que mede consumo e autonomia de todos os carros do mesmo jeito.",
+   "texto": "O Programa Brasileiro de Etiquetagem Veicular (PBE Veicular), do Inmetro, mede o consumo e a autonomia dos carros vendidos no Brasil com o mesmo teste para todas as marcas e publica uma tabela todo ano. É por isso que dá para comparar um carro com outro de forma justa. É de lá que vêm os números de autonomia e consumo do EV Brasil.",
+   "padroes": ["\\bPBE\\b", "\\bInmetro\\b"]
+  },
+  {
+   "id": "bateria-lfp-nmc", "termo": "Bateria LFP e NMC", "grupo": "Bateria e energia",
+   "curto": "Os dois tipos de bateria mais comuns: LFP dura mais e é mais barata; NMC guarda mais energia.",
+   "texto": "LFP (lítio-ferro-fosfato) é mais barata, aguenta mais ciclos e pode ser carregada até 100% no dia a dia; é comum nos chineses de entrada, como o BYD Dolphin. NMC (níquel-manganês-cobalto) guarda mais energia no mesmo peso, o que dá mais autonomia, mas a marca costuma recomendar carregar só até 80% no dia a dia.",
+   "padroes": ["\\bLFP\\b", "\\bNMC\\b"]
+  },
+  {
+   "id": "saude-bateria", "termo": "Saúde da bateria (SoH)", "grupo": "Bateria e energia",
+   "curto": "Quanto da capacidade original a bateria ainda tem, em %.",
+   "texto": "SoH (do inglês state of health) é a porcentagem da capacidade original que a bateria ainda guarda. Uma bateria com 90% de saúde roda cerca de 90% da autonomia de quando era nova. É o número mais importante ao comprar um elétrico usado: peça o relatório na concessionária da marca.",
+   "padroes": ["\\bSoH\\b", "saúde da bateria"]
+  },
+  {
+   "id": "recarga-lenta", "termo": "Recarga lenta (AC)", "grupo": "Recarga",
+   "curto": "Recarga em corrente alternada, de 2 a 22 kW: em casa, no shopping, no estacionamento.",
+   "texto": "É a recarga em corrente alternada (AC), a da tomada e do wallbox, com potência de 2 a 22 kW. Leva horas para encher a bateria, por isso é feita com o carro parado: à noite em casa ou enquanto você faz compras. A velocidade é limitada pelo carregador de bordo do carro.",
+   "padroes": ["recarga lenta", "\\(AC\\)"]
+  },
+  {
+   "id": "recarga-rapida", "termo": "Recarga rápida (DC)", "grupo": "Recarga",
+   "curto": "Recarga em corrente contínua, de 40 a mais de 300 kW: leva de 20 a 50 minutos de 10% a 80%.",
+   "texto": "É a recarga em corrente contínua (DC), feita em eletropostos de 40 a mais de 300 kW, geralmente em rodovias. A energia vai direto para a bateria, sem passar pelo carregador de bordo. Leva de 20 a 50 minutos para ir de 10% a 80%, conforme o carro e o carregador. Custa mais caro que carregar em casa.",
+   "padroes": ["recarga rápida", "\\(DC\\)"]
+  },
+  {
+   "id": "curva-recarga", "termo": "Curva de recarga (e a regra dos 80%)", "grupo": "Recarga",
+   "curto": "A recarga rápida desacelera muito depois de 80% para proteger a bateria.",
+   "texto": "Na recarga rápida, a potência não fica constante: começa alta e cai conforme a bateria enche, principalmente depois de 80%. Os últimos 20% podem levar quase o mesmo tempo que os primeiros 70%. Por isso, na estrada, compensa carregar até 80% e seguir viagem.",
+   "padroes": ["\\b80%"]
+  },
+  {
+   "id": "carregador-bordo", "termo": "Carregador de bordo", "grupo": "Recarga",
+   "curto": "Peça dentro do carro que converte a energia da tomada; define a velocidade máxima da recarga lenta.",
+   "texto": "É o aparelho dentro do carro que transforma a corrente alternada (da tomada ou do wallbox) em contínua para a bateria. A potência dele limita a recarga lenta: um carro com carregador de bordo de 7 kW carrega a 7 kW mesmo num ponto de 22 kW. Na ficha técnica, aparece como recarga AC.",
+   "padroes": ["carregador de bordo"]
+  },
+  {
+   "id": "wallbox", "termo": "Wallbox", "grupo": "Recarga",
+   "curto": "Carregador de parede para casa, de 7 a 11 kW, bem mais rápido que a tomada comum.",
+   "texto": "É o carregador fixo na parede da garagem. Os mais comuns têm 7 kW (circuito monofásico) ou 11 kW (trifásico) e enchem a bateria de um compacto numa noite. Precisa de instalação por eletricista, com circuito próprio. Veja o guia Como carregar em casa.",
+   "padroes": ["\\bwallbox(es)?\\b"]
+  },
+  {
+   "id": "eletroposto", "termo": "Eletroposto", "grupo": "Recarga",
+   "curto": "Ponto de recarga público ou semipúblico, lento ou rápido.",
+   "texto": "É o \"posto de combustível\" do elétrico: um ponto de recarga em rua, shopping, posto, estacionamento ou rodovia. O Brasil tinha quase 30 mil em agosto de 2026, e mais de 11 mil eram rápidos. Cada rede costuma ter o seu aplicativo para carregar e pagar.",
+   "padroes": ["\\beletropostos?\\b"]
+  },
+  {
+   "id": "conectores", "termo": "Tipo 2, CCS2 e GB/T", "grupo": "Recarga",
+   "curto": "Os plugues de recarga: Tipo 2 (lenta) e CCS2 (rápida) são o padrão no Brasil.",
+   "texto": "O Tipo 2 é o plugue da recarga lenta (AC). O CCS2 é o da recarga rápida (DC): é o mesmo bocal do Tipo 2 com dois pinos a mais, então um encaixe só no carro serve para as duas. O GB/T é o padrão chinês; alguns carros, principalmente os mais antigos, usam ele e precisam de adaptador em parte dos eletropostos.",
+   "padroes": ["\\bCCS2\\b", "\\bTipo 2\\b", "\\bGB/T\\b"]
+  },
+  {
+   "id": "taxa-ociosidade", "termo": "Taxa de ociosidade", "grupo": "Recarga",
+   "curto": "Cobrança por minuto quando o carro continua parado no carregador depois de terminar.",
+   "texto": "Algumas redes de eletropostos cobram por minuto quando o carro fica conectado depois que a recarga termina, para liberar o carregador para o próximo. Confira no aplicativo da rede antes de carregar.",
+   "padroes": ["taxa de ociosidade"]
+  },
+  {
+   "id": "regeneracao", "termo": "Frenagem regenerativa", "grupo": "Ao dirigir",
+   "curto": "Ao frear ou tirar o pé, o motor vira gerador e devolve energia para a bateria.",
+   "texto": "Quando você tira o pé do acelerador ou freia, o motor elétrico funciona como gerador e manda energia de volta para a bateria. É por isso que o elétrico gasta menos no trânsito da cidade do que na estrada. Muitos carros deixam escolher a intensidade, e alguns permitem dirigir só com o acelerador (o \"one pedal\").",
+   "padroes": ["regenera(ção|tiva)", "one[- ]pedal"]
+  },
+  {
+   "id": "pre-condicionamento", "termo": "Pré-condicionamento", "grupo": "Ao dirigir",
+   "curto": "Aquecer ou resfriar bateria e cabine antes de sair, ainda ligado na tomada.",
+   "texto": "É preparar o carro antes de sair: climatizar a cabine e deixar a bateria na temperatura ideal enquanto ele ainda está carregando, sem gastar a autonomia. Alguns carros também preparam a bateria antes de chegar num carregador rápido, o que deixa a recarga mais veloz.",
+   "padroes": ["pré-condicionamento"]
+  },
+  {
+   "id": "v2l", "termo": "V2L", "grupo": "Ao dirigir",
+   "curto": "Usar a bateria do carro como tomada para ligar aparelhos.",
+   "texto": "Do inglês vehicle-to-load (do veículo para a carga): o carro vira uma tomada e alimenta aparelhos como cafeteira, notebook ou ferramentas, usando a energia da bateria. Útil em acampamento, viagem e falta de luz. Nem todo elétrico tem.",
+   "padroes": ["\\bV2L\\b"]
+  },
+  {
+   "id": "ota", "termo": "Atualização remota (OTA)", "grupo": "Ao dirigir",
+   "curto": "O carro recebe atualizações de software pela internet, como um celular.",
+   "texto": "OTA (do inglês over the air) é a atualização do software do carro pela internet, sem ir à concessionária. Pode corrigir problemas e até trazer funções novas ou mais autonomia.",
+   "padroes": ["\\bOTA\\b"]
+  },
+  {
+   "id": "eletrico-hibrido", "termo": "Elétrico, híbrido e híbrido plug-in", "grupo": "Tipos de carro",
+   "curto": "O EV Brasil só mostra carros 100% elétricos, que não têm motor a combustão.",
+   "texto": "O 100% elétrico (BEV) só tem motor elétrico e bateria e se abastece na tomada. O híbrido (HEV) tem motor a combustão e um elétrico pequeno, e não liga na tomada. O híbrido plug-in (PHEV) tem os dois e uma bateria média que carrega na tomada, para rodar uns 50 a 100 km no elétrico. O EV Brasil compara só os 100% elétricos.",
+   "padroes": ["híbrido plug-in", "\\bPHEV\\b", "100% elétric[oa]s?"]
+  },
+  {
+   "id": "fipe", "termo": "Tabela FIPE", "grupo": "Comprar e manter",
+   "curto": "Preço médio de mercado de cada carro, novo e usado, atualizado todo mês.",
+   "texto": "A Fundação Instituto de Pesquisas Econômicas (FIPE) publica todo mês o preço médio de cada carro no Brasil, novo e usado. Bancos e seguradoras usam a tabela como referência. O EV Brasil usa para mostrar quanto cada elétrico vale usado e o preço dos carros a gasolina na comparação.",
+   "padroes": ["\\bFIPE\\b"]
+  },
+  {
+   "id": "ipva", "termo": "IPVA do elétrico", "grupo": "Comprar e manter",
+   "curto": "Imposto anual do carro; vários estados dão isenção ou desconto para o elétrico.",
+   "texto": "O Imposto sobre a Propriedade de Veículos Automotores é estadual e cobrado todo ano. Vários estados isentam o carro elétrico ou cobram uma alíquota menor; outros cobram igual ao carro a gasolina. Veja a regra do seu estado no guia de IPVA.",
+   "padroes": ["\\bIPVA\\b"]
+  },
+  {
+   "id": "garantia-bateria", "termo": "Garantia da bateria", "grupo": "Comprar e manter",
+   "curto": "Garantia separada da bateria, em anos e km, normalmente maior que a do carro.",
+   "texto": "A bateria costuma ter uma garantia própria, maior que a do resto do carro, de 8 anos ou mais, com limite de km. Normalmente cobre a bateria se a saúde cair abaixo de um mínimo (por exemplo, 70%). Para uso em aplicativo, várias marcas reduzem a garantia: confira o termo por escrito.",
+   "padroes": ["garantia da bateria"]
+  }
+ ]
+}

@@ -22,7 +22,7 @@ export const num = (n, casas = 0) => n.toLocaleString("pt-BR", { minimumFraction
 export const reais = (n) => `R$ ${num(n)}`; // espaço que não quebra: "R$" nunca fica sozinho no fim da linha
 export const nome = (v) => `${v.brand} ${v.model}`;
 
-export function pagina({ arquivo, url, titulo, desc, h1, eyebrow, migalha, corpo, ld }) {
+export function pagina({ url, titulo, desc, h1, eyebrow, migalha, corpo, ld, ativo = "veiculos", scripts = "" }) {
   return `<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -70,7 +70,7 @@ ${corpo}
   <script src="js/data.js"></script>
   <script src="js/car-svg.js"></script>
   <script src="js/main.js"></script>
-  <script>mountChrome("veiculos");</script>
+${scripts}  <script>mountChrome("${ativo}");</script>
 </body>
 </html>
 `;
