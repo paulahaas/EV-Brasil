@@ -74,6 +74,7 @@ function renderFooter() {
           <a href="encontre.html">Qual elétrico é para mim?</a>
           <a href="veiculos.html">Todos os carros</a>
           <a href="eletricos/">Listas prontas</a>
+          <a href="precos/">Preços do mês</a>
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
           <a href="calculadora.html">Calculadora de economia</a>
@@ -198,6 +199,18 @@ if (typeof document !== "undefined") document.addEventListener("click", (e) => {
     else reserva();
   }
 });
+
+/* ---------------- Contagem de visitas ---------------- */
+// Cloudflare Web Analytics: conta visitas sem cookies e sem identificar ninguém.
+// Só roda no site publicado (as prévias locais não entram nos números).
+const CF_ANALYTICS_TOKEN = "";
+if (typeof document !== "undefined" && CF_ANALYTICS_TOKEN && /(^|\.)ev-brasil\.(web\.app|firebaseapp\.com)$/.test(location.hostname)) {
+  const beacon = document.createElement("script");
+  beacon.defer = true;
+  beacon.src = "https://static.cloudflareinsights.com/beacon.min.js";
+  beacon.dataset.cfBeacon = JSON.stringify({ token: CF_ANALYTICS_TOKEN });
+  document.head.appendChild(beacon);
+}
 
 /* ---------------- Inicialização comum ---------------- */
 function mountChrome(activeKey) {

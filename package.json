@@ -7,7 +7,7 @@
     "start": "npx serve .",
     "dev": "npx serve .",
     "deploy": "firebase deploy --only hosting",
-    "dados": "node scripts/gerar-dados.mjs && node scripts/gerar-paginas.mjs && node scripts/gerar-buscas.mjs",
+    "dados": "node scripts/gerar-dados.mjs && node scripts/gerar-paginas.mjs && node scripts/gerar-buscas.mjs && node scripts/gerar-precos-mes.mjs",
     "imagens": "node scripts/gerar-imagens.mjs",
     "og": "node scripts/gerar-og.mjs",
     "precos": "node scripts/conferir-precos.mjs",
