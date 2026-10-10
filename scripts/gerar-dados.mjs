@@ -200,6 +200,7 @@ const DATA_INFO = {
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
   seguranca: { coleta: "09/10/2026" },
   fipe: { referencia: fipe.referencia || "", fonte: "https://veiculos.fipe.org.br/" },
+  juros: fs.existsSync("dados/juros.json") ? (({ taxaMes, taxaAno, referencia, fonte }) => ({ taxaMes, taxaAno, referencia, fonte }))(lerJson("dados/juros.json")) : null,
 };
 
 const js = `/**

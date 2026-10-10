@@ -26,7 +26,7 @@ ev-brasil/
 ├── encontre.html       # Questionário "Qual é o meu?" (uso pessoal ou motorista de aplicativo)
 ├── rankings.html       # Rankings (critério explicado em cada um)
 ├── comparar.html       # Até três modelos lado a lado (o endereço guarda a comparação)
-├── calculadora.html    # Economia elétrico × gasolina e custo total em 5 anos
+├── calculadora.html    # Economia elétrico × gasolina, custo total em 5 anos e financiamento
 ├── viagem.html         # Planejador: quantas paradas uma viagem precisa
 ├── novidades.html      # Lançamentos e o que está chegando
 ├── guias.html, guia-*.html  # Guias: carregar em casa, onde recarregar, autonomia real,
@@ -40,7 +40,7 @@ ev-brasil/
 │   ├── car-svg.js      # Fotos (WebP em 3 tamanhos) e silhuetas
 │   ├── main.js         # Cabeçalho, rodapé, card, botões de compartilhar e contagem de visitas
 │   └── home.js, grafico.js, veiculos.js, veiculo.js, encontre.js, rankings.js,
-│       comparar.js, simulador.js, custo-total.js, viagem.js, novidades.js
+│       comparar.js, simulador.js, custo-total.js, financiamento.js, viagem.js, novidades.js
 ├── dados/              # Fonte dos dados (não vai para o ar)
 │   ├── inmetro-pbev-2026-eletricos.json   # elétricos da tabela PBE Veicular 2026
 │   ├── precos-2026-10.jsonl               # preços coletados, com fonte
@@ -49,6 +49,8 @@ ev-brasil/
 │   ├── garantias.json                     # garantia por marca (inclusive uso comercial)
 │   ├── seguranca.json                     # nota Latin NCAP / Euro NCAP
 │   ├── fipe.json, fipe-mapa.json          # valores da FIPE e a versão de cada modelo nela
+│   ├── combustao.json                     # carros a gasolina de referência (elétrico x combustão)
+│   ├── juros.json                         # juros médios de veículos (Banco Central)
 │   ├── ipva-2026.json                     # IPVA por estado (gasolina e elétrico)
 │   ├── novidades.json                     # modelos que estão chegando
 │   ├── modelos.json                       # nome de exibição, carroceria, cor
@@ -62,7 +64,8 @@ ev-brasil/
 │   ├── gerar-imagens.mjs     # fotos JPG → WebP 480/960/1600
 │   ├── gerar-og.mjs          # → assets/og/ (imagens de prévia 1200×630)
 │   ├── conferir-precos.mjs   # confere os preços com os sites das marcas
-│   └── coletar-fipe.mjs      # consulta a FIPE e grava dados/fipe.json
+│   ├── coletar-fipe.mjs      # consulta a FIPE (elétricos e carros a gasolina de referência)
+│   └── coletar-juros.mjs     # juros médios de veículos do Banco Central
 └── assets/
     ├── carros/         # Fotos (Wikimedia Commons): <id>.jpg original e WebP
     └── og/             # Imagens de prévia para compartilhar
@@ -88,9 +91,10 @@ Modelo novo precisa estar na tabela do Inmetro e ganhar uma linha em
 
 1. **Preços:** `npm run precos` (confere com os sites das marcas, veja abaixo), corrija o que mudou.
 2. **FIPE:** `npm run fipe` (uns 50 minutos).
-3. **Gerar:** `npm run dados` e `npm run og`. O histórico de preços ganha o ponto do mês e a
+3. **Juros:** `npm run juros` (taxa média do Banco Central para o simulador de financiamento).
+4. **Gerar:** `npm run dados` e `npm run og`. O histórico de preços ganha o ponto do mês e a
    página `precos/` ganha a edição do mês, com o que subiu e o que caiu.
-4. **Publicar:** `npm run deploy`.
+5. **Publicar:** `npm run deploy`.
 
 ## 🔎 Conferir os preços
 
