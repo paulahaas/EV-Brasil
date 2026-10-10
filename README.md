@@ -31,6 +31,7 @@ ev-brasil/
 ├── novidades.html      # Lançamentos e o que está chegando
 ├── guias.html, guia-*.html  # Guias: carregar em casa, onde recarregar, autonomia real,
 │                            # IPVA, elétrico usado, motorista de aplicativo
+├── glossario.html      # GERADO: glossário do carro elétrico (23 termos)
 ├── metodologia.html    # De onde vêm os dados
 ├── creditos.html       # Autores e licenças das fotos
 ├── css/styles.css      # Todo o visual (cores no topo do arquivo)
@@ -51,6 +52,7 @@ ev-brasil/
 │   ├── fipe.json, fipe-mapa.json          # valores da FIPE e a versão de cada modelo nela
 │   ├── combustao.json                     # carros a gasolina de referência (elétrico x combustão)
 │   ├── juros.json                         # juros médios de veículos (Banco Central)
+│   ├── glossario.json                     # termos do glossário
 │   ├── ipva-2026.json                     # IPVA por estado (gasolina e elétrico)
 │   ├── novidades.json                     # modelos que estão chegando
 │   ├── modelos.json                       # nome de exibição, carroceria, cor
@@ -60,6 +62,7 @@ ev-brasil/
 │   ├── gerar-paginas.mjs     # → carros/<id>.html
 │   ├── gerar-buscas.mjs      # → eletricos/ (listas para buscas)
 │   ├── gerar-precos-mes.mjs  # → precos/ (preços do mês)
+│   ├── gerar-glossario.mjs   # → glossario.html e js/glossario.js (links nos guias)
 │   ├── pagina-estatica.mjs   # modelo comum das páginas geradas (listas e preços)
 │   ├── gerar-imagens.mjs     # fotos JPG → WebP 480/960/1600
 │   ├── gerar-og.mjs          # → assets/og/ (imagens de prévia 1200×630)
@@ -81,7 +84,7 @@ npm run dados
 ```
 
 Isso refaz o catálogo, as páginas de cada modelo, as listas de `eletricos/`, os preços do
-mês em `precos/` e o `sitemap.xml`. Foto nova: rode também `npm run imagens`. Preço ou
+mês em `precos/`, o glossário e o `sitemap.xml`. Foto nova: rode também `npm run imagens`. Preço ou
 autonomia mudou: rode `npm run og` para refazer as imagens de prévia.
 
 Modelo novo precisa estar na tabela do Inmetro e ganhar uma linha em
