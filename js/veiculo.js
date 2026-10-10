@@ -231,6 +231,7 @@
           </div>
           ${obs}
           ${historico}
+          ${v.price ? `<p><a class="text-link" href="calculadora.html?modelo=${encodeURIComponent(v.id)}#financiamento">Simular o financiamento →</a></p>` : ""}
           <p class="fine-print"><a class="text-link" href="metodologia.html">Como coletamos os dados</a></p>
         </div>
         ${combustao}

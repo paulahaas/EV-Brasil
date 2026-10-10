@@ -30,6 +30,12 @@ const DATA_INFO = {
   "fipe": {
     "referencia": "outubro/2026",
     "fonte": "https://veiculos.fipe.org.br/"
+  },
+  "juros": {
+    "taxaMes": 1.97,
+    "taxaAno": 26.42,
+    "referencia": "agosto/2026",
+    "fonte": "https://www3.bcb.gov.br/sgspub/ (séries 25471 e 20749)"
   }
 };
 

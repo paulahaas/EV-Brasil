@@ -1,0 +1,7 @@
+{
+ "_leia": "Taxa média de juros do financiamento de veículos para pessoa física, do Banco Central (gerado por scripts/coletar-juros.mjs — não edite à mão).",
+ "taxaMes": 1.97,
+ "taxaAno": 26.42,
+ "referencia": "agosto/2026",
+ "fonte": "https://www3.bcb.gov.br/sgspub/ (séries 25471 e 20749)"
+}

@@ -455,6 +455,10 @@ a.chip { display: inline-flex; align-items: center; gap: 6px; }
 .sim-result { background: var(--bg-elev); border-radius: var(--radius); padding: clamp(24px, 4vw, 44px); }
 .sim-big { font-size: clamp(2.6rem, 6vw, 4.5rem); font-weight: 800; letter-spacing: -0.04em; line-height: 1; }
 .sim-label { color: var(--text-dim); font-size: 1.05rem; margin-top: 8px; }
+.fin-table { margin-top: 24px; }
+.fin-bolso { margin: 18px 0 10px; padding: 14px 16px; border: 1px solid rgba(156, 192, 255, 0.3); border-radius: var(--radius-sm); background: var(--accent-soft); color: var(--text-dim); }
+.fin-bolso:empty { display: none; }
+.fin-bolso strong { color: var(--text); }
 .sim-bars { margin: 28px 0; display: grid; gap: 10px; }
 .sim-bar-row { display: grid; grid-template-columns: 70px 1fr 90px; gap: 12px; align-items: center; font-size: 0.9rem; color: var(--text-dim); }
 .sim-bar-row strong { color: var(--text); text-align: right; }
