@@ -1,0 +1,19 @@
+{
+ "_leia": "Carros a combustão de referência para a comparação 'elétrico x combustão' na página de cada elétrico. consumo = km/l com gasolina no ciclo combinado da tabela PBE Veicular 2026 do Inmetro (mesma versão); fipe = versão na tabela FIPE (marca + expressão), de onde vem o preço zero km (npm run fipe). Cada elétrico é comparado com o carro desta lista da mesma carroceria e preço mais próximo (Perua e Esportivo usam os sedãs). eletricos = elétricos que são a versão elétrica deste mesmo carro e sempre comparam com ele.",
+ "fonte_consumo": "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular",
+ "carros": {
+  "hyundai-hb20": { "nome": "Hyundai HB20", "versao": "Comfort 1.0", "carroceria": "Hatch", "consumo": 14.2, "fipe": { "marca": "Hyundai", "versao": "^HB20 Comfort 1\\.0 Flex 12V Mec" } },
+  "vw-polo": { "nome": "Volkswagen Polo", "versao": "Sense TSI automático", "carroceria": "Hatch", "consumo": 14.3, "fipe": { "marca": "VW - VolksWagen", "versao": "^Polo Sense TSI 1\\.0" } },
+  "mini-cooper-s": { "eletricos": ["mini-cooper"], "nome": "Mini Cooper S", "versao": "5 portas", "carroceria": "Hatch", "consumo": 12.7, "fipe": { "marca": "MINI", "versao": "^COOPER S 2\\.0 Turbo 16V 5p" } },
+  "chevrolet-onix-plus": { "nome": "Chevrolet Onix Plus", "versao": "LT 1.0 turbo automático", "carroceria": "Sedã", "consumo": 13.7, "fipe": { "marca": "GM - Chevrolet", "versao": "^ONIX SEDAN Plus LT 1\\.0 12V TB Flex Aut" } },
+  "toyota-corolla": { "nome": "Toyota Corolla", "versao": "XEi 2.0", "carroceria": "Sedã", "consumo": 12.8, "fipe": { "marca": "Toyota", "versao": "^Corolla XEi 2\\.0 Flex" } },
+  "bmw-320i": { "nome": "BMW 320i", "versao": "GP", "carroceria": "Sedã", "consumo": 11.9, "fipe": { "marca": "BMW", "versao": "^320iA 2\\.0 Turbo/ActiveFlex 16V/GP" } },
+  "chevrolet-tracker": { "nome": "Chevrolet Tracker", "versao": "LT 1.0 turbo automático", "carroceria": "SUV", "consumo": 12.4, "fipe": { "marca": "GM - Chevrolet", "versao": "^TRACKER LT 1\\.0 Turbo" } },
+  "nissan-kicks": { "nome": "Nissan Kicks", "versao": "Sense 1.0 turbo automático", "carroceria": "SUV", "consumo": 12.7, "fipe": { "marca": "Nissan", "versao": "^KICKS Sense 1\\.0 Turbo" } },
+  "hyundai-creta": { "nome": "Hyundai Creta", "versao": "Comfort 1.0 turbo", "carroceria": "SUV", "consumo": 12.3, "fipe": { "marca": "Hyundai", "versao": "^Creta Comfort 1\\.0 TB" } },
+  "toyota-corolla-cross": { "nome": "Toyota Corolla Cross", "versao": "XRE 2.0", "carroceria": "SUV", "consumo": 12.2, "fipe": { "marca": "Toyota", "versao": "^Corolla Cross XRE 2\\.0" } },
+  "jeep-compass": { "nome": "Jeep Compass", "versao": "Longitude T270", "carroceria": "SUV", "consumo": 10.9, "fipe": { "marca": "Jeep", "versao": "^COMPASS LONG\\. T270" } },
+  "bmw-x1": { "eletricos": ["bmw-ix1"], "nome": "BMW X1", "versao": "sDrive20i GP", "carroceria": "SUV", "consumo": 11.5, "fipe": { "marca": "BMW", "versao": "^X1 SDRIVE 20i GP" } },
+  "porsche-macan": { "eletricos": ["porsche-macan-electric"], "nome": "Porsche Macan", "versao": "2.0 turbo", "carroceria": "SUV", "consumo": 7.8, "fipe": { "marca": "Porsche", "versao": "^Macan 2\\.0 Turbo" } }
+ }
+}

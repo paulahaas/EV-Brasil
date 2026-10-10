@@ -149,6 +149,28 @@
     .sort((a, b) => distancia(a) - distancia(b))
     .slice(0, 4);
 
+  // Elétrico x combustão: o carro a gasolina de referência (mesma carroceria e faixa de
+  // preço, ver dados/combustao.json) e quanto tempo a economia leva para pagar a diferença.
+  const GASOLINA = 6.2;
+  const ref = v.gasRef && typeof COMBUSTAO !== "undefined" ? COMBUSTAO[v.gasRef] : null;
+  const combustao = ref ? `
+        <div class="spec-section" id="combustao">
+          <h2>Elétrico ou a gasolina?</h2>
+          <p class="fine-print">Comparado com o ${escapeHtml(ref.name)} ${escapeHtml(ref.version)}, um carro a combustão ${v.gasRef && ref.name.split(" ")[0] === v.brand ? "da mesma marca" : "da mesma carroceria e faixa de preço"}.</p>
+          <div class="vs">
+            <div class="vs-col"><span class="vs-rot">${v.brand} ${v.model}</span><strong>${formatBRL(v.price)}</strong><span>a partir de</span></div>
+            <div class="vs-col"><span class="vs-rot">${escapeHtml(ref.name)}</span><strong>${formatBRL(ref.price)}</strong><span>FIPE zero km</span></div>
+          </div>
+          <label class="vs-km">Quanto você roda por mês
+            <select class="select" id="vsKm">
+              ${[500, 1000, 1500, 2000, 3000].map((k) => `<option value="${k}"${k === 1000 ? " selected" : ""}>${k.toLocaleString("pt-BR")} km</option>`).join("")}
+            </select>
+          </label>
+          <ul class="vs-conta" id="vsConta"></ul>
+          <p class="fine-print">Energia em casa a R$ ${formatNum(TARIFA, 2)} por kWh e gasolina a R$ ${formatNum(GASOLINA, 2)} por litro. Consumo do Inmetro: ${formatNum(v.kwh100)} kWh/100 km no elétrico e ${formatNum(ref.kmL)} km/l (gasolina, ciclo combinado) no ${escapeHtml(ref.name)}. Seguro, IPVA (muitos estados cobram menos do elétrico) e manutenção ficam de fora.</p>
+          <p><a class="text-link" href="calculadora.html?modelo=${encodeURIComponent(v.id)}">Fazer a conta completa na calculadora →</a></p>
+        </div>` : "";
+
   root.innerHTML = `
     <section class="panel model-hero" style="--glow:${v.color}">
       ${hasPhoto(v) ? photoCredit(v) : ""}
@@ -179,6 +201,7 @@
       <nav class="model-tabs" aria-label="Nesta página">
         <a href="#versoes">Versões</a>
         <a href="#preco">Preço</a>
+        ${combustao ? `<a href="#combustao">x Gasolina</a>` : ""}
         ${ficha ? `<a href="#ficha">Ficha técnica</a>` : ""}
         <a href="#seguranca">Segurança</a>
         ${usado ? `<a href="#usado">Usado</a>` : ""}
@@ -199,6 +222,7 @@
         ${segGarantia}
         ${usado}
         </div>
+        <div class="detail-side">
         <div class="spec-section" id="preco">
           <h2>Sobre o preço</h2>
           <div class="notice">
@@ -208,6 +232,8 @@
           ${obs}
           ${historico}
           <p class="fine-print"><a class="text-link" href="metodologia.html">Como coletamos os dados</a></p>
+        </div>
+        ${combustao}
         </div>
       </div>
     </section>
@@ -222,4 +248,29 @@
       </div>
     </section>` : ""}
   `;
+
+  // Conta do "elétrico ou a gasolina?", refeita quando muda a quilometragem.
+  const km = document.getElementById("vsKm");
+  if (km) {
+    const conta = () => {
+      const kmMes = Number(km.value);
+      const gasto = (kmMes / ref.kmL) * GASOLINA;
+      const ele = (kmMes * v.kwh100 / 100) * TARIFA;
+      const economia = gasto - ele;
+      const diferenca = v.price - ref.price;
+      const meses = diferenca > 0 && economia > 0 ? Math.ceil(diferenca / economia) : 0;
+      const prazo = meses > 180 ? "mais de 15 anos"
+        : `${Math.floor(meses / 12) ? `${Math.floor(meses / 12)} ${Math.floor(meses / 12) === 1 ? "ano" : "anos"}` : ""}${Math.floor(meses / 12) && meses % 12 ? " e " : ""}${meses % 12 ? `${meses % 12} ${meses % 12 === 1 ? "mês" : "meses"}` : ""}`;
+      document.getElementById("vsConta").innerHTML = [
+        `<li>Gasolina no ${escapeHtml(ref.name)}: <strong>${formatBRL(Math.round(gasto))}</strong> por mês</li>`,
+        `<li>Energia no ${v.model}, carregando em casa: <strong>${formatBRL(Math.round(ele))}</strong> por mês</li>`,
+        `<li>Economia: <strong>${formatBRL(Math.round(economia))} por mês</strong> (${formatBRL(Math.round(economia * 12))} por ano)</li>`,
+        diferenca > 0
+          ? `<li class="vs-final">O elétrico custa ${formatBRL(diferenca)} a mais. Com essa economia, a diferença se paga em <strong>${prazo}</strong>.</li>`
+          : `<li class="vs-final">O elétrico custa ${formatBRL(-diferenca)} a menos <strong>e ainda gasta menos por mês</strong>.</li>`,
+      ].join("");
+    };
+    km.addEventListener("change", conta);
+    conta();
+  }
 })();

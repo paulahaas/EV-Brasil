@@ -1263,5 +1263,85 @@
     }
    ]
   }
+ },
+ "combustao": {
+  "hyundai-hb20": {
+   "versao": "HB20 Comfort 1.0 Flex 12V Mec.",
+   "ano": "0km",
+   "valor": 90448,
+   "codigoFipe": "015215-3"
+  },
+  "vw-polo": {
+   "versao": "Polo Sense TSI 1.0 Flex 12V Aut",
+   "ano": "0km",
+   "valor": 107832,
+   "codigoFipe": "005513-1"
+  },
+  "mini-cooper-s": {
+   "versao": "COOPER S 2.0 Turbo 16V 5p Aut.",
+   "ano": "0km",
+   "valor": 324090,
+   "codigoFipe": "071032-6"
+  },
+  "chevrolet-onix-plus": {
+   "versao": "ONIX SEDAN Plus LT 1.0 12V TB Flex Aut.",
+   "ano": "0km",
+   "valor": 119480,
+   "codigoFipe": "004501-2"
+  },
+  "toyota-corolla": {
+   "versao": "Corolla XEi 2.0 Flex 16V Aut.",
+   "ano": "0km",
+   "valor": 176046,
+   "codigoFipe": "002111-3"
+  },
+  "bmw-320i": {
+   "versao": "320iA 2.0 Turbo/ActiveFlex 16V/GP  4p",
+   "ano": "0km",
+   "valor": 352527,
+   "codigoFipe": "009164-2"
+  },
+  "chevrolet-tracker": {
+   "versao": "TRACKER LT 1.0 Turbo 12V Flex Aut.",
+   "ano": "0km",
+   "valor": 140650,
+   "codigoFipe": "004522-5"
+  },
+  "nissan-kicks": {
+   "versao": "KICKS Sense 1.0 Turbo Flex Aut.",
+   "ano": "0km",
+   "valor": 158594,
+   "codigoFipe": "023194-0"
+  },
+  "hyundai-creta": {
+   "versao": "Creta Comfort 1.0 TB 12V Flex Aut.",
+   "ano": "0km",
+   "valor": 143276,
+   "codigoFipe": "015200-5"
+  },
+  "toyota-corolla-cross": {
+   "versao": "Corolla Cross XRE 2.0 16V Flex Aut.",
+   "ano": "0km",
+   "valor": 197854,
+   "codigoFipe": "002203-9"
+  },
+  "jeep-compass": {
+   "versao": "COMPASS LONG. T270 1.3 TB 4x2 Flex Aut.",
+   "ano": "0km",
+   "valor": 192903,
+   "codigoFipe": "017071-2"
+  },
+  "bmw-x1": {
+   "versao": "X1 SDRIVE 20i GP 2.0 TB Aut.",
+   "ano": "0km",
+   "valor": 332474,
+   "codigoFipe": "009323-8"
+  },
+  "porsche-macan": {
+   "versao": "Macan 2.0 Turbo",
+   "ano": "0km",
+   "valor": 662500,
+   "codigoFipe": "035060-5"
+  }
  }
 }

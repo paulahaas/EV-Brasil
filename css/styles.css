@@ -367,6 +367,20 @@ a.chip { display: inline-flex; align-items: center; gap: 6px; }
 .spec-table td:last-child { text-align: right; font-weight: 600; }
 .detail-main { display: grid; gap: clamp(40px, 5vw, 56px); }
 .model-tabs { display: none; }
+.detail-side { display: grid; gap: clamp(40px, 5vw, 56px); }
+
+/* Elétrico x combustão (página do modelo) */
+.vs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 18px; }
+.vs-col { display: grid; gap: 2px; padding: 14px 16px; border: 1px solid var(--stroke); border-radius: var(--radius-sm); background: var(--bg-glass); }
+.vs-col:first-child { border-color: rgba(156, 192, 255, 0.4); }
+.vs-rot { color: var(--text-dim); font-size: 0.85rem; }
+.vs-col strong { font-size: 1.2rem; font-weight: 600; }
+.vs-col span:last-child { color: var(--text-mute); font-size: 0.78rem; }
+.vs-km { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--text-dim); font-size: 0.92rem; }
+.vs-conta { list-style: none; margin: 14px 0 10px; }
+.vs-conta li { padding: 9px 0; border-bottom: 1px solid var(--stroke); color: var(--text-dim); font-size: 0.95rem; }
+.vs-conta strong { color: var(--text); }
+.vs-conta .vs-final { border-bottom: none; color: var(--text); padding-top: 12px; }
 .spec-section[id], #parecidos { scroll-margin-top: calc(var(--header-h) + 64px); }
 .spec-table caption { text-align: left; color: var(--text-mute); font-size: 0.85rem; padding-bottom: 6px; caption-side: top; }
 .spec-table tbody th { padding: 15px 4px; text-align: left; font-weight: 400; color: var(--text-dim); width: 45%; }
@@ -694,10 +708,10 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
   /* Página do carro: o preço sobe para logo depois das versões, e uma barra de
      atalhos fica grudada no topo para pular entre as seções. */
   .detail-cols { display: flex; flex-direction: column; gap: 48px; margin-top: 24px; }
-  .detail-main { display: contents; }
+  .detail-main, .detail-side { display: contents; }
   .detail-cols > *, .detail-main > * { order: 2; }
   #versoes { order: 0; }
-  #preco { order: 1; }
+  #preco, #combustao { order: 1; }
   .model-tabs {
     position: sticky; top: var(--header-h); z-index: 50; display: flex; gap: 6px; overflow-x: auto;
     padding: 10px 16px; background: rgba(6, 16, 36, 0.88); backdrop-filter: blur(14px);
