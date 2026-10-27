@@ -19,9 +19,11 @@ marinho com um brilho azul que muda de tom devagar, títulos em Sora e texto em 
 ev-brasil/
 ├── index.html          # Home: abertura, gráfico preço × autonomia, rankings, carrocerias
 ├── veiculos.html       # Catálogo com busca, filtros e "Listas prontas"
-├── carros/<id>.html    # GERADO: uma página por modelo (prévia para WhatsApp e Google)
+├── carros/<id>.html    # GERADO: uma página por modelo, elétrico ou plug-in (prévia para WhatsApp e Google)
 ├── veiculo.html        # Modelo das páginas acima; o endereço antigo ?id= redireciona
 ├── eletricos/          # GERADO: listas para buscas do Google (preço, autonomia, marca...)
+├── hibridos/           # GERADO: listas dos híbridos plug-in (mais baratos, flex, SUV...)
+├── comparacoes/        # GERADO: comparações prontas entre dois modelos (lista em dados/comparacoes.json)
 ├── precos/             # GERADO: preços do mês (edição atual em index.html + uma por mês)
 ├── encontre.html       # Questionário "Qual é o meu?" (uso pessoal ou motorista de aplicativo)
 ├── rankings.html       # Rankings (critério explicado em cada um)
@@ -30,7 +32,10 @@ ev-brasil/
 ├── viagem.html         # Planejador: quantas paradas uma viagem precisa
 ├── novidades.html      # Lançamentos e o que está chegando
 ├── guias.html, guia-*.html  # Guias: carregar em casa, onde recarregar, autonomia real,
-│                            # IPVA, elétrico usado, motorista de aplicativo
+│                            # IPVA, elétrico usado, motorista de aplicativo, elétrico ou plug-in
+├── favoritos.html      # Modelos salvos pelo visitante (ficam só no navegador dele)
+├── checklist-test-drive.html  # O que conferir no test-drive
+├── quem-somos.html     # Quem faz o site e contato
 ├── glossario.html      # GERADO: glossário do carro elétrico (23 termos)
 ├── metodologia.html    # De onde vêm os dados
 ├── creditos.html       # Autores e licenças das fotos
@@ -44,7 +49,11 @@ ev-brasil/
 │       comparar.js, simulador.js, custo-total.js, financiamento.js, viagem.js, novidades.js
 ├── dados/              # Fonte dos dados (não vai para o ar)
 │   ├── inmetro-pbev-2026-eletricos.json   # elétricos da tabela PBE Veicular 2026
+│   ├── inmetro-pbev-2026-plugin.json      # híbridos plug-in da mesma tabela
 │   ├── precos-2026-10.jsonl               # preços coletados, com fonte
+│   ├── precos-hibridos-2026-10.jsonl      # preços dos híbridos plug-in, com fonte
+│   ├── modelos-hibridos.json              # quais plug-ins entram no site (30 km ou mais só na bateria)
+│   ├── comparacoes.json                   # duelos das comparações prontas
 │   ├── historico-precos.json              # histórico de preço (um ponto por coleta mensal)
 │   ├── fichas.json                        # ficha técnica, com versão e fonte
 │   ├── garantias.json                     # garantia por marca (inclusive uso comercial)
@@ -56,15 +65,19 @@ ev-brasil/
 │   ├── ipva-2026.json                     # IPVA por estado (gasolina e elétrico)
 │   ├── novidades.json                     # modelos que estão chegando
 │   ├── modelos.json                       # nome de exibição, carroceria, cor
-│   └── fotos.json                         # fotos e créditos
+│   ├── fotos.json                         # fotos e créditos
+│   └── fotos-relatorio.md                 # conferência das fotos dos plug-ins (de onde veio cada uma)
 ├── scripts/
 │   ├── gerar-dados.mjs       # dados/ → js/catalogo.js e sitemap.xml
 │   ├── gerar-paginas.mjs     # → carros/<id>.html
 │   ├── gerar-buscas.mjs      # → eletricos/ (listas para buscas)
+│   ├── gerar-hibridos.mjs    # → hibridos/ (listas dos plug-ins)
+│   ├── gerar-comparacoes.mjs # → comparacoes/ (comparações prontas)
 │   ├── gerar-precos-mes.mjs  # → precos/ (preços do mês)
 │   ├── gerar-glossario.mjs   # → glossario.html e js/glossario.js (links nos guias)
 │   ├── pagina-estatica.mjs   # modelo comum das páginas geradas (listas e preços)
 │   ├── gerar-imagens.mjs     # fotos JPG → WebP 480/960/1600
+│   ├── baixar-fotos.mjs      # procura e baixa fotos livres no Wikimedia Commons
 │   ├── gerar-og.mjs          # → assets/og/ (imagens de prévia 1200×630)
 │   ├── conferir-precos.mjs   # confere os preços com os sites das marcas
 │   ├── coletar-fipe.mjs      # consulta a FIPE (elétricos e carros a gasolina de referência)
@@ -83,16 +96,30 @@ ev-brasil/
 npm run dados
 ```
 
-Isso refaz o catálogo, as páginas de cada modelo, as listas de `eletricos/`, os preços do
-mês em `precos/`, o glossário e o `sitemap.xml`. Foto nova: rode também `npm run imagens`. Preço ou
+Isso refaz o catálogo, as páginas de cada modelo, as listas de `eletricos/` e `hibridos/`,
+as comparações prontas, os preços do mês em `precos/`, o glossário e o `sitemap.xml`. Foto nova: rode também `npm run imagens`. Preço ou
 autonomia mudou: rode `npm run og` para refazer as imagens de prévia.
 
 Modelo novo precisa estar na tabela do Inmetro e ganhar uma linha em
-`dados/modelos.json`. Modelo que saiu de linha vai para `fora_de_linha`.
+`dados/modelos.json` (elétrico) ou `dados/modelos-hibridos.json` (plug-in). Modelo que saiu
+de linha vai para `fora_de_linha`.
+
+## 📷 Fotos
+
+```bash
+npm run fotos
+```
+
+Procura no Wikimedia Commons uma foto livre para cada plug-in que ainda não tem, baixa,
+gera os WebP e atualiza o catálogo. Autor e licença vão para `dados/fotos.json` (a página
+de Créditos mostra). **Confira cada foto antes de publicar**: a busca às vezes traz outro
+modelo, um carro-conceito ou a traseira. O `dados/fotos-relatorio.md` diz de onde veio cada uma.
+Sem foto boa, o modelo fica com a silhueta.
 
 ## 📅 Rotina do mês
 
-1. **Preços:** `npm run precos` (confere com os sites das marcas, veja abaixo), corrija o que mudou.
+1. **Preços:** `npm run precos` (confere com os sites das marcas, veja abaixo), corrija o que mudou
+   (elétricos e plug-ins).
 2. **FIPE:** `npm run fipe` (uns 50 minutos).
 3. **Juros:** `npm run juros` (taxa média do Banco Central para o simulador de financiamento).
 4. **Gerar:** `npm run dados` e `npm run og`. O histórico de preços ganha o ponto do mês e a
