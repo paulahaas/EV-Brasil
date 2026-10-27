@@ -41,7 +41,7 @@
     const kmMes = Number($("simKm").value) || 0;
     const rendimento = Number($("simKmL").value) || 0;
     const gas = rendimento > 0 ? (kmMes / rendimento) * (Number($("simGasolina").value) || 0) : 0;
-    const ele = ((kmMes * v.kwh100) / 100) * (Number($("simKwh").value) || 0);
+    const ele = custoMensal(v, kmMes, Number($("simKwh").value) || 0, Number($("simGasolina").value) || 0).total;
     return gas - ele;
   }
 

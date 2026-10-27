@@ -40,7 +40,7 @@
         <div class="sim">
           <form class="sim-form" id="simForm">
             <div class="field">
-              <label for="simModelo">Modelo elétrico</label>
+              <label for="simModelo">Modelo (elétrico ou híbrido plug-in)</label>
               <select id="simModelo"></select>
             </div>
             <div class="field">
@@ -74,7 +74,7 @@
                 <strong id="simCustoGasolina"></strong>
               </div>
               <div class="sim-bar-row">
-                <span>Elétrico</span>
+                <span data-ev="Elétrico" data-phev="Plug-in">Elétrico</span>
                 <div class="sim-track"><div class="sim-bar" id="simBarEletrico"></div></div>
                 <strong id="simCustoEletrico"></strong>
               </div>
@@ -85,7 +85,7 @@
               <div class="spec"><span class="v" id="simMes"></span><span class="k">por mês</span></div>
               <div class="spec"><span class="v" id="sim5anos"></span><span class="k">em 5 anos</span></div>
               <div class="spec"><span class="v" id="simKmGasolina"></span><span class="k">gasolina</span></div>
-              <div class="spec"><span class="v" id="simKmEletrico"></span><span class="k">elétrico</span></div>
+              <div class="spec"><span class="v" id="simKmEletrico"></span><span class="k" data-ev="elétrico" data-phev="plug-in">elétrico</span></div>
             </div>
 
             <p class="fine-print" id="simConsumo"></p>
@@ -115,7 +115,7 @@
             </div>
             <div class="form-row">
               <div class="field">
-                <label for="tcoPrecoEv">Preço do elétrico (R$)</label>
+                <label for="tcoPrecoEv" data-ev="Preço do elétrico (R$)" data-phev="Preço do plug-in (R$)">Preço do elétrico (R$)</label>
                 <input type="number" id="tcoPrecoEv" min="0" step="1000" inputmode="numeric">
               </div>
               <div class="field">
@@ -129,7 +129,7 @@
             </div>
             <div class="form-row">
               <div class="field">
-                <label for="tcoRevEv">Revisões do elétrico (R$ por ano)</label>
+                <label for="tcoRevEv" data-ev="Revisões do elétrico (R$ por ano)" data-phev="Revisões do plug-in (R$ por ano)">Revisões do elétrico (R$ por ano)</label>
                 <input type="number" id="tcoRevEv" min="0" step="100" inputmode="numeric">
               </div>
               <div class="field">
@@ -151,7 +151,7 @@
                 <strong id="tcoTotGas"></strong>
               </div>
               <div class="sim-bar-row">
-                <span>Elétrico</span>
+                <span data-ev="Elétrico" data-phev="Plug-in">Elétrico</span>
                 <div class="sim-track"><div class="sim-bar" id="tcoBarEv"></div></div>
                 <strong id="tcoTotEv"></strong>
               </div>
@@ -159,7 +159,7 @@
             </div>
 
             <table class="spec-table tco-table">
-              <thead><tr><th scope="col">Em 5 anos</th><th scope="col">Elétrico</th><th scope="col">Gasolina</th></tr></thead>
+              <thead><tr><th scope="col">Em 5 anos</th><th scope="col" data-ev="Elétrico" data-phev="Plug-in">Elétrico</th><th scope="col">Gasolina</th></tr></thead>
               <tbody id="tcoLinhas"></tbody>
             </table>
             <p class="fine-print" id="tcoNotas"></p>

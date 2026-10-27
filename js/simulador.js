@@ -22,7 +22,9 @@
   const kmPorLitro = document.getElementById("simKmL");
   const kwh = document.getElementById("simKwh");
 
-  modelo.innerHTML = VEHICLES.map((v) => `<option value="${v.id}">${v.brand} ${v.model}</option>`).join("");
+  const opt = (v) => `<option value="${v.id}">${v.brand} ${v.model}</option>`;
+  modelo.innerHTML = `<optgroup label="100% elétricos">${VEHICLES.map(opt).join("")}</optgroup>` +
+    (typeof HIBRIDOS !== "undefined" ? `<optgroup label="Híbridos plug-in">${HIBRIDOS.map(opt).join("")}</optgroup>` : "");
 
   // Outras páginas mandam para cá com ?modelo=<id> para já abrir no modelo certo.
   const pedido = new URLSearchParams(location.search).get("modelo");
@@ -46,7 +48,9 @@
     const consumo = v.kwh100;
 
     const custoGasolina = rendimento > 0 ? (kmMes / rendimento) * precoGasolina : 0;
-    const custoEletrico = ((kmMes * consumo) / 100) * precoKwh;
+    const uso = custoMensal(v, kmMes, precoKwh, precoGasolina);
+    const custoEletrico = uso.total;
+    rotularTipo(isPhev(v));
     const economiaMes = custoGasolina - custoEletrico;
 
     kmValor.textContent = kmMes.toLocaleString("pt-BR") + " km por mês";
@@ -57,8 +61,10 @@
     set("simCustoGasolina", reais(custoGasolina));
     set("simCustoEletrico", reais(custoEletrico));
     set("simKmGasolina", rendimento > 0 ? centavos(precoGasolina / rendimento) + " por km" : "—");
-    set("simKmEletrico", centavos((consumo / 100) * precoKwh) + " por km");
-    set("simConsumo", `${v.brand} ${v.model}: ${formatNum(consumo)} kWh a cada 100 km, medido pelo Inmetro.`);
+    set("simKmEletrico", kmMes > 0 ? centavos(custoEletrico / kmMes) + " por km" : "—");
+    set("simConsumo", isPhev(v)
+      ? `${v.brand} ${v.model}: carregando uma vez por dia, ${formatNum(uso.kmBateria / 30, 0)} km do dia saem da bateria (até ${v.rangeMax} km, medido pelo Inmetro, a ${formatNum(consumo)} kWh/100 km) e ${formatNum(uso.kmGasolina / 30, 0)} km na gasolina (${formatNum(v.gasKmL)} km/l). Se você não carregar, o gasto sobe: tudo vira gasolina.`
+      : `${v.brand} ${v.model}: ${formatNum(consumo)} kWh a cada 100 km, medido pelo Inmetro.`);
 
     // Barras proporcionais ao custo mensal mais alto.
     const maior = Math.max(custoGasolina, custoEletrico, 1);

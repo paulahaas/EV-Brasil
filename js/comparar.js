@@ -18,15 +18,19 @@
 
   // Linhas da tabela. `valor` é o número usado para achar o melhor da linha
   // e `melhor` diz se ganha o maior ou o menor (sem `melhor`, ninguém é destacado).
+  const faltaDado = (v) => (isPhev(v) ? '<span class="spec-missing">ainda não coletado</span>' : null);
   const LINHAS = [
+    { rotulo: "Tipo", texto: (v) => (isPhev(v) ? "Híbrido plug-in" : "100% elétrico") },
     { rotulo: "Preço a partir de", texto: (v) => priceText(v) + (priceNoteShort(v) ? `<small>${priceNoteShort(v)}</small>` : ""), valor: (v) => v.price, melhor: "menor" },
-    { rotulo: "Autonomia (Inmetro)", texto: (v) => rangeText(v), valor: (v) => v.rangeMax, melhor: "maior" },
-    { rotulo: "Consumo", texto: (v) => `${formatNum(v.kwh100)} kWh/100 km<small class="meter-small">${consumoNivel(v).texto} entre os elétricos</small>`, valor: (v) => v.kwh100, melhor: "menor" },
+    { rotulo: "Autonomia (Inmetro)", texto: (v) => (isPhev(v) ? `${rangeText(v)}<small>só na bateria</small>` : rangeText(v)), valor: (v) => v.rangeMax, melhor: "maior", mesmoTipo: true },
+    { rotulo: "Consumo", texto: (v) => (isPhev(v) ? `${formatNum(v.kwh100)} kWh/100 km<small>na bateria</small>` : `${formatNum(v.kwh100)} kWh/100 km<small class="meter-small">${consumoNivel(v).texto} entre os elétricos</small>`), valor: (v) => v.kwh100, melhor: "menor", mesmoTipo: true },
+    { rotulo: "Consumo na gasolina", texto: (v) => (isPhev(v) ? gasText(v) : "não usa gasolina"), valor: (v) => (isPhev(v) ? v.gasKmL : null), melhor: "maior", soPhev: true },
     {
       rotulo: "Energia a cada 100 km",
       texto: (v) => (v.kwh100 * TARIFA).toLocaleString("pt-BR", { style: "currency", currency: "BRL" }),
       valor: (v) => Math.round(v.kwh100 * TARIFA * 100),
       melhor: "menor",
+      mesmoTipo: true,
     },
     {
       // Versão de entrada: o preço "a partir de" é o da versão mais barata.
@@ -34,11 +38,12 @@
       texto: (v) => (v.price ? `${Math.round((v.rangeMin / v.price) * 100000)} km` : "—"),
       valor: (v) => (v.price ? Math.round((v.rangeMin / v.price) * 100000) : null),
       melhor: "maior",
+      mesmoTipo: true,
     },
     // Ficha técnica (potência, bateria, recarga, 0 a 100, porta-malas).
     ...FICHA_CAMPOS.map((c) => ({
       rotulo: c.rotulo,
-      texto: (v) => specText(v, c) || '<span class="spec-missing">não divulgado</span>',
+      texto: (v) => specText(v, c) || faltaDado(v) || '<span class="spec-missing">não divulgado</span>',
       valor: (v) => (v.specs && v.specs[c.id]) || null,
       melhor: c.melhor,
     })),
@@ -46,13 +51,13 @@
       rotulo: "Segurança (teste de colisão)",
       texto: (v) => (v.safety
         ? `<span class="stars s${v.safety.stars}">${starsText(v.safety.stars)}</span>${v.safety.program} ${v.safety.year}`
-        : '<span class="spec-missing">não testado</span>'),
+        : faltaDado(v) || '<span class="spec-missing">não testado</span>'),
       valor: (v) => (v.safety ? v.safety.stars + 1 : null), // +1: zero estrela também é um valor
       melhor: "maior",
     },
     {
       rotulo: "Garantia da bateria",
-      texto: (v) => (v.warranty && v.warranty.battery ? v.warranty.battery : '<span class="spec-missing">não divulgado</span>'),
+      texto: (v) => (v.warranty && v.warranty.battery ? v.warranty.battery : faltaDado(v) || '<span class="spec-missing">não divulgado</span>'),
     },
     { rotulo: "Carroceria", texto: (v) => v.bodyType },
     { rotulo: "Categoria (Inmetro)", texto: (v) => v.category },
@@ -64,8 +69,10 @@
     const usados = ids.filter((id, i) => id && i !== coluna);
     return (
       '<option value="">— Escolher modelo —</option>' +
-      VEHICLES.filter((v) => !usados.includes(v.id))
-        .map((v) => `<option value="${v.id}" ${v.id === selecionado ? "selected" : ""}>${v.brand} ${v.model}</option>`)
+      [["100% elétricos", VEHICLES], ["Híbridos plug-in", typeof HIBRIDOS !== "undefined" ? HIBRIDOS : []]]
+        .map(([nome, lista]) => `<optgroup label="${nome}">` + lista.filter((v) => !usados.includes(v.id))
+          .map((v) => `<option value="${v.id}" ${v.id === selecionado ? "selected" : ""}>${v.brand} ${v.model}</option>`)
+          .join("") + "</optgroup>")
         .join("")
     );
   }
@@ -90,7 +97,8 @@
     const validos = valores.filter((n) => n);
     // Só destaca quando há pelo menos dois valores diferentes para comparar.
     let alvo = null;
-    if (l.melhor && validos.length > 1 && new Set(validos).size > 1) {
+    const misto = carros.some((v) => v && isPhev(v)) && carros.some((v) => v && !isPhev(v));
+    if (l.melhor && !(l.mesmoTipo && misto) && validos.length > 1 && new Set(validos).size > 1) {
       alvo = l.melhor === "maior" ? Math.max(...validos) : Math.min(...validos);
     }
     return `
@@ -110,10 +118,10 @@
               ${ids.map(cabecalho).join("")}
             </tr>
           </thead>
-          <tbody>${LINHAS.map(linha).join("")}</tbody>
+          <tbody>${LINHAS.filter((l) => !l.soPhev || ids.some((id) => id && isPhev(getVehicleById(id)))).map(linha).join("")}</tbody>
         </table>
       </div>
-      <p class="fine-print">Em azul, o melhor valor de cada linha. Autonomia e consumo: Inmetro (versão mais eficiente). Ficha técnica: versão indicada na página de cada modelo. Energia: carregando em casa a R$ 0,95 por kWh.</p>`;
+      <p class="fine-print">Em azul, o melhor valor de cada linha. Autonomia e consumo: Inmetro (versão mais eficiente). Ficha técnica: versão indicada na página de cada modelo. Energia: carregando em casa a R$ 0,95 por kWh. Híbrido plug-in: autonomia só na bateria; por isso autonomia e consumo elétrico não são destacados quando se compara plug-in com 100% elétrico.</p>`;
 
     // Mantém a escolha na URL, para o link poder ser compartilhado.
     const escolhidos = ids.filter(Boolean);
