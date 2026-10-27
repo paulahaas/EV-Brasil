@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quem somos — EV Brasil</title>
+  <meta name="description" content="O EV Brasil é um guia independente de carros elétricos e híbridos plug-in: não vende carros, não recebe das marcas e mostra de onde vem cada dado.">
+  <link rel="canonical" href="https://ev-brasil.web.app/quem-somos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Um guia independente, sem carro para vender">
+  <meta property="og:description" content="O EV Brasil é um guia independente de carros elétricos e híbridos plug-in: não vende carros, não recebe das marcas e mostra de onde vem cada dado.">
+  <meta property="og:url" content="https://ev-brasil.web.app/quem-somos.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="theme-color" content="#061024">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Quem somos</span>
+        <h1 class="section-title">Um guia independente, sem carro para vender</h1>
+        <p class="section-sub">O EV Brasil nasceu para quem quer entender qual carro elétrico faz sentido, sem ter que garimpar tabelas e sites de marcas.</p>
+      </div>
+    </section>
+    <section class="section-flush">
+      <div class="container prose">
+        <h2>O que somos</h2>
+        <p>Um site de pesquisa que reúne, num só lugar, os carros 100% elétricos e os híbridos plug-in à venda no Brasil: autonomia e consumo do Inmetro, preço com fonte e data, nota de segurança, garantia e quanto custa rodar.</p>
+        <h2>O que não somos</h2>
+        <p>Não somos loja, concessionária nem corretora. <strong>Não vendemos carros</strong> e não ganhamos comissão por indicar nenhum modelo. Nenhuma marca paga para aparecer melhor, e a ordem das listas segue sempre um critério objetivo (preço, autonomia, consumo).</p>
+        <h2>De onde vêm os dados</h2>
+        <p>Só de fontes oficiais: tabela PBE Veicular do Inmetro, sites das marcas, tabela FIPE e Banco Central. Quando a marca não divulga o preço, usamos um valor da imprensa e deixamos isso claro na página. Veja os detalhes em <a class="text-link" href="metodologia.html">de onde vêm os dados</a>.</p>
+        <h2>Como o site se mantém</h2>
+        <p>Hoje, o EV Brasil é um projeto independente, sem anúncios e sem patrocínio de marcas. Se um dia houver anúncio, parceria ou serviço pago, isso será identificado com clareza, separado do conteúdo de pesquisa, e não vai mudar a forma como os carros são comparados.</p>
+        <h2>Errou algo? Avise</h2>
+        <p>Se você encontrou um preço desatualizado ou um dado errado, queremos corrigir. Diga o modelo, o que está errado e, se puder, o link que mostra o valor certo.</p>
+        <h2 id="contato">Contato</h2>
+        <p id="contatoLinks">Em breve, os canais de contato estarão aqui.</p>
+        <div data-share-bar="EV Brasil: guia independente de carros elétricos"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("sobre");
+    const links = [];
+    if (CONTATO.email) links.push(`E-mail: <a class="text-link" href="mailto:${CONTATO.email}">${CONTATO.email}</a>`);
+    if (CONTATO.instagram) links.push(`Instagram: <a class="text-link" href="${CONTATO.instagram}" target="_blank" rel="noopener">${CONTATO.instagram.replace(/^https?:\/\/(www\.)?/, "")}</a>`);
+    if (links.length) document.getElementById("contatoLinks").innerHTML = links.join("<br>");
+  </script>
+</body>
+</html>

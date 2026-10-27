@@ -216,10 +216,13 @@
         <div class="panel-actions">
           ${phev
             ? `<a href="veiculos.html?motor=phev" class="btn btn-primary btn-wide">Ver outros híbridos plug-in</a>
-          <a href="guia-eletrico-ou-hibrido-plug-in.html" class="btn btn-ghost btn-wide">Elétrico ou plug-in?</a>`
+          <a href="guia-eletrico-ou-hibrido-plug-in.html" class="btn btn-ghost btn-wide">Elétrico ou plug-in?</a>
+          ${favButton(v)}`
             : `<a href="comparar.html?ids=${encodeURIComponent(v.id)}" class="btn btn-primary btn-wide">Comparar com outros</a>
-          <a href="calculadora.html?modelo=${encodeURIComponent(v.id)}" class="btn btn-ghost btn-wide">Calcular minha economia</a>`}
+          <a href="calculadora.html?modelo=${encodeURIComponent(v.id)}" class="btn btn-ghost btn-wide">Calcular minha economia</a>
+          ${favButton(v)}`}
         </div>
+        ${dataStrip(v)}
         ${shareBar(`${v.brand} ${v.model}: autonomia, consumo e preço no EV Brasil`)}
       </div>
     </section>

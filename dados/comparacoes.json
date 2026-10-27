@@ -1,0 +1,13 @@
+{
+  "_nota": "Duelos que aparecem como páginas em comparacoes/. Escolha editorial (modelos populares e de preço parecido); a Paula aprova a lista.",
+  "duelos": [
+    ["byd-dolphin", "byd-dolphin-mini"],
+    ["byd-dolphin", "mg-mg4"],
+    ["byd-dolphin-mini", "geely-ex2"],
+    ["byd-yuan-plus", "geely-ex5"],
+    ["byd-yuan-pro", "chevrolet-captiva-ev"],
+    ["byd-yuan-plus", "byd-song-plus"],
+    ["byd-song-plus", "gwm-haval-h6-phev"],
+    ["byd-song-pro", "geely-ex5-emi"]
+  ]
+}

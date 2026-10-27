@@ -853,3 +853,24 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
 .phev-conta strong { color: var(--text); }
 .phev-conta .phev-final { background: var(--accent-soft); color: var(--text); }
 #hibridos .panel-actions { justify-content: flex-start; margin-top: 22px; }
+
+/* Faixa de dados atualizados e favoritos */
+.data-strip { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 8px 14px; border: 1px solid rgba(120,160,255,.28); border-radius: 999px; background: rgba(40,80,200,.12); color: var(--text-mute); font-size: .84rem; }
+.data-strip strong { color: var(--text); }
+.data-strip a { color: inherit; text-decoration: underline; }
+.data-strip-dot { width: 8px; height: 8px; border-radius: 50%; background: #34d399; box-shadow: 0 0 8px #34d399; }
+.panel-foot > .data-strip { margin-top: 14px; }
+.fav-btn[aria-pressed="true"] { border-color: #f472b6; color: #f9a8d4; }
+.fav-card { display: flex; flex-direction: column; gap: 8px; }
+.fav-card .btn { width: 100%; text-align: center; }
+.check-list { list-style: none; padding: 0; margin: 0 0 26px; }
+.check-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,.08); }
+.check-list label { display: flex; gap: 12px; align-items: flex-start; cursor: pointer; }
+.check-list input { margin-top: 4px; width: 18px; height: 18px; flex: none; }
+@media print {
+  #header-slot, #footer-slot, .no-print, .share, .data-strip { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .page-head, .container, .prose, .prose * { color: #000 !important; background: none !important; }
+  .check-list li { break-inside: avoid; border-color: #bbb; }
+}
+@media (max-width: 640px) { .data-strip { border-radius: 16px; font-size: .8rem; } }

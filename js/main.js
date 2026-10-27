@@ -55,6 +55,36 @@ function renderHeader(active) {
 </header>`;
 }
 
+/* ---------------- Faixa "dados atualizados" ---------------- */
+function dataStrip(v) {
+  const data = v ? (isPhev(v) ? DATA_INFO.precosHibridos : DATA_INFO.precos).coleta : dataAtualizada();
+  return `<p class="data-strip"><span class="data-strip-dot" aria-hidden="true"></span>${v ? "Preço e dados conferidos em" : "Dados atualizados em"} <strong>${data}</strong> · Autonomia e consumo: Inmetro · <a href="metodologia.html">de onde vêm os dados</a></p>`;
+}
+
+/* ---------------- Favoritos (ficam só neste navegador) ---------------- */
+function lerFavoritos() {
+  try { return JSON.parse(localStorage.getItem("ev-favoritos") || "[]").filter((id) => getVehicleById(id)); } catch (e) { return []; }
+}
+function gravarFavoritos(lista) {
+  try { localStorage.setItem("ev-favoritos", JSON.stringify(lista)); } catch (e) { /* sem armazenamento */ }
+}
+function favButton(v) {
+  const on = lerFavoritos().includes(v.id);
+  return `<button type="button" class="btn btn-ghost btn-wide fav-btn" data-fav="${v.id}" aria-pressed="${on}">${on ? "♥ Nos seus favoritos" : "♡ Salvar nos favoritos"}</button>`;
+}
+if (typeof document !== "undefined") document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-fav]");
+  if (!btn) return;
+  const id = btn.dataset.fav;
+  const lista = lerFavoritos();
+  const novo = lista.includes(id) ? lista.filter((x) => x !== id) : [...lista, id];
+  gravarFavoritos(novo);
+  const on = novo.includes(id);
+  btn.setAttribute("aria-pressed", on);
+  if (btn.classList.contains("fav-btn")) btn.textContent = on ? "♥ Nos seus favoritos" : "♡ Salvar nos favoritos";
+  document.dispatchEvent(new CustomEvent("favoritos-mudaram"));
+});
+
 /* ---------------- Rodapé ---------------- */
 function renderFooter() {
   const year = new Date().getFullYear();
@@ -78,6 +108,9 @@ function renderFooter() {
           <a href="precos/">Preços do mês</a>
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
+          <a href="comparacoes/">Comparações prontas</a>
+          <a href="favoritos.html">Meus favoritos</a>
+          <a href="checklist-test-drive.html">Checklist de test-drive</a>
           <a href="calculadora.html">Calculadora de economia</a>
           <a href="viagem.html">Dá para viajar?</a>
           <a href="novidades.html">Lançamentos</a>
@@ -90,8 +123,10 @@ function renderFooter() {
         </div>
         <div class="footer-col">
           <h4>Sobre</h4>
+          <a href="quem-somos.html">Quem somos</a>
           <a href="metodologia.html">De onde vêm os dados</a>
           <a href="creditos.html">Créditos das fotos</a>
+          <a href="quem-somos.html#contato">Contato</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -233,6 +268,7 @@ function mountChrome(activeKey) {
   if (headerSlot) headerSlot.innerHTML = renderHeader(activeKey);
   if (footerSlot) footerSlot.innerHTML = renderFooter();
   // Páginas fixas marcam onde vão os botões com <div data-share-bar></div>.
+  document.querySelectorAll("[data-data-strip]").forEach((el) => (el.outerHTML = dataStrip()));
   document.querySelectorAll("[data-share-bar]").forEach((el) => (el.outerHTML = shareBar(el.dataset.shareBar)));
 
   // Na home o cabeçalho começa transparente sobre o painel e ganha fundo ao rolar.

@@ -35,6 +35,20 @@ function modelUrl(v) {
  */
 const TODOS = [...VEHICLES, ...(typeof HIBRIDOS !== "undefined" ? HIBRIDOS : [])];
 
+/**
+ * Contato do site (rodapé e página "Quem somos"). A Paula preenche; vazio = o link some.
+ * Exemplo: { email: "contato@seudominio.com.br", instagram: "https://instagram.com/seuperfil" }
+ */
+const CONTATO = { email: "", instagram: "" };
+
+/** Data mais recente entre as coletas de preços, fichas e plug-ins (texto dd/mm/aaaa). */
+function dataAtualizada() {
+  const datas = [DATA_INFO.precos, DATA_INFO.precosHibridos, DATA_INFO.fichas]
+    .filter((x) => x && x.coleta).map((x) => x.coleta);
+  const chave = (t) => t.split("/").reverse().join("");
+  return datas.sort((a, b) => chave(b).localeCompare(chave(a)))[0];
+}
+
 /** É um híbrido plug-in? */
 function isPhev(v) {
   return !!v && v.powertrain === "phev";

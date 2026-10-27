@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus favoritos — EV Brasil</title>
+  <meta name="description" content="Os carros que você salvou, para comparar depois. Ficam guardados só neste navegador.">
+  <link rel="canonical" href="https://ev-brasil.web.app/favoritos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Meus favoritos">
+  <meta property="og:description" content="Os carros que você salvou, para comparar depois. Ficam guardados só neste navegador.">
+  <meta property="og:url" content="https://ev-brasil.web.app/favoritos.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="theme-color" content="#061024">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Favoritos</span>
+        <h1 class="section-title">Meus favoritos</h1>
+        <p class="section-sub">Os carros que você salvou. Ficam guardados só neste navegador, sem cadastro.</p>
+      </div>
+    </section>
+    <section class="section-flush">
+      <div class="container">
+        <p class="lista-acoes" id="favAcoes" hidden><a class="btn btn-primary" id="favComparar" href="comparar.html">Comparar os três primeiros</a></p>
+        <div class="grid lista-grid" id="favGrid"></div>
+        <p class="fine-print" id="favVazio" hidden>Você ainda não salvou nenhum carro. Abra a página de um modelo e toque em "Salvar nos favoritos".</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("veiculos");
+    function desenhar() {
+      const lista = lerFavoritos().map(getVehicleById);
+      document.getElementById("favGrid").innerHTML = lista.map((v) => `<div class="fav-card">${createCard(v)}<button type="button" class="btn btn-ghost" data-fav="${v.id}">Remover dos favoritos</button></div>`).join("");
+      document.getElementById("favVazio").hidden = lista.length > 0;
+      document.getElementById("favAcoes").hidden = lista.length < 2;
+      document.getElementById("favComparar").href = "comparar.html?ids=" + lista.slice(0, 3).map((v) => v.id).join(",");
+    }
+    document.addEventListener("favoritos-mudaram", desenhar);
+    desenhar();
+  </script>
+</body>
+</html>
