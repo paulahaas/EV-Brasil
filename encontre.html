@@ -113,7 +113,85 @@
           <ol class="matches" id="quizResults"></ol>
           <a class="btn btn-ghost" id="quizCompare" href="comparar.html">Comparar os três primeiros</a>
           <p class="fine-print">Sugestões calculadas só com dados públicos: autonomia e consumo do Inmetro e preço "a partir de". <a class="text-link" href="metodologia.html">Como funciona</a></p>
+          <a class="oferta-atalho" href="#relatorio">Quer os 3 melhores com as contas feitas? <strong>Conheça o relatório completo ↓</strong></a>
         </div>
+      </div>
+    </section>
+
+    <!-- Relatório completo: por enquanto, teste de interesse (o botão leva à lista de espera; nada é cobrado). -->
+    <section class="section oferta" id="relatorio" aria-labelledby="ofertaTitulo">
+      <div class="container oferta-layout">
+        <div class="oferta-texto">
+          <span class="eyebrow">Relatório completo</span>
+          <h2 class="section-title" id="ofertaTitulo">Os 3 melhores para você, com as contas feitas</h2>
+          <p class="section-sub"><span id="ofertaQtd">Vários modelos combinam</span> com as suas respostas. O relatório aponta os 3 que mais combinam e faz as contas para o seu caso:</p>
+          <ul class="oferta-lista">
+            <li><strong>Os 3 melhores modelos</strong>, cada um com o motivo em linguagem simples</li>
+            <li><strong>Custo total em 5 anos</strong> no seu estado: compra, energia, IPVA, seguro e revisões</li>
+            <li><strong>Financiamento</strong> com a sua entrada e o seu prazo, pela taxa média do Banco Central</li>
+            <li><strong>Recarga em casa</strong>: quanto custa instalar, quanto sai por mês e se compensa</li>
+            <li><strong>Valor de revenda</strong> pela tabela FIPE (quando houver dado de usado)</li>
+            <li><strong>Checklist de test-drive</strong> feito para os modelos escolhidos</li>
+          </ul>
+          <p class="oferta-preco">R$ 9,90 <span>pagamento único, por Pix</span></p>
+          <p class="oferta-neutro">O pagamento não muda a ordem nem o critério da recomendação: só libera o relatório completo. Quando faltar um dado oficial, o relatório diz isso, sem chutar. <a class="text-link" href="quem-somos.html">Por que o site é neutro</a></p>
+
+          <button type="button" class="btn btn-primary oferta-btn" id="ofertaBtn" aria-controls="listaEspera" aria-expanded="false">Relatório completo — R$ 9,90</button>
+
+          <div class="espera" id="listaEspera" hidden>
+            <p class="espera-aviso"><strong>O relatório ainda não está à venda.</strong> Antes de lançar, queremos saber se ele é útil para quem pesquisa aqui. Deixe seu e-mail e mandamos <strong>um único aviso</strong> quando ele estiver disponível. Você não paga nada agora.</p>
+            <form class="espera-form" id="esperaForm" novalidate>
+              <div class="field">
+                <label for="esperaEmail">Seu e-mail</label>
+                <input type="email" id="esperaEmail" name="email" autocomplete="email" inputmode="email" placeholder="voce@exemplo.com" required>
+              </div>
+              <label class="espera-consentimento">
+                <input type="checkbox" id="esperaOk" required>
+                <span>Aceito receber um único e-mail avisando quando o relatório estiver disponível. Posso pedir para apagar meu e-mail quando quiser.</span>
+              </label>
+              <button type="submit" class="btn btn-primary">Quero ser avisado</button>
+              <p class="fine-print">Guardamos só o e-mail, para esse aviso. Detalhes no <a class="text-link" href="privacidade.html">aviso de privacidade</a>.</p>
+            </form>
+            <p class="form-msg" id="esperaPronto" role="status">Pronto! Você está na lista. Quando o relatório sair, mandamos um aviso para esse e-mail.</p>
+            <p class="form-error" id="esperaErro" role="alert"></p>
+          </div>
+        </div>
+
+        <figure class="oferta-exemplo" aria-label="Exemplo de relatório com números fictícios">
+          <figcaption class="exemplo-tag">Exemplo com números fictícios</figcaption>
+          <div class="exemplo-bloco">
+            <p class="exemplo-rotulo">1º lugar</p>
+            <p class="exemplo-modelo">Modelo A <span class="badge-exemplo">elétrico</span></p>
+            <ul class="exemplo-motivos">
+              <li>Faz 320 km com uma carga: 6 dias do seu uso sem recarregar</li>
+              <li>Cabe no seu orçamento com R$ 12 mil de folga</li>
+              <li>Cerca de R$ 180 por mês de energia, carregando em casa</li>
+            </ul>
+          </div>
+          <div class="exemplo-bloco">
+            <p class="exemplo-rotulo">Custo total em 5 anos (SP)</p>
+            <dl class="exemplo-tabela">
+              <div><dt>Compra</dt><dd>R$ 199.990</dd></div>
+              <div><dt>Energia</dt><dd>R$ 10.800</dd></div>
+              <div><dt>IPVA</dt><dd>R$ 0</dd></div>
+              <div><dt>Seguro e revisões (estimativa)</dt><dd>R$ 38.400</dd></div>
+              <div class="exemplo-total"><dt>Total</dt><dd>R$ 249.190</dd></div>
+            </dl>
+            <p class="exemplo-nota">Com o seu carro atual, a gasolina dos mesmos 5 anos daria R$ 41.200.</p>
+          </div>
+          <div class="exemplo-bloco exemplo-duplo">
+            <div>
+              <p class="exemplo-rotulo">Financiamento</p>
+              <p class="exemplo-valor">48 × R$ 3.890</p>
+              <p class="exemplo-nota">Entrada de 40%, taxa média do Banco Central</p>
+            </div>
+            <div>
+              <p class="exemplo-rotulo">Revenda (FIPE)</p>
+              <p class="exemplo-valor">−14% no 1º ano</p>
+              <p class="exemplo-nota">Modelo B: sem dado de usado na FIPE</p>
+            </div>
+          </div>
+        </figure>
       </div>
     </section>
   </main>
@@ -127,5 +205,6 @@
   <!-- Celular: as sugestões ficam abaixo das perguntas; este atalho leva até elas. -->
   <a href="#quizTitle" class="quiz-jump btn btn-primary" id="quizJump" hidden>Ver sugestões ↓</a>
   <script src="js/encontre.js"></script>
+  <script src="js/lista-espera.js"></script>
 </body>
 </html>

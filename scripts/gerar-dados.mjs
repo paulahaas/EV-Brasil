@@ -278,7 +278,7 @@ fs.writeFileSync("js/catalogo.js", js);
 // sitemap.xml: páginas fixas + uma por modelo.
 const SITE = "https://ev-brasil.web.app";
 const paginas = ["/", "/veiculos.html", "/encontre.html", "/rankings.html", "/comparar.html",
-  "/calculadora.html", "/viagem.html", "/novidades.html", "/metodologia.html", "/quem-somos.html", "/checklist-test-drive.html", "/guias.html", "/guia-carregar-em-casa.html",
+  "/calculadora.html", "/viagem.html", "/novidades.html", "/metodologia.html", "/quem-somos.html", "/privacidade.html", "/checklist-test-drive.html", "/guias.html", "/guia-carregar-em-casa.html",
   "/guia-eletrico-ou-hibrido-plug-in.html", "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", "/guia-motorista-aplicativo.html", "/guia-onde-recarregar.html", "/glossario.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`), ...HIBRIDOS.map((v) => `/carros/${v.id}.html`)];
 const urls = paginas.map((p) => `  <url><loc>${SITE}${p}</loc></url>`).join("\n");
 fs.writeFileSync("sitemap.xml",
