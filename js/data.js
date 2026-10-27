@@ -28,9 +28,26 @@ function modelUrl(v) {
   return `carros/${v.id}.html`;
 }
 
-/** Busca um veículo pelo id. */
+/**
+ * Elétricos e híbridos plug-in juntos (só o catálogo, as páginas de modelo e as listas usam).
+ * Rankings, gráfico, comparador e calculadoras continuam só com os 100% elétricos (VEHICLES),
+ * porque a autonomia do plug-in é só na bateria e não cabe na mesma régua.
+ */
+const TODOS = [...VEHICLES, ...(typeof HIBRIDOS !== "undefined" ? HIBRIDOS : [])];
+
+/** É um híbrido plug-in? */
+function isPhev(v) {
+  return !!v && v.powertrain === "phev";
+}
+
+/** Busca um veículo pelo id (elétricos e híbridos plug-in). */
 function getVehicleById(id) {
-  return VEHICLES.find((v) => v.id === id) || null;
+  return TODOS.find((v) => v.id === id) || null;
+}
+
+/** Consumo a gasolina do plug-in (ciclo combinado do Inmetro), em km/l. */
+function gasText(v) {
+  return v.gasKmL ? `${formatNum(v.gasKmL)} km/l` : "—";
 }
 
 /** Autonomia do Inmetro (a melhor versão). */

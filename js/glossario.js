@@ -168,7 +168,7 @@ const GLOSSARIO = [
  {
   "id": "eletrico-hibrido",
   "termo": "Elétrico, híbrido e híbrido plug-in",
-  "curto": "O EV Brasil só mostra carros 100% elétricos, que não têm motor a combustão.",
+  "curto": "O EV Brasil mostra os carros 100% elétricos e, em lista à parte, os híbridos plug-in.",
   "padroes": [
    "híbrido plug-in",
    "\\bPHEV\\b",

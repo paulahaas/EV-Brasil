@@ -11,6 +11,9 @@ const DATA_INFO = {
   "precos": {
     "coleta": "05/10/2026"
   },
+  "precosHibridos": {
+    "coleta": "27/10/2026"
+  },
   "fichas": {
     "coleta": "08/10/2026"
   },
@@ -5693,6 +5696,1211 @@ const VEHICLES = [
       ]
     },
     "gasRef": "bmw-x1"
+  }
+];
+
+const HIBRIDOS = [
+  {
+    "id": "byd-atto-2-dmi",
+    "brand": "BYD",
+    "model": "Atto 2 DM-i",
+    "bodyType": "SUV",
+    "color": "#3b82f6",
+    "category": "Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM FLEX",
+        "rangeKm": 75,
+        "kwh100": 14.2,
+        "gasCity": 15.5,
+        "gasRoad": 13.9,
+        "gasAvg": 14.8,
+        "ethCity": 11.8,
+        "ethRoad": 10.7
+      },
+      {
+        "name": "GL DM FLEX",
+        "rangeKm": 33,
+        "kwh100": 15.8,
+        "gasCity": 15.8,
+        "gasRoad": 13.5,
+        "gasAvg": 14.7,
+        "ethCity": 11.7,
+        "ethRoad": 10.5
+      }
+    ],
+    "rangeMin": 33,
+    "rangeMax": 75,
+    "kwh100": 14.2,
+    "gasKmL": 14.8,
+    "flex": true,
+    "inmetroClass": "A/A",
+    "price": 166660,
+    "priceVersion": "GL",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "a BYD não mostra o preço deste modelo no site; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "byd-atto-8",
+    "brand": "BYD",
+    "model": "Atto 8",
+    "bodyType": "SUV",
+    "color": "#22d3ee",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM",
+        "rangeKm": 111,
+        "kwh100": 19.7,
+        "gasCity": 11.4,
+        "gasRoad": 10.8,
+        "gasAvg": 11.1,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 111,
+    "rangeMax": 111,
+    "kwh100": 19.7,
+    "gasKmL": 11.1,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 399990,
+    "priceVersion": "",
+    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceKind": "oficial",
+    "priceNote": ""
+  },
+  {
+    "id": "byd-king",
+    "brand": "BYD",
+    "model": "King",
+    "bodyType": "Sedã",
+    "color": "#a78bfa",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM",
+        "rangeKm": 78,
+        "kwh100": 13.6,
+        "gasCity": 16.4,
+        "gasRoad": 12.9,
+        "gasAvg": 14.6,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "GL DM",
+        "rangeKm": 35,
+        "kwh100": 14.7,
+        "gasCity": 17.1,
+        "gasRoad": 13.6,
+        "gasAvg": 15.3,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 35,
+    "rangeMax": 78,
+    "kwh100": 13.6,
+    "gasKmL": 15.3,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 147990,
+    "priceVersion": "GL",
+    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceKind": "oficial",
+    "priceNote": ""
+  },
+  {
+    "id": "byd-shark",
+    "brand": "BYD",
+    "model": "Shark",
+    "bodyType": "Picape",
+    "color": "#34d399",
+    "category": "Picape",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM / GL DM",
+        "rangeKm": 68,
+        "kwh100": 25.3,
+        "gasCity": 8.7,
+        "gasRoad": 8.5,
+        "gasAvg": 8.6,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 68,
+    "rangeMax": 68,
+    "kwh100": 25.3,
+    "gasKmL": 8.6,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 344990,
+    "priceVersion": "GS",
+    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceKind": "oficial",
+    "priceNote": ""
+  },
+  {
+    "id": "byd-song-plus",
+    "brand": "BYD",
+    "model": "Song Plus",
+    "bodyType": "SUV",
+    "color": "#f59e0b",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "PREM DM",
+        "rangeKm": 87,
+        "kwh100": 18.6,
+        "gasCity": 12.2,
+        "gasRoad": 10.1,
+        "gasAvg": 11.2,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "PREM DM (MY27)",
+        "rangeKm": 83,
+        "kwh100": 20,
+        "gasCity": 12,
+        "gasRoad": 10.6,
+        "gasAvg": 11.3,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "GS DM",
+        "rangeKm": 63,
+        "kwh100": 16.1,
+        "gasCity": 15,
+        "gasRoad": 11.2,
+        "gasAvg": 13,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 63,
+    "rangeMax": 87,
+    "kwh100": 16.1,
+    "gasKmL": 13,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 249990,
+    "priceVersion": "",
+    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceKind": "oficial",
+    "priceNote": "versão Premium: R$ 299.800"
+  },
+  {
+    "id": "byd-song-pro",
+    "brand": "BYD",
+    "model": "Song Pro",
+    "bodyType": "SUV",
+    "color": "#f472b6",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM FLEX",
+        "rangeKm": 72,
+        "kwh100": 15.3,
+        "gasCity": 15.9,
+        "gasRoad": 13.5,
+        "gasAvg": 14.7,
+        "ethCity": 11.7,
+        "ethRoad": 10.5
+      },
+      {
+        "name": "GS DM",
+        "rangeKm": 62,
+        "kwh100": 16.7,
+        "gasCity": 14.8,
+        "gasRoad": 12,
+        "gasAvg": 13.4,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "GL DM FLEX",
+        "rangeKm": 57,
+        "kwh100": 14.7,
+        "gasCity": 16,
+        "gasRoad": 13.9,
+        "gasAvg": 15,
+        "ethCity": 12.1,
+        "ethRoad": 10.7
+      },
+      {
+        "name": "GL DM",
+        "rangeKm": 49,
+        "kwh100": 16.1,
+        "gasCity": 14.7,
+        "gasRoad": 11,
+        "gasAvg": 12.8,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 49,
+    "rangeMax": 72,
+    "kwh100": 14.7,
+    "gasKmL": 15,
+    "flex": true,
+    "inmetroClass": "A/A",
+    "price": 179990,
+    "priceVersion": "GL",
+    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceKind": "oficial",
+    "priceNote": ""
+  },
+  {
+    "id": "caoa-chery-tiggo-7-pro-phev",
+    "brand": "Caoa Chery",
+    "model": "Tiggo 7 Pro PHEV",
+    "bodyType": "SUV",
+    "color": "#60a5fa",
+    "category": "Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 68,
+        "kwh100": 16.4,
+        "gasCity": 15.4,
+        "gasRoad": 13.4,
+        "gasAvg": 14.4,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "padrão",
+        "rangeKm": 60,
+        "kwh100": 17.2,
+        "gasCity": 12.3,
+        "gasRoad": 11.9,
+        "gasAvg": 12.1,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 60,
+    "rangeMax": 68,
+    "kwh100": 16.4,
+    "gasKmL": 14.4,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 209990,
+    "priceVersion": "",
+    "priceSource": "https://www.caoachery.com.br/",
+    "priceKind": "oficial",
+    "priceNote": "preço público sugerido no site da marca, sem data de coleta"
+  },
+  {
+    "id": "caoa-chery-tiggo-8-pro-phev",
+    "brand": "Caoa Chery",
+    "model": "Tiggo 8 Pro PHEV",
+    "bodyType": "SUV",
+    "color": "#2dd4bf",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 70,
+        "kwh100": 17.2,
+        "gasCity": 14.4,
+        "gasRoad": 12.8,
+        "gasAvg": 13.6,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "padrão",
+        "rangeKm": 56,
+        "kwh100": 18.3,
+        "gasCity": 11.8,
+        "gasRoad": 11.3,
+        "gasAvg": 11.6,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 56,
+    "rangeMax": 70,
+    "kwh100": 17.2,
+    "gasKmL": 13.6,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 249990,
+    "priceVersion": "",
+    "priceSource": "https://www.caoachery.com.br/",
+    "priceKind": "oficial",
+    "priceNote": "preço público sugerido no site da marca, sem data de coleta"
+  },
+  {
+    "id": "denza-b5",
+    "brand": "Denza",
+    "model": "B5",
+    "bodyType": "SUV",
+    "color": "#fb7185",
+    "category": "Fora de Estrada Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "GS DM",
+        "rangeKm": 74,
+        "kwh100": 25.8,
+        "gasCity": 8.4,
+        "gasRoad": 7.9,
+        "gasAvg": 8.2,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 74,
+    "rangeMax": 74,
+    "kwh100": 25.8,
+    "gasKmL": 8.2,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 436000,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "gac-gs9-phev",
+    "brand": "GAC",
+    "model": "GS9",
+    "bodyType": "SUV",
+    "color": "#c084fc",
+    "category": "Utilitário Esportivo Grande 4x4",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "ULTRA",
+        "rangeKm": 114,
+        "kwh100": 20.6,
+        "gasCity": 10.3,
+        "gasRoad": 10.6,
+        "gasAvg": 10.5,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 114,
+    "rangeMax": 114,
+    "kwh100": 20.6,
+    "gasKmL": 10.5,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 399990,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "geely-ex5-emi",
+    "brand": "Geely",
+    "model": "EX5 EM-i",
+    "bodyType": "SUV",
+    "color": "#f59e0b",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "ULTRA",
+        "rangeKm": 112,
+        "kwh100": 16.4,
+        "gasCity": 14.8,
+        "gasRoad": 13.1,
+        "gasAvg": 14,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "MAX / PRO",
+        "rangeKm": 65,
+        "kwh100": 15.3,
+        "gasCity": 14.6,
+        "gasRoad": 13.3,
+        "gasAvg": 14,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 65,
+    "rangeMax": 112,
+    "kwh100": 15.3,
+    "gasKmL": 14,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 191490,
+    "priceVersion": "PRO",
+    "priceSource": "https://www.geelybrasil.com.br/",
+    "priceKind": "oficial",
+    "priceNote": "versões Max e Ultra mais caras"
+  },
+  {
+    "id": "gwm-haval-h6-phev",
+    "brand": "GWM",
+    "model": "Haval H6",
+    "bodyType": "SUV",
+    "color": "#3b82f6",
+    "category": "Utilitário Esportivo Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "PHEV35 FLEX",
+        "rangeKm": 126,
+        "kwh100": 19.4,
+        "gasCity": 12.5,
+        "gasRoad": 10.7,
+        "gasAvg": 11.6,
+        "ethCity": 9.2,
+        "ethRoad": 7.4
+      },
+      {
+        "name": "PHEV35 (MY26)",
+        "rangeKm": 119,
+        "kwh100": 20.6,
+        "gasCity": 12,
+        "gasRoad": 10.9,
+        "gasAvg": 11.5,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "PHEV19 FLEX",
+        "rangeKm": 77,
+        "kwh100": 16.7,
+        "gasCity": 14.7,
+        "gasRoad": 12.9,
+        "gasAvg": 13.8,
+        "ethCity": 10,
+        "ethRoad": 8.9
+      },
+      {
+        "name": "PHEV19 (MY26)",
+        "rangeKm": 73,
+        "kwh100": 17.8,
+        "gasCity": 13.5,
+        "gasRoad": 11.9,
+        "gasAvg": 12.7,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 73,
+    "rangeMax": 126,
+    "kwh100": 16.7,
+    "gasKmL": 13.8,
+    "flex": true,
+    "inmetroClass": "A/A",
+    "price": 250000,
+    "priceVersion": "PHEV19",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "gwm-haval-h6-gt-phev",
+    "brand": "GWM",
+    "model": "Haval H6 GT",
+    "bodyType": "SUV",
+    "color": "#22d3ee",
+    "category": "Utilitário Esportivo Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "FLEX",
+        "rangeKm": 126,
+        "kwh100": 19.4,
+        "gasCity": 12.5,
+        "gasRoad": 10.7,
+        "gasAvg": 11.6,
+        "ethCity": 9.2,
+        "ethRoad": 7.4
+      },
+      {
+        "name": "(MY26)",
+        "rangeKm": 119,
+        "kwh100": 20.6,
+        "gasCity": 12.6,
+        "gasRoad": 10.5,
+        "gasAvg": 11.6,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 119,
+    "rangeMax": 126,
+    "kwh100": 19.4,
+    "gasKmL": 11.6,
+    "flex": true,
+    "inmetroClass": "A/A",
+    "price": 326000,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "gwm-tank-300-phev",
+    "brand": "GWM",
+    "model": "Tank 300",
+    "bodyType": "SUV",
+    "color": "#a78bfa",
+    "category": "Fora de Estrada Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 75,
+        "kwh100": 30.3,
+        "gasCity": 7.5,
+        "gasRoad": 7.7,
+        "gasAvg": 7.6,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "FLEX",
+        "rangeKm": 74,
+        "kwh100": 29.7,
+        "gasCity": 7.5,
+        "gasRoad": 7.6,
+        "gasAvg": 7.5,
+        "ethCity": 5.4,
+        "ethRoad": 5.7
+      }
+    ],
+    "rangeMin": 74,
+    "rangeMax": 75,
+    "kwh100": 29.7,
+    "gasKmL": 7.6,
+    "flex": true,
+    "inmetroClass": "A/B",
+    "price": 342000,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "gwm-wey-07-phev",
+    "brand": "GWM",
+    "model": "Wey 07",
+    "bodyType": "SUV",
+    "color": "#34d399",
+    "category": "Utilitário Esportivo Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão / DARK ED.",
+        "rangeKm": 128,
+        "kwh100": 23.1,
+        "gasCity": 10.8,
+        "gasRoad": 9.1,
+        "gasAvg": 10,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 128,
+    "rangeMax": 128,
+    "kwh100": 23.1,
+    "gasKmL": 10,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 429000,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "jaecoo-7-shs",
+    "brand": "Jaecoo",
+    "model": "7 SHS",
+    "bodyType": "SUV",
+    "color": "#f472b6",
+    "category": "Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "PRESTIGE / LUXURY",
+        "rangeKm": 79,
+        "kwh100": 16.7,
+        "gasCity": 15.1,
+        "gasRoad": 13.5,
+        "gasAvg": 14.3,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 79,
+    "rangeMax": 79,
+    "kwh100": 16.7,
+    "gasKmL": 14.3,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 234990,
+    "priceVersion": "Luxury",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "jetour-s06-phev",
+    "brand": "Jetour",
+    "model": "S06 PHEV",
+    "bodyType": "SUV",
+    "color": "#60a5fa",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "ADVANCE / PREMIUM",
+        "rangeKm": 70,
+        "kwh100": 17.2,
+        "gasCity": 14,
+        "gasRoad": 12.6,
+        "gasAvg": 13.4,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 70,
+    "rangeMax": 70,
+    "kwh100": 17.2,
+    "gasKmL": 13.4,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 199900,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "jetour-t1-phev",
+    "brand": "Jetour",
+    "model": "T1 PHEV",
+    "bodyType": "SUV",
+    "color": "#2dd4bf",
+    "category": "Utilitário Esportivo Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "ADVANCE / PREMIUM",
+        "rangeKm": 88,
+        "kwh100": 18.3,
+        "gasCity": 13.6,
+        "gasRoad": 12.2,
+        "gasAvg": 13,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 88,
+    "rangeMax": 88,
+    "kwh100": 18.3,
+    "gasKmL": 13,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 249900,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "jetour-t2-phev",
+    "brand": "Jetour",
+    "model": "T2 PHEV",
+    "bodyType": "SUV",
+    "color": "#fb7185",
+    "category": "Utilitário Esportivo Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "PRM 4X4",
+        "rangeKm": 106,
+        "kwh100": 23.3,
+        "gasCity": 10.5,
+        "gasRoad": 9.3,
+        "gasAvg": 9.9,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "ADVANCE / PREMIUM",
+        "rangeKm": 75,
+        "kwh100": 22.2,
+        "gasCity": 11.4,
+        "gasRoad": 10.5,
+        "gasAvg": 11,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 75,
+    "rangeMax": 106,
+    "kwh100": 22.2,
+    "gasKmL": 11,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 289900,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "land-rover-range-rover-phev",
+    "brand": "Land Rover",
+    "model": "Range Rover",
+    "bodyType": "SUV",
+    "color": "#c084fc",
+    "category": "Fora de Estrada Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "4 acabamentos (mesmos números)",
+        "rangeKm": 71,
+        "kwh100": 31.1,
+        "gasCity": 7.5,
+        "gasRoad": 8.4,
+        "gasAvg": 7.9,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 71,
+    "rangeMax": 71,
+    "kwh100": 31.1,
+    "gasKmL": 7.9,
+    "flex": false,
+    "inmetroClass": "A/B",
+    "price": null,
+    "priceVersion": "",
+    "priceSource": "",
+    "priceKind": null,
+    "priceNote": "preço não pesquisado ainda"
+  },
+  {
+    "id": "land-rover-range-rover-sport-phev",
+    "brand": "Land Rover",
+    "model": "Range Rover Sport",
+    "bodyType": "SUV",
+    "color": "#3b82f6",
+    "category": "Fora de Estrada Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "5 acabamentos (mesmos números)",
+        "rangeKm": 71,
+        "kwh100": 31.1,
+        "gasCity": 7.5,
+        "gasRoad": 8.4,
+        "gasAvg": 7.9,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 71,
+    "rangeMax": 71,
+    "kwh100": 31.1,
+    "gasKmL": 7.9,
+    "flex": false,
+    "inmetroClass": "A/B",
+    "price": null,
+    "priceVersion": "",
+    "priceSource": "",
+    "priceKind": null,
+    "priceNote": "preço não pesquisado ainda"
+  },
+  {
+    "id": "land-rover-velar-phev",
+    "brand": "Land Rover",
+    "model": "Velar",
+    "bodyType": "SUV",
+    "color": "#22d3ee",
+    "category": "Fora de Estrada Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "AB",
+        "rangeKm": 40,
+        "kwh100": 25.6,
+        "gasCity": 8.3,
+        "gasRoad": 9.3,
+        "gasAvg": 8.7,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 40,
+    "rangeMax": 40,
+    "kwh100": 25.6,
+    "gasKmL": 8.7,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": null,
+    "priceVersion": "",
+    "priceSource": "",
+    "priceKind": null,
+    "priceNote": "preço não pesquisado ainda"
+  },
+  {
+    "id": "leapmotor-c10-reev",
+    "brand": "Leapmotor",
+    "model": "C10 REEV",
+    "bodyType": "SUV",
+    "color": "#a78bfa",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 111,
+        "kwh100": 18.1,
+        "gasCity": 12,
+        "gasRoad": 12,
+        "gasAvg": 12,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 111,
+    "rangeMax": 111,
+    "kwh100": 18.1,
+    "gasKmL": 12,
+    "flex": false,
+    "inmetroClass": "",
+    "price": 219990,
+    "priceVersion": "Ultra-Híbrido",
+    "priceSource": "https://www.leapmotor.com.br/",
+    "priceKind": "oficial",
+    "priceNote": ""
+  },
+  {
+    "id": "lexus-nx-450h-plug-in",
+    "brand": "Lexus",
+    "model": "NX 450h+",
+    "bodyType": "SUV",
+    "color": "#34d399",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 56,
+        "kwh100": 16.9,
+        "gasCity": 14.5,
+        "gasRoad": 13.1,
+        "gasAvg": 13.8,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 56,
+    "rangeMax": 56,
+    "kwh100": 16.9,
+    "gasKmL": 13.8,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 499990,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "lexus-rx-450h-plug-in",
+    "brand": "Lexus",
+    "model": "RX 450h+",
+    "bodyType": "SUV",
+    "color": "#f59e0b",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "padrão",
+        "rangeKm": 54,
+        "kwh100": 17.8,
+        "gasCity": 14.1,
+        "gasRoad": 12.6,
+        "gasAvg": 13.4,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 54,
+    "rangeMax": 54,
+    "kwh100": 17.8,
+    "gasKmL": 13.4,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 614990,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "mitsubishi-outlander-phev",
+    "brand": "Mitsubishi",
+    "model": "Outlander",
+    "bodyType": "SUV",
+    "color": "#f472b6",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "HPE-S E / SIGNATURE E",
+        "rangeKm": 58,
+        "kwh100": 21.4,
+        "gasCity": 11.6,
+        "gasRoad": 10.4,
+        "gasAvg": 11.1,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 58,
+    "rangeMax": 58,
+    "kwh100": 21.4,
+    "gasKmL": 11.1,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 399990,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "omoda-7-phev",
+    "brand": "Omoda",
+    "model": "7 PHEV",
+    "bodyType": "SUV",
+    "color": "#60a5fa",
+    "category": "Extra Grande",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "LUXURY / PRESTIGE",
+        "rangeKm": 60,
+        "kwh100": 18.3,
+        "gasCity": 14,
+        "gasRoad": 11.9,
+        "gasAvg": 13,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 60,
+    "rangeMax": 60,
+    "kwh100": 18.3,
+    "gasKmL": 13,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": 254990,
+    "priceVersion": "Luxury",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "porsche-cayenne-e-hybrid",
+    "brand": "Porsche",
+    "model": "Cayenne E-Hybrid",
+    "bodyType": "SUV",
+    "color": "#2dd4bf",
+    "category": "Utilitário Esportivo Grande 4x4",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "T PHEV / TCPHEV",
+        "rangeKm": 57,
+        "kwh100": 28.1,
+        "gasCity": 7.4,
+        "gasRoad": 8.1,
+        "gasAvg": 7.7,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "4 acabamentos (mesmos números)",
+        "rangeKm": 57,
+        "kwh100": 27.2,
+        "gasCity": 7.8,
+        "gasRoad": 8.4,
+        "gasAvg": 8,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "4 acabamentos (mesmos números)",
+        "rangeKm": 52,
+        "kwh100": 28.9,
+        "gasCity": 7.7,
+        "gasRoad": 8.1,
+        "gasAvg": 7.9,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 52,
+    "rangeMax": 57,
+    "kwh100": 27.2,
+    "gasKmL": 8,
+    "flex": false,
+    "inmetroClass": "A/B",
+    "price": 900000,
+    "priceVersion": "",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "porsche-panamera-e-hybrid",
+    "brand": "Porsche",
+    "model": "Panamera E-Hybrid",
+    "bodyType": "Esportivo",
+    "color": "#fb7185",
+    "category": "Esportivo",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "4EHYB",
+        "rangeKm": 63,
+        "kwh100": 25,
+        "gasCity": 8,
+        "gasRoad": 9.2,
+        "gasAvg": 8.5,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "4SEHY",
+        "rangeKm": 63,
+        "kwh100": 25.8,
+        "gasCity": 8.1,
+        "gasRoad": 9.4,
+        "gasAvg": 8.6,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "TPHEV",
+        "rangeKm": 61,
+        "kwh100": 26.7,
+        "gasCity": 7,
+        "gasRoad": 8.7,
+        "gasAvg": 7.7,
+        "ethCity": null,
+        "ethRoad": null
+      },
+      {
+        "name": "TSEHY",
+        "rangeKm": 60,
+        "kwh100": 26.7,
+        "gasCity": 6.9,
+        "gasRoad": 8.6,
+        "gasAvg": 7.6,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 60,
+    "rangeMax": 63,
+    "kwh100": 25,
+    "gasKmL": 8.6,
+    "flex": false,
+    "inmetroClass": "C/A",
+    "price": 990000,
+    "priceVersion": "4 E-Hybrid",
+    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
+    "priceKind": "imprensa",
+    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"
+  },
+  {
+    "id": "volvo-xc60-t8",
+    "brand": "Volvo",
+    "model": "XC60 T8",
+    "bodyType": "SUV",
+    "color": "#c084fc",
+    "category": "Utilitário Esportivo Grande 4x4",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "10 acabamentos (mesmos números)",
+        "rangeKm": 48,
+        "kwh100": 23.9,
+        "gasCity": 9.5,
+        "gasRoad": 9.4,
+        "gasAvg": 9.4,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 48,
+    "rangeMax": 48,
+    "kwh100": 23.9,
+    "gasKmL": 9.4,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": null,
+    "priceVersion": "",
+    "priceSource": "",
+    "priceKind": null,
+    "priceNote": "preço não pesquisado ainda"
+  },
+  {
+    "id": "volvo-xc90-t8",
+    "brand": "Volvo",
+    "model": "XC90 T8",
+    "bodyType": "SUV",
+    "color": "#3b82f6",
+    "category": "Utilitário Esportivo Grande 4x4",
+    "powertrain": "phev",
+    "versions": [
+      {
+        "name": "15 acabamentos (mesmos números)",
+        "rangeKm": 47,
+        "kwh100": 24.4,
+        "gasCity": 9.4,
+        "gasRoad": 9.3,
+        "gasAvg": 9.4,
+        "ethCity": null,
+        "ethRoad": null
+      }
+    ],
+    "rangeMin": 47,
+    "rangeMax": 47,
+    "kwh100": 24.4,
+    "gasKmL": 9.4,
+    "flex": false,
+    "inmetroClass": "A/A",
+    "price": null,
+    "priceVersion": "",
+    "priceSource": "",
+    "priceKind": null,
+    "priceNote": "preço não pesquisado ainda"
   }
 ];
 

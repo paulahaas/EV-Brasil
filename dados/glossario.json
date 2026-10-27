@@ -117,8 +117,8 @@
   },
   {
    "id": "eletrico-hibrido", "termo": "Elétrico, híbrido e híbrido plug-in", "grupo": "Tipos de carro",
-   "curto": "O EV Brasil só mostra carros 100% elétricos, que não têm motor a combustão.",
-   "texto": "O 100% elétrico (BEV) só tem motor elétrico e bateria e se abastece na tomada. O híbrido (HEV) tem motor a combustão e um elétrico pequeno, e não liga na tomada. O híbrido plug-in (PHEV) tem os dois e uma bateria média que carrega na tomada, para rodar uns 50 a 100 km no elétrico. O EV Brasil compara só os 100% elétricos.",
+   "curto": "O EV Brasil mostra os carros 100% elétricos e, em lista à parte, os híbridos plug-in.",
+   "texto": "O 100% elétrico (BEV) só tem motor elétrico e bateria e se abastece na tomada. O híbrido (HEV) tem motor a combustão e um elétrico pequeno, e não liga na tomada. O híbrido plug-in (PHEV) tem os dois e uma bateria média que carrega na tomada, para rodar dezenas de quilômetros só no elétrico (de 33 a 128 km na tabela do Inmetro, entre os plug-ins do site). O EV Brasil compara os 100% elétricos entre si e mostra os plug-ins em lista à parte, porque a autonomia deles é só na bateria.",
    "padroes": ["híbrido plug-in", "\\bPHEV\\b", "100% elétric[oa]s?"]
   },
   {

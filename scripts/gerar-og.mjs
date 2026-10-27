@@ -17,8 +17,9 @@ fs.mkdirSync(PASTA, { recursive: true });
 
 // Carrega VEHICLES do arquivo gerado (é um script de navegador, não um módulo).
 const ctx = {};
-vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|DATA_INFO|IPVA)/g, "this.$1"), ctx);
+vm.runInNewContext(fs.readFileSync("js/catalogo.js", "utf8").replace(/const (VEHICLES|HIBRIDOS|DATA_INFO|IPVA)/g, "this.$1"), ctx);
 const VEHICLES = ctx.VEHICLES;
+const HIBRIDOS = ctx.HIBRIDOS;
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const num = (n, casas = 0) => n.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });
@@ -65,10 +66,13 @@ async function gerar(arquivo, v, texto) {
 const autonomia = (v) => (v.rangeMin === v.rangeMax ? `${v.rangeMax} km` : `${v.rangeMin}–${v.rangeMax} km`);
 const so = process.argv[2]; // opcional: gerar só um modelo (id)
 
-for (const v of VEHICLES.filter((x) => !so || x.id === so)) {
-  const linhas = [`${autonomia(v)} (Inmetro)`, `${num(v.kwh100, 1)} kWh/100 km`];
+for (const v of [...VEHICLES, ...HIBRIDOS].filter((x) => !so || x.id === so)) {
+  const phev = v.powertrain === "phev";
+  const linhas = phev
+    ? [`${autonomia(v)} só na bateria`, `${num(v.gasKmL, 1)} km/l na gasolina`]
+    : [`${autonomia(v)} (Inmetro)`, `${num(v.kwh100, 1)} kWh/100 km`];
   if (v.price) linhas.push(`a partir de R$ ${num(v.price)}`);
-  await gerar(`${v.id}.jpg`, v, { marca: v.brand, titulo: v.model, linhas });
+  await gerar(`${v.id}.jpg`, v, { marca: phev ? `${v.brand} · híbrido plug-in` : v.brand, titulo: v.model, linhas });
 }
 if (!so) {
   const capa = VEHICLES.find((v) => v.id === "byd-seal");

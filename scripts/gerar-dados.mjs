@@ -33,7 +33,7 @@ const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
 // Sites das montadoras: preço tirado daqui é "oficial"; o resto é "imprensa".
 const OFICIAIS = ["byd.com", "gwmmotors.com.br", "gacgroup.com", "geelybrasil.com.br",
   "mgmotoroficial.com.br", "chevrolet.com.br", "renault.com.br", "fiat.com.br",
-  "volvocars.com", "bmw.com.br", "mini.com.br", "leapmotor.com.br"];
+  "volvocars.com", "bmw.com.br", "mini.com.br", "leapmotor.com.br", "caoachery.com.br"];
 
 const chaveDe = (marca, modelo) => `${marca.toUpperCase()}|${modelo.toUpperCase()}`;
 
@@ -189,6 +189,59 @@ for (const [id, c] of Object.entries(combustaoDoc.carros)) {
   }
 }
 
+
+// ---------- Híbridos plug-in ----------
+// Ficam num catálogo à parte (HIBRIDOS), para não misturar com os elétricos nos
+// rankings, no gráfico e nas calculadoras: a autonomia deles é só na bateria.
+//   dados/inmetro-pbev-2026-plugin.json  — as 112 linhas "Plug-in" da tabela PBE do Inmetro
+//   dados/modelos-hibridos.json          — quais modelos entram, nome, carroceria e cor
+//   dados/precos-hibridos-2026-10.jsonl  — preços, um por linha, com fonte
+const inmetroPlugin = lerJson("dados/inmetro-pbev-2026-plugin.json");
+const cadastroPlugin = lerJson("dados/modelos-hibridos.json").modelos;
+const precosPlugin = fs.readFileSync("dados/precos-hibridos-2026-10.jsonl", "utf8")
+  .split("\n").filter((l) => l.trim()).map((l) => JSON.parse(l));
+const dec = (t) => (t === null || t === undefined ? null : Number(String(t).replace(",", ".")));
+
+const HIBRIDOS = Object.entries(cadastroPlugin).filter(([, c]) => c.incluir).map(([grupo, c]) => {
+  const linhas = inmetroPlugin.filter((r) => r.grupo === grupo);
+  if (!linhas.length) throw new Error(`Sem linhas do Inmetro para ${grupo}`);
+  // Versões com os mesmos números viram uma linha só (o Inmetro lista cada acabamento).
+  const unicas = new Map();
+  for (const r of linhas) {
+    const k = [r.autonomia_km, r.mj_km, r.gasolina_cidade, r.gasolina_estrada, r.etanol_cidade, r.etanol_estrada].join("|");
+    const nome = r.modelo_versao.replace(c.prefixo_inmetro, "").replace(/\bFF\b/, "FLEX").trim().replace(/^[-/ ]+/, "");
+    if (!unicas.has(k)) unicas.set(k, { r, nomes: [] });
+    unicas.get(k).nomes.push(nome || "padrão");
+  }
+  const versions = [...unicas.values()].map(({ r, nomes }) => ({
+    name: nomes.length > 3 ? `${nomes.length} acabamentos (mesmos números)` : nomes.join(" / "),
+    rangeKm: r.autonomia_km,
+    kwh100: kwh100(r.mj_km),
+    gasCity: dec(r.gasolina_cidade), gasRoad: dec(r.gasolina_estrada), gasAvg: dec(r.gasolina_media),
+    ethCity: dec(r.etanol_cidade), ethRoad: dec(r.etanol_estrada),
+  })).sort((a, b) => b.rangeKm - a.rangeKm);
+  const ps = precosPlugin.filter((p) => p.grupo === grupo && p.preco);
+  const menor = ps.sort((a, b) => a.preco - b.preco)[0];
+  const semPreco = precosPlugin.find((p) => p.grupo === grupo && !p.preco);
+  return {
+    id: c.id, brand: c.marca, model: c.modelo, bodyType: c.carroceria, color: c.cor,
+    category: linhas[0].categoria, powertrain: "phev",
+    versions,
+    rangeMin: Math.min(...versions.map((x) => x.rangeKm)),
+    rangeMax: Math.max(...versions.map((x) => x.rangeKm)),
+    kwh100: Math.min(...versions.map((x) => x.kwh100)),
+    gasKmL: Math.max(...versions.map((x) => x.gasAvg || 0)),
+    flex: versions.some((x) => x.ethCity),
+    inmetroClass: [...new Set(linhas.map((r) => r.classe_relativa && r.classe_absoluta ? `${r.classe_relativa}/${r.classe_absoluta}` : null).filter(Boolean))].join(", "),
+    price: menor ? menor.preco : null,
+    priceVersion: menor ? menor.versao : "",
+    priceSource: menor ? menor.fonte : "",
+    priceKind: menor ? (OFICIAIS.some((d) => menor.fonte.includes(d)) ? "oficial" : "imprensa") : null,
+    priceNote: menor ? notaPublica(menor.obs) : notaPublica(semPreco ? semPreco.obs : ""),
+    ...(fotos[c.id] ? { photo: fotos[c.id] } : {}),
+  };
+}).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
+
 const DATA_INFO = {
   inmetro: {
     titulo: "Tabela PBE Veicular 2026 (18º ciclo)",
@@ -196,6 +249,7 @@ const DATA_INFO = {
     url: "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular",
   },
   precos: { coleta: DATA_INFO_COLETA },
+  precosHibridos: { coleta: "27/10/2026" },
   fichas: { coleta: "08/10/2026" },
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
   seguranca: { coleta: "09/10/2026" },
@@ -211,6 +265,8 @@ const DATA_INFO = ${JSON.stringify(DATA_INFO, null, 2)};
 
 const VEHICLES = ${JSON.stringify(VEHICLES, null, 2)};
 
+const HIBRIDOS = ${JSON.stringify(HIBRIDOS, null, 2)};
+
 const IPVA = ${JSON.stringify(ipva.estados, null, 2)};
 
 const NOVIDADES = ${JSON.stringify({ atualizado: novidades.atualizado, chegando: novidades.chegando }, null, 2)};
@@ -223,11 +279,12 @@ fs.writeFileSync("js/catalogo.js", js);
 const SITE = "https://ev-brasil.web.app";
 const paginas = ["/", "/veiculos.html", "/encontre.html", "/rankings.html", "/comparar.html",
   "/calculadora.html", "/viagem.html", "/novidades.html", "/metodologia.html", "/guias.html", "/guia-carregar-em-casa.html",
-  "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", "/guia-motorista-aplicativo.html", "/guia-onde-recarregar.html", "/glossario.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`)];
+  "/guia-eletrico-ou-hibrido-plug-in.html", "/guia-autonomia-real.html", "/guia-ipva-carro-eletrico.html", "/guia-eletrico-usado.html", "/guia-motorista-aplicativo.html", "/guia-onde-recarregar.html", "/glossario.html", ...VEHICLES.map((v) => `/carros/${v.id}.html`), ...HIBRIDOS.map((v) => `/carros/${v.id}.html`)];
 const urls = paginas.map((p) => `  <url><loc>${SITE}${p}</loc></url>`).join("\n");
 fs.writeFileSync("sitemap.xml",
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 console.log(`js/catalogo.js: ${VEHICLES.length} modelos, ` +
   `${VEHICLES.filter((v) => v.priceKind === "oficial").length} com preço oficial, ` +
   `${VEHICLES.filter((v) => v.priceKind === "imprensa").length} da imprensa, ` +
-  `${VEHICLES.filter((v) => !v.price).length} sem preço`);
+  `${VEHICLES.filter((v) => !v.price).length} sem preço; ` +
+  `${HIBRIDOS.length} híbridos plug-in (${HIBRIDOS.filter((v) => v.priceKind === "oficial").length} com preço oficial, ${HIBRIDOS.filter((v) => v.priceKind === "imprensa").length} da imprensa, ${HIBRIDOS.filter((v) => !v.price).length} sem preço)`);

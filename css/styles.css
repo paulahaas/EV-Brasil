@@ -837,3 +837,19 @@ body.home .header:not(.is-scrolled):not(.open) { background: transparent; }
 
 /* Quem pede menos movimento vê o brilho do fundo parado. */
 @media (prefers-reduced-motion: reduce) { body::before { animation: none; } }
+
+/* ---------- Híbridos plug-in: selo no cartão e na página do modelo ---------- */
+.badge-phev {
+  position: absolute; top: 12px; left: 12px; z-index: 2;
+  padding: 4px 10px; border-radius: 100px;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.02em;
+  background: rgba(6, 16, 36, 0.78); color: var(--accent-2);
+  border: 1px solid rgba(156, 192, 255, 0.35);
+  backdrop-filter: blur(6px);
+}
+.badge-phev-lg { position: static; display: inline-block; margin-bottom: 10px; font-size: 0.8rem; padding: 5px 12px; }
+.phev-conta { list-style: none; display: grid; gap: 10px; margin: 14px 0 0; }
+.phev-conta li { background: var(--bg-elev); border-radius: var(--radius-sm); padding: 12px 16px; color: var(--text-dim); }
+.phev-conta strong { color: var(--text); }
+.phev-conta .phev-final { background: var(--accent-soft); color: var(--text); }
+#hibridos .panel-actions { justify-content: flex-start; margin-top: 22px; }

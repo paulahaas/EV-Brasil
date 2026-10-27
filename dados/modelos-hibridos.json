@@ -1,0 +1,324 @@
+{
+ "_leia": "Cadastro dos híbridos plug-in do site. A chave é 'MARCA|MODELO' (campo 'grupo' de dados/inmetro-pbev-2026-plugin.json, que reúne as versões do mesmo modelo). 'incluir: false' deixa o modelo de fora (regra: só entram plug-ins com 30 km ou mais só na bateria; BMW e Mercedes-AMG ficam de fora por escolha do site). Depois de editar, rode: npm run dados",
+ "modelos": {
+  "BMW|330e": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "BMW|530e": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "BMW|X5 xDrive50e": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "BYD|Atto 2 DM-i": {
+   "incluir": true,
+   "id": "byd-atto-2-dmi",
+   "marca": "BYD",
+   "modelo": "Atto 2 DM-i",
+   "carroceria": "SUV",
+   "cor": "#3b82f6",
+   "prefixo_inmetro": "ATTO 2"
+  },
+  "BYD|Atto 8": {
+   "incluir": true,
+   "id": "byd-atto-8",
+   "marca": "BYD",
+   "modelo": "Atto 8",
+   "carroceria": "SUV",
+   "cor": "#22d3ee",
+   "prefixo_inmetro": "ATTO 8"
+  },
+  "BYD|King": {
+   "incluir": true,
+   "id": "byd-king",
+   "marca": "BYD",
+   "modelo": "King",
+   "carroceria": "Sedã",
+   "cor": "#a78bfa",
+   "prefixo_inmetro": "KING"
+  },
+  "BYD|Shark": {
+   "incluir": true,
+   "id": "byd-shark",
+   "marca": "BYD",
+   "modelo": "Shark",
+   "carroceria": "Picape",
+   "cor": "#34d399",
+   "prefixo_inmetro": "SHARK"
+  },
+  "BYD|Song Plus": {
+   "incluir": true,
+   "id": "byd-song-plus",
+   "marca": "BYD",
+   "modelo": "Song Plus",
+   "carroceria": "SUV",
+   "cor": "#f59e0b",
+   "prefixo_inmetro": "SONG PLUS"
+  },
+  "BYD|Song Pro": {
+   "incluir": true,
+   "id": "byd-song-pro",
+   "marca": "BYD",
+   "modelo": "Song Pro",
+   "carroceria": "SUV",
+   "cor": "#f472b6",
+   "prefixo_inmetro": "SONG PRO"
+  },
+  "Caoa Chery|Tiggo 7 Pro PHEV": {
+   "incluir": true,
+   "id": "caoa-chery-tiggo-7-pro-phev",
+   "marca": "Caoa Chery",
+   "modelo": "Tiggo 7 Pro PHEV",
+   "carroceria": "SUV",
+   "cor": "#60a5fa",
+   "prefixo_inmetro": "TIGGO 7 PHEV"
+  },
+  "Caoa Chery|Tiggo 8 Pro PHEV": {
+   "incluir": true,
+   "id": "caoa-chery-tiggo-8-pro-phev",
+   "marca": "Caoa Chery",
+   "modelo": "Tiggo 8 Pro PHEV",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf",
+   "prefixo_inmetro": "TIGGO 8 PHEV"
+  },
+  "Denza|B5": {
+   "incluir": true,
+   "id": "denza-b5",
+   "marca": "Denza",
+   "modelo": "B5",
+   "carroceria": "SUV",
+   "cor": "#fb7185",
+   "prefixo_inmetro": "B5"
+  },
+  "Ferrari|296 (GTB e GTS)": {
+   "incluir": false,
+   "motivo": "menos de 30 km só na bateria"
+  },
+  "GAC|GS9": {
+   "incluir": true,
+   "id": "gac-gs9-phev",
+   "marca": "GAC",
+   "modelo": "GS9",
+   "carroceria": "SUV",
+   "cor": "#c084fc",
+   "prefixo_inmetro": "GS9"
+  },
+  "GWM|Haval H6": {
+   "incluir": true,
+   "id": "gwm-haval-h6-phev",
+   "marca": "GWM",
+   "modelo": "Haval H6",
+   "carroceria": "SUV",
+   "cor": "#3b82f6",
+   "prefixo_inmetro": "HAVAL H6"
+  },
+  "GWM|Haval H6 GT": {
+   "incluir": true,
+   "id": "gwm-haval-h6-gt-phev",
+   "marca": "GWM",
+   "modelo": "Haval H6 GT",
+   "carroceria": "SUV",
+   "cor": "#22d3ee",
+   "prefixo_inmetro": "HAVAL H6 GT"
+  },
+  "GWM|Tank 300": {
+   "incluir": true,
+   "id": "gwm-tank-300-phev",
+   "marca": "GWM",
+   "modelo": "Tank 300",
+   "carroceria": "SUV",
+   "cor": "#a78bfa",
+   "prefixo_inmetro": "TANK 300 PHEV"
+  },
+  "GWM|Wey 07": {
+   "incluir": true,
+   "id": "gwm-wey-07-phev",
+   "marca": "GWM",
+   "modelo": "Wey 07",
+   "carroceria": "SUV",
+   "cor": "#34d399",
+   "prefixo_inmetro": "WEY 07"
+  },
+  "Geely|EX5 EM-i": {
+   "incluir": true,
+   "id": "geely-ex5-emi",
+   "marca": "Geely",
+   "modelo": "EX5 EM-i",
+   "carroceria": "SUV",
+   "cor": "#f59e0b",
+   "prefixo_inmetro": "EX5 EM-i"
+  },
+  "Jaecoo|7 SHS": {
+   "incluir": true,
+   "id": "jaecoo-7-shs",
+   "marca": "Jaecoo",
+   "modelo": "7 SHS",
+   "carroceria": "SUV",
+   "cor": "#f472b6",
+   "prefixo_inmetro": "7"
+  },
+  "Jetour|S06 PHEV": {
+   "incluir": true,
+   "id": "jetour-s06-phev",
+   "marca": "Jetour",
+   "modelo": "S06 PHEV",
+   "carroceria": "SUV",
+   "cor": "#60a5fa",
+   "prefixo_inmetro": "S06 DM"
+  },
+  "Jetour|T1 PHEV": {
+   "incluir": true,
+   "id": "jetour-t1-phev",
+   "marca": "Jetour",
+   "modelo": "T1 PHEV",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf",
+   "prefixo_inmetro": "T1 I-DM"
+  },
+  "Jetour|T2 PHEV": {
+   "incluir": true,
+   "id": "jetour-t2-phev",
+   "marca": "Jetour",
+   "modelo": "T2 PHEV",
+   "carroceria": "SUV",
+   "cor": "#fb7185",
+   "prefixo_inmetro": "T2 I-DM"
+  },
+  "Land Rover|Range Rover": {
+   "incluir": true,
+   "id": "land-rover-range-rover-phev",
+   "marca": "Land Rover",
+   "modelo": "Range Rover",
+   "carroceria": "SUV",
+   "cor": "#c084fc",
+   "prefixo_inmetro": "RANGE ROVER PHEV"
+  },
+  "Land Rover|Range Rover Sport": {
+   "incluir": true,
+   "id": "land-rover-range-rover-sport-phev",
+   "marca": "Land Rover",
+   "modelo": "Range Rover Sport",
+   "carroceria": "SUV",
+   "cor": "#3b82f6",
+   "prefixo_inmetro": "RANGE ROVER SPORT PHEV"
+  },
+  "Land Rover|Velar": {
+   "incluir": true,
+   "id": "land-rover-velar-phev",
+   "marca": "Land Rover",
+   "modelo": "Velar",
+   "carroceria": "SUV",
+   "cor": "#22d3ee",
+   "prefixo_inmetro": "VELAR PHEV"
+  },
+  "Leapmotor|C10 REEV": {
+   "incluir": true,
+   "id": "leapmotor-c10-reev",
+   "marca": "Leapmotor",
+   "modelo": "C10 REEV",
+   "carroceria": "SUV",
+   "cor": "#a78bfa",
+   "prefixo_inmetro": "C10 REEV"
+  },
+  "Lexus|NX 450h+": {
+   "incluir": true,
+   "id": "lexus-nx-450h-plug-in",
+   "marca": "Lexus",
+   "modelo": "NX 450h+",
+   "carroceria": "SUV",
+   "cor": "#34d399",
+   "prefixo_inmetro": "NX 450H PLUG-IN NX450H PLUG-IN"
+  },
+  "Lexus|RX 450h+": {
+   "incluir": true,
+   "id": "lexus-rx-450h-plug-in",
+   "marca": "Lexus",
+   "modelo": "RX 450h+",
+   "carroceria": "SUV",
+   "cor": "#f59e0b",
+   "prefixo_inmetro": "RX450H PLUG-IN I/LEXUS RX450H PLUG-IN"
+  },
+  "McLaren|Artura": {
+   "incluir": false,
+   "motivo": "menos de 30 km só na bateria"
+  },
+  "Mercedes-Benz|AMG C 63 S E Performance": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "Mercedes-Benz|AMG GLC 63 S E Performance": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "Mercedes-Benz|AMG GT 63 S E Performance": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "Mercedes-Benz|AMG S 63 E Performance": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "Mercedes-Benz|AMG SL 63 S E Performance": {
+   "incluir": false,
+   "motivo": "BMW e Mercedes-AMG: pedido da Paula"
+  },
+  "Mitsubishi|Outlander": {
+   "incluir": true,
+   "id": "mitsubishi-outlander-phev",
+   "marca": "Mitsubishi",
+   "modelo": "Outlander",
+   "carroceria": "SUV",
+   "cor": "#f472b6",
+   "prefixo_inmetro": "Outlander"
+  },
+  "Omoda|7 PHEV": {
+   "incluir": true,
+   "id": "omoda-7-phev",
+   "marca": "Omoda",
+   "modelo": "7 PHEV",
+   "carroceria": "SUV",
+   "cor": "#60a5fa",
+   "prefixo_inmetro": "7 PHEV"
+  },
+  "Porsche|Cayenne E-Hybrid": {
+   "incluir": true,
+   "id": "porsche-cayenne-e-hybrid",
+   "marca": "Porsche",
+   "modelo": "Cayenne E-Hybrid",
+   "carroceria": "SUV",
+   "cor": "#2dd4bf",
+   "prefixo_inmetro": "CAYENNE"
+  },
+  "Porsche|Panamera E-Hybrid": {
+   "incluir": true,
+   "id": "porsche-panamera-e-hybrid",
+   "marca": "Porsche",
+   "modelo": "Panamera E-Hybrid",
+   "carroceria": "Esportivo",
+   "cor": "#fb7185",
+   "prefixo_inmetro": "PANAMERA"
+  },
+  "Volvo|XC60 T8": {
+   "incluir": true,
+   "id": "volvo-xc60-t8",
+   "marca": "Volvo",
+   "modelo": "XC60 T8",
+   "carroceria": "SUV",
+   "cor": "#c084fc",
+   "prefixo_inmetro": "XC60"
+  },
+  "Volvo|XC90 T8": {
+   "incluir": true,
+   "id": "volvo-xc90-t8",
+   "marca": "Volvo",
+   "modelo": "XC90 T8",
+   "carroceria": "SUV",
+   "cor": "#3b82f6",
+   "prefixo_inmetro": "XC90"
+  }
+ }
+}

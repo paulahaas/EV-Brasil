@@ -74,6 +74,7 @@ function renderFooter() {
           <a href="encontre.html">Qual elétrico é para mim?</a>
           <a href="veiculos.html">Todos os carros</a>
           <a href="eletricos/">Listas prontas</a>
+          <a href="hibridos/">Híbridos plug-in</a>
           <a href="precos/">Preços do mês</a>
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
@@ -104,6 +105,14 @@ function renderFooter() {
 /* ---------------- Números rápidos de um veículo ---------------- */
 /** Faixa de números sob o carro (painéis e página do modelo). */
 function specBar(v) {
+  if (isPhev(v)) {
+    return `
+    <div class="specbar">
+      <div class="spec"><span class="v">${rangeText(v)}</span><span class="k">Só na bateria (Inmetro)</span></div>
+      <div class="spec"><span class="v">${gasText(v)}</span><span class="k">Gasolina (Inmetro)</span></div>
+      <div class="spec"><span class="v">${v.price ? formatBRL(v.price) : "—"}</span><span class="k">${v.price ? "A partir de" : "Preço não divulgado"}</span></div>
+    </div>`;
+  }
   return `
     <div class="specbar">
       <div class="spec"><span class="v">${rangeText(v)}</span><span class="k">Autonomia (Inmetro)</span></div>
@@ -115,16 +124,20 @@ function specBar(v) {
 /* ---------------- Card de veículo ---------------- */
 function createCard(v) {
   const nota = priceNoteShort(v);
+  const phev = isPhev(v);
   return `
     <a class="card" href="${modelUrl(v)}">
       <div class="card-media ${hasPhoto(v) ? "has-photo" : ""}" style="--glow:${v.color}">
-        ${carImage(v)}
+        ${phev ? '<span class="badge-phev">Híbrido plug-in</span>' : ""}${carImage(v)}
       </div>
       <div class="card-body">
         <h3 class="card-title">${v.brand} ${v.model}</h3>
         <p class="card-meta">${v.bodyType} · ${v.versions.length} ${v.versions.length === 1 ? "versão" : "versões"}</p>
-        <p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
-        <p class="card-meter">${consumoMeter(v)}</p>
+        ${phev
+          ? `<p class="card-meta">Só na bateria ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-meta">Na gasolina até ${gasText(v)}</p>`
+          : `<p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-meter">${consumoMeter(v)}</p>`}
         <p class="card-price">${priceText(v)}</p>
         ${nota ? `<p class="card-note">${nota}</p>` : ""}
         ${(() => {

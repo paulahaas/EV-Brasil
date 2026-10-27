@@ -11,6 +11,7 @@
   <url><loc>https://ev-brasil.web.app/metodologia.html</loc></url>
   <url><loc>https://ev-brasil.web.app/guias.html</loc></url>
   <url><loc>https://ev-brasil.web.app/guia-carregar-em-casa.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/guia-eletrico-ou-hibrido-plug-in.html</loc></url>
   <url><loc>https://ev-brasil.web.app/guia-autonomia-real.html</loc></url>
   <url><loc>https://ev-brasil.web.app/guia-ipva-carro-eletrico.html</loc></url>
   <url><loc>https://ev-brasil.web.app/guia-eletrico-usado.html</loc></url>
@@ -82,6 +83,37 @@
   <url><loc>https://ev-brasil.web.app/carros/zeekr-001.html</loc></url>
   <url><loc>https://ev-brasil.web.app/carros/zeekr-7x.html</loc></url>
   <url><loc>https://ev-brasil.web.app/carros/zeekr-x.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-atto-2-dmi.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-atto-8.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-king.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-shark.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-song-plus.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/byd-song-pro.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/caoa-chery-tiggo-7-pro-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/caoa-chery-tiggo-8-pro-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/denza-b5.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/gac-gs9-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/geely-ex5-emi.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/gwm-haval-h6-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/gwm-haval-h6-gt-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/gwm-tank-300-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/gwm-wey-07-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/jaecoo-7-shs.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/jetour-s06-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/jetour-t1-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/jetour-t2-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/land-rover-range-rover-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/land-rover-range-rover-sport-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/land-rover-velar-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/leapmotor-c10-reev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/lexus-nx-450h-plug-in.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/lexus-rx-450h-plug-in.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/mitsubishi-outlander-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/omoda-7-phev.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/porsche-cayenne-e-hybrid.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/porsche-panamera-e-hybrid.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/volvo-xc60-t8.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/carros/volvo-xc90-t8.html</loc></url>
   <url><loc>https://ev-brasil.web.app/eletricos/</loc></url>
   <url><loc>https://ev-brasil.web.app/eletricos/carro-eletrico-mais-barato.html</loc></url>
   <url><loc>https://ev-brasil.web.app/eletricos/carro-eletrico-ate-150-mil.html</loc></url>
@@ -108,5 +140,12 @@
   <url><loc>https://ev-brasil.web.app/eletricos/carros-eletricos-porsche.html</loc></url>
   <url><loc>https://ev-brasil.web.app/eletricos/carros-eletricos-volvo.html</loc></url>
   <url><loc>https://ev-brasil.web.app/eletricos/carros-eletricos-zeekr.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/hibrido-plug-in-mais-barato.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/hibrido-plug-in-ate-200-mil.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/hibrido-plug-in-ate-300-mil.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/hibrido-plug-in-maior-autonomia-na-bateria.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/suv-hibrido-plug-in.html</loc></url>
+  <url><loc>https://ev-brasil.web.app/hibridos/hibrido-plug-in-flex.html</loc></url>
   <url><loc>https://ev-brasil.web.app/precos/</loc></url>
 </urlset>
