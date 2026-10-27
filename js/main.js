@@ -127,6 +127,7 @@ function renderFooter() {
           <a href="metodologia.html">De onde vêm os dados</a>
           <a href="creditos.html">Créditos das fotos</a>
           <a href="quem-somos.html#contato">Contato</a>
+          <a href="privacidade.html">Privacidade</a>
         </div>
       </div>
       <div class="footer-bottom">

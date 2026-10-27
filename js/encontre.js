@@ -88,6 +88,15 @@
       if (candidatos.length) { aviso = t.aviso; break; }
     }
 
+    // Prévia honesta do relatório: só a quantidade de modelos, sem dizer quais.
+    const qtd = document.getElementById("ofertaQtd");
+    if (qtd) {
+      const n = candidatos.length, phevs = candidatos.filter(isPhev).length;
+      qtd.textContent = !n ? "Nenhum modelo combina"
+        : `${n} ${n === 1 ? "modelo combina" : "modelos combinam"}` +
+          (phevs && phevs < n ? ` (${n - phevs} ${n - phevs === 1 ? "elétrico" : "elétricos"} e ${phevs} plug-in)` : "");
+    }
+
     if (!candidatos.length) {
       titulo.textContent = "Nenhum modelo encontrado";
       resumo.textContent = "Tente aumentar o orçamento.";
@@ -205,7 +214,8 @@
   const jump = document.getElementById("quizJump");
   if (jump && "IntersectionObserver" in window) {
     new IntersectionObserver(([e]) => {
-      jump.hidden = e.isIntersecting || window.innerWidth > 900;
+      // Some também depois que a pessoa passou das sugestões (na seção do relatório).
+      jump.hidden = e.isIntersecting || e.boundingClientRect.top < 0 || window.innerWidth > 900;
     }).observe(document.querySelector(".quiz-results"));
   }
 

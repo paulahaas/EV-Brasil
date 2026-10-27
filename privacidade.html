@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviso de privacidade — EV Brasil</title>
+  <meta name="description" content="Que dados o EV Brasil guarda, para quê, por quanto tempo e como pedir para apagar. O site não usa cookies de rastreamento.">
+  <link rel="canonical" href="https://ev-brasil.web.app/privacidade.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="EV Brasil">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Aviso de privacidade — EV Brasil">
+  <meta property="og:description" content="Que dados o EV Brasil guarda, para quê, por quanto tempo e como pedir para apagar.">
+  <meta property="og:url" content="https://ev-brasil.web.app/privacidade.html">
+  <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
+  <meta name="theme-color" content="#061024">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Privacidade</span>
+        <h1 class="section-title">Aviso de privacidade</h1>
+        <p class="section-sub">O EV Brasil funciona sem cadastro. Este aviso explica o pouco que guardamos, para quê e como pedir para apagar, de acordo com a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+      </div>
+    </section>
+    <section class="section-flush">
+      <div class="container prose">
+        <h2>Lista de espera do relatório completo</h2>
+        <p><strong>O que guardamos:</strong> o e-mail que você digitar, a data e o registro de que você marcou a caixa de consentimento. Nada mais: nem nome, nem telefone, nem as suas respostas do questionário.</p>
+        <p><strong>Para quê:</strong> mandar <strong>um único aviso</strong> quando o relatório completo estiver disponível. Não enviamos propaganda, não vendemos e não repassamos o seu e-mail a marcas, concessionárias ou qualquer outra empresa.</p>
+        <p><strong>Base legal:</strong> o seu consentimento (art. 7º, I, da LGPD). Você pode retirá-lo quando quiser.</p>
+        <p><strong>Onde fica:</strong> numa planilha do Google (Google Formulários e Planilhas), acessível só pelo responsável pelo site. O Google pode guardar os dados em servidores fora do Brasil, com as garantias previstas nos termos dele.</p>
+        <p><strong>Por quanto tempo:</strong> até o aviso ser enviado. Se o relatório não for lançado em até 6 meses depois do seu cadastro, apagamos a lista inteira.</p>
+
+        <h2>Contagem de cliques no botão do relatório</h2>
+        <p>Quando alguém clica em "Relatório completo — R$ 9,90", registramos só que houve um clique e quando. Esse registro não tem e-mail, nome nem nada que identifique você. Serve para saber quantas pessoas se interessam pelo relatório.</p>
+
+        <h2>O que fica no seu navegador</h2>
+        <p>Algumas preferências ficam guardadas <strong>só no seu aparelho</strong> e nunca chegam até nós: o estado escolhido na calculadora, os seus favoritos e se você já entrou na lista de espera. Para apagar, limpe os dados do site no navegador. O site não usa cookies de rastreamento nem anúncios.</p>
+
+        <h2>Serviços de terceiros</h2>
+        <p>O site é hospedado no Firebase (Google) e usa as fontes do Google Fonts. Como em qualquer site, esses serviços recebem dados técnicos da conexão (como o endereço IP) para entregar as páginas, conforme as políticas de privacidade deles.</p>
+
+        <h2>Seus direitos</h2>
+        <p>Você pode pedir, a qualquer momento e sem custo: confirmação de que temos o seu e-mail, uma cópia dele, correção ou exclusão, e a retirada do consentimento (art. 18 da LGPD). Atendemos em até 15 dias. Você também pode reclamar à <a class="text-link" href="https://www.gov.br/anpd/" target="_blank" rel="noopener">Autoridade Nacional de Proteção de Dados (ANPD)</a>.</p>
+
+        <h2 id="contato">Como pedir</h2>
+        <p id="privContato">Em breve, o e-mail de contato estará aqui.</p>
+
+        <p class="fine-print">Última atualização: outubro de 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+
+  <script src="js/catalogo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/car-svg.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    mountChrome("sobre");
+    if (CONTATO.email) document.getElementById("privContato").innerHTML =
+      `Escreva para <a class="text-link" href="mailto:${CONTATO.email}">${CONTATO.email}</a> com o assunto "Privacidade", dizendo o e-mail cadastrado e o que você quer (ver, corrigir ou apagar).`;
+  </script>
+</body>
+</html>
