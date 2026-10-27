@@ -5740,7 +5740,15 @@ const HIBRIDOS = [
     "priceVersion": "GL",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "a BYD não mostra o preço deste modelo no site; valor da imprensa, conferir com a concessionária"
+    "priceNote": "a BYD não mostra o preço deste modelo no site; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/byd-atto-2-dmi.jpg",
+      "card": "assets/carros/byd-atto-2-dmi-960.jpg",
+      "author": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Sealion_5_DM-i_Aurora_White_01.jpg"
+    }
   },
   {
     "id": "byd-atto-8",
@@ -5772,7 +5780,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-atto-8.jpg",
+      "card": "assets/carros/byd-atto-8-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Tang_L_002.jpg"
+    }
   },
   {
     "id": "byd-king",
@@ -5814,7 +5830,15 @@ const HIBRIDOS = [
     "priceVersion": "GL",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-king.jpg",
+      "card": "assets/carros/byd-king-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Qin_L_001.jpg"
+    }
   },
   {
     "id": "byd-shark",
@@ -5846,7 +5870,15 @@ const HIBRIDOS = [
     "priceVersion": "GS",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-shark.jpg",
+      "card": "assets/carros/byd-shark-960.jpg",
+      "author": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Shark_6_DMO_Premium_Aurora_White.jpg"
+    }
   },
   {
     "id": "byd-song-plus",
@@ -5898,7 +5930,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "versão Premium: R$ 299.800"
+    "priceNote": "versão Premium: R$ 299.800",
+    "photo": {
+      "src": "assets/carros/byd-song-plus.jpg",
+      "card": "assets/carros/byd-song-plus-960.jpg",
+      "author": "User 3204",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2023_BYD_Song_Plus_DM-i_(front).jpg"
+    }
   },
   {
     "id": "byd-song-pro",
@@ -5960,7 +6000,15 @@ const HIBRIDOS = [
     "priceVersion": "GL",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/byd-song-pro.jpg",
+      "card": "assets/carros/byd-song-pro-960.jpg",
+      "author": "SAIC GM sucks",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:BYD_Song_Pro_DM-i_001.jpg"
+    }
   },
   {
     "id": "caoa-chery-tiggo-7-pro-phev",
@@ -6002,7 +6050,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.caoachery.com.br/",
     "priceKind": "oficial",
-    "priceNote": "preço público sugerido no site da marca, sem data de coleta"
+    "priceNote": "preço público sugerido no site da marca, sem data de coleta",
+    "photo": {
+      "src": "assets/carros/caoa-chery-tiggo-7-pro-phev.jpg",
+      "card": "assets/carros/caoa-chery-tiggo-7-pro-phev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Chery_Tiggo_7_Plus_PHEV_001.jpg"
+    }
   },
   {
     "id": "caoa-chery-tiggo-8-pro-phev",
@@ -6044,7 +6100,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.caoachery.com.br/",
     "priceKind": "oficial",
-    "priceNote": "preço público sugerido no site da marca, sem data de coleta"
+    "priceNote": "preço público sugerido no site da marca, sem data de coleta",
+    "photo": {
+      "src": "assets/carros/caoa-chery-tiggo-8-pro-phev.jpg",
+      "card": "assets/carros/caoa-chery-tiggo-8-pro-phev-960.jpg",
+      "author": "User 3204",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2023_Chery_Tiggo_8_Pro_PHEV.jpg"
+    }
   },
   {
     "id": "denza-b5",
@@ -6076,7 +6140,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/denza-b5.jpg",
+      "card": "assets/carros/denza-b5-960.jpg",
+      "author": "Ethan Llamas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Denza_B5_MIAS_2026_preview_02.jpg"
+    }
   },
   {
     "id": "gac-gs9-phev",
@@ -6108,7 +6180,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/gac-gs9-phev.jpg",
+      "card": "assets/carros/gac-gs9-phev-960.jpg",
+      "author": "User 3204",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2021_GAC_Trumpchi_GS8_(front).jpg"
+    }
   },
   {
     "id": "geely-ex5-emi",
@@ -6150,7 +6230,15 @@ const HIBRIDOS = [
     "priceVersion": "PRO",
     "priceSource": "https://www.geelybrasil.com.br/",
     "priceKind": "oficial",
-    "priceNote": "versões Max e Ultra mais caras"
+    "priceNote": "versões Max e Ultra mais caras",
+    "photo": {
+      "src": "assets/carros/geely-ex5-emi.jpg",
+      "card": "assets/carros/geely-ex5-emi-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Geely_Galaxy_E5_009.jpg"
+    }
   },
   {
     "id": "gwm-haval-h6-phev",
@@ -6212,7 +6300,15 @@ const HIBRIDOS = [
     "priceVersion": "PHEV19",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/gwm-haval-h6-phev.jpg",
+      "card": "assets/carros/gwm-haval-h6-phev-960.jpg",
+      "author": "User 3204",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2022_Great_Wall_Haval_H6_PHEV_(front).jpg"
+    }
   },
   {
     "id": "gwm-haval-h6-gt-phev",
@@ -6254,7 +6350,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/gwm-haval-h6-gt-phev.jpg",
+      "card": "assets/carros/gwm-haval-h6-gt-phev-960.jpg",
+      "author": "LuvsMG481",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2022_Haval_H6_GT_Ultra_front.jpg"
+    }
   },
   {
     "id": "gwm-tank-300-phev",
@@ -6296,7 +6400,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/gwm-tank-300-phev.jpg",
+      "card": "assets/carros/gwm-tank-300-phev-960.jpg",
+      "author": "Just a Man",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Expo_Auto_Chino_2026._GWM_TANK_300.jpg"
+    }
   },
   {
     "id": "gwm-wey-07-phev",
@@ -6328,7 +6440,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/gwm-wey-07-phev.jpg",
+      "card": "assets/carros/gwm-wey-07-phev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:WEY_Blue_Mountain_001.jpg"
+    }
   },
   {
     "id": "jaecoo-7-shs",
@@ -6360,7 +6480,15 @@ const HIBRIDOS = [
     "priceVersion": "Luxury",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/jaecoo-7-shs.jpg",
+      "card": "assets/carros/jaecoo-7-shs-960.jpg",
+      "author": "Chanokchon",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2025_Jaecoo_J7_SHS_Max.jpg"
+    }
   },
   {
     "id": "jetour-s06-phev",
@@ -6392,7 +6520,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/jetour-s06-phev.jpg",
+      "card": "assets/carros/jetour-s06-phev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Jetour_Shanhai_L6_001.jpg"
+    }
   },
   {
     "id": "jetour-t1-phev",
@@ -6424,7 +6560,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/jetour-t1-phev.jpg",
+      "card": "assets/carros/jetour-t1-phev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Jetour_Shanhai_T1_003.jpg"
+    }
   },
   {
     "id": "jetour-t2-phev",
@@ -6466,7 +6610,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/jetour-t2-phev.jpg",
+      "card": "assets/carros/jetour-t2-phev-960.jpg",
+      "author": "JustAnotherCarDesigner",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "page": "https://commons.wikimedia.org/wiki/File:Jetour_Shanhai_T2_002.jpg"
+    }
   },
   {
     "id": "land-rover-range-rover-phev",
@@ -6498,7 +6650,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não pesquisado ainda"
+    "priceNote": "preço não pesquisado ainda",
+    "photo": {
+      "src": "assets/carros/land-rover-range-rover-phev.jpg",
+      "card": "assets/carros/land-rover-range-rover-phev-960.jpg",
+      "author": "Vauxford",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2022_Land_Rover_Range_Rover_SE_P440e_AWD_Automatic_3.0_Front.jpg"
+    }
   },
   {
     "id": "land-rover-range-rover-sport-phev",
@@ -6530,7 +6690,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não pesquisado ainda"
+    "priceNote": "preço não pesquisado ainda",
+    "photo": {
+      "src": "assets/carros/land-rover-range-rover-sport-phev.jpg",
+      "card": "assets/carros/land-rover-range-rover-sport-phev-960.jpg",
+      "author": "Calreyn88",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2023_Range_Rover_Sport.jpg"
+    }
   },
   {
     "id": "land-rover-velar-phev",
@@ -6562,7 +6730,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não pesquisado ainda"
+    "priceNote": "preço não pesquisado ainda",
+    "photo": {
+      "src": "assets/carros/land-rover-velar-phev.jpg",
+      "card": "assets/carros/land-rover-velar-phev-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Range_Rover_Velar_P400e_Auto_Zuerich_2021_IMG_0513.jpg"
+    }
   },
   {
     "id": "leapmotor-c10-reev",
@@ -6594,7 +6770,15 @@ const HIBRIDOS = [
     "priceVersion": "Ultra-Híbrido",
     "priceSource": "https://www.leapmotor.com.br/",
     "priceKind": "oficial",
-    "priceNote": ""
+    "priceNote": "",
+    "photo": {
+      "src": "assets/carros/leapmotor-c10-reev.jpg",
+      "card": "assets/carros/leapmotor-c10-reev-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.pt-br",
+      "page": "https://commons.wikimedia.org/wiki/File:Leapmotor_C10_EV_DSC_8756.jpg"
+    }
   },
   {
     "id": "lexus-nx-450h-plug-in",
@@ -6626,7 +6810,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/lexus-nx-450h-plug-in.jpg",
+      "card": "assets/carros/lexus-nx-450h-plug-in-960.jpg",
+      "author": "Pokemonprime",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2024_Lexus_NX_450h%2B_AWD,_Electrify_Expo_Orlando.jpg"
+    }
   },
   {
     "id": "lexus-rx-450h-plug-in",
@@ -6658,7 +6850,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/lexus-rx-450h-plug-in.jpg",
+      "card": "assets/carros/lexus-rx-450h-plug-in-960.jpg",
+      "author": "Alexander-93",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Lexus_RX_450h%2B_(AALH16)_1X7A7074.jpg"
+    }
   },
   {
     "id": "mitsubishi-outlander-phev",
@@ -6690,7 +6890,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "valor da imprensa, conferir com a concessionária"
+    "priceNote": "valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/mitsubishi-outlander-phev.jpg",
+      "card": "assets/carros/mitsubishi-outlander-phev-960.jpg",
+      "author": "Tokumeigakarinoaoshima",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:The_frontview_of_Mitsubishi_OUTLANDER_PHEV_P_(5LA-GN0W-XDUHZ).jpg"
+    }
   },
   {
     "id": "omoda-7-phev",
@@ -6722,7 +6930,15 @@ const HIBRIDOS = [
     "priceVersion": "Luxury",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"
+    "priceNote": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/omoda-7-phev.jpg",
+      "card": "assets/carros/omoda-7-phev-960.jpg",
+      "author": "Alexander Migl",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Omoda_7_SHS_IAA_2025_DSC_2184.jpg"
+    }
   },
   {
     "id": "porsche-cayenne-e-hybrid",
@@ -6774,7 +6990,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"
+    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/porsche-cayenne-e-hybrid.jpg",
+      "card": "assets/carros/porsche-cayenne-e-hybrid-960.jpg",
+      "author": "Alexandre Prevot from Nancy, France",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Porsche_Cayenne_E-Hybrid_(53996969181).jpg"
+    }
   },
   {
     "id": "porsche-panamera-e-hybrid",
@@ -6836,7 +7060,15 @@ const HIBRIDOS = [
     "priceVersion": "4 E-Hybrid",
     "priceSource": "https://www.eletricos.app/catalogo-hibrido",
     "priceKind": "imprensa",
-    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"
+    "priceNote": "ano-modelo 2027; valor da imprensa, conferir com a concessionária",
+    "photo": {
+      "src": "assets/carros/porsche-panamera-e-hybrid.jpg",
+      "card": "assets/carros/porsche-panamera-e-hybrid-960.jpg",
+      "author": "Fiver, der Hellseher",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:Porsche_Panamera_4_E-Hybrid_Sport_(front).jpg"
+    }
   },
   {
     "id": "volvo-xc60-t8",
@@ -6868,7 +7100,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não pesquisado ainda"
+    "priceNote": "preço não pesquisado ainda",
+    "photo": {
+      "src": "assets/carros/volvo-xc60-t8.jpg",
+      "card": "assets/carros/volvo-xc60-t8-960.jpg",
+      "author": "LuvsMG481",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2023_Volvo_XC60_T8_R-Line_front.jpg"
+    }
   },
   {
     "id": "volvo-xc90-t8",
@@ -6900,7 +7140,15 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "",
     "priceKind": null,
-    "priceNote": "preço não pesquisado ainda"
+    "priceNote": "preço não pesquisado ainda",
+    "photo": {
+      "src": "assets/carros/volvo-xc90-t8.jpg",
+      "card": "assets/carros/volvo-xc90-t8-960.jpg",
+      "author": "Vauxford",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "page": "https://commons.wikimedia.org/wiki/File:2017_Volvo_XC90_T8_Inscription.jpg"
+    }
   }
 ];
 
