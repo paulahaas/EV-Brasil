@@ -35,7 +35,9 @@
   const modelo = $("tripModelo"), versao = $("tripVersao"), rota = $("tripRota"), km = $("tripKm");
   const carga = $("tripCarga"), estrada = $("tripEstrada"), posto = $("tripPosto"), preco = $("tripPreco");
 
-  modelo.innerHTML = VEHICLES.map((v) => `<option value="${v.id}">${v.brand} ${v.model}</option>`).join("");
+  const opt = (v) => `<option value="${v.id}">${v.brand} ${v.model}</option>`;
+  modelo.innerHTML = `<optgroup label="100% elétricos">${VEHICLES.map(opt).join("")}</optgroup>` +
+    `<optgroup label="Híbridos plug-in">${HIBRIDOS.map(opt).join("")}</optgroup>`;
   rota.innerHTML = ROTAS.map(([d, n]) => `<option value="${d}">${n}</option>`).join("");
   const pedido = new URLSearchParams(location.search).get("modelo");
   modelo.value = getVehicleById(pedido) ? pedido : PADRAO.modelo;
@@ -59,12 +61,46 @@
   };
   const set = (id, t) => { $(id).textContent = t; };
 
+  const GASOLINA = 6.2;
+  const rotulosEletrico = ["por parada", "recarregando", "em energia", "bateria ao chegar"];
+  const rotulosPhev = ["só na bateria", "na gasolina", "gasolina", "custo total"];
+  const setRotulos = (r) => ["tripTempoParada", "tripTempoTotal", "tripCusto", "tripChegada"]
+    .forEach((id, i) => { $(id).parentElement.querySelector(".k").textContent = r[i]; });
+
+  // Plug-in: não há parada para recarregar. A bateria faz os primeiros km e a gasolina completa o resto.
+  function calcularPhev(v, ver, distancia) {
+    const fator = (Number(estrada.value) || 85) / 100;
+    const bateria = Math.min(distancia, ver.rangeKm * fator);
+    const gas = distancia - bateria;
+    const kmL = ver.gasRoad || v.gasKmL;
+    const litros = kmL ? gas / kmL : 0;
+    const custoEnergia = (bateria * ver.kwh100 / 100 / fator) * (Number(preco.value) || 0);
+    const custoGas = litros * GASOLINA;
+    setRotulos(rotulosPhev);
+    set("tripKmValor", `${distancia.toLocaleString("pt-BR")} km`);
+    set("tripParadas", "Sem paradas");
+    set("tripRotulo", `para recarregar: o ${v.brand} ${v.model} completa a viagem na gasolina quando a bateria acaba.`);
+    set("tripTempoParada", `${Math.round(bateria)} km`);
+    set("tripTempoTotal", `${Math.round(gas)} km`);
+    set("tripCusto", `${formatNum(litros, 0)} l · ${formatBRL(Math.round(custoGas))}`);
+    set("tripChegada", formatBRL(Math.round(custoGas + custoEnergia)));
+    $("tripMapa").innerHTML = `<div class="trip-line"></div><span class="trip-dot trip-start" style="left:0%"></span>` +
+      (gas > 0 ? `<span class="trip-dot trip-stop" style="left:${(bateria / distancia) * 100}%"><em>gasolina a partir do km ${Math.round(bateria)}</em></span>` : "") +
+      `<span class="trip-dot trip-end" style="left:100%"></span><div class="trip-ends"><span>Saída · ${Math.max(0, Number(carga.value) || 100)}%</span><span>Chegada · ${distancia.toLocaleString("pt-BR")} km</span></div>`;
+    set("tripNotas", `Autonomia na bateria considerada: ${Math.round(ver.rangeKm * fator)} km (${ver.rangeKm} km do Inmetro × ${estrada.value}%), saindo com a bateria cheia. ` +
+      `Depois disso o carro roda na gasolina a ${formatNum(kmL)} km/l (consumo de estrada do Inmetro; gasolina a R$ ${GASOLINA.toFixed(2).replace(".", ",")} o litro). ` +
+      `A energia da bateria usa o preço por kWh informado acima. Sem recarga rápida: híbrido plug-in carrega devagar, por isso o planejador não conta paradas.`);
+    $("tripLink").href = modelUrl(v);
+  }
+
   function calcular() {
     const v = getVehicleById(modelo.value);
     const ver = versaoEscolhida();
     const distancia = Number(km.value) || 0;
     const inicio = Math.min(100, Math.max(RESERVA + 5, Number(carga.value) || 100));
     const autonomia = ver.rangeKm * (Number(estrada.value) || 85) / 100;
+    if (isPhev(v)) return calcularPhev(v, ver, distancia);
+    setRotulos(rotulosEletrico);
     const kmPorPct = autonomia / 100;
     const primeiro = (inicio - RESERVA) * kmPorPct;
     const porParada = (ATE - RESERVA) * kmPorPct;
