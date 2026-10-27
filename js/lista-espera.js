@@ -12,10 +12,10 @@
  */
 (function () {
   const LISTA_ESPERA = {
-    form: "",          // ex.: "1FAIpQLSc...": https://docs.google.com/forms/d/e/<form>/viewform
-    tipo: "",          // ex.: "entry.123456789" (pergunta "Tipo")
-    email: "",         // pergunta "E-mail"
-    consentimento: "", // pergunta "Consentimento"
+    form: "1FAIpQLSfEc8icz9FHy16kleGl1tc2nO8LInRSd4mA8uhpM756cpBZ4A", // https://docs.google.com/forms/d/e/<form>/viewform
+    tipo: "entry.1562360689",          // pergunta "Tipo"
+    email: "entry.1656225695",         // pergunta "E-mail"
+    consentimento: "entry.1394660246", // pergunta "Consentimento"
   };
   const ligado = Object.values(LISTA_ESPERA).every(Boolean);
 
