@@ -8,6 +8,9 @@
   const heroAll = document.getElementById("heroAll");
   if (heroAll) heroAll.textContent = `Ver os ${VEHICLES.length} carros`;
 
+  const hibBtn = document.getElementById("hibridosBtn");
+  if (hibBtn && typeof HIBRIDOS !== "undefined") hibBtn.textContent = `Ver os ${HIBRIDOS.length} híbridos plug-in`;
+
   // Números do catálogo.
   const comPreco = VEHICLES.filter((v) => v.price);
   const maisBarato = comPreco.reduce((a, b) => (b.price < a.price ? b : a));

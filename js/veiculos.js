@@ -10,6 +10,7 @@
     q: "",
     brand: "Todas",
     type: "Todos",
+    motor: "bev",  // "bev" = 100% elétricos, "phev" = híbridos plug-in, "todos" = os dois
     maxPrice: 0,   // 0 = qualquer preço
     minRange: 0,   // 0 = qualquer autonomia
     minDc: 0,      // 0 = qualquer recarga rápida (kW)
@@ -19,8 +20,12 @@
 
   // Lê filtros vindos da URL (ex.: veiculos.html?tipo=SUV&q=byd).
   const params = new URLSearchParams(location.search);
-  if (params.get("tipo") && BODY_TYPES.includes(params.get("tipo"))) state.type = params.get("tipo");
-  if (params.get("marca") && BRANDS.includes(params.get("marca"))) state.brand = params.get("marca");
+  const TIPOS_TODOS = ["Hatch", "Sedã", "SUV", "Perua", "Esportivo", "Picape"].filter((t) => TODOS.some((v) => v.bodyType === t));
+  const MOTORES = { bev: "100% elétricos", phev: "Híbridos plug-in", todos: "Todos" };
+  if (MOTORES[params.get("motor")]) state.motor = params.get("motor");
+  const marcasDe = () => [...new Set(TODOS.filter((v) => state.motor === "todos" || (state.motor === "phev") === isPhev(v)).map((v) => v.brand))].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  if (params.get("tipo") && TIPOS_TODOS.includes(params.get("tipo"))) state.type = params.get("tipo");
+  if (params.get("marca") && TODOS.some((v) => v.brand === params.get("marca"))) state.brand = params.get("marca");
   if (params.get("q")) state.q = params.get("q").trim();
 
   const grid = document.getElementById("vehiclesGrid");
@@ -33,6 +38,7 @@
   const dcSelect = document.getElementById("dcSelect");
   const trunkSelect = document.getElementById("trunkSelect");
   const typeFilters = document.getElementById("typeFilters");
+  const motorFilters = document.getElementById("motorFilters");
   const sortSelect = document.getElementById("sortSelect");
   const clearBtn = document.getElementById("clearFilters");
   const toggleBtn = document.getElementById("filtersToggle");
@@ -44,14 +50,35 @@
     toggleBtn.setAttribute("aria-expanded", String(aberto));
   });
 
-  // Marcas num menu (são muitas para caber em chips).
-  brandSelect.innerHTML =
-    '<option value="Todas">Marca: Todas</option>' +
-    BRANDS.map((b) => `<option value="${b}">${b}</option>`).join("");
+  // Marcas num menu (são muitas para caber em chips); muda com o tipo de motor.
+  function renderBrands() {
+    const marcas = marcasDe();
+    if (state.brand !== "Todas" && !marcas.includes(state.brand)) state.brand = "Todas";
+    brandSelect.innerHTML =
+      '<option value="Todas">Marca: Todas</option>' +
+      marcas.map((b) => `<option value="${b}">${b}</option>`).join("");
+    brandSelect.value = state.brand;
+  }
+
+  // Chips de tipo de motor: 100% elétricos, híbridos plug-in ou todos.
+  function renderMotor() {
+    const n = (m) => TODOS.filter((v) => m === "todos" || (m === "phev") === isPhev(v)).length;
+    motorFilters.innerHTML = ["bev", "phev", "todos"]
+      .map((m) => `<button class="chip ${m === state.motor ? "active" : ""}" data-motor="${m}" aria-pressed="${m === state.motor}">${MOTORES[m]} <span class="lista-n">${n(m)}</span></button>`)
+      .join("");
+    motorFilters.querySelectorAll(".chip").forEach((c) =>
+      c.addEventListener("click", () => {
+        state.motor = c.dataset.motor;
+        renderMotor();
+        renderBrands();
+        render();
+      })
+    );
+  }
 
   // Chips de tipo de carroceria.
   function renderChips() {
-    typeFilters.innerHTML = ["Todos", ...BODY_TYPES]
+    typeFilters.innerHTML = ["Todos", ...TIPOS_TODOS]
       .map((t) => `<button class="chip ${t === state.type ? "active" : ""}" data-type="${t}">${t}</button>`)
       .join("");
     typeFilters.querySelectorAll(".chip").forEach((c) =>
@@ -66,7 +93,8 @@
   // Deixa os campos iguais ao estado (ao abrir a página e ao limpar os filtros).
   function syncControls() {
     searchInput.value = state.q;
-    brandSelect.value = state.brand;
+    renderMotor();
+    renderBrands();
     priceSelect.value = String(state.maxPrice);
     rangeSelect.value = String(state.minRange);
     dcSelect.value = String(state.minDc);
@@ -108,7 +136,8 @@
 
   function render() {
     const q = state.q;
-    const filtrar = (tolerante) => VEHICLES.filter((v) => {
+    const filtrar = (tolerante) => TODOS.filter((v) => {
+      const okMotor = state.motor === "todos" || (state.motor === "phev") === isPhev(v);
       const okBrand = state.brand === "Todas" || v.brand === state.brand;
       const okType = state.type === "Todos" || v.bodyType === state.type;
       const okPrice = !state.maxPrice || (v.price && v.price <= state.maxPrice);
@@ -117,7 +146,7 @@
       const okDc = !state.minDc || (v.specs && v.specs.dcKw >= state.minDc);
       const okTrunk = !state.minTrunk || (v.specs && v.specs.trunkL >= state.minTrunk);
       const okText = !q || combina(v, q, tolerante);
-      return okBrand && okType && okPrice && okRange && okDc && okTrunk && okText;
+      return okMotor && okBrand && okType && okPrice && okRange && okDc && okTrunk && okText;
     });
     let list = filtrar(false);
     if (!list.length && q) list = filtrar(true);
@@ -134,13 +163,14 @@
     };
     list.sort(ordens[state.sort] || ordens.menor);
 
+    document.getElementById("pageTitle").textContent = state.motor === "phev" ? "Híbridos plug-in à venda" : state.motor === "todos" ? "Elétricos e híbridos plug-in à venda" : "Carros elétricos à venda";
     grid.innerHTML = list.map(createCard).join("");
     emptyState.style.display = list.length ? "none" : "block";
     resultsCount.textContent = `${list.length} ${list.length === 1 ? "modelo" : "modelos"}`;
 
-    const filtrando = q || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange || state.minDc || state.minTrunk;
+    const filtrando = q || state.motor !== "bev" || state.brand !== "Todas" || state.type !== "Todos" || state.maxPrice || state.minRange || state.minDc || state.minTrunk;
     clearBtn.hidden = !filtrando;
-    const ativos = [state.brand !== "Todas", state.type !== "Todos", state.maxPrice, state.minRange, state.minDc, state.minTrunk].filter(Boolean).length;
+    const ativos = [state.motor !== "bev", state.brand !== "Todas", state.type !== "Todos", state.maxPrice, state.minRange, state.minDc, state.minTrunk].filter(Boolean).length;
     toggleBtn.textContent = ativos ? `Filtros (${ativos})` : "Filtros";
   }
 
@@ -152,7 +182,7 @@
   trunkSelect.addEventListener("change", () => { state.minTrunk = Number(trunkSelect.value); render(); });
   sortSelect.addEventListener("change", () => { state.sort = sortSelect.value; render(); });
   clearBtn.addEventListener("click", () => {
-    Object.assign(state, { q: "", brand: "Todas", type: "Todos", maxPrice: 0, minRange: 0, minDc: 0, minTrunk: 0 });
+    Object.assign(state, { q: "", brand: "Todas", type: "Todos", motor: "bev", maxPrice: 0, minRange: 0, minDc: 0, minTrunk: 0 });
     syncControls();
     render();
   });

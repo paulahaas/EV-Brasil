@@ -55,6 +55,36 @@ function renderHeader(active) {
 </header>`;
 }
 
+/* ---------------- Faixa "dados atualizados" ---------------- */
+function dataStrip(v) {
+  const data = v ? (isPhev(v) ? DATA_INFO.precosHibridos : DATA_INFO.precos).coleta : dataAtualizada();
+  return `<p class="data-strip"><span class="data-strip-dot" aria-hidden="true"></span>${v ? "Preço e dados conferidos em" : "Dados atualizados em"} <strong>${data}</strong> · Autonomia e consumo: Inmetro · <a href="metodologia.html">de onde vêm os dados</a></p>`;
+}
+
+/* ---------------- Favoritos (ficam só neste navegador) ---------------- */
+function lerFavoritos() {
+  try { return JSON.parse(localStorage.getItem("ev-favoritos") || "[]").filter((id) => getVehicleById(id)); } catch (e) { return []; }
+}
+function gravarFavoritos(lista) {
+  try { localStorage.setItem("ev-favoritos", JSON.stringify(lista)); } catch (e) { /* sem armazenamento */ }
+}
+function favButton(v) {
+  const on = lerFavoritos().includes(v.id);
+  return `<button type="button" class="btn btn-ghost btn-wide fav-btn" data-fav="${v.id}" aria-pressed="${on}">${on ? "♥ Nos seus favoritos" : "♡ Salvar nos favoritos"}</button>`;
+}
+if (typeof document !== "undefined") document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-fav]");
+  if (!btn) return;
+  const id = btn.dataset.fav;
+  const lista = lerFavoritos();
+  const novo = lista.includes(id) ? lista.filter((x) => x !== id) : [...lista, id];
+  gravarFavoritos(novo);
+  const on = novo.includes(id);
+  btn.setAttribute("aria-pressed", on);
+  if (btn.classList.contains("fav-btn")) btn.textContent = on ? "♥ Nos seus favoritos" : "♡ Salvar nos favoritos";
+  document.dispatchEvent(new CustomEvent("favoritos-mudaram"));
+});
+
 /* ---------------- Rodapé ---------------- */
 function renderFooter() {
   const year = new Date().getFullYear();
@@ -74,9 +104,13 @@ function renderFooter() {
           <a href="encontre.html">Qual elétrico é para mim?</a>
           <a href="veiculos.html">Todos os carros</a>
           <a href="eletricos/">Listas prontas</a>
+          <a href="hibridos/">Híbridos plug-in</a>
           <a href="precos/">Preços do mês</a>
           <a href="rankings.html">Rankings</a>
           <a href="comparar.html">Comparar modelos</a>
+          <a href="comparacoes/">Comparações prontas</a>
+          <a href="favoritos.html">Meus favoritos</a>
+          <a href="checklist-test-drive.html">Checklist de test-drive</a>
           <a href="calculadora.html">Calculadora de economia</a>
           <a href="viagem.html">Dá para viajar?</a>
           <a href="novidades.html">Lançamentos</a>
@@ -89,8 +123,10 @@ function renderFooter() {
         </div>
         <div class="footer-col">
           <h4>Sobre</h4>
+          <a href="quem-somos.html">Quem somos</a>
           <a href="metodologia.html">De onde vêm os dados</a>
           <a href="creditos.html">Créditos das fotos</a>
+          <a href="quem-somos.html#contato">Contato</a>
         </div>
       </div>
       <div class="footer-bottom">
@@ -104,6 +140,14 @@ function renderFooter() {
 /* ---------------- Números rápidos de um veículo ---------------- */
 /** Faixa de números sob o carro (painéis e página do modelo). */
 function specBar(v) {
+  if (isPhev(v)) {
+    return `
+    <div class="specbar">
+      <div class="spec"><span class="v">${rangeText(v)}</span><span class="k">Só na bateria (Inmetro)</span></div>
+      <div class="spec"><span class="v">${gasText(v)}</span><span class="k">Gasolina (Inmetro)</span></div>
+      <div class="spec"><span class="v">${v.price ? formatBRL(v.price) : "—"}</span><span class="k">${v.price ? "A partir de" : "Preço não divulgado"}</span></div>
+    </div>`;
+  }
   return `
     <div class="specbar">
       <div class="spec"><span class="v">${rangeText(v)}</span><span class="k">Autonomia (Inmetro)</span></div>
@@ -115,16 +159,20 @@ function specBar(v) {
 /* ---------------- Card de veículo ---------------- */
 function createCard(v) {
   const nota = priceNoteShort(v);
+  const phev = isPhev(v);
   return `
     <a class="card" href="${modelUrl(v)}">
       <div class="card-media ${hasPhoto(v) ? "has-photo" : ""}" style="--glow:${v.color}">
-        ${carImage(v)}
+        ${phev ? '<span class="badge-phev">Híbrido plug-in</span>' : ""}${carImage(v)}
       </div>
       <div class="card-body">
         <h3 class="card-title">${v.brand} ${v.model}</h3>
         <p class="card-meta">${v.bodyType} · ${v.versions.length} ${v.versions.length === 1 ? "versão" : "versões"}</p>
-        <p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
-        <p class="card-meter">${consumoMeter(v)}</p>
+        ${phev
+          ? `<p class="card-meta">Só na bateria ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-meta">Na gasolina até ${gasText(v)}</p>`
+          : `<p class="card-meta">Autonomia ${rangeText(v)} · ${formatNum(v.kwh100)} kWh/100 km</p>
+        <p class="card-meter">${consumoMeter(v)}</p>`}
         <p class="card-price">${priceText(v)}</p>
         ${nota ? `<p class="card-note">${nota}</p>` : ""}
         ${(() => {
@@ -220,6 +268,7 @@ function mountChrome(activeKey) {
   if (headerSlot) headerSlot.innerHTML = renderHeader(activeKey);
   if (footerSlot) footerSlot.innerHTML = renderFooter();
   // Páginas fixas marcam onde vão os botões com <div data-share-bar></div>.
+  document.querySelectorAll("[data-data-strip]").forEach((el) => (el.outerHTML = dataStrip()));
   document.querySelectorAll("[data-share-bar]").forEach((el) => (el.outerHTML = shareBar(el.dataset.shareBar)));
 
   // Na home o cabeçalho começa transparente sobre o painel e ganha fundo ao rolar.

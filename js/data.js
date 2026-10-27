@@ -28,9 +28,61 @@ function modelUrl(v) {
   return `carros/${v.id}.html`;
 }
 
-/** Busca um veículo pelo id. */
+/**
+ * Elétricos e híbridos plug-in juntos (só o catálogo, as páginas de modelo e as listas usam).
+ * Rankings, gráfico, comparador e calculadoras continuam só com os 100% elétricos (VEHICLES),
+ * porque a autonomia do plug-in é só na bateria e não cabe na mesma régua.
+ */
+const TODOS = [...VEHICLES, ...(typeof HIBRIDOS !== "undefined" ? HIBRIDOS : [])];
+
+/**
+ * Contato do site (rodapé e página "Quem somos"). A Paula preenche; vazio = o link some.
+ * Exemplo: { email: "contato@seudominio.com.br", instagram: "https://instagram.com/seuperfil" }
+ */
+const CONTATO = { email: "", instagram: "" };
+
+/** Data mais recente entre as coletas de preços, fichas e plug-ins (texto dd/mm/aaaa). */
+function dataAtualizada() {
+  const datas = [DATA_INFO.precos, DATA_INFO.precosHibridos, DATA_INFO.fichas]
+    .filter((x) => x && x.coleta).map((x) => x.coleta);
+  const chave = (t) => t.split("/").reverse().join("");
+  return datas.sort((a, b) => chave(b).localeCompare(chave(a)))[0];
+}
+
+/** É um híbrido plug-in? */
+function isPhev(v) {
+  return !!v && v.powertrain === "phev";
+}
+
+/** Busca um veículo pelo id (elétricos e híbridos plug-in). */
 function getVehicleById(id) {
-  return VEHICLES.find((v) => v.id === id) || null;
+  return TODOS.find((v) => v.id === id) || null;
+}
+
+/**
+ * Gasto mensal com energia e combustível.
+ * 100% elétrico: tudo na bateria.
+ * Plug-in: carrega uma vez por dia; os primeiros km do dia saem da bateria (até a autonomia do Inmetro)
+ * e o resto sai na gasolina, ao consumo médio do Inmetro.
+ */
+function custoMensal(v, kmMes, precoKwh, precoGasolina) {
+  if (!isPhev(v)) {
+    return { total: (kmMes * v.kwh100 / 100) * precoKwh, kmBateria: kmMes, kmGasolina: 0, litros: 0 };
+  }
+  const kmBateria = Math.min(kmMes / 30, v.rangeMax) * 30;
+  const kmGasolina = Math.max(kmMes - kmBateria, 0);
+  const litros = v.gasKmL ? kmGasolina / v.gasKmL : 0;
+  return { total: (kmBateria * v.kwh100 / 100) * precoKwh + litros * precoGasolina, kmBateria, kmGasolina, litros };
+}
+
+/** Troca os textos "Elétrico"/"Plug-in" marcados com data-ev e data-phev. */
+function rotularTipo(phev) {
+  document.querySelectorAll("[data-ev]").forEach((el) => { el.textContent = phev ? el.dataset.phev : el.dataset.ev; });
+}
+
+/** Consumo a gasolina do plug-in (ciclo combinado do Inmetro), em km/l. */
+function gasText(v) {
+  return v.gasKmL ? `${formatNum(v.gasKmL)} km/l` : "—";
 }
 
 /** Autonomia do Inmetro (a melhor versão). */

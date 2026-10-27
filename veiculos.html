@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todos os carros elétricos à venda no Brasil — EV Brasil</title>
-  <meta name="description" content="Todos os carros 100% elétricos à venda no Brasil, com autonomia e consumo do Inmetro e preço com fonte. Filtre por preço, autonomia, marca e carroceria.">
+  <meta name="description" content="Todos os carros 100% elétricos e híbridos plug-in à venda no Brasil, com autonomia e consumo do Inmetro e preço com fonte. Filtre por preço, autonomia, marca e carroceria.">
   <link rel="canonical" href="https://ev-brasil.web.app/veiculos.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="EV Brasil">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Todos os carros elétricos à venda no Brasil">
-  <meta property="og:description" content="Todos os carros 100% elétricos à venda no Brasil, com autonomia e consumo do Inmetro e preço com fonte. Filtre por preço, autonomia, marca e carroceria.">
+  <meta property="og:description" content="Todos os carros 100% elétricos e híbridos plug-in à venda no Brasil, com autonomia e consumo do Inmetro e preço com fonte. Filtre por preço, autonomia, marca e carroceria.">
   <meta property="og:url" content="https://ev-brasil.web.app/veiculos.html">
   <meta property="og:image" content="https://ev-brasil.web.app/assets/og/site.jpg">
   <meta property="og:image:width" content="1200">
@@ -30,7 +30,7 @@
     <section class="page-head">
       <div class="container">
         <span class="eyebrow">Catálogo</span>
-        <h1 class="section-title">Carros elétricos à venda</h1>
+        <h1 class="section-title" id="pageTitle">Carros elétricos à venda</h1>
         <p class="results-count">
           <span id="resultsCount"></span> ·
           <a href="comparar.html" class="text-link">Comparar modelos</a>
@@ -45,6 +45,7 @@
         <!-- No celular, os filtros ficam recolhidos atrás deste botão -->
         <button type="button" class="chip filters-toggle" id="filtersToggle" aria-expanded="false" aria-controls="filtersMore">Filtros</button>
         <div class="filters-more" id="filtersMore">
+        <div class="filter-group" id="motorFilters" role="group" aria-label="Tipo de motor"></div>
         <div class="filter-group" id="typeFilters"></div>
         <div class="spacer"></div>
         <select class="select" id="brandSelect" aria-label="Marca"></select>
@@ -97,7 +98,7 @@
         </div>
 
         <p class="fine-print">
-          Autonomia e consumo: <a class="text-link" href="metodologia.html">Inmetro</a>, versão mais eficiente de cada modelo.
+          Autonomia e consumo: <a class="text-link" href="metodologia.html">Inmetro</a>, versão mais eficiente de cada modelo. Nos híbridos plug-in, a autonomia é só com a bateria (depois dela, o carro segue na gasolina).
           Preço: "a partir de", coletado nos sites das marcas; quando a marca não divulga, mostramos o valor publicado na imprensa com aviso.
           Recarga e porta-malas: ficha técnica de cada modelo; quem não tem o dado divulgado sai desses filtros.
         </p>
@@ -120,6 +121,7 @@
           <a class="chip" href="eletricos/hatch-eletrico.html">Hatches</a>
           <a class="chip" href="eletricos/seda-eletrico.html">Sedãs</a>
           <a class="chip" href="eletricos/">Por marca e todas as listas →</a>
+          <a class="chip" href="hibridos/">Híbridos plug-in: todas as listas →</a>
         </div>
       </div>
     </section>

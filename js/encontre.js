@@ -50,12 +50,16 @@
   // "a partir de"); sem limite de preço, a da versão que roda mais.
   const autonomia = (v, orcamento) => (orcamento ? v.rangeMin : v.rangeMax);
 
-  function filtrar({ orcamento, tipo, minimo, app }) {
-    return VEHICLES.filter((v) =>
+  const fonte = (motor) => (motor === "phev" ? HIBRIDOS : motor === "todos" ? TODOS : VEHICLES);
+  // Plug-in não precisa de autonomia mínima na bateria: a gasolina completa o trajeto.
+  const autonomiaOk = (v, orcamento, minimo) => isPhev(v) || autonomia(v, orcamento) >= minimo;
+
+  function filtrar({ orcamento, tipo, minimo, app, motor }) {
+    return fonte(motor).filter((v) =>
       (!app || v.bodyType !== "Esportivo") &&
       (!orcamento || (v.price && v.price <= orcamento)) &&
       (!tipo || v.bodyType === tipo) &&
-      autonomia(v, orcamento) >= minimo
+      autonomiaOk(v, orcamento, minimo)
     );
   }
 
@@ -66,15 +70,16 @@
     const recarga = resposta("recarga");
     const prioridade = resposta("prioridade");
     const app = resposta("uso") === "app";
+    const motor = resposta("motor");
     const minimo = autonomiaMinima(kmDia, recarga, app);
     document.getElementById("quizApp").hidden = !app;
 
     // Tenta com tudo; se não sobrar ninguém, afrouxa um critério de cada vez.
     const tentativas = [
-      { filtro: { orcamento, tipo, minimo, app }, aviso: "" },
-      tipo && { filtro: { orcamento, tipo: "", minimo, app }, aviso: `Nenhum ${tipo} atende a essas respostas; mostrando outras carrocerias.` },
-      { filtro: { orcamento, tipo, minimo: 0, app }, aviso: `Nenhum modelo nessa faixa tem ${minimo} km de autonomia; mostrando os que chegam mais perto.` },
-      tipo && { filtro: { orcamento, tipo: "", minimo: 0, app }, aviso: `Nenhum modelo nessa faixa de preço atende a tudo; mostrando os que chegam mais perto.` },
+      { filtro: { orcamento, tipo, minimo, app, motor }, aviso: "" },
+      tipo && { filtro: { orcamento, tipo: "", minimo, app, motor }, aviso: `Nenhum ${tipo} atende a essas respostas; mostrando outras carrocerias.` },
+      { filtro: { orcamento, tipo, minimo: 0, app, motor }, aviso: `Nenhum modelo nessa faixa tem ${minimo} km de autonomia; mostrando os que chegam mais perto.` },
+      tipo && { filtro: { orcamento, tipo: "", minimo: 0, app, motor }, aviso: `Nenhum modelo nessa faixa de preço atende a tudo; mostrando os que chegam mais perto.` },
     ].filter(Boolean);
     let aviso = "";
     let candidatos = [];
@@ -92,15 +97,18 @@
     }
 
     const precos = candidatos.filter((v) => v.price).map((v) => v.price);
-    const ranges = candidatos.map((v) => autonomia(v, orcamento));
-    const consumos = candidatos.map((v) => v.kwh100);
+    const ranges = candidatos.filter((v) => !isPhev(v)).map((v) => autonomia(v, orcamento));
+    if (!ranges.length) ranges.push(0);
+    // Custo de energia por mês (plug-in: bateria + gasolina), para comparar os dois tipos de motor.
+    const gastoMes = (v) => custoMensal(v, kmDia * 30, TARIFA, GASOLINA.preco).total;
+    const consumos = candidatos.map(gastoMes);
     const p = app ? PESOS_APP : PESOS[prioridade];
     const dcs = candidatos.map((v) => (v.specs && v.specs.dcKw) || 0);
 
     const nota = (v) =>
       p.preco * (v.price ? escala(v.price, Math.min(...precos), Math.max(...precos), true) : 0.4) +
-      p.autonomia * escala(autonomia(v, orcamento), Math.min(...ranges), Math.max(...ranges)) +
-      p.consumo * escala(v.kwh100, Math.min(...consumos), Math.max(...consumos), true) +
+      p.autonomia * (isPhev(v) ? 0.5 : escala(autonomia(v, orcamento), Math.min(...ranges), Math.max(...ranges))) +
+      p.consumo * escala(gastoMes(v), Math.min(...consumos), Math.max(...consumos), true) +
       // Recarga rápida (só no modo aplicativo); sem o dado, nota baixa.
       (p.recarga || 0) * (v.specs && v.specs.dcKw ? escala(v.specs.dcKw, Math.min(...dcs), Math.max(...dcs)) : 0.2);
 
@@ -109,14 +117,24 @@
     titulo.textContent = `${melhores.length} ${melhores.length === 1 ? "sugestão" : "sugestões"} para você`;
     resumo.textContent = aviso ||
       `${candidatos.length} ${candidatos.length === 1 ? "modelo atende" : "modelos atendem"} às suas respostas` +
-      ` (autonomia mínima de ${minimo} km${orcamento ? `, até ${formatBRL(orcamento)}` : ""}). Estes são os mais bem colocados.`;
+      ` (${motor === "phev" ? "" : `autonomia mínima de ${minimo} km`}${motor !== "phev" && orcamento ? ", " : ""}${orcamento ? `até ${formatBRL(orcamento)}` : ""}). Estes são os mais bem colocados.`;
 
     lista.innerHTML = melhores.map(({ v }) => {
       const km = autonomia(v, orcamento);
       const dias = Math.floor(km / kmDia);
-      const energiaMes = (kmDia * 30 * v.kwh100 / 100) * TARIFA;
+      const energiaMes = gastoMes(v);
       if (app) return itemApp(v, km, kmDia, orcamento);
-      const motivos = [
+      const phev = isPhev(v);
+      const motivos = phev ? [
+        v.price
+          ? `${orcamento ? "Cabe no orçamento: " : ""}a partir de ${formatBRL(v.price)}${v.priceKind === "imprensa" ? " (valor da imprensa, confira com a concessionária)" : ""}`
+          : "Preço não pesquisado ainda",
+        kmDia <= km
+          ? `Só na bateria faz ${km} km: seu uso de ${kmDia} km por dia cabe nela, se você carregar toda noite`
+          : `A bateria faz ${km} km; dos seus ${kmDia} km por dia, o resto sai na gasolina (${gasText(v)})`,
+        `Cerca de ${formatBRL(Math.round(energiaMes))} por mês de energia e gasolina, carregando em casa` +
+          (recarga === "rua" ? " (sem tomada em casa, o plug-in perde a vantagem)" : ""),
+      ] : [
         v.price
           ? `${orcamento ? "Cabe no orçamento: " : ""}a partir de ${formatBRL(v.price)}${v.priceKind === "imprensa" ? " (valor da imprensa)" : ""}`
           : "Preço não divulgado pela marca",
@@ -129,7 +147,7 @@
           <a class="match-media" href="${modelUrl(v)}" style="--glow:${v.color}">${carImage(v)}</a>
           <div class="match-body">
             <h3><a href="${modelUrl(v)}">${v.brand} ${v.model}</a></h3>
-            <p class="card-meta">${v.bodyType} · ${formatNum(v.kwh100)} kWh/100 km</p>
+            <p class="card-meta">${phev ? '<span class="badge-phev">Híbrido plug-in</span> ' : ""}${v.bodyType} · ${formatNum(v.kwh100)} kWh/100 km${phev ? " na bateria" : ""}</p>
             <ul class="motivos">${motivos.map((m) => `<li>${m}</li>`).join("")}</ul>
           </div>
         </li>`;
@@ -144,23 +162,26 @@
   // Sugestão no modo aplicativo: custo por km, economia no mês, recarga e garantia comercial.
   function itemApp(v, km, kmDia, orcamento) {
     const kmMes = kmDia * DIAS_TRABALHO;
-    const porKm = (v.kwh100 / 100) * TARIFA;
+    const phev = isPhev(v);
+    const porKm = custoMensal(v, kmDia * 30, TARIFA, GASOLINA.preco).total / (kmDia * 30);
     const gasolinaKm = GASOLINA.preco / GASOLINA.kmPorLitro;
     const economia = (gasolinaKm - porKm) * kmMes;
     const centavos = (n) => n.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
-    const dc = v.specs && v.specs.dcKw;
+    const dc = !phev && v.specs && v.specs.dcKw;
     // Parada de 10% a 80% num carregador rápido de 100 kW (mesma conta do planejador de viagem).
     const energia = (km * 0.7 * v.kwh100) / 100;
     const minutos = dc ? Math.round((energia / (Math.min(dc, 100) * 0.65)) * 60 / 5) * 5 : null;
     const c = v.warranty && v.warranty.commercial;
-    const garantia = c
+    const garantia = phev
+      ? "Garantia para aplicativo de plug-in: ainda não coletada; peça o termo de uso comercial na concessionária"
+      : c
       ? `Garantia para aplicativo: ${[c.vehicle && `veículo ${c.vehicle}`, c.battery && `bateria ${c.battery}`].filter(Boolean).join(", ")} (<a class="text-link" href="${c.source}" target="_blank" rel="noopener">fonte</a>)`
       : "Garantia para aplicativo não divulgada: peça o termo de uso comercial na concessionária";
     const motivos = [
       v.price ? `A partir de ${formatBRL(v.price)}${v.priceKind === "imprensa" ? " (valor da imprensa)" : ""}` : "Preço não divulgado pela marca",
-      `<strong>${centavos(porKm)}/km</strong> de energia em casa (gasolina: ${centavos(gasolinaKm)}/km): economia de ~${formatBRL(Math.round(economia))} por mês rodando ${kmMes.toLocaleString("pt-BR")} km`,
+      `<strong>${centavos(porKm)}/km</strong> de ${phev ? "energia e gasolina" : "energia"} em casa (gasolina: ${centavos(gasolinaKm)}/km): economia de ~${formatBRL(Math.round(economia))} por mês rodando ${kmMes.toLocaleString("pt-BR")} km`,
       `${km} km de autonomia${orcamento && v.rangeMin !== v.rangeMax ? " (versão de entrada)" : ""}` +
-        (minutos ? ` · 10→80% em ~${minutos} min (até ${dc} kW)` : " · recarga rápida não divulgada"),
+        (phev ? " só na bateria · depois segue na gasolina, sem parar para recarregar" : minutos ? ` · 10→80% em ~${minutos} min (até ${dc} kW)` : " · recarga rápida não divulgada"),
       garantia,
     ];
     return `
@@ -168,7 +189,7 @@
           <a class="match-media" href="${modelUrl(v)}" style="--glow:${v.color}">${carImage(v)}</a>
           <div class="match-body">
             <h3><a href="${modelUrl(v)}">${v.brand} ${v.model}</a></h3>
-            <p class="card-meta">${v.bodyType} · ${formatNum(v.kwh100)} kWh/100 km</p>
+            <p class="card-meta">${phev ? '<span class="badge-phev">Híbrido plug-in</span> ' : ""}${v.bodyType} · ${formatNum(v.kwh100)} kWh/100 km${phev ? " na bateria" : ""}</p>
             <ul class="motivos">${motivos.map((m) => `<li>${m}</li>`).join("")}</ul>
           </div>
         </li>`;

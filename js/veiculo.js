@@ -24,9 +24,15 @@
     return;
   }
 
-  document.title = `${v.brand} ${v.model}: autonomia, consumo e preço — EV Brasil`;
+  const phev = isPhev(v);
+  const coletaPreco = phev ? DATA_INFO.precosHibridos.coleta : DATA_INFO.precos.coleta;
+  document.title = phev
+    ? `${v.brand} ${v.model}: híbrido plug-in, autonomia na bateria e preço — EV Brasil`
+    : `${v.brand} ${v.model}: autonomia, consumo e preço — EV Brasil`;
   const desc = document.querySelector('meta[name="description"]');
-  if (desc) desc.content = `${v.brand} ${v.model}: autonomia de ${rangeText(v)} e consumo de ${formatNum(v.kwh100)} kWh/100 km pelo Inmetro. ${v.price ? "A partir de " + formatBRL(v.price) + "." : ""}`;
+  if (desc) desc.content = phev
+    ? `${v.brand} ${v.model}, híbrido plug-in: anda ${rangeText(v)} só na bateria e faz até ${gasText(v)} na gasolina, pelo Inmetro. ${v.price ? "A partir de " + formatBRL(v.price) + "." : ""}`
+    : `${v.brand} ${v.model}: autonomia de ${rangeText(v)} e consumo de ${formatNum(v.kwh100)} kWh/100 km pelo Inmetro. ${v.price ? "A partir de " + formatBRL(v.price) + "." : ""}`;
 
   // Custo de energia com a tarifa padrão da calculadora.
   const TARIFA = 0.95;
@@ -34,7 +40,9 @@
 
   const versoes = [...v.versions]
     .sort((a, b) => b.rangeKm - a.rangeKm)
-    .map((x) => `<tr><td>${escapeHtml(x.name)}</td><td>${x.rangeKm} km</td><td>${formatNum(x.kwh100)}</td><td>${custo100(x.kwh100)}</td></tr>`)
+    .map((x) => phev
+      ? `<tr><td>${escapeHtml(x.name)}</td><td>${x.rangeKm} km</td><td>${formatNum(x.kwh100)}</td><td>${x.gasCity ? `${formatNum(x.gasCity)} / ${formatNum(x.gasRoad)}` : "—"}</td><td>${x.ethCity ? `${formatNum(x.ethCity)} / ${formatNum(x.ethRoad)}` : "—"}</td></tr>`
+      : `<tr><td>${escapeHtml(x.name)}</td><td>${x.rangeKm} km</td><td>${formatNum(x.kwh100)}</td><td>${custo100(x.kwh100)}</td></tr>`)
     .join("");
 
   const fonteHost = v.priceSource ? v.priceSource.split("/")[2].replace("www.", "") : "";
@@ -42,7 +50,7 @@
   if (!v.price) {
     sobrePreco = `A marca não divulga o preço deste modelo no site oficial e não encontramos um valor confiável publicado. ${v.priceNote ? escapeHtml(v.priceNote) + "." : ""}`;
   } else if (v.priceKind === "oficial") {
-    sobrePreco = `Preço de tabela "a partir de"${v.priceVersion ? ` (versão ${escapeHtml(v.priceVersion)})` : ""}, no site oficial da marca, coletado em ${DATA_INFO.precos.coleta}. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>.`;
+    sobrePreco = `Preço de tabela "a partir de"${v.priceVersion ? ` (versão ${escapeHtml(v.priceVersion)})` : ""}, no site oficial da marca, coletado em ${coletaPreco}. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>.`;
   } else {
     sobrePreco = `<strong>Valor publicado na imprensa</strong>: a marca não mostra o preço no site oficial. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>. Confirme com uma concessionária.`;
   }
@@ -133,8 +141,12 @@
         ${g.note ? `<p class="fine-print">${escapeHtml(g.note)}.</p>` : ""}
         <p class="fine-print">Garantia da ${escapeHtml(v.brand)} para uso particular. Fonte: <a class="text-link" href="${g.source}" target="_blank" rel="noopener">${host2(g.source)}</a>${g.kind === "imprensa" ? " (imprensa)" : ""}. Confirme no termo de garantia do carro.</p>`
     : `<p class="fine-print">Não encontramos a garantia da ${escapeHtml(v.brand)} em fonte confiável. Pergunte na concessionária.</p>`;
-  const viajar = `<p class="fine-print"><a class="text-link" href="viagem.html?modelo=${encodeURIComponent(v.id)}">Dá para viajar com ele? Veja quantas paradas uma viagem precisa →</a></p>`;
-  const segGarantia = `
+  const viajar = phev ? "" : `<p class="fine-print"><a class="text-link" href="viagem.html?modelo=${encodeURIComponent(v.id)}">Dá para viajar com ele? Veja quantas paradas uma viagem precisa →</a></p>`;
+  const segGarantia = phev ? `
+      <div class="spec-section" id="seguranca">
+        <h2>Segurança, garantia e ficha técnica</h2>
+        <p class="fine-print">Ainda não coletamos a nota de segurança, a garantia, a bateria e a recarga dos híbridos plug-in. Esses dados entram nas próximas atualizações do site, sempre com fonte oficial. Até lá, confirme com a concessionária.</p>
+      </div>` : `
       <div class="spec-section" id="seguranca">
         <h2>Segurança e garantia</h2>
         <h3 class="spec-sub">Teste de colisão</h3>
@@ -145,7 +157,7 @@
 
   // Parecidos: mesma carroceria, preço mais próximo (ou autonomia, se não houver preço).
   const distancia = (x) => (v.price && x.price ? Math.abs(x.price - v.price) / 1000 : Math.abs(x.rangeMax - v.rangeMax) + 1000);
-  const parecidos = VEHICLES.filter((x) => x.id !== v.id && x.bodyType === v.bodyType)
+  const parecidos = TODOS.filter((x) => x.id !== v.id && x.bodyType === v.bodyType && isPhev(x) === phev)
     .sort((a, b) => distancia(a) - distancia(b))
     .slice(0, 4);
 
@@ -153,7 +165,18 @@
   // preço, ver dados/combustao.json) e quanto tempo a economia leva para pagar a diferença.
   const GASOLINA = 6.2;
   const ref = v.gasRef && typeof COMBUSTAO !== "undefined" ? COMBUSTAO[v.gasRef] : null;
-  const combustao = ref ? `
+  const combustao = phev ? `
+        <div class="spec-section" id="combustao">
+          <h2>Quanto custa rodar</h2>
+          <p class="fine-print">Com a bateria carregada, o ${escapeHtml(v.model)} anda até ${rangeText(v)} só na tomada; depois, segue na gasolina. A conta abaixo supõe uma recarga por dia, em casa.</p>
+          <label class="vs-km">Quanto você roda por dia
+            <select class="select" id="vsKm">
+              ${[20, 40, 60, 100, 150].map((k) => `<option value="${k}"${k === 40 ? " selected" : ""}>${k} km</option>`).join("")}
+            </select>
+          </label>
+          <ul class="phev-conta" id="vsConta"></ul>
+          <p class="fine-print">Energia em casa a R$ ${formatNum(TARIFA, 2)} por kWh e gasolina a R$ ${formatNum(GASOLINA, 2)} por litro. Consumo do Inmetro: ${formatNum(v.kwh100)} kWh/100 km na bateria e ${gasText(v)} na gasolina (ciclo combinado). Na estrada e com ar-condicionado, a autonomia na bateria costuma ser menor que a do Inmetro. Seguro, IPVA e manutenção ficam de fora.</p>
+        </div>` : ref ? `
         <div class="spec-section" id="combustao">
           <h2>Elétrico ou a gasolina?</h2>
           <p class="fine-print">Comparado com o ${escapeHtml(ref.name)} ${escapeHtml(ref.version)}, um carro a combustão ${v.gasRef && ref.name.split(" ")[0] === v.brand ? "da mesma marca" : "da mesma carroceria e faixa de preço"}.</p>
@@ -181,18 +204,25 @@
           <span>${v.brand} ${v.model}</span>
         </nav>
         <span class="eyebrow">${v.brand} · ${v.bodyType} · ${v.category}</span>
+        ${phev ? '<span class="badge-phev badge-phev-lg">Híbrido plug-in</span>' : ""}
         <h1 class="panel-title">${v.model}</h1>
         <p class="panel-sub">${v.versions.length} ${v.versions.length === 1 ? "versão medida" : "versões medidas"} pelo Inmetro</p>
       </div>
       <div class="panel-visual">${panelVisual(v)}</div>
       <div class="panel-foot">
         ${specBar(v)}
-        <p class="card-meter">${consumoMeter(v)}</p>
+        ${phev ? "" : `<p class="card-meter">${consumoMeter(v)}</p>`}
         ${priceNoteShort(v) ? `<p class="card-note">${priceNoteShort(v)}</p>` : ""}
         <div class="panel-actions">
-          <a href="comparar.html?ids=${encodeURIComponent(v.id)}" class="btn btn-primary btn-wide">Comparar com outros</a>
+          ${phev
+            ? `<a href="veiculos.html?motor=phev" class="btn btn-primary btn-wide">Ver outros híbridos plug-in</a>
+          <a href="guia-eletrico-ou-hibrido-plug-in.html" class="btn btn-ghost btn-wide">Elétrico ou plug-in?</a>
+          ${favButton(v)}`
+            : `<a href="comparar.html?ids=${encodeURIComponent(v.id)}" class="btn btn-primary btn-wide">Comparar com outros</a>
           <a href="calculadora.html?modelo=${encodeURIComponent(v.id)}" class="btn btn-ghost btn-wide">Calcular minha economia</a>
+          ${favButton(v)}`}
         </div>
+        ${dataStrip(v)}
         ${shareBar(`${v.brand} ${v.model}: autonomia, consumo e preço no EV Brasil`)}
       </div>
     </section>
@@ -201,7 +231,7 @@
       <nav class="model-tabs" aria-label="Nesta página">
         <a href="#versoes">Versões</a>
         <a href="#preco">Preço</a>
-        ${combustao ? `<a href="#combustao">x Gasolina</a>` : ""}
+        ${combustao ? `<a href="#combustao">${phev ? "Quanto custa rodar" : "x Gasolina"}</a>` : ""}
         ${ficha ? `<a href="#ficha">Ficha técnica</a>` : ""}
         <a href="#seguranca">Segurança</a>
         ${usado ? `<a href="#usado">Usado</a>` : ""}
@@ -212,10 +242,14 @@
         <div class="spec-section" id="versoes">
           <h2>Versões medidas pelo Inmetro</h2>
           <table class="spec-table versions-table">
-            <thead><tr><th>Versão</th><th>Autonomia</th><th>kWh/100 km</th><th>Energia a cada 100 km*</th></tr></thead>
+            <thead>${phev
+              ? "<tr><th>Versão</th><th>Só na bateria</th><th>kWh/100 km</th><th>Gasolina cidade / estrada (km/l)</th><th>Etanol cidade / estrada (km/l)</th></tr>"
+              : "<tr><th>Versão</th><th>Autonomia</th><th>kWh/100 km</th><th>Energia a cada 100 km*</th></tr>"}</thead>
             <tbody>${versoes}</tbody>
           </table>
-          <p class="fine-print">Medição do Inmetro (${DATA_INFO.inmetro.titulo}, atualização de ${DATA_INFO.inmetro.atualizacao}), igual para todas as marcas. *Carregando em casa a R$ ${formatNum(TARIFA, 2)} por kWh.</p>
+          <p class="fine-print">Medição do Inmetro (${DATA_INFO.inmetro.titulo}, atualização de ${DATA_INFO.inmetro.atualizacao}), igual para todas as marcas.${phev
+            ? ` Nos híbridos plug-in, o Inmetro mede a autonomia só com a bateria e o consumo em MJ/km; convertemos para kWh/100 km (1 kWh = 3,6 MJ). Classificação do Inmetro (comparação relativa/absoluta): ${escapeHtml(v.inmetroClass || "—")}. O Inmetro lista cada acabamento separado; quando vários têm os mesmos números, juntamos numa linha.`
+            : ` *Carregando em casa a R$ ${formatNum(TARIFA, 2)} por kWh.`}</p>
         </div>
         ${ficha}
         ${viajar}
@@ -231,7 +265,7 @@
           </div>
           ${obs}
           ${historico}
-          ${v.price ? `<p><a class="text-link" href="calculadora.html?modelo=${encodeURIComponent(v.id)}#financiamento">Simular o financiamento →</a></p>` : ""}
+          ${v.price && !phev ? `<p><a class="text-link" href="calculadora.html?modelo=${encodeURIComponent(v.id)}#financiamento">Simular o financiamento →</a></p>` : ""}
           <p class="fine-print"><a class="text-link" href="metodologia.html">Como coletamos os dados</a></p>
         </div>
         ${combustao}
@@ -250,8 +284,29 @@
     </section>` : ""}
   `;
 
+  // Conta do plug-in: quanto do trajeto diário cabe na bateria, e quanto custa o resto na gasolina.
+  const kmPhev = phev ? document.getElementById("vsKm") : null;
+  if (kmPhev) {
+    const conta = () => {
+      const kmDia = Number(kmPhev.value);
+      const naBateria = Math.min(kmDia, v.rangeMax);
+      const naGasolina = kmDia - naBateria;
+      const custoDia = (naBateria * v.kwh100 / 100) * TARIFA + (naGasolina / v.gasKmL) * GASOLINA;
+      const soGasolinaDia = (kmDia / v.gasKmL) * GASOLINA;
+      const mes = custoDia * 30, soGas = soGasolinaDia * 30;
+      document.getElementById("vsConta").innerHTML = [
+        `<li>Dos ${kmDia} km do dia, <strong>${naBateria} km na bateria</strong>${naGasolina ? ` e <strong>${naGasolina} km na gasolina</strong>` : " (o trajeto cabe todo na bateria)"}.</li>`,
+        `<li>Custo de energia: <strong>${formatBRL(Math.round(mes))} por mês</strong> (${formatBRL(Math.round(custoDia * 100) / 100)} por dia).</li>`,
+        `<li>Se rodasse só na gasolina (${gasText(v)}): <strong>${formatBRL(Math.round(soGas))} por mês</strong>.</li>`,
+        `<li class="phev-final">${soGas > mes ? `Economia estimada de <strong>${formatBRL(Math.round(soGas - mes))} por mês</strong> carregando todo dia.` : "Sem economia neste trajeto."}</li>`,
+      ].join("");
+    };
+    kmPhev.addEventListener("change", conta);
+    conta();
+  }
+
   // Conta do "elétrico ou a gasolina?", refeita quando muda a quilometragem.
-  const km = document.getElementById("vsKm");
+  const km = phev ? null : document.getElementById("vsKm");
   if (km) {
     const conta = () => {
       const kmMes = Number(km.value);

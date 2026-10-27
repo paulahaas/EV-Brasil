@@ -15,7 +15,7 @@ for (const f of ["js/catalogo.js", "js/data.js", "js/car-svg.js", "js/main.js"])
   const codigo = fs.readFileSync(f, "utf8").replace(/^(const|let) (\w+) =/gm, "var $2 =");
   vm.runInContext(codigo, ctx, { filename: f });
 }
-export const { VEHICLES, DATA_INFO, createCard } = ctx;
+export const { VEHICLES, HIBRIDOS, DATA_INFO, createCard } = ctx;
 
 export const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 export const num = (n, casas = 0) => n.toLocaleString("pt-BR", { minimumFractionDigits: casas, maximumFractionDigits: casas });

@@ -4,7 +4,7 @@
 
 Site de pesquisa que compara os carros 100% elétricos à venda no Brasil com dados
 públicos: autonomia e consumo medidos pelo **Inmetro**, preço com fonte e data, valor na
-**FIPE**, garantia e nota de segurança. Só elétricos puros (sem híbridos). O site não vende carros.
+**FIPE**, garantia e nota de segurança. Os elétricos puros têm tudo (rankings, comparador, calculadoras); os híbridos plug-in (que ligam na tomada) ficam em lista à parte, sem híbridos comuns. O site não vende carros.
 
 No ar em **https://ev-brasil.web.app** (Firebase Hosting).
 

@@ -35,10 +35,12 @@
 
   // O preço do elétrico acompanha o modelo escolhido; o do carro a gasolina
   // começa igual e passa a ser do visitante assim que ele mexer.
-  let gasEditado = false;
+  let gasEditado = false, revEditado = false;
+  revEv.addEventListener("input", () => { revEditado = true; });
   function precoDoModelo() {
     const v = getVehicleById(modelo.value);
     precoEv.value = v && v.price ? v.price : "";
+    if (v && !revEditado) revEv.value = isPhev(v) ? Math.round((PADRAO.revEv + PADRAO.revGas) / 2) : PADRAO.revEv;
     if (!gasEditado) precoGas.value = precoEv.value;
   }
   precoGas.addEventListener("input", () => { gasEditado = true; });
@@ -47,7 +49,9 @@
   const pct = (n) => `${formatNum(n, Number.isInteger(n) ? 0 : Number.isInteger(n * 10) ? 1 : 2)}%`;
 
   // IPVA de cada ano para o elétrico, seguindo a regra do estado.
+  let phev = false;
   function aliquotaEv(e, valorCompra, ano) {
+    if (phev) return e.gasolina; // plug-in: usamos a alíquota normal (descontos variam por estado)
     if (e.teto_valor && valorCompra > e.teto_valor) return e.gasolina;
     if (e.anos_isento && ano <= e.anos_isento) return 0;
     return e.eletrico;
@@ -63,7 +67,9 @@
     // Energia e combustível: mesma conta da calculadora de cima, por 5 anos.
     const kmMes = Number($("simKm").value) || 0;
     const kmL = Number($("simKmL").value) || 0;
-    const energia = ((kmMes * v.kwh100) / 100) * (Number($("simKwh").value) || 0) * 12 * ANOS;
+    phev = isPhev(v);
+    rotularTipo(phev);
+    const energia = custoMensal(v, kmMes, Number($("simKwh").value) || 0, Number($("simGasolina").value) || 0).total * 12 * ANOS;
     const combustivel = kmL > 0 ? (kmMes / kmL) * (Number($("simGasolina").value) || 0) * 12 * ANOS : 0;
 
     let ipvaEv = 0, ipvaGas = 0, segEv = 0, segGas = 0;
@@ -97,7 +103,7 @@
       $("tcoRotulo").textContent = "Este modelo não tem preço divulgado: informe um valor ao lado.";
     } else {
       $("tcoDif").textContent = reais(Math.abs(dif));
-      $("tcoRotulo").textContent = dif >= 0 ? "a menos com o elétrico, em 5 anos" : "a mais com o elétrico, em 5 anos";
+      $("tcoRotulo").textContent = dif >= 0 ? `a menos com o ${phev ? "plug-in" : "elétrico"}, em 5 anos` : `a mais com o ${phev ? "plug-in" : "elétrico"}, em 5 anos`;
     }
     $("tcoTotEv").textContent = reais(totEv);
     $("tcoTotGas").textContent = reais(totGas);
@@ -105,7 +111,7 @@
     $("tcoBarEv").style.width = (totEv / maior) * 100 + "%";
     $("tcoBarGas").style.width = (totGas / maior) * 100 + "%";
 
-    $("tcoUfNota").textContent = `IPVA em ${e.nome}: ${pct(e.gasolina)} para carro a gasolina. Elétrico: ${e.nota.charAt(0).toLowerCase() + e.nota.slice(1)}.`;
+    $("tcoUfNota").textContent = `IPVA em ${e.nome}: ${pct(e.gasolina)} para carro a gasolina. ${phev ? "Plug-in: contamos a alíquota normal (alguns estados dão desconto a híbridos; confirme na Sefaz)." : `Elétrico: ${e.nota.charAt(0).toLowerCase() + e.nota.slice(1)}.`}`;
     const f = DATA_INFO.ipva.fontes;
     $("tcoNotas").innerHTML =
       `IPVA e seguro calculados sobre um valor que cai 10% ao ano. Não inclui a revenda do carro, financiamento nem a instalação do carregador. ` +
