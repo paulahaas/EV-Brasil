@@ -1,12 +1,12 @@
-{"grupo": "BYD|King", "versao": "GL", "preco": 147990, "fonte": "https://www.byd.com/br/condicoes", "obs": "preço sugerido, à vista (página de condições da BYD, atualizada em 15/10/2026)"}
-{"grupo": "BYD|Song Pro", "versao": "GL", "preco": 179990, "fonte": "https://www.byd.com/br/condicoes", "obs": "preço sugerido, à vista (página de condições da BYD, atualizada em 15/10/2026)"}
-{"grupo": "BYD|Song Plus", "versao": "", "preco": 249990, "fonte": "https://www.byd.com/br/condicoes", "obs": "preço sugerido, à vista (página de condições da BYD, atualizada em 15/10/2026); versão Premium: R$ 299.800"}
-{"grupo": "BYD|Atto 8", "versao": "", "preco": 399990, "fonte": "https://www.byd.com/br/condicoes", "obs": "preço sugerido, à vista (página de condições da BYD, atualizada em 15/10/2026)"}
-{"grupo": "BYD|Shark", "versao": "GS", "preco": 344990, "fonte": "https://www.byd.com/br/condicoes", "obs": "preço sugerido, à vista (página de condições da BYD, atualizada em 15/10/2026)"}
-{"grupo": "BYD|Atto 2 DM-i", "versao": "GL", "preco": 166660, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "a BYD não mostra o preço deste modelo no site; valor da imprensa, conferir com a concessionária"}
-{"grupo": "Caoa Chery|Tiggo 7 Pro PHEV", "versao": "", "preco": 209990, "fonte": "https://www.caoachery.com.br/", "obs": "preço público sugerido no site da marca, sem data de coleta"}
-{"grupo": "Caoa Chery|Tiggo 8 Pro PHEV", "versao": "", "preco": 249990, "fonte": "https://www.caoachery.com.br/", "obs": "preço público sugerido no site da marca, sem data de coleta"}
-{"grupo": "Geely|EX5 EM-i", "versao": "PRO", "preco": 191490, "fonte": "https://www.geelybrasil.com.br/", "obs": "versões Max e Ultra mais caras; oferta válida até 31/10/2026"}
+{"grupo": "BYD|King", "versao": "GL", "preco": 172990, "fonte": "https://www.byd.com/br/ofertas", "obs": "preço 'De' na página de ofertas da BYD"}
+{"grupo": "BYD|Song Pro", "versao": "GL Flex", "preco": 196990, "fonte": "https://www.byd.com/br/ofertas", "obs": "preço 'De' na página de ofertas da BYD; ano-modelo 2027"}
+{"grupo": "BYD|Song Plus", "versao": "", "preco": 249990, "fonte": "https://www.byd.com/br/condicoes", "obs": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
+{"grupo": "BYD|Atto 8", "versao": "", "preco": 399990, "fonte": "https://www.byd.com/br/condicoes", "obs": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
+{"grupo": "BYD|Shark", "versao": "GS", "preco": 344990, "fonte": "https://www.byd.com/br/ofertas", "obs": "preço 'De' na página de ofertas da BYD"}
+{"grupo": "BYD|Atto 2 DM-i", "versao": "GL", "preco": 166660, "fonte": "https://www.byd.com/br/ofertas", "obs": "preço 'De' na página de ofertas da BYD"}
+{"grupo": "Caoa Chery|Tiggo 7 Pro PHEV", "versao": "", "preco": 209990, "fonte": "https://www.caoachery.com.br/", "obs": "último preço publicado pela Caoa Chery (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
+{"grupo": "Caoa Chery|Tiggo 8 Pro PHEV", "versao": "", "preco": 249990, "fonte": "https://www.caoachery.com.br/", "obs": "último preço publicado pela Caoa Chery (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
+{"grupo": "Geely|EX5 EM-i", "versao": "PRO", "preco": 191490, "fonte": "https://www.geelybrasil.com.br/", "obs": "último preço publicado pela Geely (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
 {"grupo": "Leapmotor|C10 REEV", "versao": "Ultra-Híbrido", "preco": 219990, "fonte": "https://www.leapmotor.com.br/", "obs": "oferta de 06/10 a 03/11/2026 (50 unidades)"}
 {"grupo": "Jaecoo|7 SHS", "versao": "Luxury", "preco": 234990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"}
 {"grupo": "Omoda|7 PHEV", "versao": "Luxury", "preco": 254990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"}

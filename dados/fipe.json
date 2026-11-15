@@ -1,6 +1,6 @@
 {
  "_leia": "Valores da tabela FIPE (gerado por scripts/coletar-fipe.mjs — não edite à mão). '0km' = valor de zero quilômetro; os demais, por ano-modelo.",
- "referencia": "outubro/2026",
+ "referencia": "novembro/2026",
  "fonte": "https://veiculos.fipe.org.br/",
  "modelos": {
   "audi-a6-avant-e-tron": {
@@ -8,12 +8,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 699993,
+     "valor": 706712,
      "codigoFipe": "008332-1"
     },
     {
      "ano": "2027",
-     "valor": 641893,
+     "valor": 636115,
      "codigoFipe": "008332-1"
     }
    ]
@@ -23,17 +23,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 650990,
+     "valor": 629990,
      "codigoFipe": "008315-1"
     },
     {
      "ano": "2026",
-     "valor": 578952,
+     "valor": 573741,
      "codigoFipe": "008315-1"
     },
     {
      "ano": "2025",
-     "valor": 516520,
+     "valor": 534598,
      "codigoFipe": "008315-1"
     }
    ]
@@ -48,7 +48,7 @@
     },
     {
      "ano": "2026",
-     "valor": 603222,
+     "valor": 597793,
      "codigoFipe": "008331-3"
     }
    ]
@@ -58,12 +58,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 603114,
+     "valor": 597685,
      "codigoFipe": "008324-0"
     },
     {
      "ano": "2025",
-     "valor": 512995,
+     "valor": 508378,
      "codigoFipe": "008324-0"
     }
    ]
@@ -73,17 +73,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 810710,
+     "valor": 810740,
      "codigoFipe": "008325-9"
     },
     {
      "ano": "2026",
-     "valor": 685247,
+     "valor": 679079,
      "codigoFipe": "008325-9"
     },
     {
      "ano": "2025",
-     "valor": 602401,
+     "valor": 596979,
      "codigoFipe": "008325-9"
     }
    ]
@@ -93,17 +93,17 @@
    "valores": [
     {
      "ano": "2024",
-     "valor": 940439,
+     "valor": 931975,
      "codigoFipe": "008274-0"
     },
     {
      "ano": "2023",
-     "valor": 561049,
+     "valor": 541412,
      "codigoFipe": "008274-0"
     },
     {
      "ano": "2022",
-     "valor": 432775,
+     "valor": 428345,
      "codigoFipe": "008274-0"
     }
    ]
@@ -113,22 +113,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 1372402,
+     "valor": 1371660,
      "codigoFipe": "009313-0"
     },
     {
      "ano": "2026",
-     "valor": 1148550,
+     "valor": 1138213,
      "codigoFipe": "009313-0"
     },
     {
      "ano": "2025",
-     "valor": 914703,
+     "valor": 906470,
      "codigoFipe": "009313-0"
     },
     {
      "ano": "2024",
-     "valor": 851851,
+     "valor": 852287,
      "codigoFipe": "009313-0"
     }
    ]
@@ -138,22 +138,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 468376,
+     "valor": 472110,
      "codigoFipe": "009309-2"
     },
     {
      "ano": "2026",
-     "valor": 353695,
+     "valor": 341492,
      "codigoFipe": "009309-2"
     },
     {
      "ano": "2025",
-     "valor": 321881,
+     "valor": 319109,
      "codigoFipe": "009309-2"
     },
     {
      "ano": "2024",
-     "valor": 270885,
+     "valor": 271112,
      "codigoFipe": "009309-2"
     }
    ]
@@ -163,22 +163,27 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 497164,
+     "valor": 495241,
+     "codigoFipe": "009319-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 440764,
      "codigoFipe": "009319-0"
     },
     {
      "ano": "2026",
-     "valor": 411045,
+     "valor": 407345,
      "codigoFipe": "009319-0"
     },
     {
      "ano": "2025",
-     "valor": 344379,
+     "valor": 341478,
      "codigoFipe": "009319-0"
     },
     {
      "ano": "2024",
-     "valor": 332056,
+     "valor": 329067,
      "codigoFipe": "009319-0"
     }
    ]
@@ -188,12 +193,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 582953,
+     "valor": 587110,
      "codigoFipe": "009330-0"
     },
     {
      "ano": "2027",
-     "valor": 489589,
+     "valor": 485182,
      "codigoFipe": "009330-0"
     }
    ]
@@ -203,27 +208,27 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 147055,
+     "valor": 149990,
      "codigoFipe": "095007-6"
     },
     {
      "ano": "2027",
-     "valor": 133010,
+     "valor": 134547,
      "codigoFipe": "095007-6"
     },
     {
      "ano": "2026",
-     "valor": 129551,
+     "valor": 128690,
      "codigoFipe": "095007-6"
     },
     {
      "ano": "2025",
-     "valor": 121374,
+     "valor": 118226,
      "codigoFipe": "095007-6"
     },
     {
      "ano": "2024",
-     "valor": 117564,
+     "valor": 115010,
      "codigoFipe": "095007-6"
     }
    ]
@@ -233,22 +238,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 119679,
+     "valor": 119257,
      "codigoFipe": "095022-0"
     },
     {
      "ano": "2027",
-     "valor": 112634,
+     "valor": 112161,
      "codigoFipe": "095022-0"
     },
     {
      "ano": "2026",
-     "valor": 106009,
+     "valor": 105054,
      "codigoFipe": "095022-0"
     },
     {
      "ano": "2025",
-     "valor": 103220,
+     "valor": 102291,
      "codigoFipe": "095022-0"
     }
    ]
@@ -258,27 +263,27 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 551838,
+     "valor": 561038,
      "codigoFipe": "095003-3"
     },
     {
      "ano": "2025",
-     "valor": 365914,
+     "valor": 365227,
      "codigoFipe": "095003-3"
     },
     {
      "ano": "2024",
-     "valor": 285451,
+     "valor": 295441,
      "codigoFipe": "095003-3"
     },
     {
      "ano": "2023",
-     "valor": 276448,
+     "valor": 270533,
      "codigoFipe": "095003-3"
     },
     {
      "ano": "2022",
-     "valor": 254616,
+     "valor": 252324,
      "codigoFipe": "095003-3"
     }
    ]
@@ -288,22 +293,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 299673,
+     "valor": 299224,
      "codigoFipe": "095008-4"
     },
     {
      "ano": "2027",
-     "valor": 271532,
+     "valor": 272372,
      "codigoFipe": "095008-4"
     },
     {
      "ano": "2025",
-     "valor": 221377,
+     "valor": 220137,
      "codigoFipe": "095008-4"
     },
     {
      "ano": "2024",
-     "valor": 204101,
+     "valor": 204132,
      "codigoFipe": "095008-4"
     }
    ]
@@ -313,12 +318,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 339063,
+     "valor": 339990,
      "codigoFipe": "095020-3"
     },
     {
      "ano": "2027",
-     "valor": 318713,
+     "valor": 315844,
      "codigoFipe": "095020-3"
     }
    ]
@@ -328,27 +333,27 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 429964,
+     "valor": 432700,
      "codigoFipe": "095001-7"
     },
     {
      "ano": "2025",
-     "valor": 342490,
+     "valor": 349498,
      "codigoFipe": "095001-7"
     },
     {
      "ano": "2024",
-     "valor": 295554,
+     "valor": 292894,
      "codigoFipe": "095001-7"
     },
     {
      "ano": "2023",
-     "valor": 247964,
+     "valor": 243140,
      "codigoFipe": "095001-7"
     },
     {
      "ano": "2022",
-     "valor": 236214,
+     "valor": 236055,
      "codigoFipe": "095001-7"
     }
    ]
@@ -358,12 +363,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 269214,
+     "valor": 268826,
      "codigoFipe": "095021-1"
     },
     {
      "ano": "2027",
-     "valor": 239699,
+     "valor": 237541,
      "codigoFipe": "095021-1"
     }
    ]
@@ -378,17 +383,17 @@
     },
     {
      "ano": "2027",
-     "valor": 169094,
+     "valor": 167572,
      "codigoFipe": "095015-7"
     },
     {
      "ano": "2026",
-     "valor": 162916,
+     "valor": 159867,
      "codigoFipe": "095015-7"
     },
     {
      "ano": "2025",
-     "valor": 152985,
+     "valor": 150189,
      "codigoFipe": "095015-7"
     }
    ]
@@ -398,17 +403,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 621995,
+     "valor": 615421,
      "codigoFipe": "308002-1"
     },
     {
      "ano": "2027",
-     "valor": 559589,
+     "valor": 554552,
      "codigoFipe": "308002-1"
     },
     {
      "ano": "2026",
-     "valor": 534349,
+     "valor": 529539,
      "codigoFipe": "308002-1"
     }
    ]
@@ -423,12 +428,12 @@
     },
     {
      "ano": "2025",
-     "valor": 420597,
+     "valor": 416811,
      "codigoFipe": "004553-5"
     },
     {
      "ano": "2024",
-     "valor": 328235,
+     "valor": 324902,
      "codigoFipe": "004553-5"
     }
    ]
@@ -438,12 +443,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 209017,
+     "valor": 208520,
      "codigoFipe": "004563-2"
     },
     {
      "ano": "2026",
-     "valor": 185147,
+     "valor": 189493,
      "codigoFipe": "004563-2"
     }
    ]
@@ -453,17 +458,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 151927,
+     "valor": 156938,
+     "codigoFipe": "004560-8"
+    },
+    {
+     "ano": "2027",
+     "valor": 144069,
      "codigoFipe": "004560-8"
     },
     {
      "ano": "2026",
-     "valor": 137349,
+     "valor": 134261,
      "codigoFipe": "004560-8"
     },
     {
      "ano": "2025",
-     "valor": 128913,
+     "valor": 127752,
      "codigoFipe": "004560-8"
     }
    ]
@@ -478,7 +488,7 @@
     },
     {
      "ano": "2022",
-     "valor": 129811,
+     "valor": 126520,
      "codigoFipe": "001541-5"
     }
    ]
@@ -488,17 +498,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 168790,
+     "valor": 169790,
      "codigoFipe": "304002-0"
     },
     {
      "ano": "2026",
-     "valor": 152674,
+     "valor": 151299,
      "codigoFipe": "304002-0"
     },
     {
      "ano": "2025",
-     "valor": 137195,
+     "valor": 139668,
      "codigoFipe": "304002-0"
     }
    ]
@@ -513,7 +523,7 @@
     },
     {
      "ano": "2027",
-     "valor": 126761,
+     "valor": 125620,
      "codigoFipe": "304011-9"
     }
    ]
@@ -528,17 +538,17 @@
     },
     {
      "ano": "2027",
-     "valor": 201755,
+     "valor": 199939,
      "codigoFipe": "304006-2"
     },
     {
      "ano": "2026",
-     "valor": 192581,
+     "valor": 191974,
      "codigoFipe": "304006-2"
     },
     {
      "ano": "2025",
-     "valor": 182676,
+     "valor": 181031,
      "codigoFipe": "304006-2"
     }
    ]
@@ -553,17 +563,17 @@
     },
     {
      "ano": "2027",
-     "valor": 164556,
+     "valor": 163074,
      "codigoFipe": "304007-0"
     },
     {
      "ano": "2026",
-     "valor": 158962,
+     "valor": 157531,
      "codigoFipe": "304007-0"
     },
     {
      "ano": "2025",
-     "valor": 148684,
+     "valor": 147345,
      "codigoFipe": "304007-0"
     }
    ]
@@ -578,17 +588,17 @@
     },
     {
      "ano": "2027",
-     "valor": 270631,
+     "valor": 268195,
      "codigoFipe": "304004-6"
     },
     {
      "ano": "2026",
-     "valor": 256578,
+     "valor": 254268,
      "codigoFipe": "304004-6"
     },
     {
      "ano": "2025",
-     "valor": 233811,
+     "valor": 231706,
      "codigoFipe": "304004-6"
     }
    ]
@@ -598,12 +608,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 125671,
+     "valor": 125910,
      "codigoFipe": "088005-1"
     },
     {
      "ano": "2026",
-     "valor": 115414,
+     "valor": 117066,
      "codigoFipe": "088005-1"
     }
    ]
@@ -613,12 +623,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 192410,
+     "valor": 188650,
      "codigoFipe": "088003-5"
     },
     {
      "ano": "2026",
-     "valor": 163500,
+     "valor": 157777,
      "codigoFipe": "088003-5"
     }
    ]
@@ -628,17 +638,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 168670,
+     "valor": 167998,
      "codigoFipe": "096011-0"
     },
     {
      "ano": "2027",
-     "valor": 149074,
+     "valor": 147732,
      "codigoFipe": "096011-0"
     },
     {
      "ano": "2026",
-     "valor": 142623,
+     "valor": 141461,
      "codigoFipe": "096011-0"
     }
    ]
@@ -648,12 +658,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 163900,
+     "valor": 162318,
      "codigoFipe": "096018-7"
     },
     {
      "ano": "2027",
-     "valor": 142088,
+     "valor": 140809,
      "codigoFipe": "096018-7"
     }
    ]
@@ -663,12 +673,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 400120,
+     "valor": 409990,
      "codigoFipe": "015250-1"
     },
     {
      "ano": "2025",
-     "valor": 293046,
+     "valor": 282789,
      "codigoFipe": "015250-1"
     }
    ]
@@ -677,18 +687,13 @@
    "versao": "E-J7 193cv 5p Aut. (Elétrico)",
    "valores": [
     {
-     "ano": "0km",
-     "valor": 250803,
-     "codigoFipe": "080035-0"
-    },
-    {
      "ano": "2023",
-     "valor": 136918,
+     "valor": 132125,
      "codigoFipe": "080035-0"
     },
     {
      "ano": "2022",
-     "valor": 133358,
+     "valor": 128689,
      "codigoFipe": "080035-0"
     }
    ]
@@ -703,32 +708,32 @@
     },
     {
      "ano": "2027",
-     "valor": 104715,
+     "valor": 103772,
      "codigoFipe": "080031-7"
     },
     {
      "ano": "2026",
-     "valor": 95350,
+     "valor": 98687,
      "codigoFipe": "080031-7"
     },
     {
      "ano": "2025",
-     "valor": 82468,
+     "valor": 85354,
      "codigoFipe": "080031-7"
     },
     {
      "ano": "2024",
-     "valor": 79734,
+     "valor": 79016,
      "codigoFipe": "080031-7"
     },
     {
      "ano": "2023",
-     "valor": 72674,
+     "valor": 71343,
      "codigoFipe": "080031-7"
     },
     {
      "ano": "2022",
-     "valor": 69595,
+     "valor": 69233,
      "codigoFipe": "080031-7"
     }
    ]
@@ -737,18 +742,13 @@
    "versao": "e-JS4 150CV 5p Aut. (Elétrico)",
    "valores": [
     {
-     "ano": "0km",
-     "valor": 245977,
-     "codigoFipe": "080030-9"
-    },
-    {
      "ano": "2023",
-     "valor": 110908,
+     "valor": 107026,
      "codigoFipe": "080030-9"
     },
     {
      "ano": "2022",
-     "valor": 108024,
+     "valor": 104243,
      "codigoFipe": "080030-9"
     }
    ]
@@ -758,37 +758,37 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 346015,
+     "valor": 342899,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2025",
-     "valor": 312022,
+     "valor": 309213,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2024",
-     "valor": 281443,
+     "valor": 278910,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2023",
-     "valor": 262443,
+     "valor": 260081,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2022",
-     "valor": 242196,
+     "valor": 240014,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2021",
-     "valor": 236288,
+     "valor": 234160,
      "codigoFipe": "080023-6"
     },
     {
      "ano": "2020",
-     "valor": 212402,
+     "valor": 204967,
      "codigoFipe": "080023-6"
     }
    ]
@@ -798,12 +798,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 382047,
+     "valor": 376363,
      "codigoFipe": "018103-0"
     },
     {
      "ano": "2025",
-     "valor": 285892,
+     "valor": 286347,
      "codigoFipe": "018103-0"
     }
    ]
@@ -813,17 +813,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 181285,
+     "valor": 182990,
      "codigoFipe": "305003-3"
     },
     {
      "ano": "2027",
-     "valor": 166847,
+     "valor": 165345,
      "codigoFipe": "305003-3"
     },
     {
      "ano": "2026",
-     "valor": 161189,
+     "valor": 159738,
      "codigoFipe": "305003-3"
     }
    ]
@@ -833,17 +833,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 205620,
+     "valor": 212490,
      "codigoFipe": "305001-7"
     },
     {
      "ano": "2027",
-     "valor": 185621,
+     "valor": 183950,
      "codigoFipe": "305001-7"
     },
     {
      "ano": "2026",
-     "valor": 177749,
+     "valor": 178541,
      "codigoFipe": "305001-7"
     }
    ]
@@ -853,12 +853,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 500833,
+     "valor": 500622,
      "codigoFipe": "057060-5"
     },
     {
      "ano": "2027",
-     "valor": 421830,
+     "valor": 418033,
      "codigoFipe": "057060-5"
     }
    ]
@@ -868,17 +868,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 354634,
+     "valor": 351441,
      "codigoFipe": "021558-9"
     },
     {
      "ano": "2026",
-     "valor": 328275,
+     "valor": 325320,
      "codigoFipe": "021558-9"
     },
     {
      "ano": "2025",
-     "valor": 318402,
+     "valor": 315536,
      "codigoFipe": "021558-9"
     }
    ]
@@ -893,12 +893,12 @@
     },
     {
      "ano": "2027",
-     "valor": 497629,
+     "valor": 493150,
      "codigoFipe": "076003-0"
     },
     {
      "ano": "2026",
-     "valor": 475918,
+     "valor": 459260,
      "codigoFipe": "076003-0"
     }
    ]
@@ -908,17 +908,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 172958,
+     "valor": 172000,
      "codigoFipe": "076006-4"
     },
     {
      "ano": "2027",
-     "valor": 164120,
+     "valor": 162642,
      "codigoFipe": "076006-4"
     },
     {
      "ano": "2026",
-     "valor": 159147,
+     "valor": 155632,
      "codigoFipe": "076006-4"
     }
    ]
@@ -928,12 +928,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 134572,
+     "valor": 139181,
      "codigoFipe": "076010-2"
     },
     {
      "ano": "2027",
-     "valor": 117619,
+     "valor": 116560,
      "codigoFipe": "076010-2"
     }
    ]
@@ -943,17 +943,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 206133,
+     "valor": 196970,
      "codigoFipe": "076004-8"
     },
     {
      "ano": "2027",
-     "valor": 188126,
+     "valor": 181541,
      "codigoFipe": "076004-8"
     },
     {
      "ano": "2026",
-     "valor": 173627,
+     "valor": 167800,
      "codigoFipe": "076004-8"
     }
    ]
@@ -963,17 +963,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 279530,
+     "valor": 280717,
      "codigoFipe": "071062-8"
     },
     {
      "ano": "2026",
-     "valor": 234695,
+     "valor": 237553,
      "codigoFipe": "071062-8"
     },
     {
      "ano": "2025",
-     "valor": 198816,
+     "valor": 197831,
      "codigoFipe": "071062-8"
     }
    ]
@@ -983,22 +983,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 266682,
+     "valor": 266640,
      "codigoFipe": "071060-1"
     },
     {
      "ano": "2026",
-     "valor": 207513,
+     "valor": 205645,
      "codigoFipe": "071060-1"
     },
     {
      "ano": "2025",
-     "valor": 197588,
+     "valor": 195809,
      "codigoFipe": "071060-1"
     },
     {
      "ano": "2024",
-     "valor": 181605,
+     "valor": 175248,
      "codigoFipe": "071060-1"
     }
    ]
@@ -1013,12 +1013,12 @@
     },
     {
      "ano": "2026",
-     "valor": 283144,
+     "valor": 288521,
      "codigoFipe": "071066-0"
     },
     {
      "ano": "2025",
-     "valor": 262205,
+     "valor": 260833,
      "codigoFipe": "071066-0"
     }
    ]
@@ -1028,12 +1028,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 205366,
+     "valor": 209900,
+     "codigoFipe": "302001-0"
+    },
+    {
+     "ano": "2027",
+     "valor": 180521,
      "codigoFipe": "302001-0"
     },
     {
      "ano": "2026",
-     "valor": 175733,
+     "valor": 173933,
      "codigoFipe": "302001-0"
     }
    ]
@@ -1043,12 +1048,12 @@
    "valores": [
     {
      "ano": "2026",
-     "valor": 650982,
+     "valor": 645123,
      "codigoFipe": "035169-5"
     },
     {
      "ano": "2025",
-     "valor": 565862,
+     "valor": 560769,
      "codigoFipe": "035169-5"
     }
    ]
@@ -1058,32 +1063,32 @@
    "valores": [
     {
      "ano": "2026",
-     "valor": 859995,
+     "valor": 852255,
      "codigoFipe": "035134-2"
     },
     {
      "ano": "2025",
-     "valor": 806460,
+     "valor": 799201,
      "codigoFipe": "035134-2"
     },
     {
      "ano": "2024",
-     "valor": 543083,
+     "valor": 538195,
      "codigoFipe": "035134-2"
     },
     {
      "ano": "2023",
-     "valor": 490168,
+     "valor": 483060,
      "codigoFipe": "035134-2"
     },
     {
      "ano": "2022",
-     "valor": 446611,
+     "valor": 430979,
      "codigoFipe": "035134-2"
     },
     {
      "ano": "2021",
-     "valor": 430249,
+     "valor": 415190,
      "codigoFipe": "035134-2"
     }
    ]
@@ -1093,17 +1098,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 268310,
+     "valor": 267870,
      "codigoFipe": "025321-9"
     },
     {
      "ano": "2025",
-     "valor": 189644,
+     "valor": 193030,
      "codigoFipe": "025321-9"
     },
     {
      "ano": "2024",
-     "valor": 161629,
+     "valor": 156118,
      "codigoFipe": "025321-9"
     }
    ]
@@ -1113,17 +1118,17 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 219990,
+     "valor": 219967,
      "codigoFipe": "028084-4"
     },
     {
      "ano": "2027",
-     "valor": 190424,
+     "valor": 188710,
      "codigoFipe": "028084-4"
     },
     {
      "ano": "2026",
-     "valor": 180712,
+     "valor": 179085,
      "codigoFipe": "028084-4"
     }
    ]
@@ -1138,17 +1143,17 @@
     },
     {
      "ano": "2027",
-     "valor": 301566,
+     "valor": 298851,
      "codigoFipe": "029174-9"
     },
     {
      "ano": "2026",
-     "valor": 271948,
+     "valor": 264445,
      "codigoFipe": "029174-9"
     },
     {
      "ano": "2025",
-     "valor": 252195,
+     "valor": 244435,
      "codigoFipe": "029174-9"
     }
    ]
@@ -1157,18 +1162,13 @@
    "versao": "EX30 E40 Core (Elétrico)",
    "valores": [
     {
-     "ano": "0km",
-     "valor": 226392,
-     "codigoFipe": "029164-1"
-    },
-    {
      "ano": "2025",
-     "valor": 201201,
+     "valor": 194521,
      "codigoFipe": "029164-1"
     },
     {
      "ano": "2024",
-     "valor": 176338,
+     "valor": 173832,
      "codigoFipe": "029164-1"
     }
    ]
@@ -1178,22 +1178,22 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 345950,
+     "valor": 351950,
      "codigoFipe": "029175-7"
     },
     {
      "ano": "2027",
-     "valor": 307900,
+     "valor": 305128,
      "codigoFipe": "029175-7"
     },
     {
      "ano": "2026",
-     "valor": 264175,
+     "valor": 257684,
      "codigoFipe": "029175-7"
     },
     {
      "ano": "2025",
-     "valor": 250060,
+     "valor": 241307,
      "codigoFipe": "029175-7"
     }
    ]
@@ -1203,12 +1203,12 @@
    "valores": [
     {
      "ano": "0km",
-     "valor": 793945,
+     "valor": 790020,
      "codigoFipe": "029176-5"
     },
     {
      "ano": "2025",
-     "valor": 557292,
+     "valor": 549171,
      "codigoFipe": "029176-5"
     }
    ]
@@ -1223,7 +1223,7 @@
     },
     {
      "ano": "2025",
-     "valor": 385833,
+     "valor": 382360,
      "codigoFipe": "301001-5"
     }
    ]
@@ -1238,12 +1238,12 @@
     },
     {
      "ano": "2027",
-     "valor": 425089,
+     "valor": 421263,
      "codigoFipe": "301005-8"
     },
     {
      "ano": "2026",
-     "valor": 397440,
+     "valor": 393863,
      "codigoFipe": "301005-8"
     }
    ]
@@ -1258,7 +1258,7 @@
     },
     {
      "ano": "2025",
-     "valor": 229884,
+     "valor": 227815,
      "codigoFipe": "301003-1"
     }
    ]
@@ -1268,73 +1268,73 @@
   "hyundai-hb20": {
    "versao": "HB20 Comfort 1.0 Flex 12V Mec.",
    "ano": "0km",
-   "valor": 90448,
+   "valor": 90989,
    "codigoFipe": "015215-3"
   },
   "vw-polo": {
    "versao": "Polo Sense TSI 1.0 Flex 12V Aut",
    "ano": "0km",
-   "valor": 107832,
+   "valor": 107435,
    "codigoFipe": "005513-1"
   },
   "mini-cooper-s": {
    "versao": "COOPER S 2.0 Turbo 16V 5p Aut.",
    "ano": "0km",
-   "valor": 324090,
+   "valor": 309990,
    "codigoFipe": "071032-6"
   },
   "chevrolet-onix-plus": {
    "versao": "ONIX SEDAN Plus LT 1.0 12V TB Flex Aut.",
    "ano": "0km",
-   "valor": 119480,
+   "valor": 118582,
    "codigoFipe": "004501-2"
   },
   "toyota-corolla": {
    "versao": "Corolla XEi 2.0 Flex 16V Aut.",
    "ano": "0km",
-   "valor": 176046,
+   "valor": 177211,
    "codigoFipe": "002111-3"
   },
   "bmw-320i": {
    "versao": "320iA 2.0 Turbo/ActiveFlex 16V/GP  4p",
    "ano": "0km",
-   "valor": 352527,
+   "valor": 353964,
    "codigoFipe": "009164-2"
   },
   "chevrolet-tracker": {
    "versao": "TRACKER LT 1.0 Turbo 12V Flex Aut.",
    "ano": "0km",
-   "valor": 140650,
+   "valor": 144296,
    "codigoFipe": "004522-5"
   },
   "nissan-kicks": {
    "versao": "KICKS Sense 1.0 Turbo Flex Aut.",
    "ano": "0km",
-   "valor": 158594,
+   "valor": 160896,
    "codigoFipe": "023194-0"
   },
   "hyundai-creta": {
    "versao": "Creta Comfort 1.0 TB 12V Flex Aut.",
    "ano": "0km",
-   "valor": 143276,
+   "valor": 143552,
    "codigoFipe": "015200-5"
   },
   "toyota-corolla-cross": {
    "versao": "Corolla Cross XRE 2.0 16V Flex Aut.",
    "ano": "0km",
-   "valor": 197854,
+   "valor": 191271,
    "codigoFipe": "002203-9"
   },
   "jeep-compass": {
    "versao": "COMPASS LONG. T270 1.3 TB 4x2 Flex Aut.",
    "ano": "0km",
-   "valor": 192903,
+   "valor": 192043,
    "codigoFipe": "017071-2"
   },
   "bmw-x1": {
    "versao": "X1 SDRIVE 20i GP 2.0 TB Aut.",
    "ano": "0km",
-   "valor": 332474,
+   "valor": 334471,
    "codigoFipe": "009323-8"
   },
   "porsche-macan": {

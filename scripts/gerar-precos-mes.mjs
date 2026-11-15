@@ -75,7 +75,7 @@ const quedas = tendencias.filter((x) => x.t.pct < 0).sort((a, b) => a.t.pct - b.
 const altas = tendencias.filter((x) => x.t.pct > 0).sort((a, b) => b.t.pct - a.t.pct).slice(0, 8);
 
 // ---------- Tabela completa ----------
-const linhaTabela = (v) => `<tr><td>${link(v)}</td><td>${esc(v.bodyType)}</td><td>${reais(v.price)}${v.priceKind === "imprensa" ? "<small>valor da imprensa</small>" : ""}</td></tr>`;
+const linhaTabela = (v) => `<tr><td>${link(v)}</td><td>${esc(v.bodyType)}</td><td>${reais(v.price)}${v.priceKind === "imprensa" ? "<small>valor da imprensa</small>" : v.priceStale ? "<small>último preço publicado pela marca</small>" : ""}</td></tr>`;
 
 const titulo = `Preços dos carros elétricos em ${mesTexto(MES)}`;
 const intro = `Coletamos o preço "a partir de" de ${comPreco.length} carros 100% elétricos à venda no Brasil em ${DATA_INFO.precos.coleta}. ` +
@@ -105,7 +105,7 @@ ${secaoMes}
           </table>
         </div>
         ${semPreco.length ? `<p class="fine-print">Sem preço divulgado: ${semPreco.map((v) => esc(nome(v))).join(", ")}.</p>` : ""}
-        <p class="fine-print">Preço "a partir de" da versão de entrada, coletado nos sites das marcas em ${DATA_INFO.precos.coleta}; quando a marca não divulga, usamos o valor publicado na imprensa, com aviso. <a class="text-link" href="metodologia.html">Como coletamos os dados</a>.</p>
+        <p class="fine-print">Preço "a partir de" da versão de entrada, coletado nos sites das marcas em ${DATA_INFO.precos.coleta}; quando a marca não divulga, usamos o valor publicado na imprensa, com aviso. Se a marca tirou o preço do site, mostramos o último publicado, também com aviso. <a class="text-link" href="metodologia.html">Como coletamos os dados</a>.</p>
 
         <p class="lista-acoes">
           <a class="btn btn-primary" href="eletricos/carro-eletrico-mais-barato.html">Ver os mais baratos</a>

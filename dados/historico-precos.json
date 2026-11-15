@@ -13,6 +13,12 @@
     "preco": 1373950,
     "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 1373950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
+    "tipo": "coleta"
    }
   ],
   "bmw-ix3": [
@@ -25,6 +31,12 @@
    {
     "mes": "2026-10",
     "preco": 582950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 587950,
     "fonte": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
     "tipo": "coleta"
    }
@@ -41,6 +53,12 @@
     "preco": 264990,
     "fonte": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 264990,
+    "fonte": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
+    "tipo": "coleta"
    }
   ],
   "mini-aceman": [
@@ -52,6 +70,12 @@
    },
    {
     "mes": "2026-10",
+    "preco": 275990,
+    "fonte": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 275990,
     "fonte": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
     "tipo": "coleta"
@@ -117,6 +141,12 @@
     "preco": 214990,
     "fonte": "https://www.leapmotor.com.br/",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 214990,
+    "fonte": "https://www.leapmotor.com.br/",
+    "tipo": "coleta"
    }
   ],
   "leapmotor-b10": [
@@ -128,6 +158,12 @@
    },
    {
     "mes": "2026-10",
+    "preco": 182990,
+    "fonte": "https://www.leapmotor.com.br/b10/monte.html",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 182990,
     "fonte": "https://www.leapmotor.com.br/b10/monte.html",
     "tipo": "coleta"
@@ -153,6 +189,12 @@
     "preco": 218800,
     "fonte": "https://mgmotoroficial.com.br/oferta/mgs5",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 218800,
+    "fonte": "https://mgmotoroficial.com.br/oferta/mgs5",
+    "tipo": "coleta"
    }
   ],
   "chevrolet-captiva-ev": [
@@ -167,6 +209,12 @@
     "preco": 199990,
     "fonte": "https://www.chevrolet.com.br/eletrico/captiva-ev",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 199990,
+    "fonte": "https://www.chevrolet.com.br/eletrico/captiva-ev",
+    "tipo": "coleta"
    }
   ],
   "chevrolet-blazer-ev": [
@@ -178,6 +226,12 @@
    },
    {
     "mes": "2026-10",
+    "preco": 503190,
+    "fonte": "https://www.chevrolet.com.br/eletrico/blazer-ev",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 503190,
     "fonte": "https://www.chevrolet.com.br/eletrico/blazer-ev",
     "tipo": "coleta"
@@ -211,6 +265,12 @@
     "preco": 124600,
     "fonte": "https://www.geelybrasil.com.br/ofertas",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 124600,
+    "fonte": "https://www.geelybrasil.com.br/ofertas",
+    "tipo": "coleta"
    }
   ],
   "hyundai-ioniq-5": [
@@ -241,6 +301,12 @@
     "preco": 279990,
     "fonte": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 279990,
+    "fonte": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
+    "tipo": "coleta"
    }
   ],
   "fiat-500e": [
@@ -255,6 +321,12 @@
     "preco": 214990,
     "fonte": "https://500e.fiat.com.br/monte.html",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 214990,
+    "fonte": "https://500e.fiat.com.br/monte.html",
+    "tipo": "coleta"
    }
   ],
   "volvo-es90": [
@@ -266,6 +338,12 @@
    },
    {
     "mes": "2026-10",
+    "preco": 659950,
+    "fonte": "https://www.volvocars.com/br/cars/es90-electric/",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 659950,
     "fonte": "https://www.volvocars.com/br/cars/es90-electric/",
     "tipo": "coleta"
@@ -299,6 +377,12 @@
     "preco": 163990,
     "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora5",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 165990,
+    "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora5",
+    "tipo": "coleta"
    }
   ],
   "gwm-ora-03": [
@@ -313,6 +397,12 @@
     "preco": 169000,
     "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 169000,
+    "fonte": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
+    "tipo": "coleta"
    }
   ],
   "bmw-ix1": [
@@ -321,11 +411,23 @@
     "preco": 485950,
     "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 485950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
+    "tipo": "coleta"
    }
   ],
   "bmw-ix2": [
    {
     "mes": "2026-10",
+    "preco": 495950,
+    "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 495950,
     "fonte": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
     "tipo": "coleta"
@@ -342,6 +444,12 @@
   "byd-dolphin-mini": [
    {
     "mes": "2026-10",
+    "preco": 118990,
+    "fonte": "https://www.byd.com/br/ofertas",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 118990,
     "fonte": "https://www.byd.com/br/ofertas",
     "tipo": "coleta"
@@ -401,11 +509,23 @@
     "preco": 146990,
     "fonte": "https://www.chevrolet.com.br/eletrico/spark-euv",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 152790,
+    "fonte": "https://www.chevrolet.com.br/eletrico/spark-euv",
+    "tipo": "coleta"
    }
   ],
   "gac-aion-es": [
    {
     "mes": "2026-10",
+    "preco": 170990,
+    "fonte": "https://www.gacgroup.com/pt-br/sedan/aion-es",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 170990,
     "fonte": "https://www.gacgroup.com/pt-br/sedan/aion-es",
     "tipo": "coleta"
@@ -425,11 +545,23 @@
     "preco": 175990,
     "fonte": "https://www.gacgroup.com/pt-br/suv/aion-y",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 175990,
+    "fonte": "https://www.gacgroup.com/pt-br/suv/aion-y",
+    "tipo": "coleta"
    }
   ],
   "gac-hyptec-ht": [
    {
     "mes": "2026-10",
+    "preco": 314990,
+    "fonte": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 314990,
     "fonte": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
     "tipo": "coleta"
@@ -441,11 +573,23 @@
     "preco": 207800,
     "fonte": "https://www.geelybrasil.com.br/ofertas",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 207800,
+    "fonte": "https://www.geelybrasil.com.br/ofertas",
+    "tipo": "coleta"
    }
   ],
   "mg-mg4": [
    {
     "mes": "2026-10",
+    "preco": 184600,
+    "fonte": "https://mgmotoroficial.com.br/oferta/mg4",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 184600,
     "fonte": "https://mgmotoroficial.com.br/oferta/mg4",
     "tipo": "coleta"
@@ -457,11 +601,23 @@
     "preco": 350950,
     "fonte": "https://www.volvocars.com/br/cars/ec40-electric/",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 350950,
+    "fonte": "https://www.volvocars.com/br/cars/ec40-electric/",
+    "tipo": "coleta"
    }
   ],
   "volvo-ex30": [
    {
     "mes": "2026-10",
+    "preco": 249950,
+    "fonte": "https://www.volvocars.com/br/cars/ex30-electric/",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 249950,
     "fonte": "https://www.volvocars.com/br/cars/ex30-electric/",
     "tipo": "coleta"
@@ -473,11 +629,23 @@
     "preco": 345950,
     "fonte": "https://www.volvocars.com/br/cars/ex40-electric/",
     "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
+    "preco": 345950,
+    "fonte": "https://www.volvocars.com/br/cars/ex40-electric/",
+    "tipo": "coleta"
    }
   ],
   "volvo-ex90": [
    {
     "mes": "2026-10",
+    "preco": 849950,
+    "fonte": "https://www.volvocars.com/br/cars/ex90-electric/",
+    "tipo": "coleta"
+   },
+   {
+    "mes": "2026-11",
     "preco": 849950,
     "fonte": "https://www.volvocars.com/br/cars/ex90-electric/",
     "tipo": "coleta"
