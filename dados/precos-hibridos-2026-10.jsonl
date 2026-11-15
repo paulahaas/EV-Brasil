@@ -8,24 +8,24 @@
 {"grupo": "Caoa Chery|Tiggo 8 Pro PHEV", "versao": "", "preco": 249990, "fonte": "https://www.caoachery.com.br/", "obs": "último preço publicado pela Caoa Chery (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
 {"grupo": "Geely|EX5 EM-i", "versao": "PRO", "preco": 191490, "fonte": "https://www.geelybrasil.com.br/", "obs": "último preço publicado pela Geely (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária", "ultimoDivulgado": "10/2026"}
 {"grupo": "Leapmotor|C10 REEV", "versao": "Ultra-Híbrido", "preco": 219990, "fonte": "https://www.leapmotor.com.br/", "obs": "oferta de 06/10 a 03/11/2026 (50 unidades)"}
-{"grupo": "Jaecoo|7 SHS", "versao": "Luxury", "preco": 234990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "Omoda|7 PHEV", "versao": "Luxury", "preco": 254990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da marca não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "Jetour|S06 PHEV", "versao": "", "preco": 199900, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Jetour|T1 PHEV", "versao": "", "preco": 249900, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Jetour|T2 PHEV", "versao": "", "preco": 289900, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "GWM|Haval H6", "versao": "PHEV19", "preco": 250000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "GWM|Haval H6 GT", "versao": "", "preco": 326000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "GWM|Wey 07", "versao": "", "preco": 429000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "GWM|Tank 300", "versao": "", "preco": 342000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "o site da GWM não mostra preço; valor da imprensa, conferir com a concessionária"}
-{"grupo": "GAC|GS9", "versao": "", "preco": 399990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Denza|B5", "versao": "", "preco": 436000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Lexus|NX 450h+", "versao": "", "preco": 499990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Lexus|RX 450h+", "versao": "", "preco": 614990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Mitsubishi|Outlander", "versao": "", "preco": 399990, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "valor da imprensa, conferir com a concessionária"}
-{"grupo": "Porsche|Cayenne E-Hybrid", "versao": "", "preco": 900000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"}
-{"grupo": "Porsche|Panamera E-Hybrid", "versao": "4 E-Hybrid", "preco": 990000, "fonte": "https://www.eletricos.app/catalogo-hibrido", "obs": "ano-modelo 2027; valor da imprensa, conferir com a concessionária"}
+{"grupo": "Jaecoo|7 SHS", "versao": "", "preco": 189990, "fonte": "https://www.omodajaecoo.com.br/jaecoo-7", "obs": "a partir de; versão de entrada, que não está na tabela do Inmetro (as versões medidas são a Luxury e a Prestige)"}
+{"grupo": "Omoda|7 PHEV", "versao": "SHS-P", "preco": 254990, "fonte": "https://www.omodajaecoo.com.br/omoda-7-shs-p", "obs": "a partir de"}
+{"grupo": "Jetour|S06 PHEV", "versao": "Advance", "preco": 199900, "fonte": "https://autopapo.com.br/noticia/jetour-s06-suv-preco-motor-versoes-equipamentos/", "obs": "valor da imprensa (preço de lançamento, início de 2026), conferir com a concessionária"}
+{"grupo": "Jetour|T1 PHEV", "versao": "Advance", "preco": 249900, "fonte": "https://canalve.com.br/jetour-lancada-oficialmente-brasil-suvs-hibridos-plug-in/", "obs": "valor da imprensa (preço de lançamento, início de 2026), conferir com a concessionária"}
+{"grupo": "Jetour|T2 PHEV", "versao": "Advance", "preco": 289900, "fonte": "https://www.itatiaia.com.br/auto/jetour-t2-suv-hibrido-tem-tres-motores-e-detecta-alagamentos/", "obs": "valor da imprensa (preço de lançamento, janeiro de 2026), conferir com a concessionária"}
+{"grupo": "GWM|Haval H6", "versao": "PHEV19", "preco": 250000, "fonte": "https://www.gwmmotors.com.br/pt/modelos/haval-h6-phev-19", "obs": "preço único"}
+{"grupo": "GWM|Haval H6 GT", "versao": "", "preco": 326000, "fonte": "https://www.gwmmotors.com.br/pt/modelos/haval-h6-gt", "obs": "preço único"}
+{"grupo": "GWM|Wey 07", "versao": "", "preco": 429000, "fonte": "https://www.gwmmotors.com.br/pt/modelos/wey-07", "obs": "preço único"}
+{"grupo": "GWM|Tank 300", "versao": "", "preco": 342000, "fonte": "https://www.gwmmotors.com.br/pt/media-center/news/2026/gwm-anuncia-tank-300-phev-flex-no-salao-de-pequim-o-primeiro-hibrido-plug-in-flex-do-mundo", "obs": "último preço publicado pela GWM (abril de 2026): o site da marca não mostra o preço, confirme na concessionária", "ultimoDivulgado": "04/2026"}
+{"grupo": "GAC|GS9", "versao": "", "preco": 399990, "fonte": "https://www.autodata.com.br/noticias/2026/08/18/gac-gs9-chega-ao-mercado-por-r-400-mil-para-disputar-com-suvs-premium/133038/", "obs": "o site da GAC não mostra preço; valor da imprensa (preço de tabela; o de lançamento, R$ 379.990, foi promoção até agosto de 2026), conferir com a concessionária"}
+{"grupo": "Denza|B5", "versao": "GS", "preco": 449000, "fonte": "https://www.bloomberglinea.com.br/negocios/marca-premium-da-byd-denza-amplia-presenca-no-brasil-contra-rivais-do-segmento-de-luxo/", "obs": "o site da Denza não mostra preço; valor da imprensa, conferir com a concessionária"}
+{"grupo": "Lexus|NX 450h+", "versao": "", "preco": 499990, "fonte": "https://www.lexus.com.br/pt/models/nx/nx-450h-plus.html", "obs": "a partir de"}
+{"grupo": "Lexus|RX 450h+", "versao": "", "preco": 614990, "fonte": "https://www.lexus.com.br/pt/models/rx/rx-450h-plus.html", "obs": "a partir de"}
+{"grupo": "Mitsubishi|Outlander", "versao": "Signature", "preco": 364990, "fonte": "https://www.mitsubishimotors.com.br/suv-e-crossovers/outlander?versao=SIGNATURE", "obs": "preço público sugerido, à vista"}
+{"grupo": "Porsche|Cayenne E-Hybrid", "versao": "E-Hybrid", "preco": 900000, "fonte": "https://configurator.porsche.com/pt-BR/mode/model/9YAAV1", "obs": "configurador oficial; ano-modelo 2027"}
+{"grupo": "Porsche|Panamera E-Hybrid", "versao": "4 E-Hybrid", "preco": 990000, "fonte": "https://configurator.porsche.com/pt-BR/mode/model/YAABE1", "obs": "configurador oficial; ano-modelo 2027"}
 {"grupo": "Land Rover|Range Rover", "versao": "", "preco": null, "fonte": "", "obs": "preço não pesquisado ainda"}
-{"grupo": "Land Rover|Range Rover Sport", "versao": "", "preco": null, "fonte": "", "obs": "preço não pesquisado ainda"}
-{"grupo": "Land Rover|Velar", "versao": "", "preco": null, "fonte": "", "obs": "preço não pesquisado ainda"}
-{"grupo": "Volvo|XC60 T8", "versao": "", "preco": null, "fonte": "", "obs": "preço não pesquisado ainda"}
-{"grupo": "Volvo|XC90 T8", "versao": "", "preco": null, "fonte": "", "obs": "preço não pesquisado ainda"}
+{"grupo": "Land Rover|Range Rover Sport", "versao": "Dynamic", "preco": 1063950, "fonte": "https://www.rangerover.com/pt-br/range-rover-sport/index.html", "obs": "a partir de; versão Dynamic, híbrida plug-in P550e"}
+{"grupo": "Land Rover|Velar", "versao": "Autobiography", "preco": 773069, "fonte": "https://www.rangerover.com/pt-br/range-rover-velar/index.html", "obs": "a partir de; ano-modelo 2026, versão única"}
+{"grupo": "Volvo|XC60 T8", "versao": "", "preco": 469950, "fonte": "https://www.volvocars.com/br/cars/xc60-hybrid/", "obs": "a partir de"}
+{"grupo": "Volvo|XC90 T8", "versao": "", "preco": 699950, "fonte": "https://www.volvocars.com/br/cars/xc90-hybrid/", "obs": "a partir de"}

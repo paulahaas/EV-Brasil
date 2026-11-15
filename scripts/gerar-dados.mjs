@@ -33,7 +33,8 @@ const precos = fs.readFileSync("dados/precos-2026-10.jsonl", "utf8")
 // Sites das montadoras: preço tirado daqui é "oficial"; o resto é "imprensa".
 const OFICIAIS = ["byd.com", "gwmmotors.com.br", "gacgroup.com", "geelybrasil.com.br",
   "mgmotoroficial.com.br", "chevrolet.com.br", "renault.com.br", "fiat.com.br",
-  "volvocars.com", "bmw.com.br", "mini.com.br", "leapmotor.com.br", "caoachery.com.br"];
+  "volvocars.com", "bmw.com.br", "mini.com.br", "leapmotor.com.br", "caoachery.com.br",
+  "lexus.com.br", "mitsubishimotors.com.br", "omodajaecoo.com.br", "porsche.com", "rangerover.com"];
 
 const chaveDe = (marca, modelo) => `${marca.toUpperCase()}|${modelo.toUpperCase()}`;
 
