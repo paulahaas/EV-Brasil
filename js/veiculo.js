@@ -49,12 +49,17 @@
   let sobrePreco;
   if (!v.price) {
     sobrePreco = `A marca não divulga o preço deste modelo no site oficial e não encontramos um valor confiável publicado. ${v.priceNote ? escapeHtml(v.priceNote) + "." : ""}`;
+  } else if (v.priceStale) {
+    // A marca tirou o preço do site: é o último publicado, não uma coleta deste mês.
+    const [mes, ano] = v.priceStale.split("/");
+    const nomeMes = new Date(Number(ano), Number(mes) - 1, 1).toLocaleDateString("pt-BR", { month: "long" });
+    sobrePreco = `<strong>Último preço publicado pela marca</strong>, em ${nomeMes} de ${ano}${v.priceVersion ? ` (versão ${escapeHtml(v.priceVersion)})` : ""}. A marca não mostra mais o preço no site oficial; confirme na concessionária. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>.`;
   } else if (v.priceKind === "oficial") {
     sobrePreco = `Preço de tabela "a partir de"${v.priceVersion ? ` (versão ${escapeHtml(v.priceVersion)})` : ""}, no site oficial da marca, coletado em ${coletaPreco}. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>.`;
   } else {
     sobrePreco = `<strong>Valor publicado na imprensa</strong>: a marca não mostra o preço no site oficial. Fonte: <a class="text-link" href="${v.priceSource}" target="_blank" rel="noopener">${fonteHost}</a>. Confirme com uma concessionária.`;
   }
-  const obs = v.price && v.priceNote ? `<p class="fine-print">${escapeHtml(v.priceNote.charAt(0).toUpperCase() + v.priceNote.slice(1))}.</p>` : "";
+  const obs = v.price && v.priceNote && !v.priceStale ? `<p class="fine-print">${escapeHtml(v.priceNote.charAt(0).toUpperCase() + v.priceNote.slice(1))}.</p>` : "";
 
   // Ficha técnica (bateria, potência, recarga...), com a fonte de cada modelo.
   let ficha = "";

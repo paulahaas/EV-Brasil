@@ -9,10 +9,10 @@ const DATA_INFO = {
     "url": "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular"
   },
   "precos": {
-    "coleta": "05/10/2026"
+    "coleta": "15/11/2026"
   },
   "precosHibridos": {
-    "coleta": "27/10/2026"
+    "coleta": "15/11/2026"
   },
   "fichas": {
     "coleta": "08/10/2026"
@@ -31,13 +31,13 @@ const DATA_INFO = {
     "coleta": "09/10/2026"
   },
   "fipe": {
-    "referencia": "outubro/2026",
+    "referencia": "novembro/2026",
     "fonte": "https://veiculos.fipe.org.br/"
   },
   "juros": {
-    "taxaMes": 1.97,
-    "taxaAno": 26.42,
-    "referencia": "agosto/2026",
+    "taxaMes": 1.96,
+    "taxaAno": 26.18,
+    "referencia": "setembro/2026",
     "fonte": "https://www3.bcb.gov.br/sgspub/ (séries 25471 e 20749)"
   }
 };
@@ -95,13 +95,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "A6 Avant E-Tron S-Line",
-      "zero": 699993,
+      "zero": 706712,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 641893,
-          "loss": 8.3
+          "value": 636115,
+          "loss": 10
         }
       ]
     }
@@ -171,18 +171,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "A6 Sport. e-tron Perf. Black (Elétrico)",
-      "zero": 650990,
+      "zero": 629990,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 578952,
-          "loss": 11.1
+          "value": 573741,
+          "loss": 8.9
         },
         {
           "year": 2025,
-          "value": 516520,
-          "loss": 20.7
+          "value": 534598,
+          "loss": 15.1
         }
       ]
     }
@@ -267,8 +267,8 @@ const VEHICLES = [
       "used": [
         {
           "year": 2026,
-          "value": 603222,
-          "loss": 14.2
+          "value": 597793,
+          "loss": 14.9
         }
       ]
     },
@@ -339,12 +339,12 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Q6 E-Tron Quattro Sportback Performance Black",
-      "zero": 603114,
+      "zero": 597685,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 512995,
+          "value": 508378,
           "loss": 14.9
         }
       ]
@@ -403,17 +403,17 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "RS E-TRON GT Quattro Aut. (Elétrico)",
-      "zero": 940439,
+      "zero": 931975,
       "refYear": 2024,
       "used": [
         {
           "year": 2023,
-          "value": 561049,
-          "loss": 40.3
+          "value": 541412,
+          "loss": 41.9
         },
         {
           "year": 2022,
-          "value": 432775,
+          "value": 428345,
           "loss": 54
         }
       ]
@@ -484,18 +484,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "SQ6 Sportback E-Tron Quattro (Elétrico)",
-      "zero": 810710,
+      "zero": 810740,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 685247,
-          "loss": 15.5
+          "value": 679079,
+          "loss": 16.2
         },
         {
           "year": 2025,
-          "value": 602401,
-          "loss": 25.7
+          "value": 596979,
+          "loss": 26.4
         }
       ]
     },
@@ -554,22 +554,22 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "i7 XDrive 60 M Sport Aut. (Elétrico)",
-      "zero": 1372402,
+      "zero": 1371660,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 1148550,
-          "loss": 16.3
+          "value": 1138213,
+          "loss": 17
         },
         {
           "year": 2025,
-          "value": 914703,
-          "loss": 33.4
+          "value": 906470,
+          "loss": 33.9
         },
         {
           "year": 2024,
-          "value": 851851,
+          "value": 852287,
           "loss": 37.9
         }
       ]
@@ -583,6 +583,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 1373950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 1373950,
         "source": "https://www.bmw.com.br/pt/all-models/bmw-i/i7/bmw-i7.html",
         "kind": "coleta"
@@ -647,29 +653,35 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "iX 1 xDrive 30 M Sport (Elétrico)",
-      "zero": 468376,
+      "zero": 472110,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 353695,
-          "loss": 24.5
+          "value": 341492,
+          "loss": 27.7
         },
         {
           "year": 2025,
-          "value": 321881,
-          "loss": 31.3
+          "value": 319109,
+          "loss": 32.4
         },
         {
           "year": 2024,
-          "value": 270885,
-          "loss": 42.2
+          "value": 271112,
+          "loss": 42.6
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 485950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 485950,
         "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix1/bmw-ix1.html",
         "kind": "coleta"
@@ -730,29 +742,40 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "iX 2 xDrive 30 M Sport (Elétrico)",
-      "zero": 497164,
+      "zero": 495241,
       "refYear": null,
       "used": [
         {
+          "year": 2027,
+          "value": 440764,
+          "loss": 11
+        },
+        {
           "year": 2026,
-          "value": 411045,
-          "loss": 17.3
+          "value": 407345,
+          "loss": 17.7
         },
         {
           "year": 2025,
-          "value": 344379,
-          "loss": 30.7
+          "value": 341478,
+          "loss": 31
         },
         {
           "year": 2024,
-          "value": 332056,
-          "loss": 33.2
+          "value": 329067,
+          "loss": 33.6
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 495950,
+        "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 495950,
         "source": "https://www.bmw.com.br/pt/all-models/bmw-i/ix2/bmw-ix2-overview.html",
         "kind": "coleta"
@@ -777,7 +800,7 @@ const VEHICLES = [
     "rangeMin": 570,
     "rangeMax": 570,
     "kwh100": 15,
-    "price": 582950,
+    "price": 587950,
     "priceVersion": "50 xDrive",
     "priceSource": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
     "priceKind": "oficial",
@@ -813,13 +836,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "iX 3 XDrive 50 M Sport",
-      "zero": 582953,
+      "zero": 587110,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 489589,
-          "loss": 16
+          "value": 485182,
+          "loss": 17.4
         }
       ]
     },
@@ -833,6 +856,12 @@ const VEHICLES = [
       {
         "month": "2026-10",
         "price": 582950,
+        "source": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 587950,
         "source": "https://www.bmw.com.br/pt/all-models/serie-x/ix3/bmw-ix3.html",
         "kind": "coleta"
       }
@@ -870,7 +899,8 @@ const VEHICLES = [
     "priceVersion": "GS",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-dolphin.jpg",
       "card": "assets/carros/byd-dolphin-960.jpg",
@@ -914,28 +944,28 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Dolphin EV GS (Elétrico)",
-      "zero": 147055,
+      "zero": 149990,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 133010,
-          "loss": 9.6
+          "value": 134547,
+          "loss": 10.3
         },
         {
           "year": 2026,
-          "value": 129551,
-          "loss": 11.9
+          "value": 128690,
+          "loss": 14.2
         },
         {
           "year": 2025,
-          "value": 121374,
-          "loss": 17.5
+          "value": 118226,
+          "loss": 21.2
         },
         {
           "year": 2024,
-          "value": 117564,
-          "loss": 20.1
+          "value": 115010,
+          "loss": 23.3
         }
       ]
     },
@@ -1024,29 +1054,35 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Dolphin Mini GL",
-      "zero": 119679,
+      "zero": 119257,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 112634,
-          "loss": 5.9
+          "value": 112161,
+          "loss": 6
         },
         {
           "year": 2026,
-          "value": 106009,
-          "loss": 11.4
+          "value": 105054,
+          "loss": 11.9
         },
         {
           "year": 2025,
-          "value": 103220,
-          "loss": 13.8
+          "value": 102291,
+          "loss": 14.2
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 118990,
+        "source": "https://www.byd.com/br/ofertas",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 118990,
         "source": "https://www.byd.com/br/ofertas",
         "kind": "coleta"
@@ -1075,7 +1111,8 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025; último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-han.jpg",
       "card": "assets/carros/byd-han-960.jpg",
@@ -1111,28 +1148,28 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Han EV  (Elétrico)",
-      "zero": 551838,
+      "zero": 561038,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 365914,
-          "loss": 33.7
+          "value": 365227,
+          "loss": 34.9
         },
         {
           "year": 2024,
-          "value": 285451,
-          "loss": 48.3
+          "value": 295441,
+          "loss": 47.3
         },
         {
           "year": 2023,
-          "value": 276448,
-          "loss": 49.9
+          "value": 270533,
+          "loss": 51.8
         },
         {
           "year": 2022,
-          "value": 254616,
-          "loss": 53.9
+          "value": 252324,
+          "loss": 55
         }
       ]
     },
@@ -1167,7 +1204,8 @@ const VEHICLES = [
     "priceVersion": "AWD",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-seal.jpg",
       "card": "assets/carros/byd-seal-960.jpg",
@@ -1211,23 +1249,23 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Seal (Elétrico)",
-      "zero": 299673,
+      "zero": 299224,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 271532,
-          "loss": 9.4
+          "value": 272372,
+          "loss": 9
         },
         {
           "year": 2025,
-          "value": 221377,
-          "loss": 26.1
+          "value": 220137,
+          "loss": 26.4
         },
         {
           "year": 2024,
-          "value": 204101,
-          "loss": 31.9
+          "value": 204132,
+          "loss": 31.8
         }
       ]
     },
@@ -1262,7 +1300,8 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-sealion-7.jpg",
       "card": "assets/carros/byd-sealion-7-960.jpg",
@@ -1306,13 +1345,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Sealion 7 AWD (Elétrico)",
-      "zero": 339063,
+      "zero": 339990,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 318713,
-          "loss": 6
+          "value": 315844,
+          "loss": 7.1
         }
       ]
     },
@@ -1347,7 +1386,8 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2025; último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-tan.jpg",
       "card": "assets/carros/byd-tan-960.jpg",
@@ -1391,28 +1431,28 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "TAN EV AWD (Elétrico)",
-      "zero": 429964,
+      "zero": 432700,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 342490,
-          "loss": 20.3
+          "value": 349498,
+          "loss": 19.2
         },
         {
           "year": 2024,
-          "value": 295554,
-          "loss": 31.3
+          "value": 292894,
+          "loss": 32.3
         },
         {
           "year": 2023,
-          "value": 247964,
-          "loss": 42.3
+          "value": 243140,
+          "loss": 43.8
         },
         {
           "year": 2022,
-          "value": 236214,
-          "loss": 45.1
+          "value": 236055,
+          "loss": 45.4
         }
       ]
     },
@@ -1457,7 +1497,8 @@ const VEHICLES = [
     "priceVersion": "AWD",
     "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "último preço publicado pela BYD, em 05/10/2026: o site da marca não mostra mais o preço deste modelo",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-yuan-plus.jpg",
       "card": "assets/carros/byd-yuan-plus-960.jpg",
@@ -1501,13 +1542,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Yuan Plus AWD",
-      "zero": 269214,
+      "zero": 268826,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 239699,
-          "loss": 11
+          "value": 237541,
+          "loss": 11.6
         }
       ]
     },
@@ -1542,7 +1583,8 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-yuan-pro.jpg",
       "card": "assets/carros/byd-yuan-pro-960.jpg",
@@ -1583,18 +1625,18 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 169094,
-          "loss": 7.6
+          "value": 167572,
+          "loss": 8.4
         },
         {
           "year": 2026,
-          "value": 162916,
-          "loss": 11
+          "value": 159867,
+          "loss": 12.6
         },
         {
           "year": 2025,
-          "value": 152985,
-          "loss": 16.4
+          "value": 150189,
+          "loss": 17.9
         }
       ]
     },
@@ -1606,7 +1648,7 @@ const VEHICLES = [
         "kind": "coleta"
       }
     ],
-    "gasRef": "jeep-compass"
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "avatr-11",
@@ -1653,18 +1695,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "AVATR11",
-      "zero": 621995,
+      "zero": 615421,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 559589,
-          "loss": 10
+          "value": 554552,
+          "loss": 9.9
         },
         {
           "year": 2026,
-          "value": 534349,
-          "loss": 14.1
+          "value": 529539,
+          "loss": 14
         }
       ]
     },
@@ -1734,13 +1776,13 @@ const VEHICLES = [
       "used": [
         {
           "year": 2025,
-          "value": 420597,
-          "loss": 16.4
+          "value": 416811,
+          "loss": 17.2
         },
         {
           "year": 2024,
-          "value": 328235,
-          "loss": 34.8
+          "value": 324902,
+          "loss": 35.4
         }
       ]
     },
@@ -1753,6 +1795,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 503190,
+        "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 503190,
         "source": "https://www.chevrolet.com.br/eletrico/blazer-ev",
         "kind": "coleta"
@@ -1812,13 +1860,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "CAPTIVA EV Premier",
-      "zero": 209017,
+      "zero": 208520,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 185147,
-          "loss": 11.4
+          "value": 189493,
+          "loss": 9.1
         }
       ]
     },
@@ -1834,9 +1882,15 @@ const VEHICLES = [
         "price": 199990,
         "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 199990,
+        "source": "https://www.chevrolet.com.br/eletrico/captiva-ev",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "chevrolet-spark-euv",
@@ -1855,11 +1909,11 @@ const VEHICLES = [
     "rangeMin": 258,
     "rangeMax": 258,
     "kwh100": 13.9,
-    "price": 146990,
-    "priceVersion": "ACTIV",
+    "price": 152790,
+    "priceVersion": "",
     "priceSource": "https://www.chevrolet.com.br/eletrico/spark-euv",
     "priceKind": "oficial",
-    "priceNote": "ano-modelo 2027",
+    "priceNote": "preço público sugerido; ano-modelo 2027",
     "photo": {
       "src": "assets/carros/chevrolet-spark-euv.jpg",
       "card": "assets/carros/chevrolet-spark-euv-960.jpg",
@@ -1890,18 +1944,23 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "SPARK EUV ACTIV",
-      "zero": 151927,
+      "zero": 156938,
       "refYear": null,
       "used": [
         {
+          "year": 2027,
+          "value": 144069,
+          "loss": 8.2
+        },
+        {
           "year": 2026,
-          "value": 137349,
-          "loss": 9.6
+          "value": 134261,
+          "loss": 14.4
         },
         {
           "year": 2025,
-          "value": 128913,
-          "loss": 15.1
+          "value": 127752,
+          "loss": 18.6
         }
       ]
     },
@@ -1911,9 +1970,15 @@ const VEHICLES = [
         "price": 146990,
         "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 152790,
+        "source": "https://www.chevrolet.com.br/eletrico/spark-euv",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "hyundai-creta"
+    "gasRef": "nissan-kicks"
   },
   {
     "id": "fiat-500e",
@@ -1973,8 +2038,8 @@ const VEHICLES = [
       "used": [
         {
           "year": 2022,
-          "value": 129811,
-          "loss": 39.6
+          "value": 126520,
+          "loss": 41.2
         }
       ]
     },
@@ -1987,6 +2052,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 214990,
+        "source": "https://500e.fiat.com.br/monte.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 214990,
         "source": "https://500e.fiat.com.br/monte.html",
         "kind": "coleta"
@@ -2051,24 +2122,30 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "AION ES Plus (Elétrico)",
-      "zero": 168790,
+      "zero": 169790,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 152674,
-          "loss": 9.5
+          "value": 151299,
+          "loss": 10.9
         },
         {
           "year": 2025,
-          "value": 137195,
-          "loss": 18.7
+          "value": 139668,
+          "loss": 17.7
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 170990,
+        "source": "https://www.gacgroup.com/pt-br/sedan/aion-es",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 170990,
         "source": "https://www.gacgroup.com/pt-br/sedan/aion-es",
         "kind": "coleta"
@@ -2151,8 +2228,8 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 126761,
-          "loss": 9.4
+          "value": 125620,
+          "loss": 10.3
         }
       ]
     },
@@ -2192,7 +2269,8 @@ const VEHICLES = [
     "priceVersion": "",
     "priceSource": "https://www.gacgroup.com/pt-br/suv/aion-v",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela GAC (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/gac-aion-v.jpg",
       "card": "assets/carros/gac-aion-v-960.jpg",
@@ -2241,18 +2319,18 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 201755,
-          "loss": 8.3
+          "value": 199939,
+          "loss": 9.1
         },
         {
           "year": 2026,
-          "value": 192581,
-          "loss": 12.5
+          "value": 191974,
+          "loss": 12.7
         },
         {
           "year": 2025,
-          "value": 182676,
-          "loss": 17
+          "value": 181031,
+          "loss": 17.7
         }
       ]
     },
@@ -2264,7 +2342,7 @@ const VEHICLES = [
         "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "gac-aion-y",
@@ -2333,18 +2411,18 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 164556,
-          "loss": 6.5
+          "value": 163074,
+          "loss": 7.3
         },
         {
           "year": 2026,
-          "value": 158962,
-          "loss": 9.7
+          "value": 157531,
+          "loss": 10.5
         },
         {
           "year": 2025,
-          "value": 148684,
-          "loss": 15.5
+          "value": 147345,
+          "loss": 16.3
         }
       ]
     },
@@ -2354,9 +2432,15 @@ const VEHICLES = [
         "price": 175990,
         "source": "https://www.gacgroup.com/pt-br/suv/aion-y",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 175990,
+        "source": "https://www.gacgroup.com/pt-br/suv/aion-y",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "jeep-compass"
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "gac-hyptec-ht",
@@ -2425,24 +2509,30 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 270631,
-          "loss": 14.1
+          "value": 268195,
+          "loss": 14.9
         },
         {
           "year": 2026,
-          "value": 256578,
-          "loss": 18.5
+          "value": 254268,
+          "loss": 19.3
         },
         {
           "year": 2025,
-          "value": 233811,
-          "loss": 25.8
+          "value": 231706,
+          "loss": 26.4
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 314990,
+        "source": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 314990,
         "source": "https://www.gacgroup.com/pt-br/suv/hyptec-ht",
         "kind": "coleta"
@@ -2515,13 +2605,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EX2 PRO",
-      "zero": 125671,
+      "zero": 125910,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 115414,
-          "loss": 8.2
+          "value": 117066,
+          "loss": 7
         }
       ]
     },
@@ -2537,9 +2627,15 @@ const VEHICLES = [
         "price": 124600,
         "source": "https://www.geelybrasil.com.br/ofertas",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 124600,
+        "source": "https://www.geelybrasil.com.br/ofertas",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "chevrolet-tracker"
+    "gasRef": "hyundai-creta"
   },
   {
     "id": "geely-ex5",
@@ -2606,13 +2702,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EX5 PRO (Elétrico)",
-      "zero": 192410,
+      "zero": 188650,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 163500,
-          "loss": 15
+          "value": 157777,
+          "loss": 16.4
         }
       ]
     },
@@ -2622,9 +2718,15 @@ const VEHICLES = [
         "price": 207800,
         "source": "https://www.geelybrasil.com.br/ofertas",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 207800,
+        "source": "https://www.geelybrasil.com.br/ofertas",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "gwm-ora-03",
@@ -2701,18 +2803,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Ora 03",
-      "zero": 168670,
+      "zero": 167998,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 149074,
-          "loss": 11.6
+          "value": 147732,
+          "loss": 12.1
         },
         {
           "year": 2026,
-          "value": 142623,
-          "loss": 15.4
+          "value": 141461,
+          "loss": 15.8
         }
       ]
     },
@@ -2725,6 +2827,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 169000,
+        "source": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 169000,
         "source": "https://www.gwmmotors.com.br/pt/modelos/ora-03-bev58",
         "kind": "coleta"
@@ -2749,7 +2857,7 @@ const VEHICLES = [
     "rangeMin": 349,
     "rangeMax": 349,
     "kwh100": 13.6,
-    "price": 163990,
+    "price": 165990,
     "priceVersion": "5",
     "priceSource": "https://www.gwmmotors.com.br/pt/modelos/ora5",
     "priceKind": "oficial",
@@ -2784,12 +2892,12 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Ora 05",
-      "zero": 163900,
+      "zero": 162318,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 142088,
+          "value": 140809,
           "loss": 13.3
         }
       ]
@@ -2804,6 +2912,12 @@ const VEHICLES = [
       {
         "month": "2026-10",
         "price": 163990,
+        "source": "https://www.gwmmotors.com.br/pt/modelos/ora5",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 165990,
         "source": "https://www.gwmmotors.com.br/pt/modelos/ora5",
         "kind": "coleta"
       }
@@ -2885,13 +2999,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "IONIQ 5 SIGNATURE (Elétrico)",
-      "zero": 400120,
+      "zero": 409990,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 293046,
-          "loss": 26.8
+          "value": 282789,
+          "loss": 31
         }
       ]
     },
@@ -2954,18 +3068,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "E-J7 193cv 5p Aut. (Elétrico)",
-      "zero": 250803,
-      "refYear": null,
+      "zero": 132125,
+      "refYear": 2023,
       "used": [
         {
-          "year": 2023,
-          "value": 136918,
-          "loss": 45.4
-        },
-        {
           "year": 2022,
-          "value": 133358,
-          "loss": 46.8
+          "value": 128689,
+          "loss": 2.6
         }
       ]
     },
@@ -3046,33 +3155,33 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 104715,
-          "loss": 12.7
+          "value": 103772,
+          "loss": 13.5
         },
         {
           "year": 2026,
-          "value": 95350,
-          "loss": 20.5
+          "value": 98687,
+          "loss": 17.7
         },
         {
           "year": 2025,
-          "value": 82468,
-          "loss": 31.2
+          "value": 85354,
+          "loss": 28.8
         },
         {
           "year": 2024,
-          "value": 79734,
-          "loss": 33.5
+          "value": 79016,
+          "loss": 34.1
         },
         {
           "year": 2023,
-          "value": 72674,
-          "loss": 39.4
+          "value": 71343,
+          "loss": 40.5
         },
         {
           "year": 2022,
-          "value": 69595,
-          "loss": 42
+          "value": 69233,
+          "loss": 42.3
         }
       ]
     },
@@ -3135,18 +3244,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "e-JS4 150CV 5p Aut. (Elétrico)",
-      "zero": 245977,
-      "refYear": null,
+      "zero": 107026,
+      "refYear": 2023,
       "used": [
         {
-          "year": 2023,
-          "value": 110908,
-          "loss": 54.9
-        },
-        {
           "year": 2022,
-          "value": 108024,
-          "loss": 56.1
+          "value": 104243,
+          "loss": 2.6
         }
       ]
     }
@@ -3187,38 +3291,38 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "iEV 330P CD 150cv Aut. (Elétrico)",
-      "zero": 346015,
+      "zero": 342899,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 312022,
+          "value": 309213,
           "loss": 9.8
         },
         {
           "year": 2024,
-          "value": 281443,
+          "value": 278910,
           "loss": 18.7
         },
         {
           "year": 2023,
-          "value": 262443,
+          "value": 260081,
           "loss": 24.2
         },
         {
           "year": 2022,
-          "value": 242196,
+          "value": 240014,
           "loss": 30
         },
         {
           "year": 2021,
-          "value": 236288,
+          "value": 234160,
           "loss": 31.7
         },
         {
           "year": 2020,
-          "value": 212402,
-          "loss": 38.6
+          "value": 204967,
+          "loss": 40.2
         }
       ]
     }
@@ -3288,13 +3392,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EV5 Land (Elétrico)",
-      "zero": 382047,
+      "zero": 376363,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 285892,
-          "loss": 25.2
+          "value": 286347,
+          "loss": 23.9
         }
       ]
     },
@@ -3360,18 +3464,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "B10 (Elétrico)",
-      "zero": 181285,
+      "zero": 182990,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 166847,
-          "loss": 8
+          "value": 165345,
+          "loss": 9.6
         },
         {
           "year": 2026,
-          "value": 161189,
-          "loss": 11.1
+          "value": 159738,
+          "loss": 12.7
         }
       ]
     },
@@ -3387,9 +3491,15 @@ const VEHICLES = [
         "price": 182990,
         "source": "https://www.leapmotor.com.br/b10/monte.html",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 182990,
+        "source": "https://www.leapmotor.com.br/b10/monte.html",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "jeep-compass"
+    "gasRef": "toyota-corolla-cross"
   },
   {
     "id": "leapmotor-c10",
@@ -3451,18 +3561,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "C10 (Elétrico)",
-      "zero": 205620,
+      "zero": 212490,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 185621,
-          "loss": 9.7
+          "value": 183950,
+          "loss": 13.4
         },
         {
           "year": 2026,
-          "value": 177749,
-          "loss": 13.6
+          "value": 178541,
+          "loss": 16
         }
       ]
     },
@@ -3478,9 +3588,15 @@ const VEHICLES = [
         "price": 214990,
         "source": "https://www.leapmotor.com.br/",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 214990,
+        "source": "https://www.leapmotor.com.br/",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "lexus-rz",
@@ -3542,13 +3658,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "RZ-500e",
-      "zero": 500833,
+      "zero": 500622,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 421830,
-          "loss": 15.8
+          "value": 418033,
+          "loss": 16.5
         }
       ]
     },
@@ -3622,17 +3738,17 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EQB 250+",
-      "zero": 354634,
+      "zero": 351441,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 328275,
+          "value": 325320,
           "loss": 7.4
         },
         {
           "year": 2025,
-          "value": 318402,
+          "value": 315536,
           "loss": 10.2
         }
       ]
@@ -3742,13 +3858,13 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 497629,
-          "loss": 6.1
+          "value": 493150,
+          "loss": 6.9
         },
         {
           "year": 2026,
-          "value": 475918,
-          "loss": 10.2
+          "value": 459260,
+          "loss": 13.3
         }
       ]
     }
@@ -3823,24 +3939,30 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "4 Comfort",
-      "zero": 172958,
+      "zero": 172000,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 164120,
-          "loss": 5.1
+          "value": 162642,
+          "loss": 5.4
         },
         {
           "year": 2026,
-          "value": 159147,
-          "loss": 8
+          "value": 155632,
+          "loss": 9.5
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 184600,
+        "source": "https://mgmotoroficial.com.br/oferta/mg4",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 184600,
         "source": "https://mgmotoroficial.com.br/oferta/mg4",
         "kind": "coleta"
@@ -3922,13 +4044,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "4 Urban Comfort 43",
-      "zero": 134572,
+      "zero": 139181,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 117619,
-          "loss": 12.6
+          "value": 116560,
+          "loss": 16.3
         }
       ]
     },
@@ -4007,18 +4129,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "S5 Comfort",
-      "zero": 206133,
+      "zero": 196970,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 188126,
-          "loss": 8.7
+          "value": 181541,
+          "loss": 7.8
         },
         {
           "year": 2026,
-          "value": 173627,
-          "loss": 15.8
+          "value": 167800,
+          "loss": 14.8
         }
       ]
     },
@@ -4034,9 +4156,15 @@ const VEHICLES = [
         "price": 218800,
         "source": "https://mgmotoroficial.com.br/oferta/mgs5",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 218800,
+        "source": "https://mgmotoroficial.com.br/oferta/mgs5",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "mini-aceman",
@@ -4103,18 +4231,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Aceman E (Elétrico)",
-      "zero": 279530,
+      "zero": 280717,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 234695,
-          "loss": 16
+          "value": 237553,
+          "loss": 15.4
         },
         {
           "year": 2025,
-          "value": 198816,
-          "loss": 28.9
+          "value": 197831,
+          "loss": 29.5
         }
       ]
     },
@@ -4127,6 +4255,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 275990,
+        "source": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 275990,
         "source": "https://www.mini.com.br/pt_BR/home/range/all-electric-mini-aceman.html",
         "kind": "coleta"
@@ -4199,23 +4333,23 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "COOPER E 3p (Elétrico)",
-      "zero": 266682,
+      "zero": 266640,
       "refYear": null,
       "used": [
         {
           "year": 2026,
-          "value": 207513,
-          "loss": 22.2
+          "value": 205645,
+          "loss": 22.9
         },
         {
           "year": 2025,
-          "value": 197588,
-          "loss": 25.9
+          "value": 195809,
+          "loss": 26.6
         },
         {
           "year": 2024,
-          "value": 181605,
-          "loss": 31.9
+          "value": 175248,
+          "loss": 34.3
         }
       ]
     },
@@ -4228,6 +4362,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 264990,
+        "source": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 264990,
         "source": "https://www.mini.com.br/pt_BR/home/range/mini-cooper-eletrico.html",
         "kind": "coleta"
@@ -4369,13 +4509,13 @@ const VEHICLES = [
       "used": [
         {
           "year": 2026,
-          "value": 283144,
-          "loss": 18.3
+          "value": 288521,
+          "loss": 16.7
         },
         {
           "year": 2025,
-          "value": 262205,
-          "loss": 24.3
+          "value": 260833,
+          "loss": 24.7
         }
       ]
     },
@@ -4433,13 +4573,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "E5 FWD (Elétrico)",
-      "zero": 205366,
+      "zero": 209900,
       "refYear": null,
       "used": [
         {
+          "year": 2027,
+          "value": 180521,
+          "loss": 14
+        },
+        {
           "year": 2026,
-          "value": 175733,
-          "loss": 14.4
+          "value": 173933,
+          "loss": 17.1
         }
       ]
     },
@@ -4451,7 +4596,7 @@ const VEHICLES = [
         "kind": "lançamento"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "porsche-cayenne-electric",
@@ -4623,12 +4768,12 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Macan (Elétrico)",
-      "zero": 650982,
+      "zero": 645123,
       "refYear": 2026,
       "used": [
         {
           "year": 2025,
-          "value": 565862,
+          "value": 560769,
           "loss": 13.1
         }
       ]
@@ -4725,33 +4870,33 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Taycan (Elétrico)",
-      "zero": 859995,
+      "zero": 852255,
       "refYear": 2026,
       "used": [
         {
           "year": 2025,
-          "value": 806460,
+          "value": 799201,
           "loss": 6.2
         },
         {
           "year": 2024,
-          "value": 543083,
+          "value": 538195,
           "loss": 36.9
         },
         {
           "year": 2023,
-          "value": 490168,
-          "loss": 43
+          "value": 483060,
+          "loss": 43.3
         },
         {
           "year": 2022,
-          "value": 446611,
-          "loss": 48.1
+          "value": 430979,
+          "loss": 49.4
         },
         {
           "year": 2021,
-          "value": 430249,
-          "loss": 50
+          "value": 415190,
+          "loss": 51.3
         }
       ]
     }
@@ -4816,18 +4961,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "Megane E-Tech (Elétrico)",
-      "zero": 268310,
+      "zero": 267870,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 189644,
-          "loss": 29.3
+          "value": 193030,
+          "loss": 27.9
         },
         {
           "year": 2024,
-          "value": 161629,
-          "loss": 39.8
+          "value": 156118,
+          "loss": 41.7
         }
       ]
     },
@@ -4840,6 +4985,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 279990,
+        "source": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 279990,
         "source": "https://ofertas.renault.com.br/kwid-e-tech%2Bmegane-e-tech",
         "kind": "coleta"
@@ -4912,18 +5063,18 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "e-Vitara 4STYLE ALLGRIP",
-      "zero": 219990,
+      "zero": 219967,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 190424,
-          "loss": 13.4
+          "value": 188710,
+          "loss": 14.2
         },
         {
           "year": 2026,
-          "value": 180712,
-          "loss": 17.9
+          "value": 179085,
+          "loss": 18.6
         }
       ]
     },
@@ -5036,24 +5187,30 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 301566,
-          "loss": 13.9
+          "value": 298851,
+          "loss": 14.6
         },
         {
           "year": 2026,
-          "value": 271948,
-          "loss": 22.3
+          "value": 264445,
+          "loss": 24.5
         },
         {
           "year": 2025,
-          "value": 252195,
-          "loss": 28
+          "value": 244435,
+          "loss": 30.2
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 350950,
+        "source": "https://www.volvocars.com/br/cars/ec40-electric/",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 350950,
         "source": "https://www.volvocars.com/br/cars/ec40-electric/",
         "kind": "coleta"
@@ -5120,6 +5277,12 @@ const VEHICLES = [
       },
       {
         "month": "2026-10",
+        "price": 659950,
+        "source": "https://www.volvocars.com/br/cars/es90-electric/",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 659950,
         "source": "https://www.volvocars.com/br/cars/es90-electric/",
         "kind": "coleta"
@@ -5221,18 +5384,13 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EX30 E40 Core (Elétrico)",
-      "zero": 226392,
-      "refYear": null,
+      "zero": 194521,
+      "refYear": 2025,
       "used": [
         {
-          "year": 2025,
-          "value": 201201,
-          "loss": 11.1
-        },
-        {
           "year": 2024,
-          "value": 176338,
-          "loss": 22.1
+          "value": 173832,
+          "loss": 10.6
         }
       ]
     },
@@ -5242,9 +5400,15 @@ const VEHICLES = [
         "price": 249950,
         "source": "https://www.volvocars.com/br/cars/ex30-electric/",
         "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
+        "price": 249950,
+        "source": "https://www.volvocars.com/br/cars/ex30-electric/",
+        "kind": "coleta"
       }
     ],
-    "gasRef": "toyota-corolla-cross"
+    "gasRef": "jeep-compass"
   },
   {
     "id": "volvo-ex40",
@@ -5341,29 +5505,35 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EX40 Plus P6 (Elétrico)",
-      "zero": 345950,
+      "zero": 351950,
       "refYear": null,
       "used": [
         {
           "year": 2027,
-          "value": 307900,
-          "loss": 11
+          "value": 305128,
+          "loss": 13.3
         },
         {
           "year": 2026,
-          "value": 264175,
-          "loss": 23.6
+          "value": 257684,
+          "loss": 26.8
         },
         {
           "year": 2025,
-          "value": 250060,
-          "loss": 27.7
+          "value": 241307,
+          "loss": 31.4
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 345950,
+        "source": "https://www.volvocars.com/br/cars/ex40-electric/",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 345950,
         "source": "https://www.volvocars.com/br/cars/ex40-electric/",
         "kind": "coleta"
@@ -5441,19 +5611,25 @@ const VEHICLES = [
     },
     "fipe": {
       "version": "EX90 Twin Ultra AWD (Elétrico)",
-      "zero": 793945,
+      "zero": 790020,
       "refYear": null,
       "used": [
         {
           "year": 2025,
-          "value": 557292,
-          "loss": 29.8
+          "value": 549171,
+          "loss": 30.5
         }
       ]
     },
     "priceHistory": [
       {
         "month": "2026-10",
+        "price": 849950,
+        "source": "https://www.volvocars.com/br/cars/ex90-electric/",
+        "kind": "coleta"
+      },
+      {
+        "month": "2026-11",
         "price": 849950,
         "source": "https://www.volvocars.com/br/cars/ex90-electric/",
         "kind": "coleta"
@@ -5531,8 +5707,8 @@ const VEHICLES = [
       "used": [
         {
           "year": 2025,
-          "value": 385833,
-          "loss": 22.1
+          "value": 382360,
+          "loss": 22.8
         }
       ]
     },
@@ -5608,13 +5784,13 @@ const VEHICLES = [
       "used": [
         {
           "year": 2027,
-          "value": 425089,
-          "loss": 9.2
+          "value": 421263,
+          "loss": 10
         },
         {
           "year": 2026,
-          "value": 397440,
-          "loss": 15.1
+          "value": 393863,
+          "loss": 15.8
         }
       ]
     },
@@ -5690,8 +5866,8 @@ const VEHICLES = [
       "used": [
         {
           "year": 2025,
-          "value": 229884,
-          "loss": 22.9
+          "value": 227815,
+          "loss": 23.6
         }
       ]
     },
@@ -5738,9 +5914,9 @@ const HIBRIDOS = [
     "inmetroClass": "A/A",
     "price": 166660,
     "priceVersion": "GL",
-    "priceSource": "https://www.eletricos.app/catalogo-hibrido",
-    "priceKind": "imprensa",
-    "priceNote": "a BYD não mostra o preço deste modelo no site; valor da imprensa, conferir com a concessionária",
+    "priceSource": "https://www.byd.com/br/ofertas",
+    "priceKind": "oficial",
+    "priceNote": "",
     "photo": {
       "src": "assets/carros/byd-atto-2-dmi.jpg",
       "card": "assets/carros/byd-atto-2-dmi-960.jpg",
@@ -5780,7 +5956,8 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-atto-8.jpg",
       "card": "assets/carros/byd-atto-8-960.jpg",
@@ -5826,9 +6003,9 @@ const HIBRIDOS = [
     "gasKmL": 15.3,
     "flex": false,
     "inmetroClass": "A/A",
-    "price": 147990,
+    "price": 172990,
     "priceVersion": "GL",
-    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
     "priceNote": "",
     "photo": {
@@ -5868,7 +6045,7 @@ const HIBRIDOS = [
     "inmetroClass": "A/A",
     "price": 344990,
     "priceVersion": "GS",
-    "priceSource": "https://www.byd.com/br/condicoes",
+    "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
     "priceNote": "",
     "photo": {
@@ -5930,7 +6107,8 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.byd.com/br/condicoes",
     "priceKind": "oficial",
-    "priceNote": "versão Premium: R$ 299.800",
+    "priceNote": "último preço publicado pela BYD (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/byd-song-plus.jpg",
       "card": "assets/carros/byd-song-plus-960.jpg",
@@ -5996,11 +6174,11 @@ const HIBRIDOS = [
     "gasKmL": 15,
     "flex": true,
     "inmetroClass": "A/A",
-    "price": 179990,
-    "priceVersion": "GL",
-    "priceSource": "https://www.byd.com/br/condicoes",
+    "price": 196990,
+    "priceVersion": "GL Flex",
+    "priceSource": "https://www.byd.com/br/ofertas",
     "priceKind": "oficial",
-    "priceNote": "",
+    "priceNote": "ano-modelo 2027",
     "photo": {
       "src": "assets/carros/byd-song-pro.jpg",
       "card": "assets/carros/byd-song-pro-960.jpg",
@@ -6050,7 +6228,8 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.caoachery.com.br/",
     "priceKind": "oficial",
-    "priceNote": "preço público sugerido no site da marca, sem data de coleta",
+    "priceNote": "último preço publicado pela Caoa Chery (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/caoa-chery-tiggo-7-pro-phev.jpg",
       "card": "assets/carros/caoa-chery-tiggo-7-pro-phev-960.jpg",
@@ -6100,7 +6279,8 @@ const HIBRIDOS = [
     "priceVersion": "",
     "priceSource": "https://www.caoachery.com.br/",
     "priceKind": "oficial",
-    "priceNote": "preço público sugerido no site da marca, sem data de coleta",
+    "priceNote": "último preço publicado pela Caoa Chery (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/caoa-chery-tiggo-8-pro-phev.jpg",
       "card": "assets/carros/caoa-chery-tiggo-8-pro-phev-960.jpg",
@@ -6230,7 +6410,8 @@ const HIBRIDOS = [
     "priceVersion": "PRO",
     "priceSource": "https://www.geelybrasil.com.br/",
     "priceKind": "oficial",
-    "priceNote": "versões Max e Ultra mais caras",
+    "priceNote": "último preço publicado pela Geely (outubro de 2026): a marca não mostra mais o preço no site, confirme na concessionária",
+    "priceStale": "10/2026",
     "photo": {
       "src": "assets/carros/geely-ex5-emi.jpg",
       "card": "assets/carros/geely-ex5-emi-960.jpg",
@@ -7445,7 +7626,7 @@ const COMBUSTAO = {
     "version": "Comfort 1.0",
     "bodyType": "Hatch",
     "kmL": 14.2,
-    "price": 90448,
+    "price": 90989,
     "fipeVersion": "HB20 Comfort 1.0 Flex 12V Mec."
   },
   "vw-polo": {
@@ -7453,7 +7634,7 @@ const COMBUSTAO = {
     "version": "Sense TSI automático",
     "bodyType": "Hatch",
     "kmL": 14.3,
-    "price": 107832,
+    "price": 107435,
     "fipeVersion": "Polo Sense TSI 1.0 Flex 12V Aut"
   },
   "mini-cooper-s": {
@@ -7461,7 +7642,7 @@ const COMBUSTAO = {
     "version": "5 portas",
     "bodyType": "Hatch",
     "kmL": 12.7,
-    "price": 324090,
+    "price": 309990,
     "fipeVersion": "COOPER S 2.0 Turbo 16V 5p Aut."
   },
   "chevrolet-onix-plus": {
@@ -7469,7 +7650,7 @@ const COMBUSTAO = {
     "version": "LT 1.0 turbo automático",
     "bodyType": "Sedã",
     "kmL": 13.7,
-    "price": 119480,
+    "price": 118582,
     "fipeVersion": "ONIX SEDAN Plus LT 1.0 12V TB Flex Aut."
   },
   "toyota-corolla": {
@@ -7477,7 +7658,7 @@ const COMBUSTAO = {
     "version": "XEi 2.0",
     "bodyType": "Sedã",
     "kmL": 12.8,
-    "price": 176046,
+    "price": 177211,
     "fipeVersion": "Corolla XEi 2.0 Flex 16V Aut."
   },
   "bmw-320i": {
@@ -7485,7 +7666,7 @@ const COMBUSTAO = {
     "version": "GP",
     "bodyType": "Sedã",
     "kmL": 11.9,
-    "price": 352527,
+    "price": 353964,
     "fipeVersion": "320iA 2.0 Turbo/ActiveFlex 16V/GP  4p"
   },
   "chevrolet-tracker": {
@@ -7493,7 +7674,7 @@ const COMBUSTAO = {
     "version": "LT 1.0 turbo automático",
     "bodyType": "SUV",
     "kmL": 12.4,
-    "price": 140650,
+    "price": 144296,
     "fipeVersion": "TRACKER LT 1.0 Turbo 12V Flex Aut."
   },
   "nissan-kicks": {
@@ -7501,7 +7682,7 @@ const COMBUSTAO = {
     "version": "Sense 1.0 turbo automático",
     "bodyType": "SUV",
     "kmL": 12.7,
-    "price": 158594,
+    "price": 160896,
     "fipeVersion": "KICKS Sense 1.0 Turbo Flex Aut."
   },
   "hyundai-creta": {
@@ -7509,7 +7690,7 @@ const COMBUSTAO = {
     "version": "Comfort 1.0 turbo",
     "bodyType": "SUV",
     "kmL": 12.3,
-    "price": 143276,
+    "price": 143552,
     "fipeVersion": "Creta Comfort 1.0 TB 12V Flex Aut."
   },
   "toyota-corolla-cross": {
@@ -7517,7 +7698,7 @@ const COMBUSTAO = {
     "version": "XRE 2.0",
     "bodyType": "SUV",
     "kmL": 12.2,
-    "price": 197854,
+    "price": 191271,
     "fipeVersion": "Corolla Cross XRE 2.0 16V Flex Aut."
   },
   "jeep-compass": {
@@ -7525,7 +7706,7 @@ const COMBUSTAO = {
     "version": "Longitude T270",
     "bodyType": "SUV",
     "kmL": 10.9,
-    "price": 192903,
+    "price": 192043,
     "fipeVersion": "COMPASS LONG. T270 1.3 TB 4x2 Flex Aut."
   },
   "bmw-x1": {
@@ -7533,7 +7714,7 @@ const COMBUSTAO = {
     "version": "sDrive20i GP",
     "bodyType": "SUV",
     "kmL": 11.5,
-    "price": 332474,
+    "price": 334471,
     "fipeVersion": "X1 SDRIVE 20i GP 2.0 TB Aut."
   },
   "porsche-macan": {

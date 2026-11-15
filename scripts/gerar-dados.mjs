@@ -107,7 +107,7 @@ const garantia = (g) => ({
 });
 
 // Data da coleta de preços (dia/mês/ano). Mude junto com o arquivo de preços.
-const DATA_INFO_COLETA = "05/10/2026";
+const DATA_INFO_COLETA = "15/11/2026";
 
 // FIPE: valor de zero km e de cada ano-modelo usado, com a perda em relação ao zero.
 const valoresFipe = (f) => {
@@ -141,6 +141,8 @@ const VEHICLES = [...porId.values()].map((v) => {
     priceSource: menor ? menor.fonte : "",
     priceKind: menor ? (OFICIAIS.some((d) => menor.fonte.includes(d)) ? "oficial" : "imprensa") : null,
     priceNote: menor ? notaPublica(menor.obs) : notaPublica((precos.find((p) => !p.preco && v.chaves.has(chavePreco(p))) || {}).obs),
+    // A marca tirou o preço do site: fica o último divulgado, com aviso, e ele não conta como coleta do mês.
+    ...(menor && menor.ultimoDivulgado ? { priceStale: menor.ultimoDivulgado } : {}),
     ...(fotos[v.id] ? { photo: fotos[v.id] } : {}),
     ...(fichas[v.id] ? { specs: ficha(fichas[v.id]) } : {}),
     ...(seguranca[v.id] ? { safety: notaNcap(seguranca[v.id]) } : {}),
@@ -159,7 +161,7 @@ const VEHICLES = [...porId.values()].map((v) => {
     const i = pontos.findIndex((p) => p.tipo === "coleta" && p.mes === chave);
     if (i >= 0) pontos.splice(i, 1);
     // Só preço oficial entra na coleta mensal: o da imprensa pode ser de uma matéria antiga.
-    if (v.price && v.priceKind === "oficial") pontos.push({ mes: chave, preco: v.price, fonte: v.priceSource, tipo: "coleta" });
+    if (v.price && v.priceKind === "oficial" && !v.priceStale) pontos.push({ mes: chave, preco: v.price, fonte: v.priceSource, tipo: "coleta" });
     pontos.sort((a, b) => a.mes.localeCompare(b.mes));
     if (!pontos.length) delete historicoDoc.historico[v.id];
     else v.priceHistory = pontos.map((p) => ({ month: p.mes, price: p.preco, source: p.fonte, kind: p.tipo }));
@@ -238,6 +240,7 @@ const HIBRIDOS = Object.entries(cadastroPlugin).filter(([, c]) => c.incluir).map
     priceSource: menor ? menor.fonte : "",
     priceKind: menor ? (OFICIAIS.some((d) => menor.fonte.includes(d)) ? "oficial" : "imprensa") : null,
     priceNote: menor ? notaPublica(menor.obs) : notaPublica(semPreco ? semPreco.obs : ""),
+    ...(menor && menor.ultimoDivulgado ? { priceStale: menor.ultimoDivulgado } : {}),
     ...(fotos[c.id] ? { photo: fotos[c.id] } : {}),
   };
 }).sort((a, b) => `${a.brand} ${a.model}`.localeCompare(`${b.brand} ${b.model}`, "pt-BR"));
@@ -249,7 +252,7 @@ const DATA_INFO = {
     url: "https://www.gov.br/inmetro/pt-br/assuntos/regulamentacao/avaliacao-da-conformidade/programa-brasileiro-de-etiquetagem/tabelas-de-eficiencia-energetica/veiculos-automotivos-pbe-veicular",
   },
   precos: { coleta: DATA_INFO_COLETA },
-  precosHibridos: { coleta: "27/10/2026" },
+  precosHibridos: { coleta: "15/11/2026" },
   fichas: { coleta: "08/10/2026" },
   ipva: { coleta: "08/10/2026", fontes: ipva.fontes },
   seguranca: { coleta: "09/10/2026" },
